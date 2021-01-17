@@ -12,9 +12,16 @@
 	
     
     
-    <meta name="description" content="esther 想記錄一下自己去年優化的幾個部分，不堪回想的血淚&amp;hellip; T^T 剛接觸 sass 時，會被他很厲害的功能迷惑， 曾經我也不自覺地濫用了很多的 @extend， 但是如果弄清楚需求與效能後， 會知道很多東西其實維持舊寫法才是比較適當的選擇。 就讓我們繼續看下去吧&amp;hellip;
+    <meta name="description" content="esther 想記錄一下自己去年優化的幾個部分，不堪回想的血淚&amp;hellip; T^T
+剛接觸 sass 時，會被他很厲害的功能迷惑，
+曾經我也不自覺地濫用了很多的 @extend，
+但是如果弄清楚需求與效能後，
+會知道很多東西其實維持舊寫法才是比較適當的選擇。
+就讓我們繼續看下去吧&amp;hellip;
 Needs? 選單的需求很單純：
- 多階層選單 大項目分類與旗下所有子項目清單 不同語系會有不同寬度與欄數 每一列下方會有分隔線  原本（不是我的）做法是各別將語系的寬度與欄數做了兩個 map 以及一個 map-get 的 function， 先以語系的寬度 map 跑 @each 後，再針對語系去 get 該語系欄數的 map， 最後還針對分隔線多了無謂的計算。
+ 多階層選單 大項目分類與旗下所有子項目清單 不同語系會有不同寬度與欄數 每一列下方會有分隔線  原本（不是我的）做法是各別將語系的寬度與欄數做了兩個 map 以及一個 map-get 的 function，
+先以語系的寬度 map 跑 @each 後，再針對語系去 get 該語系欄數的 map，
+最後還針對分隔線多了無謂的計算。
 寫到這裡應該大概能理解為什麼要優化這塊的CSS了？
 " />
     
@@ -106,11 +113,11 @@ Needs? 選單的需求很單純：
                         <span class="date">2017.09.18</span>
                     </div>
                     <div class="post_content markdown"><h3 id="esther">esther</h3>
-<p>想記錄一下自己去年優化的幾個部分，不堪回想的血淚&hellip; T^T
-剛接觸 sass 時，會被他很厲害的功能迷惑，
-曾經我也不自覺地濫用了很多的 <code>@extend</code>，
-但是如果弄清楚需求與效能後，
-會知道很多東西其實維持舊寫法才是比較適當的選擇。
+<p>想記錄一下自己去年優化的幾個部分，不堪回想的血淚&hellip; T^T<br>
+剛接觸 sass 時，會被他很厲害的功能迷惑，<br>
+曾經我也不自覺地濫用了很多的 <code>@extend</code>，<br>
+但是如果弄清楚需求與效能後，<br>
+會知道很多東西其實維持舊寫法才是比較適當的選擇。<br>
 就讓我們繼續看下去吧&hellip;</p>
 <h2 id="needs">Needs?</h2>
 <p>選單的需求很單純：</p>
@@ -120,8 +127,8 @@ Needs? 選單的需求很單純：
 <li>不同語系會有不同寬度與欄數</li>
 <li>每一列下方會有分隔線</li>
 </ol>
-<p>原本（不是我的）做法是各別將語系的寬度與欄數做了兩個 map 以及一個 map-get 的 function，
-先以語系的寬度 map 跑 <code>@each</code> 後，再針對語系去 get 該語系欄數的 map，
+<p>原本（不是我的）做法是各別將語系的寬度與欄數做了兩個 map 以及一個 map-get 的 function，<br>
+先以語系的寬度 map 跑 <code>@each</code> 後，再針對語系去 get 該語系欄數的 map，<br>
 最後還針對分隔線多了無謂的計算。</p>
 <p>寫到這裡應該大概能理解為什麼要優化這塊的CSS了？</p>
 <h3 id="after-optimization">After optimization?</h3>
