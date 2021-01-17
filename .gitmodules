@@ -1,2 +1,6 @@
 [submodule "themes/zozo"]
 	url = https://github.com/estherj-hsu/hugo-theme-zozo.git
+[submodule "public"]
+	path = public
+	url = git@github.com:estherj-hsu/estherj-hsu.github.io
+	branch = master
