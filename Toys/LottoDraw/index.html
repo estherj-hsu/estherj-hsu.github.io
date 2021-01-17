@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Lotto Draw</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>::Lotto Draw::</h1>
+      <h2 id="des"></h2>
+      <div id="resultBox" class="resultBox"></div>
+      <div id="ballsBox"></div>
+      <button id="drawBtn" class="btn-draw">Auto Draw</button>
+      <button id="resetBtn" class="btn-reset close">Reset</button>
+    </div>
+
+    <script>
+
+      var $ballsBox = $("#ballsBox");
+      var $resultBox = $("#resultBox");
+      var $drawBtn = $("#drawBtn");
+      var $resetBtn = $("#resetBtn");
+
+      var ballsNum = 30;
+      var drawNum = 5;
+      var balls = [];
+      var drawBalls = [];
+
+      // 說明列 （幾選幾）
+      $("#des").html(drawNum + ' in ' + ballsNum);
+
+      // button states change
+      function drawState(btn, state, txt) {
+        // active
+        if (state == true) {
+          btn.removeClass("close");
+          btn.text = txt;
+          btn.disabled = false;
+        } else {
+          // disabled
+          btn.addClass("close");
+          btn.text = txt;
+          btn.disabled = true;
+        }
+      }
+
+      // balls
+      function Balls() {
+        var ballNodes = {};
+        // create balls
+        this.add = function(num){
+          for (var i = 1; i <= num; i++) {
+            var id = "ball-"+i;
+            var $ball = $('<div id="' + id + '">' + (i<10?"0"+i:i) + '</div>');
+            ballNodes[id] = $ball;
+            $ballsBox.append($ball);
+            balls.push(id);
+          }
+          console.log(ballNodes);
+        };
+        // draw ball
+        this.draw = function(num){
+          // random
+          var ballIndex = Math.floor(Math.random() * balls.length);
+          var id = balls.splice(ballIndex, 1)[0];
+          drawBalls.push(id);
+          console.log(id, ballIndex);
+          var drawBall = ballNodes[id];
+          // add style
+          drawBall.addClass("is-chose");
+          // btn states
+          if (drawBalls.length == drawNum) {
+            drawState($drawBtn, false, "Done");
+            drawState($resetBtn, true, "Reset");
+          } else if (drawBalls.length > 0) {
+            drawState($drawBtn, false, "Drawing");
+          }
+          addResult(drawBalls.length - 1);
+        };
+        // reset
+        this.reset = function(){
+          // conbine balls and drawBall
+          balls = balls.concat(drawBalls);
+          // sorting
+          balls.sort(function(a, b){return a-b});
+          // remove class in nodes
+          for (var n in ballNodes) {
+            ballNodes[n].removeClass("is-chose");
+          }
+          // remove class in DOM
+          $ballsBox.removeClass("is-close");
+          // clean array and counter
+          drawBalls = [];
+          counter = 0;
+          // btn states
+          drawState($drawBtn, true, "Auto draw");
+          drawState($resetBtn, false, "Reset");
+          // reset result
+          $resultBox.empty();
+        };
+      }
+
+      // add drewBalls into resultBox
+      function addResult(drewNum) {
+        // get ball number and build DOM
+        var addBall = drawBalls[drewNum];
+        addBall = addBall.substring(5);
+        // create DOM
+        $ball = $('<div>' + (addBall<10?"0"+addBall:addBall) + '</div>');
+        // add balls into ballsBox
+        $resultBox.append($ball);
+      }
+
+      // create balls
+      var Drawing = new Balls();
+      (function(num){
+        Drawing.add(num);
+      })(ballsNum)
+
+      // auto draw
+      function autoDraw() {
+        var countSec = 0.65;
+        var counter = drawBalls.length;
+        var i = setInterval(function(){
+          counter++;
+          Drawing.draw(drawNum);
+          if(counter === drawNum) {
+              clearInterval(i);
+          }
+        }, countSec * 1000);
+      }
+
+      // reset
+      function resetDraw() {
+        Drawing.reset()
+      }
+
+      $drawBtn.on("click", autoDraw);
+      $resetBtn.on("click", resetDraw);
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>flutter on Esther's Life</title><link>http://example.org/tags/flutter/</link><description>Recent content in flutter on Esther's Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 11 Dec 2019 15:22:41 +0000</lastBuildDate><atom:link href="http://example.org/tags/flutter/index.xml" rel="self" type="application/rss+xml"/><item><title>Flutter Part 3: State</title><link>http://example.org/posts/flutter-3/</link><pubDate>Wed, 11 Dec 2019 15:22:41 +0000</pubDate><guid>http://example.org/posts/flutter-3/</guid><description>&lt;h2 id="state--http-request">State &amp;amp; HTTP request&lt;/h2>
+&lt;p>&lt;strong>Dart and Flutter: The Complete Developer's Guide&lt;/strong>: Chapter 9~11
+Let's learn more about flutter widget.
+Main Goal: Click the action button to request one more image
+Also, play with material wedgets. 🌟&lt;/p></description></item><item><title>Flutter Part 2: with Dart</title><link>http://example.org/posts/flutter-2/</link><pubDate>Fri, 22 Nov 2019 14:14:58 +0000</pubDate><guid>http://example.org/posts/flutter-2/</guid><description>&lt;h2 id="instructon-of-dart">Instructon of Dart&lt;/h2>
+&lt;p>Get basic idea of both flutter and dart:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://medium.com/swlh/flutter-with-dart-is-it-worth-it-3f60ed5df9da">Flutter with Dart&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://flutter.dev/docs/get-started/flutter-for/web-devs">Flutter for web developers&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Flutter Part 1: Install</title><link>http://example.org/posts/flutter-1/</link><pubDate>Tue, 19 Nov 2019 17:03:38 +0000</pubDate><guid>http://example.org/posts/flutter-1/</guid><description>&lt;h2 id="install-macos">Install (macOS)&lt;/h2>
+&lt;ol>
+&lt;li>Download Flutter SDK and unzip&lt;/li>
+&lt;li>Add path to &lt;code>.zshrc&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="nb">export&lt;/span> &lt;span class="nv">PATH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$PATH&lt;/span>&lt;span class="s2">:[PATH_OF_DIRECTORY]/flutter/bin&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>Pre-download tools&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">flutter precache
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="esther">esther&lt;/h3>
+&lt;p>Make sure that you unzip the flutter folder into the right directory.
+If you'd like to move the flutter folder after ran flutter, you might see the same error as mine. 🙈&lt;/p></description></item></channel></rss>
