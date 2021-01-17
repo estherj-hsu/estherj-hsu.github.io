@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Esther" />
+	
+	
+	
+	<title>sass快速入門 ｜ Esther&#39;s Life</title>
+	
+    
+    
+    <meta name="description" content="自己整理的sass快速入門重點，對於已有CSS經驗、不想花時間研讀sass手冊的懶人們應該會節省不少時間。
+重點  以雙空格取代 tab 理想情況下每行的寬度在 80 字元內 以多行方式呈現（善用 nesting） 統一空格使用方式（冒號/分號後統一空格） 以 &#39;單引號&#39; 呈現字串&amp;amp;路徑，若字串內包含單引號則使用雙引號 &amp;quot;字串&#39;引用&#39;&amp;quot;  架構部分可以參考 sass 的 The 7-1 Patterns 或之前整理的 CSS方法論們
+" />
+    
+
+    
+    
+    <meta name="keywords" content="" />
+    
+
+	
+
+    <link rel="shortcut icon" href="http://example.org/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/highlight.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/esther.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/esther/">Esther</a>
+            </li>
+            
+            <li>
+                <a href="/portfolio/">Portfolio</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/playground/">Playground</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="http://example.org/">
+                    <img width="160px" src="/img/esther.png">
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">As a front end newbie...</p>
+            <div class="my_socials">
+                
+                
+                
+                
+                <a href="https://github.com/estherj-hsu" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                
+                
+                
+                
+                
+                <a href="http://example.org/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/posts/sass/'>sass快速入門</a></h2>
+                        <span class="date">2016.12.05</span>
+                    </div>
+                    <div class="post_content markdown"><p>自己整理的sass快速入門重點，對於已有CSS經驗、不想花時間研讀sass手冊的懶人們應該會節省不少時間。</p>
+<h2 id="重點">重點</h2>
+<ul>
+<li>以雙空格取代 tab</li>
+<li>理想情況下每行的寬度在 80 字元內</li>
+<li>以多行方式呈現（善用 nesting）</li>
+<li>統一空格使用方式（冒號/分號後統一空格）</li>
+<li>以  <code>'單引號'</code>  呈現字串&amp;路徑，若字串內包含單引號則使用雙引號 <code>&quot;字串'引用'&quot;</code></li>
+</ul>
+<p>架構部分可以參考 sass 的 <a href="https://sass-guidelin.es/#architecture">The 7-1 Patterns</a> 或之前整理的 <a href="http://blog.ej.idv.tw/2016/11/02/CSS-Methodologies/">CSS方法論們</a></p>
+<blockquote>
+<p>Reference
+<a href="http://sass-lang.com/guide">http://sass-lang.com/guide</a>
+<a href="https://sass-guidelin.es/">Sass Guidelines</a></p>
+</blockquote>
+<h2 id="heading">&amp;</h2>
+<h3 id="---">&amp; &ndash;</h3>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="nt">h3</span>
+<span class="err">  </span><span class="na">font-size</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>
+<span class="err">  </span><span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span>
+<span class="k">&amp;</span><span class="nc">.some-selector</span>
+<span class="err">  </span><span class="na">font-size</span><span class="o">:</span> <span class="mi">24</span><span class="kt">px</span>
+<span class="err">  </span><span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">h3</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h3</span><span class="p">.</span><span class="nc">some-selector</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="----1">&ndash; &amp;</h3>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="nt">h3</span>
+<span class="err">  </span><span class="na">font-size</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>
+<span class="err">  </span><span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span>
+<span class="nc">.some-parent-selector</span> <span class="k">&amp;</span>
+<span class="err">  </span><span class="na">font-size</span><span class="o">:</span> <span class="mi">24</span><span class="kt">px</span>
+<span class="err">  </span><span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">h3</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">some-parent-selector</span> <span class="nt">h3</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="variables">Variables</h2>
+<p>基本的變數</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">$c-warningRed</span><span class="o">:</span> <span class="mh">#d50000</span>
+
+<span class="nc">.btn-warning</span>
+<span class="err">  </span><span class="na">background-color</span><span class="o">:</span> <span class="nv">$c-warningRed</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">btn-warning</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#d50000</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="list">List</h2>
+<p>變數的進階版，需注意清單與map不同，簡單來說清單為列的話map為表格，儲存資料方式不同，取出方式當然也有差異</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="nv">$pages</span><span class="o">:</span> <span class="p">(</span><span class="s1">&#39;home&#39;</span><span class="o">,</span> <span class="s1">&#39;about&#39;</span><span class="o">,</span> <span class="s1">&#39;products&#39;</span><span class="o">,</span> <span class="s1">&#39;contact&#39;</span><span class="p">)</span>
+
+<span class="nv">$selector</span><span class="o">:</span> <span class="p">()</span>
+
+<span class="k">@each</span> <span class="err">$</span><span class="nt">item</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">pages</span>
+<span class="err">  </span><span class="na">$selector</span><span class="o">:</span> <span class="nf">append</span><span class="p">(</span><span class="nv">$selector</span><span class="o">,</span> <span class="nf">unquote</span><span class="p">(</span><span class="s1">&#39;.</span><span class="si">#{</span><span class="nv">$item</span><span class="si">}</span><span class="s1"> .nav-</span><span class="si">#{</span><span class="nv">$item</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">,</span> <span class="s1">&#39;comma&#39;</span><span class="p">)</span>
+  <span class="nn">#</span><span class="err">{$</span><span class="nt">selector</span><span class="err">}</span>
+<span class="err">    </span><span class="na">style</span><span class="o">:</span> <span class="n">awsome</span><span class="err">;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">home</span> <span class="p">.</span><span class="nc">nav-home</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">about</span> <span class="p">.</span><span class="nc">nav-about</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">products</span> <span class="p">.</span><span class="nc">nav-products</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">contact</span> <span class="p">.</span><span class="nc">nav-contact</span> <span class="p">{</span>
+  <span class="n">style</span><span class="p">:</span> <span class="n">awsome</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="mixin">@mixin</h2>
+<p>=mixinName (v1: default, v2: default, &hellip;)</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="nf">=stf</span> <span class="p">(</span><span class="nv">$font</span><span class="o">:</span><span class="n">Arial</span><span class="o">,</span> <span class="nv">$color</span><span class="o">:</span><span class="mh">#000000</span><span class="o">,</span> <span class="nv">$size</span><span class="o">:</span><span class="mi">0</span><span class="mf">.8</span><span class="kt">em</span><span class="o">,</span> <span class="nv">$fwt</span><span class="o">:</span><span class="no">normal</span><span class="o">,</span> <span class="nv">$lh</span><span class="o">:</span><span class="mi">100</span><span class="kt">%</span><span class="p">)</span>
+<span class="err">  </span><span class="na">font-family</span><span class="o">:</span> <span class="nv">$font</span>
+<span class="err">  </span><span class="na">color</span><span class="o">:</span> <span class="nv">$color</span>
+<span class="err">  </span><span class="na">font-size</span><span class="o">:</span> <span class="nv">$size</span>
+<span class="err">  </span><span class="na">font-weight</span><span class="o">:</span> <span class="nv">$fwt</span>
+<span class="err">  </span><span class="na">line-height</span><span class="o">:</span> <span class="nv">$lh</span>
+<span class="nc">.p1</span>
+  <span class="o">+</span><span class="nt">stf</span><span class="o">(</span><span class="nt">Arial</span><span class="o">,</span> <span class="nn">#555555</span><span class="o">,</span> <span class="nt">1</span><span class="nc">.0em</span><span class="o">,</span> <span class="nt">bold</span><span class="o">,</span> <span class="nt">200</span><span class="err">%</span><span class="o">)</span>
+<span class="nc">.p2</span>
+  <span class="o">+</span><span class="nt">stf</span><span class="o">(</span><span class="nt">Times</span> <span class="nt">New</span> <span class="nt">Roman</span><span class="o">,</span> <span class="nn">#888888</span><span class="o">,</span> <span class="nt">1</span><span class="nc">.5em</span><span class="o">,</span> <span class="nt">700</span><span class="o">)</span>
+<span class="nc">.p3</span>
+  <span class="o">+</span><span class="nt">stf</span><span class="o">(</span><span class="nt">Arial</span><span class="o">,</span> <span class="nn">#888888</span><span class="o">,</span> <span class="nt">2</span><span class="nc">.5em</span><span class="o">)</span>
+<span class="nc">.p4</span>
+  <span class="o">+</span><span class="nt">stf</span>
+<span class="nc">.p5</span>
+  <span class="o">+</span><span class="nt">stf</span><span class="o">(</span><span class="nt">Verdana</span><span class="o">)</span>
+<span class="err">  </span><span class="na">padding</span><span class="o">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">p1</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="n">Arial</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#555555</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">p2</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="n">Times</span> <span class="n">New</span> <span class="n">Roman</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#888888</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">700</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">p3</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="n">Arial</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#888888</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mf">2.5</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">font-weight</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">p4</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="n">Arial</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#000000</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.8</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">font-weight</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">p5</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="n">Verdana</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#000000</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.8</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">font-weight</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>簡單用：用於常成組出現的屬性可節省時間，如width/height、font-size/font-weight/font-family/color/line-height/text-align&hellip;</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass">    <span class="o">=</span><span class="nt">size</span><span class="o">(</span><span class="err">$</span><span class="nt">w</span><span class="o">,</span> <span class="err">$</span><span class="nt">h</span><span class="o">)</span>
+<span class="err">      </span><span class="na">width</span><span class="o">:</span> <span class="nv">$w</span>
+<span class="err">      </span><span class="na">height</span><span class="o">:</span> <span class="nv">$h</span>
+</code></pre></div><h2 id="eachmap">@each+map</h2>
+<p>通常需要一組map/list去做特定的each迴圈</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="nv">$btns</span><span class="o">:</span> <span class="p">(</span><span class="no">normal</span><span class="o">:</span> <span class="mh">#94a437</span><span class="o">,</span> <span class="n">warning</span><span class="o">:</span> <span class="mh">#cb0a3a</span><span class="o">,</span> <span class="n">closed</span><span class="o">:</span> <span class="mh">#5d5d5d</span><span class="p">)</span>
+
+<span class="nc">.btn</span> <span class="nt">a</span>
+<span class="err">  </span><span class="na">font-family</span><span class="o">:</span> <span class="n">Arial</span>
+<span class="err">  </span><span class="na">font-size</span><span class="o">:</span> <span class="mi">12</span><span class="kt">px</span>
+
+<span class="k">@each</span> <span class="err">$</span><span class="nt">btn-item</span><span class="o">,</span> <span class="err">$</span><span class="nt">btn-color</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">btns</span>
+  <span class="nc">.btn-</span><span class="si">#{</span><span class="nv">$btn-item</span><span class="si">}</span>
+<span class="err">    </span><span class="na">background</span><span class="o">:</span> <span class="nv">$btn-color</span>
+    <span class="k">&amp;</span><span class="nd">:hover</span>
+<span class="err">      </span><span class="na">background</span><span class="o">:</span> <span class="nf">lighten</span><span class="p">(</span><span class="nv">$btn-color</span><span class="o">,</span> <span class="mi">5</span><span class="kt">%</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">btn</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="n">Arial</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-normal</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#94a437</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-normal</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#a5b73d</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-warning</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#cb0a3a</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-warning</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#e30b41</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-closed</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#5d5d5d</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-closed</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#6a6a6a</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="for">@for</h2>
+<p>基本數字迴圈</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="mi">1</span> <span class="ow">through</span> <span class="mi">3</span>
+  <span class="nc">.heading</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span>
+<span class="err">    </span><span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="o">+</span> <span class="nv">$i</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">heading1</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">2</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">heading2</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">3</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">heading3</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">4</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="function">@function</h2>
+<p>Output = single value (different form mixin)</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="k">@function</span> <span class="nt">calc-em</span><span class="o">(</span><span class="err">$</span><span class="nt">target-px</span><span class="o">,</span> <span class="err">$</span><span class="nt">context</span><span class="o">)</span>
+<span class="k">@return</span> <span class="o">(</span><span class="err">$</span><span class="nt">target-px</span> <span class="o">/</span> <span class="err">$</span><span class="nt">context</span><span class="o">)</span> <span class="o">*</span> <span class="nt">1em</span>
+
+<span class="nt">h2</span>
+<span class="err">  </span><span class="na">padding-left</span><span class="o">:</span> <span class="nf">calc-em</span><span class="p">(</span><span class="mi">12</span><span class="kt">px</span><span class="o">,</span> <span class="mi">32</span><span class="kt">px</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">h2</span> <span class="p">{</span>
+  <span class="k">padding-left</span><span class="p">:</span> <span class="mf">0.375</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="extend---佔位符">@extend + % 佔位符</h2>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="err">%</span><span class="nt">txt</span>
+<span class="err">  </span><span class="na">font-size</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.8</span><span class="kt">em</span>
+<span class="err">  </span><span class="na">font-weight</span><span class="o">:</span> <span class="mi">300</span>
+<span class="err">  </span><span class="na">color</span><span class="o">:</span> <span class="ni">steelblue</span>
+<span class="nc">.highlight</span>
+  <span class="o">@</span><span class="nt">extend</span> <span class="err">%</span><span class="nt">txt</span>
+<span class="err">  </span><span class="na">line-height</span><span class="o">:</span> <span class="mi">200</span><span class="kt">%</span>
+<span class="nc">.bold</span>
+  <span class="o">@</span><span class="nt">extend</span> <span class="err">%</span><span class="nt">txt</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">highlight</span><span class="o">,</span> <span class="p">.</span><span class="nc">bold</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.8</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">300</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">steelblue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">highlight</span> <span class="p">{</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">bold</span> <span class="p">{</span>
+  <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="http://example.org/tags/css/sass/">CSS/sass</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>Life would be tragic if it weren&#39;t funny. 🍿</span>
+    </div>
+</footer>
+    <script src="http://example.org/js/jquery-3.5.1.min.js"></script>
+<link href="http://example.org/css/fancybox.min.css" rel="stylesheet">
+<script src="http://example.org/js/fancybox.min.js"></script>
+<script src="http://example.org/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

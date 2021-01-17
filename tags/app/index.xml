@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>App on Esther&#39;s Life</title>
+    <link>http://example.org/tags/app/</link>
+    <description>Recent content in App on Esther&#39;s Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jul 2020 11:07:41 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/app/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2020 June Reading Ref 2</title>
+      <link>http://example.org/posts/2020-june-2/</link>
+      <pubDate>Wed, 01 Jul 2020 11:07:41 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2020-june-2/</guid>
+      <description>&lt;h2 id=&#34;reading-references&#34;&gt;Reading References&lt;/h2&gt;
+&lt;h3 id=&#34;esther&#34;&gt;esther&lt;/h3&gt;
+&lt;p&gt;Summer in Taiwan ☀️ 🔥🔥🔥🔥🔥&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2020 June Reading Ref 1</title>
+      <link>http://example.org/posts/2020-june-1/</link>
+      <pubDate>Wed, 03 Jun 2020 10:57:41 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2020-june-1/</guid>
+      <description>&lt;h2 id=&#34;reading-references&#34;&gt;Reading References&lt;/h2&gt;
+&lt;h3 id=&#34;esther&#34;&gt;esther&lt;/h3&gt;
+&lt;p&gt;Happy Birthday to RWD 🥳&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2020 May Reading Ref 2</title>
+      <link>http://example.org/posts/2020-may-2/</link>
+      <pubDate>Mon, 25 May 2020 11:35:54 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2020-may-2/</guid>
+      <description>&lt;h2 id=&#34;reading-references&#34;&gt;Reading References&lt;/h2&gt;
+&lt;h3 id=&#34;esther&#34;&gt;esther&lt;/h3&gt;
+&lt;p&gt;Say hi to Green Island!&lt;/p&gt;
+&lt;iframe src=&#34;https://drive.google.com/file/d/17peSkZn0LsN5vJQkhdACTUkcu8LSgw1l/preview&#34; width=&#34;100%&#34; height=&#34;400&#34;&gt;&lt;/iframe&gt;</description>
+    </item>
+    
+    <item>
+      <title>2020 May Reading Ref 1</title>
+      <link>http://example.org/posts/2020-may-1/</link>
+      <pubDate>Wed, 06 May 2020 14:52:10 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2020-may-1/</guid>
+      <description>&lt;h2 id=&#34;reading-references&#34;&gt;Reading References&lt;/h2&gt;
+&lt;h3 id=&#34;esther&#34;&gt;esther&lt;/h3&gt;
+&lt;p&gt;Oh yeah, going to have my vacation next week 🏖
+Taiwan No 1 🎉
+Recommend Article: &lt;a href=&#34;https://www.nytimes.com/interactive/2020/04/07/technology/coronavirus-internet-use.html?&#34;&gt;The Virus Changed the Way We Internet&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2020 March Reading Ref 1</title>
+      <link>http://example.org/posts/2020-march-1/</link>
+      <pubDate>Fri, 06 Mar 2020 14:24:30 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2020-march-1/</guid>
+      <description>&lt;h2 id=&#34;reading-references&#34;&gt;Reading References&lt;/h2&gt;
+&lt;h3 id=&#34;esther&#34;&gt;esther&lt;/h3&gt;
+&lt;p&gt;It has been a busy week 🤯&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Flutter Part 3: State</title>
+      <link>http://example.org/posts/flutter-3/</link>
+      <pubDate>Wed, 11 Dec 2019 15:22:41 +0000</pubDate>
+      
+      <guid>http://example.org/posts/flutter-3/</guid>
+      <description>&lt;h2 id=&#34;state--http-request&#34;&gt;State &amp;amp; HTTP request&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Dart and Flutter: The Complete Developer&amp;rsquo;s Guide&lt;/strong&gt;: Chapter 9~11
+Let&amp;rsquo;s learn more about flutter widget.
+Main Goal: Click the action button to request one more image
+Also, play with material wedgets. 🌟&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2019 Nov Weekly Reading Ref 3</title>
+      <link>http://example.org/posts/2019-nov-3/</link>
+      <pubDate>Mon, 02 Dec 2019 13:05:07 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2019-nov-3/</guid>
+      <description>&lt;h2 id=&#34;reading-references&#34;&gt;Reading References&lt;/h2&gt;
+&lt;h3 id=&#34;esther&#34;&gt;esther&lt;/h3&gt;
+&lt;p&gt;Add new tag App 🎉
+Special topic of this week: &lt;strong&gt;The Ethics Of Algorithms&lt;/strong&gt;
+How to &lt;a href=&#34;https://www.forbes.com/sites/insights-intelai/2019/03/27/managing-the-ethics-of-algorithms/&#34;&gt;manage the ethics of algorithms&lt;/a&gt;?
+Why should we care?
+Cuz &lt;a href=&#34;https://css-tricks.com/its-my-job-and-yours/&#34;&gt;It’s my job, and yours&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Read more if you&amp;rsquo;re interested in this topic:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://g.co/kgs/f6ciDs&#34;&gt;Hello World: How to Be Human in the Age of the Machine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://g.co/kgs/f58D26&#34;&gt;Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Flutter Part 2: with Dart</title>
+      <link>http://example.org/posts/flutter-2/</link>
+      <pubDate>Fri, 22 Nov 2019 14:14:58 +0000</pubDate>
+      
+      <guid>http://example.org/posts/flutter-2/</guid>
+      <description>&lt;h2 id=&#34;instructon-of-dart&#34;&gt;Instructon of Dart&lt;/h2&gt;
+&lt;p&gt;Get basic idea of both flutter and dart:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/swlh/flutter-with-dart-is-it-worth-it-3f60ed5df9da&#34;&gt;Flutter with Dart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://flutter.dev/docs/get-started/flutter-for/web-devs&#34;&gt;Flutter for web developers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Flutter Part 1: Install</title>
+      <link>http://example.org/posts/flutter-1/</link>
+      <pubDate>Tue, 19 Nov 2019 17:03:38 +0000</pubDate>
+      
+      <guid>http://example.org/posts/flutter-1/</guid>
+      <description>&lt;h2 id=&#34;install-macos&#34;&gt;Install (macOS)&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Download Flutter SDK and unzip&lt;/li&gt;
+&lt;li&gt;Add path to &lt;code&gt;.zshrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;:[PATH_OF_DIRECTORY]/flutter/bin&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Pre-download tools&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;flutter precache
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;esther&#34;&gt;esther&lt;/h3&gt;
+&lt;p&gt;Make sure that you unzip the flutter folder into the right directory.
+If you&amp;rsquo;d like to move the flutter folder after ran flutter, you might see the same error as mine. 🙈&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

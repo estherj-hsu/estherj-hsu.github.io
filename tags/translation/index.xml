@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Translation on Esther&#39;s Life</title>
+    <link>http://example.org/tags/translation/</link>
+    <description>Recent content in Translation on Esther&#39;s Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 08 Oct 2020 15:24:13 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/translation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CHT 致科技人</title>
+      <link>http://example.org/posts/cht/</link>
+      <pubDate>Thu, 08 Oct 2020 15:24:13 +0000</pubDate>
+      
+      <guid>http://example.org/posts/cht/</guid>
+      <description>&lt;h3 id=&#34;esther&#34;&gt;esther&lt;/h3&gt;
+&lt;p&gt;看完 &lt;a href=&#34;https://www.netflix.com/tw/title/81254224&#34;&gt;The Social Dilemma&lt;/a&gt; 之後訪問了 Center for Humane Technology 的網站，然後讀到這篇讓我很有感觸的文章。因為工作的關係，對科技其實很熟悉也更加理解科技的問題，希望大家都能意識到這些問題，也希望未來法律或是教育能追上科技的發展。
+CHT 也有提供找回掌控權的相關建議，可以參考&lt;a href=&#34;https://www.humanetech.com/take-control&#34;&gt;Take Control&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原文 Center for Humane Technology: For Technologists
+&lt;a href=&#34;https://www.humanetech.com/technologists&#34;&gt;https://www.humanetech.com/technologists&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

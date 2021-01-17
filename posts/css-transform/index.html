@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Esther" />
+	
+	
+	
+	<title>CSS Transform ｜ Esther&#39;s Life</title>
+	
+    
+    
+    <meta name="description" content="A Brief Note of CSS Transform esther Noted by myself in the end of 2015.
+" />
+    
+
+    
+    
+    <meta name="keywords" content="" />
+    
+
+	
+
+    <link rel="shortcut icon" href="http://example.org/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/highlight.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/esther.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/esther/">Esther</a>
+            </li>
+            
+            <li>
+                <a href="/portfolio/">Portfolio</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/playground/">Playground</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="http://example.org/">
+                    <img width="160px" src="/img/esther.png">
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">As a front end newbie...</p>
+            <div class="my_socials">
+                
+                
+                
+                
+                <a href="https://github.com/estherj-hsu" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                
+                
+                
+                
+                
+                <a href="http://example.org/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/posts/css-transform/'>CSS Transform</a></h2>
+                        <span class="date">2016.06.01</span>
+                    </div>
+                    <div class="post_content markdown"><h2 id="a-brief-note-of-css-transform">A Brief Note of CSS Transform</h2>
+<h3 id="esther">esther</h3>
+<p>Noted by myself in the end of 2015.</p>
+<h2 id="transform-function">transform-function</h2>
+<ul>
+<li>rotate 旋轉</li>
+<li>skew(X,Y) 傾斜</li>
+<li>scale(X,Y) 變形</li>
+<li>translate(X,Y) 位移</li>
+<li>matrix 進階變形矩陣</li>
+</ul>
+<h3 id="rotateθ">rotate(θ)</h3>
+<p>以參考點為中心軸 2D 旋轉 θ 度。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="mi">30</span><span class="kt">deg</span><span class="p">)</span>
+</code></pre></div><h3 id="skewxθ">skewX(θ)</h3>
+<p>以參考點為中心軸沿著橫向傾斜 θ 度。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">skewX</span><span class="p">(</span><span class="mi">20</span><span class="kt">deg</span><span class="p">)</span>
+</code></pre></div><h3 id="skewyθ">skewY(θ)</h3>
+<p>以參考點為中心軸沿著縱向傾斜 θ 度。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">skewY</span><span class="p">(</span><span class="mi">45</span><span class="kt">deg</span><span class="p">)</span>
+</code></pre></div><h3 id="skewθxθy">skew(θx,θy)</h3>
+<p>以參考點為中心軸沿著橫向傾斜 θx 度、 縱向傾斜 θy 度。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">skew</span><span class="p">(</span><span class="mi">20</span><span class="kt">deg</span><span class="o">,</span><span class="mi">45</span><span class="kt">deg</span><span class="p">)</span>
+</code></pre></div><blockquote>
+<p>參數如果只指定 1 個，省略的第 2 個參數，會視為 0 ，也就是只有沿橫向傾斜。</p>
+</blockquote>
+<h3 id="scalexm">scaleX(m)</h3>
+<p>指定元素由參考點橫向縮放 m 倍。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">scaleX</span><span class="p">(</span><span class="mi">0</span><span class="mf">.5</span><span class="p">)</span>
+</code></pre></div><h3 id="scaleym">scaleY(m)</h3>
+<p>指定元素由參考點縱向縮放 m 倍。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">scaleY</span><span class="p">(</span><span class="mi">1</span><span class="mf">.8</span><span class="p">)</span>
+</code></pre></div><h3 id="scalemxmy">scale(mx,my)</h3>
+<p>由參考點 2D 橫向縮放 mx 倍、縱向縮放 my 倍，等於是結合 scaleX(mx), scaleY(my) 。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">scale</span><span class="p">(</span><span class="mi">0</span><span class="mf">.5</span><span class="o">,</span><span class="mi">1</span><span class="mf">.8</span><span class="p">)</span>
+</code></pre></div><blockquote>
+<p>參數如果只指定 1 個，省略的第 2 個參數，會等於第 1 個，也就是橫向、縱向以相同比例縮放。</p>
+</blockquote>
+<h3 id="translatexo">translateX(o)</h3>
+<p>由參考點橫向移動 o 距離。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">translateX</span><span class="p">(</span><span class="mi">60</span><span class="kt">px</span><span class="p">)</span>
+</code></pre></div><h3 id="translateyo">translateY(o)</h3>
+<p>由參考點縱向移動 o 距離。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">translateY</span><span class="p">(</span><span class="mi">20</span><span class="kt">%</span><span class="p">)</span>
+</code></pre></div><h3 id="translateoxoy">translate(ox,oy)</h3>
+<p>由參考點 2D 橫向移動 ox 距離、縱向移動 oy 距離，結合 translateX(ox), translateY(oy) 。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">translate</span><span class="p">(</span><span class="mi">60</span><span class="kt">px</span><span class="o">,</span><span class="mi">20</span><span class="kt">%</span><span class="p">)</span>
+</code></pre></div><blockquote>
+<p>參數如果只指定 1 個，省略的第 2 個參數，會視為 0 ，也就是只有橫向移動。</p>
+</blockquote>
+<p>亦可同時指定translate、rotate、scale</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">translate</span><span class="p">(</span><span class="mi">180</span><span class="kt">px</span><span class="p">)</span> <span class="nf">rotate</span><span class="p">(</span><span class="mi">-5</span><span class="kt">deg</span><span class="p">)</span> <span class="nf">scale</span><span class="p">(</span><span class="mi">0</span><span class="mf">.8</span><span class="p">)</span>
+</code></pre></div><h3 id="matrixabcdef">matrix(a,b,c,d,e,f)</h3>
+<p><img src="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/5.png" alt="matrix"></p>
+<p>由參考點依據數學變形矩陣 (transformation matrix) 的 6 個參數值產生 2D 變形。(很恐怖。)</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform</span><span class="o">:</span> <span class="nf">matrix</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="mf">.611</span><span class="o">,</span><span class="mi">1</span><span class="mf">.611</span><span class="o">,</span><span class="mi">0</span><span class="mf">.278</span><span class="o">,</span><span class="mi">5</span><span class="o">,</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div><blockquote>
+<p>Reference</p>
+<ul>
+<li><a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS Transforms Matrix</a></li>
+<li><a href="http://www.useragentman.com/matrix/">Matrix Construction Set</a></li>
+</ul>
+</blockquote>
+<h2 id="transform-origin">transform-origin</h2>
+<p><img src="http://www.108js.com/article/article8/img/css-transforms-matrix2.png" alt="transform-origin"></p>
+<p>參考點定義，預設為中心點。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">transform-origin</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">|</span> <span class="no">top</span> <span class="no">left</span>  <span class="err">左上角</span>
+<span class="na">transform-origin</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span> <span class="mi">100</span><span class="kt">%</span> <span class="o">|</span> <span class="no">bottom</span> <span class="no">right</span> <span class="err">右下角</span>
+<span class="na">transform-origin</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">20</span><span class="kt">px</span> <span class="err">固定點</span>
+</code></pre></div><h2 id="frames">frames</h2>
+<p>影格定義</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="o">//</span> <span class="nt">Start</span> <span class="nt">to</span> <span class="nt">end</span>
+<span class="k">@keyframes</span> <span class="o">[</span><span class="nt">animation</span> <span class="nt">name</span><span class="o">]</span>
+  <span class="nt">from</span>
+<span class="na">opacity</span><span class="o">:</span> <span class="mi">0</span>
+  <span class="nt">to</span>
+<span class="na">opacity</span><span class="o">:</span> <span class="mi">1</span>
+
+<span class="o">//</span><span class="nt">by</span> <span class="nt">frame</span><span class="o">(</span><span class="err">%</span><span class="o">)</span>
+<span class="k">@keyframes</span> <span class="o">[</span><span class="nt">animation</span> <span class="nt">name</span><span class="o">]</span>
+  <span class="nt">0</span><span class="err">%</span>
+<span class="na">transform</span><span class="o">:</span> <span class="nf">translateX</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="p">)</span>
+  <span class="nt">30</span><span class="err">%</span>
+<span class="na">transform</span><span class="o">:</span> <span class="nf">translateX</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span><span class="p">)</span>
+  <span class="nt">100</span><span class="err">%</span>
+<span class="na">transform</span><span class="o">:</span> <span class="nf">translateX</span><span class="p">(</span><span class="mi">0</span><span class="kt">%</span><span class="p">)</span>
+</code></pre></div><p>使用方式</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="nc">.animation</span>
+<span class="err">  </span><span class="na">display</span><span class="o">:</span> <span class="no">block</span>
+<span class="err">  </span><span class="na">animation-name</span><span class="o">:</span> <span class="p">[</span><span class="no">animation</span> <span class="n">name</span><span class="p">]</span>
+<span class="err">  </span><span class="na">transform-origin</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span>
+</code></pre></div><h2 id="perspective">perspective</h2>
+<p>以透視角度控制3D效果</p>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="na">perspective</span><span class="o">:</span> <span class="mi">150</span><span class="kt">px</span> <span class="err">視角</span>
+<span class="na">perspectove</span><span class="o">:</span> <span class="no">bottom</span> <span class="no">left</span> <span class="err">基準點控制</span>
+</code></pre></div><blockquote>
+<p>perspectiv與perspective-origin是針對子元素做控制，非元素本身，在父層下perspective後針對子層做transform設定即可</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-sass" data-lang="sass"><span class="o">//</span><span class="nt">parent</span>
+<span class="nc">.wrap</span>
+<span class="err">  </span><span class="na">perspective</span><span class="o">:</span> <span class="mi">150</span><span class="kt">px</span>
+
+<span class="o">//</span><span class="nt">child</span>
+<span class="nc">.item</span>
+<span class="err">  </span><span class="na">transform</span><span class="o">:</span> <span class="nf">rotateX</span><span class="p">(</span><span class="mi">30</span><span class="kt">deg</span><span class="p">)</span> <span class="nf">scale</span><span class="p">(</span><span class="mi">1</span><span class="mf">.5</span><span class="p">)</span>
+</code></pre></div></div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="http://example.org/tags/css/sass/">CSS/sass</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>Life would be tragic if it weren&#39;t funny. 🍿</span>
+    </div>
+</footer>
+    <script src="http://example.org/js/jquery-3.5.1.min.js"></script>
+<link href="http://example.org/css/fancybox.min.css" rel="stylesheet">
+<script src="http://example.org/js/fancybox.min.js"></script>
+<script src="http://example.org/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

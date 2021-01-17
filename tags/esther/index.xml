@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Esther on Esther&#39;s Life</title>
+    <link>http://example.org/tags/esther/</link>
+    <description>Recent content in Esther on Esther&#39;s Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Jan 2021 12:06:56 +0800</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/esther/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo</title>
+      <link>http://example.org/posts/hugo/</link>
+      <pubDate>Sat, 16 Jan 2021 12:06:56 +0800</pubDate>
+      
+      <guid>http://example.org/posts/hugo/</guid>
+      <description>&lt;h3 id=&#34;esther&#34;&gt;esther&lt;/h3&gt;
+&lt;p&gt;Finally&amp;hellip; Hello Hugo!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>First challenge</title>
+      <link>http://example.org/posts/first-challenge/</link>
+      <pubDate>Wed, 09 Mar 2016 21:49:35 +0000</pubDate>
+      
+      <guid>http://example.org/posts/first-challenge/</guid>
+      <description>&lt;h2 id=&#34;not-easy&#34;&gt;Not easy!&lt;/h2&gt;
+&lt;p&gt;I love this theme.
+It&amp;rsquo;s really simple and clean as I need.
+However, I also want to use other &amp;ldquo;advanced&amp;rdquo; function, like tags and categories&amp;hellip;&lt;/p&gt;
+&lt;p&gt;So, here&amp;rsquo;s what I&amp;rsquo;m going to do this:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>First Post - Hello World!</title>
+      <link>http://example.org/posts/first-post/</link>
+      <pubDate>Sat, 20 Feb 2016 11:38:15 +0000</pubDate>
+      
+      <guid>http://example.org/posts/first-post/</guid>
+      <description>Hexo is the new sexy&amp;hellip;?</description>
+    </item>
+    
+  </channel>
+</rss>
