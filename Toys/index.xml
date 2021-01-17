@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Toys on Esther&#39;s Life</title>
-    <link>http://example.org/toys/</link>
+    <link>/toys/</link>
     <description>Recent content in Toys on Esther&#39;s Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="http://example.org/toys/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/toys/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://example.org/toys/lottodraw/readme/</link>
+      <link>/toys/lottodraw/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/toys/lottodraw/readme/</guid>
+      <guid>/toys/lottodraw/readme/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/toys/rocket/readme/</link>
+      <link>/toys/rocket/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/toys/rocket/readme/</guid>
+      <guid>/toys/rocket/readme/</guid>
       <description></description>
     </item>
     
