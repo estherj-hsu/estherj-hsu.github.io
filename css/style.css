@@ -269,8 +269,8 @@ hr ~ ol::before {
   color: #576574;
 }
 
-#experience ~ ul li::before,
-#timeline ~ ul li::before {
+#experience ~ ul li:not(:last-child)::before,
+#timeline ~ ul li:not(:last-child)::before {
   content: '';
   position: absolute;
   background-color: #ee5253;
