@@ -153,6 +153,10 @@ p > em {
   padding: 2px 4px;
 }
 
+time {
+  margin-left: 4px;
+}
+
 .landing {
   padding-top: calc(50vh - 220px);
 }
