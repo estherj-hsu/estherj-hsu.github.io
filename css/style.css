@@ -277,13 +277,19 @@ hr ~ ol::before {
 #timeline ~ ul li:not(:last-child)::before {
   content: '';
   position: absolute;
-  background-color: #ee5253;
+  background-color: #95a5a6;
   opacity: .4;
   height: 95%;
   width: 3px;
   display: block;
   left: 42px;
   top: 25px;
+}
+
+#experience ~ ul li:first-of-type strong,
+#timeline ~ ul li:first-of-type strong {
+  font-size: 1.5em;
+  line-height: 1.5;
 }
 
 #experience ~ ul li:not(:last-child),
@@ -309,6 +315,16 @@ hr ~ ol::before {
   font-weight: bold;
   color: #ee5253;
   width: 80px;
+}
+
+#experience ~ ul li:last-child span,
+#timeline ~ ul li:last-child span {
+  color: #576574;
+}
+
+#experience ~ ul li .study,
+#timeline ~ ul li .study {
+  color: #9b59b6;
 }
 
 .playground {
