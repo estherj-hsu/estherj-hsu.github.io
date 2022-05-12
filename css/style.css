@@ -260,6 +260,28 @@ hr ~ ol::before {
   display: none;
 }
 
+#experience ~ p span,
+#timeline ~ p span {
+  margin-right: 8px;
+}
+
+#experience ~ p span::before,
+#timeline ~ p span::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ee5253;
+  vertical-align: text-top;
+  margin-right: 4px;
+}
+
+#experience ~ p .study::before,
+#timeline ~ p .study::before {
+  background-color: #9b59b6;
+}
+
 #experience ~ ul,
 #timeline ~ ul {
   margin: 10px auto;

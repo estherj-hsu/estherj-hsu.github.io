@@ -189,6 +189,20 @@ hr
 
 #experience,
 #timeline
+  & ~ p
+    span
+      margin-right: 16px
+    span::before
+      content: ''
+      display: inline-block
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      background-color: $c-primary
+      vertical-align: text-top
+      margin-right: 4px
+    .study::before
+      background-color: $c-purple
   & ~ ul
     margin: 10px auto
     li
