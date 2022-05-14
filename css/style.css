@@ -298,6 +298,7 @@ hr ~ ol::before {
   list-style-type: none;
   color: #576574;
   font-size: .8em;
+  line-height: 1.6;
 }
 
 #experience ~ ul li span, #experience ~ ul li strong,
