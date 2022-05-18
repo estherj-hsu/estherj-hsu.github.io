@@ -434,6 +434,9 @@ hr ~ ol::before {
   header div:last-child {
     width: 70%;
   }
+  header .nav-link {
+    padding: .5rem .4rem !important;
+  }
   .logo::before {
     content: "J";
     position: absolute;
