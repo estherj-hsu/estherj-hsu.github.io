@@ -161,6 +161,23 @@ time {
   margin-left: 4px;
 }
 
+li > strong,
+li > em {
+  color: #222f3e;
+}
+
+li > strong {
+  font-weight: 500;
+  padding: 0 4px;
+  border-bottom: 3px #ff6b6b solid;
+}
+
+li > em {
+  font-style: normal;
+  background-color: rgba(254, 202, 87, 0.2);
+  padding: 2px 4px;
+}
+
 .landing {
   padding-top: calc(50vh - 220px);
 }
