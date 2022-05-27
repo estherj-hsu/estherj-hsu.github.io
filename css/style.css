@@ -87,7 +87,7 @@ h4 {
   font-size: 1.1em;
 }
 
-p {
+p, li {
   color: #576574;
 }
 
@@ -435,7 +435,7 @@ hr ~ ol::before {
     width: 70%;
   }
   header .nav-link {
-    padding: .5rem .4rem !important;
+    padding: .5rem .4rem;
   }
   .logo::before {
     content: "J";
