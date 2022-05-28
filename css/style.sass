@@ -72,7 +72,6 @@ blockquote
   &::before,
   &::after
     font-family: serif
-    position: absolute
     color: #c8d6e5
     font-size: 6em
     line-height: 1
@@ -84,6 +83,10 @@ blockquote
   &::after
     content: "\201D"
     right: 0
+  p
+    text-align: center
+    display: inline-block
+    margin: 0 auto
 code
   background-color: #fff
   padding: 2px 4px
@@ -113,17 +116,29 @@ p
 time
   margin-left: 4px
 li
+  padding-bottom: 2px
   & > strong,
   & > em
     color: $c-dark
   & > strong
     font-weight: 500
-    padding: 0 4px
-    border-bottom: 3px $c-secodary solid
+    padding: 0 2px
+    border-bottom: 2px $c-secodary solid
   & > em
     font-style: normal
     background-color: rgba(254, 202, 87, .2)
     padding: 2px 4px
+  p
+    margin-bottom: 4px
+  ul
+    margin-bottom: 1rem
+
+.callout
+  font-weight: 500
+  text-align: center
+  font-size: 1.2em
+  padding: 3rem 0
+  color: $c-primary
 
 .landing
   padding-top: calc(50vh - 220px)
@@ -244,6 +259,7 @@ hr
       &:not(:last-child)
         margin-bottom: 30px
       strong
+        border-bottom: 0
         color: $c-dark
       em
         font-weight: 500
