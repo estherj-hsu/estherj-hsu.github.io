@@ -66,27 +66,18 @@ p, li
 small
   transform: scale(.75)
 blockquote
-  margin-top: 2em
-  padding: 1em 3em
-  position: relative
-  &::before,
-  &::after
-    font-family: serif
-    color: #c8d6e5
-    font-size: 6em
-    line-height: 1
-    top: -4px
-    z-index: 0
-  &::before
-    content: "\201C"
-    left: 0
-  &::after
-    content: "\201D"
-    right: 0
+  background: #ffffff
+  padding: 1rem 2rem .5rem
+  margin: 3rem 2rem
+  border-left: 6px solid $c-grey
   p
-    text-align: center
-    display: inline-block
-    margin: 0 auto
+    color: $c-dark
+    span
+      color: $c-grey
+      margin-top: 12px
+      font-size: .9rem
+      display: block
+      text-align: right
 code
   background-color: #fff
   padding: 2px 4px

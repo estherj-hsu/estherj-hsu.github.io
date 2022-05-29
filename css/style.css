@@ -97,34 +97,22 @@ small {
 }
 
 blockquote {
-  margin-top: 2em;
-  padding: 1em 3em;
-  position: relative;
-}
-
-blockquote::before, blockquote::after {
-  font-family: serif;
-  color: #c8d6e5;
-  font-size: 6em;
-  line-height: 1;
-  top: -4px;
-  z-index: 0;
-}
-
-blockquote::before {
-  content: "\201C";
-  left: 0;
-}
-
-blockquote::after {
-  content: "\201D";
-  right: 0;
+  background: #ffffff;
+  padding: 1rem 2rem .5rem;
+  margin: 3rem 2rem;
+  border-left: 6px solid #8395a7;
 }
 
 blockquote p {
-  text-align: center;
-  display: inline-block;
-  margin: 0 auto;
+  color: #222f3e;
+}
+
+blockquote p span {
+  color: #8395a7;
+  margin-top: 12px;
+  font-size: .9rem;
+  display: block;
+  text-align: right;
 }
 
 code {
