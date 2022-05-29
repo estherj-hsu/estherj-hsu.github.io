@@ -37,6 +37,10 @@ header div:last-child {
   text-align: right;
 }
 
+header .nav .is-active {
+  color: #8395a7;
+}
+
 footer {
   margin-top: auto;
 }
