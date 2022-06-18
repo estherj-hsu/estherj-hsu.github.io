@@ -111,6 +111,8 @@ p
     margin: 0 auto 20px
     max-width: 80%
     display: block
+  & ~ p
+    margin-bottom: 16px
 time
   margin-left: 4px
 li
@@ -195,6 +197,9 @@ h3[id^="esther"]
       position: absolute
       width: 32px
       height: 32px
+h3:not([id^="esther"])
+  & ~ p:not(:empty)
+    margin-bottom: 1.5em
 
 hr
   margin: 5em auto
