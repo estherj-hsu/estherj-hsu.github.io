@@ -58,16 +58,16 @@ a:hover {
   color: #8395a7;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   margin-top: 1.2em;
   margin-bottom: .5em;
 }
 
-h1 a, h2 a, h3 a, h4 a {
+h1 a, h2 a, h3 a, h4 a, h5 a {
   color: #222f3e;
 }
 
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
   color: #8395a7;
 }
 
@@ -282,7 +282,7 @@ h3[id^="esther"] + p::before {
 }
 
 h3:not([id^="esther"]) ~ p:not(:empty) {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 hr {
