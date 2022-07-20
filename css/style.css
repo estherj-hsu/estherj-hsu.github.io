@@ -18,6 +18,14 @@ body {
           flex-direction: column;
 }
 
+::-moz-selection {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+::selection {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
 main, header {
   width: 100%;
   max-width: 960px;
