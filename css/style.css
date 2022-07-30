@@ -76,6 +76,10 @@ a:hover {
   color: #ee5253 !important;
 }
 
+.text-purple {
+  color: #9b59b6 !important;
+}
+
 h1, h2, h3, h4, h5 {
   margin-top: 1.2em;
   margin-bottom: .5em;
@@ -264,6 +268,12 @@ table td {
   color: #8395a7;
   font-weight: 300;
   line-height: 100%;
+}
+
+.goal {
+  padding: 2px 6px;
+  background-color: #9b59b6;
+  color: #fff;
 }
 
 .slogan {
