@@ -510,7 +510,7 @@ hr ~ ol::before {
   width: 200px;
   height: 200px;
   font-size: 1.3em;
-  padding-top: 28%;
+  padding-top: 25%;
   margin: 0 auto;
   -webkit-box-shadow: 0 0 5px 1px;
           box-shadow: 0 0 5px 1px;
