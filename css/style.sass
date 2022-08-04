@@ -358,7 +358,8 @@ hr
       color: nth($c-list, $i)
       border-color: nth($c-list, $i)
 
-.playground
+.playground,
+.casestudies
 	display: flex
 	flex-flow: row wrap
 	list-style: none
@@ -388,6 +389,8 @@ hr
       text-align: center
       font-weight: 400
       padding: 0 20px
+      img
+        width: 100%
       span
         font-size: .6em
         position: absolute
@@ -399,6 +402,18 @@ hr
         border-radius: 2px
 	&.js > a
     background-color: #f8c291
+.casestudies
+  justify-content: center
+  a
+    width: calc((960px - 30px * 3) / 4)
+    height: initial
+    margin-right: 24px
+    li
+      padding: 0
+      span
+        font-size: .7em
+        padding: 4px
+        color: $c-grey
 
 @media screen and (max-width: 960px)
   body

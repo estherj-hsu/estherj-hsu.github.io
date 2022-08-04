@@ -548,7 +548,8 @@ hr ~ ol::before {
   border-color: #ee5253;
 }
 
-.playground {
+.playground,
+.casestudies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -565,7 +566,8 @@ hr ~ ol::before {
           justify-content: flex-between;
 }
 
-.playground a {
+.playground a,
+.casestudies a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: calc((960px - 16px * 4) / 5);
@@ -592,7 +594,8 @@ hr ~ ol::before {
   position: relative;
 }
 
-.playground a li {
+.playground a li,
+.casestudies a li {
   list-style-type: none;
   font-size: 1.2em;
   color: rgba(255, 255, 255, 0.8);
@@ -601,7 +604,13 @@ hr ~ ol::before {
   padding: 0 20px;
 }
 
-.playground a li span {
+.playground a li img,
+.casestudies a li img {
+  width: 100%;
+}
+
+.playground a li span,
+.casestudies a li span {
   font-size: .6em;
   position: absolute;
   top: 6px;
@@ -612,8 +621,31 @@ hr ~ ol::before {
   border-radius: 2px;
 }
 
-.playground.js > a {
+.playground.js > a,
+.casestudies.js > a {
   background-color: #f8c291;
+}
+
+.casestudies {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.casestudies a {
+  width: calc((960px - 30px * 3) / 4);
+  height: initial;
+  margin-right: 24px;
+}
+
+.casestudies a li {
+  padding: 0;
+}
+
+.casestudies a li span {
+  font-size: .7em;
+  padding: 4px;
+  color: #8395a7;
 }
 
 @media screen and (max-width: 960px) {
