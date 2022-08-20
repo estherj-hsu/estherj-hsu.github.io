@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Designs on Esther's Life</title><link>/design/</link><description>Recent content in Designs on Esther's Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 04 Aug 2022 01:27:52 +0000</lastBuildDate><atom:link href="/design/index.xml" rel="self" type="application/rss+xml"/><item><title>Talenx</title><link>/design/talenx/</link><pubDate>Thu, 04 Aug 2022 01:27:52 +0000</pubDate><guid>/design/talenx/</guid><description>Role: Frondend Developer &amp; Interface Designer Type of project: Web application features design Target users: Recruters, Headhunters, and HR Consultants About Talenx Esther I worked on this project early on and was in charge of UI &amp;amp; UX design and development.</description></item><item><title>PC optimun Redesign</title><link>/design/pc/</link><pubDate>Wed, 03 Aug 2022 01:27:52 +0000</pubDate><guid>/design/pc/</guid><description>Role: UX Researcher, UI/UX Designer Type of project: App redesign Team: Ellen C.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Designs on Esther's Life</title><link>/design/</link><description>Recent content in Designs on Esther's Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 04 Aug 2022 01:27:52 +0000</lastBuildDate><atom:link href="/design/index.xml" rel="self" type="application/rss+xml"/><item><title>Talenx</title><link>/design/talenx/</link><pubDate>Thu, 04 Aug 2022 01:27:52 +0000</pubDate><guid>/design/talenx/</guid><description>Role: Frondend Developer &amp; Interface Designer Type of project: Web application features design Target users: Recruters, Headhunters, and HR Consultants About Talenx Esther I worked on this project early on and was in charge of UI &amp;amp; UX design and development.</description></item><item><title>AFDS Redesign</title><link>/design/afds/</link><pubDate>Wed, 03 Aug 2022 01:27:52 +0000</pubDate><guid>/design/afds/</guid><description>&lt;p>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />&lt;/p>
+&lt;div id="design" class="mb-3">
+&lt;a href="/img/afds/cover.png" data-fancybox data-caption="AFDS Redesign">
+&lt;img src="/img/afds/cover.png" width="100%" />
+&lt;/a>
+&lt;/div>
+&lt;div class="container">
+&lt;div class="row">
+&lt;div class="col-sm">
+&lt;ul>
+&lt;li>&lt;b>Role&lt;/b>: UX Researcher, UI/UX Designer&lt;/li>
+&lt;li>&lt;b>Type of project&lt;/b>: Web redesign&lt;/li>
+&lt;li>&lt;b>Member&lt;/b>: Esther H.&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="col-sm">
+&lt;ul>
+&lt;li>&lt;b>Duration&lt;/b>: 55 hours (in 3 weeks)&lt;/li>
+&lt;li>&lt;b>Tool&lt;/b>: I used Figma for prototype, &lt;a href="https://whimsical.com/afds-PcS9n6M6D2PPzWgZxJo6TH" target="_blank">Whimsical&lt;/a> for ideations, and &lt;a href="https://whimsical.com/afds-PcS9n6M6D2PPzWgZxJo6TH" target="_blank">Notion&lt;/a> for the project management, and you can find the detail with the link. &lt;/small>
+&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="about-afds">About AFDS&lt;/h2>
+&lt;p>Aboriginal Front Door Society(AFDS) is a culturally safe, peer-designed non-judgemental place for Aboriginal Peoples their friends, and family in the Downtown East Side. They create hope and offer support through Aboriginal cultural traditions, caring, and acceptance.&lt;/p>
+&lt;h3 id="esther">Esther&lt;/h3>
+&lt;p>I heard a lot about First Nation before coming to Vancouver, and after I got here, I heard a lot about the downtown east side. I started to be interested in the First Nation and people in the downtown east side, so when I heard that I could choose either an NGO or a local business website to redesign for our final project, I decided to go for Aboriginal Front Door Society (AFDS).&lt;/p></description></item><item><title>PC optimun Redesign</title><link>/design/pc/</link><pubDate>Wed, 03 Aug 2022 01:27:52 +0000</pubDate><guid>/design/pc/</guid><description>Role: UX Researcher, UI/UX Designer Type of project: App redesign Tool: Figma Team: Ellen C.</description></item></channel></rss>
