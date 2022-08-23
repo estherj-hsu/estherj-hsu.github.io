@@ -208,18 +208,15 @@ li {
   padding-bottom: 2px;
 }
 
-li > strong,
-li > em {
-  color: #222f3e;
-}
-
 li > strong {
+  color: #222f3e;
   font-weight: 500;
   padding: 0 2px;
   border-bottom: 2px #ff6b6b solid;
 }
 
 li > em {
+  font-weight: 500;
   font-style: normal;
   background-color: rgba(254, 202, 87, 0.2);
   padding: 2px 4px;
