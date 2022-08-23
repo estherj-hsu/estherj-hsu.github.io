@@ -355,6 +355,16 @@ hr
     div:nth-child(#{$i})
       color: nth($c-list, $i)
       border-color: nth($c-list, $i)
+  &.for-4 &-step
+    width: calc((960px - 80px * 3) / 4)
+    h3
+      width: 160px
+      height: 160px
+      font-size: 1.1em
+      padding-top: 28%
+      border-width: 8px
+  &.for-4 &-arrow
+    padding-top: 6%
 
 .playground,
 .casestudies

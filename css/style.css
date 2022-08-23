@@ -544,6 +544,22 @@ hr ~ ol::before {
   border-color: #ee5253;
 }
 
+.designProcess.for-4 .designProcess-step {
+  width: calc((960px - 80px * 3) / 4);
+}
+
+.designProcess.for-4 .designProcess-step h3 {
+  width: 160px;
+  height: 160px;
+  font-size: 1.1em;
+  padding-top: 28%;
+  border-width: 8px;
+}
+
+.designProcess.for-4 .designProcess-arrow {
+  padding-top: 6%;
+}
+
 .playground,
 .casestudies {
   display: -webkit-box;
