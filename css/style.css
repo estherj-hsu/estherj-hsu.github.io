@@ -230,6 +230,18 @@ li ul {
   margin-bottom: 1rem;
 }
 
+.task-list {
+  list-style: none;
+}
+
+.task-list label {
+  margin-bottom: 0;
+}
+
+.task-list input {
+  margin-right: 6px;
+}
+
 table th {
   font-weight: bolder;
   text-align: center;
