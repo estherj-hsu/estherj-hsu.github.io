@@ -182,7 +182,7 @@ table
   .nav
     font-size: 3em
     .nav-link
-      .5rem 1rem 0 1rem
+      padding: 5rem 1rem 0 1rem
     span
       display: block
       font-size: 12px
@@ -223,7 +223,7 @@ h3[id^="esther"]
   display: none
   & ~ p:not(:empty),
   & ~ ul,
-  & ~ ol,
+  & ~ ol
     margin-left: 1em
     margin-bottom: 1em
     padding: .5em 2em
@@ -374,14 +374,14 @@ hr
 
 .playground,
 .casestudies
-	display: flex
-	flex-flow: row wrap
-	list-style: none
-	margin: 0 !important
-	padding: 0
-	width: 100%
-	justify-content: flex-between
-	a
+  display: flex
+  flex-flow: row wrap
+  list-style: none
+  margin: 0 !important
+  padding: 0
+  width: 100%
+  justify-content: flex-between
+  a
     box-sizing: border-box
     width: calc((960px - 16px * 4) / 5)
     height: 120px
@@ -403,6 +403,7 @@ hr
       text-align: center
       font-weight: 400
       padding: 0 20px
+      line-height: 1.25
       img
         width: 100%
       span
@@ -414,7 +415,7 @@ hr
         line-height: 1.1
         background-color: #fff
         border-radius: 2px
-	&.js > a
+  &.js > a
     background-color: #f8c291
 .casestudies
   justify-content: center
