@@ -1,577 +1,592 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=preconnect href=https://fonts.gstatic.com><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css integrity=sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l crossorigin=anonymous><link rel=stylesheet type=text/css href=/css/style.css><link rel=stylesheet type=text/css href=/css/syntax.css><title>Data Structures ｜ Esther's Life</title><meta name=description content="esther From data structure to algorithm&amp;hellip;?
-Still working on the tree removing part T^T"><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','G-ZS1GBZ1JP6','auto');ga('send','pageview');}</script><link rel="shortcut icon" href=/images/favicon.ico></head><body><header><div><a href=/ class=logo><img width=160px src=/img/esther.png></a></div><div><nav id=nav class="nav justify-content-end"><a class=nav-link title=Esther href=/esther/ target=_self><i data-feather=message-circle></i></a><a class=nav-link title=Blog href=/posts/ target=_self><i data-feather=book-open></i></a><a class=nav-link title=Portfolio href=/portfolio/ target=_self><i data-feather=briefcase></i></a><a class=nav-link title=Playground href=/playground/ target=_self><i data-feather=box></i></a><a class=nav-link title=Github href=https://github.com/estherj-hsu target=_blank><i data-feather=github></i></a><a class=nav-link title=LinkedIn href=https://www.linkedin.com/in/estherjhsu/ target=_blank><i data-feather=linkedin></i></a></nav></div></header><main><h1 class=text-center>Data Structures</h1><div class="text-center mt-4 mb-5"><div class=meta><i width=14px height=14px data-feather=calendar></i><time datetime=2018-01-29>Jan 29, 2018</time>
-<span class=mx-3></span><i width=14px height=14px data-feather=tag></i><a class=tag href=/tags/js>JS</a>
-<a class=tag href=/tags/front-end>Front-End</a></div></div><h3 id=esther>esther</h3><p>From data structure to algorithm&mldr;?<br>Still working on the tree removing part T^T</p><hr><h2 id=references>References</h2><ul><li><a href=https://medium.com/@limichelle21/5-data-structures-in-5-minutes-7f4b34d00b8e target=_blank>6 Data Structures in 6 Minutes</a></li><li><a href=https://www.quora.com/How-do-you-use-Queue-Stack-List-Map-and-Set-in-Java target=_blank>How do you use Queue, Stack, List, Map, and Set in Java?</a></li><li>用 JavaScript 學習資料結構和演算法 系列<ul><li><a href=https://blog.kdchang.cc/2016/06/23/javascript-data-structure-algorithm-array/ target=_blank>陣列（Array）篇</a></li><li><a href=https://blog.kdchang.cc/2016/06/24/javascript-data-structure-algorithm-stack/ target=_blank>堆疊（Stack）篇</a> *</li><li><a href=https://blog.kdchang.cc/2016/09/11/javascript-data-structure-algorithm-queue/ target=_blank>佇列（Queue）篇</a> *</li><li><a href=https://blog.kdchang.cc/2016/09/21/javascript-data-structure-algorithm-linked-list/ target=_blank>鏈結串列（Linked List）篇</a> *</li><li><a href=https://blog.kdchang.cc/2016/09/23/javascript-data-structure-algorithm-set/ target=_blank>集合（Set）篇</a> *</li><li><a href=https://blog.kdchang.cc/2016/09/23/javascript-data-structure-algorithm-dictionary-hash-table/ target=_blank>字典（Dictionary）和雜湊表（Hash Table）篇</a></li><li><a href=https://blog.kdchang.cc/2016/09/25/javascript-data-structure-algorithm-tree/ target=_blank>樹（Tree）篇</a> *</li><li><a href=https://blog.kdchang.cc/2016/09/26/javascript-data-structure-algorithm-graph/ target=_blank>圖形（Graph）篇</a></li><li><a href=https://blog.kdchang.cc/2016/09/27/javascript-data-structure-algorithm-sort-and-search/ target=_blank>排序（Sort）與搜尋（Search）篇</a></li><li><a href=https://blog.kdchang.cc/2016/09/27/javascript-data-structure-algorithm-advance/ target=_blank>演算法進階補充篇</a></li></ul></li></ul><h2 id=array>Array</h2><p><img src=https://blog.kdchang.cc/2016/06/23/javascript-data-structure-algorithm-array/ja-array-operation.jpg alt=@tooto1985></p><h2 id=stack>Stack</h2><p>Last In First Out (LIFO)</p><p><img src=https://www.tutorialspoint.com/data_structures_algorithms/images/stack_representation.jpg alt=tutorialspoint></p><div class=highlight><pre class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>Stack</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-  <span class=kd>var</span> <span class=nx>items</span> <span class=o>=</span> <span class=p>[</span><span class=p>]</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>push</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>items</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>pop</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>.</span><span class=nx>pop</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>peek</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>[</span><span class=nx>items</span><span class=p>.</span><span class=nx>length</span> <span class=o>-</span> <span class=mi>1</span><span class=p>]</span><span class=p>;</span>
-  <span class=p>}</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>isEmpty</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>.</span><span class=nx>length</span> <span class=o>===</span> <span class=mi>0</span><span class=p>;</span>
-  <span class=p>}</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>clear</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>items</span> <span class=o>=</span> <span class=p>[</span><span class=p>]</span><span class=p>;</span>
-  <span class=p>}</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>size</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span>
-  <span class=p>}</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>print</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>items</span><span class=p>.</span><span class=nx>toString</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span>
-<span class=p>}</span>
-
-<span class=kd>var</span> <span class=nx>stack</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Stack</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>stack</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=s1>&#39;Book I&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>stack</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=s1>&#39;Book II&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>stack</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=s1>&#39;Book III&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>stack</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=s1>&#39;Book IV&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>stack</span><span class=p>.</span><span class=nx>pop</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>                   <span class=c1>// remove BookIV
-</span><span class=c1></span>
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>stack</span><span class=p>.</span><span class=nx>size</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>     <span class=c1>// 3
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>stack</span><span class=p>.</span><span class=nx>peek</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>     <span class=c1>// Book III
-</span><span class=c1></span><span class=nx>stack</span><span class=p>.</span><span class=nx>clear</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>                 <span class=c1>// Clear stack
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>stack</span><span class=p>.</span><span class=nx>isEmpty</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>  <span class=c1>// true
-</span></code></pre></div><h2 id=queue>Queue</h2><p>First In First Out (FIFO): In <strong>Rear</strong>, Out <strong>Front</strong></p><p><img src=https://www.tutorialspoint.com/data_structures_algorithms/images/queue_diagram.jpg alt=tutorialspoint></p><p><img src=https://www.tutorialspoint.com/data_structures_algorithms/images/queue_enqueue_diagram.jpg alt=tutorialspoint></p><div class=highlight><pre class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>Queue</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-  <span class=kd>let</span> <span class=nx>items</span> <span class=o>=</span> <span class=p>[</span><span class=p>]</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>enqueue</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>items</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>dequeue</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>.</span><span class=nx>shift</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>front</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>isEmpty</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>.</span><span class=nx>length</span> <span class=o>===</span> <span class=mi>0</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>clear</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>items</span> <span class=o>=</span> <span class=p>[</span><span class=p>]</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>size</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>print</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>items</span><span class=p>.</span><span class=nx>toString</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span>
-<span class=p>}</span>
-
-<span class=kr>const</span> <span class=nx>queue</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Queue</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>isEmpty</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>     <span class=c1>// true
-</span><span class=c1></span>
-<span class=nx>queue</span><span class=p>.</span><span class=nx>enqueue</span><span class=p>(</span><span class=s1>&#39;Car 1&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>queue</span><span class=p>.</span><span class=nx>enqueue</span><span class=p>(</span><span class=s1>&#39;Car 2&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>queue</span><span class=p>.</span><span class=nx>enqueue</span><span class=p>(</span><span class=s1>&#39;Car 3&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>queue</span><span class=p>.</span><span class=nx>enqueue</span><span class=p>(</span><span class=s1>&#39;Car 4&#39;</span><span class=p>)</span><span class=p>;</span>
-
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>front</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>       <span class=c1>// Car 1
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>size</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>        <span class=c1>// 4
-</span><span class=c1></span><span class=nx>queue</span><span class=p>.</span><span class=nx>print</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>                    <span class=c1>// Car 1,Car 2,Car 3,Car 4
-</span><span class=c1></span><span class=nx>queue</span><span class=p>.</span><span class=nx>dequeue</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>                  <span class=c1>// remove Car 1
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>front</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>       <span class=c1>// Car 2
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>size</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>        <span class=c1>// 3
-</span><span class=c1></span><span class=nx>queue</span><span class=p>.</span><span class=nx>print</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>                    <span class=c1>// Car 2,Car 3,Car 4
-</span></code></pre></div><h3 id=priority-queue>Priority Queue</h3><p>Set priority to each item in array.</p><p><img src=https://netmatze.files.wordpress.com/2014/08/priorityqueue.png alt=netmatze></p><div class=highlight><pre class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>PriorityQueue</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-  <span class=kd>let</span> <span class=nx>items</span> <span class=o>=</span> <span class=p>[</span><span class=p>]</span><span class=p>;</span>
-  <span class=kd>function</span> <span class=nx>QueueElement</span><span class=p>(</span><span class=nx>element</span><span class=p>,</span> <span class=nx>priority</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>this</span><span class=p>.</span><span class=nx>element</span> <span class=o>=</span> <span class=nx>element</span><span class=p>;</span>
-    <span class=k>this</span><span class=p>.</span><span class=nx>priority</span> <span class=o>=</span> <span class=nx>priority</span><span class=p>;</span>
-  <span class=p>}</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>enqueue</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>element</span><span class=p>,</span> <span class=nx>priority</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kr>const</span> <span class=nx>queueElement</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>QueueElement</span><span class=p>(</span><span class=nx>element</span><span class=p>,</span> <span class=nx>priority</span><span class=p>)</span><span class=p>;</span>
-    <span class=k>if</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>isEmpty</span><span class=p>(</span><span class=p>)</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>items</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>queueElement</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-      <span class=kd>let</span> <span class=nx>added</span> <span class=o>=</span> <span class=kc>false</span><span class=p>;</span>
-      <span class=k>for</span><span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>items</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-        <span class=k>if</span><span class=p>(</span><span class=nx>queueElement</span><span class=p>.</span><span class=nx>priority</span> <span class=o>&lt;</span> <span class=nx>items</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=p>.</span><span class=nx>priority</span><span class=p>)</span> <span class=p>{</span>
-          <span class=nx>items</span><span class=p>.</span><span class=nx>splice</span><span class=p>(</span><span class=nx>i</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=nx>queueElement</span><span class=p>)</span><span class=p>;</span>
-                    <span class=nx>added</span> <span class=o>=</span> <span class=kc>true</span><span class=p>;</span>
-                    <span class=k>break</span><span class=p>;</span>
-        <span class=p>}</span>
-      <span class=p>}</span>
-      <span class=k>if</span><span class=p>(</span><span class=o>!</span><span class=nx>added</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>items</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>queueElement</span><span class=p>)</span><span class=p>;</span>
-      <span class=p>}</span>
-    <span class=p>}</span>
-  <span class=p>}</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>dequeue</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>.</span><span class=nx>shift</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>front</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>isEmpty</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>.</span><span class=nx>length</span> <span class=o>===</span> <span class=mi>0</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>clear</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>items</span> <span class=o>=</span> <span class=p>[</span><span class=p>]</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>size</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>print</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>(</span><span class=nx>items</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span>
-<span class=p>}</span>
-
-<span class=kr>const</span> <span class=nx>priorityQueue</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>PriorityQueue</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>isEmpty</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>      <span class=c1>// true
-</span><span class=c1></span>
-<span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>enqueue</span><span class=p>(</span><span class=s1>&#39;Tom&#39;</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>enqueue</span><span class=p>(</span><span class=s1>&#39;Jane&#39;</span><span class=p>,</span> <span class=mi>1</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>enqueue</span><span class=p>(</span><span class=s1>&#39;Ann&#39;</span><span class=p>,</span> <span class=mi>4</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>enqueue</span><span class=p>(</span><span class=s1>&#39;Tina&#39;</span><span class=p>,</span> <span class=mi>3</span><span class=p>)</span><span class=p>;</span>
-
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>front</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>        <span class=c1>// {element: &#34;Jane&#34;, priority: 1}
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>size</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>         <span class=c1>// 4
-</span><span class=c1></span><span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>print</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>                     <span class=c1>// [{element: &#34;Jane&#34;, priority: 1}, {element: &#34;Tom&#34;, priority: 2}, ...]
-</span><span class=c1></span><span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>dequeue</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>                   <span class=c1>// remove Jane
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>front</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>        <span class=c1>// {element: &#34;Tom&#34;, priority: 2}
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>size</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>         <span class=c1>// 3
-</span><span class=c1></span><span class=nx>priorityQueue</span><span class=p>.</span><span class=nx>print</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>                     <span class=c1>// [{element: &#34;Tom&#34;, priority: 2}, {element: &#34;Tina&#34;, priority: 3}, ...]
-</span></code></pre></div><h2 id=linked-list>Linked List</h2><p>A sequence of data structures which are connected together via links.</p><ul><li><strong>Link</strong> − Each Link of a linked list can store a data called an element.</li><li><strong>Next</strong> − Each Link of a linked list contain a link to next link called Next.</li><li><strong>LinkedList</strong> − A LinkedList contains the connection link to the first Link called First.</li></ul><p><img src=https://www.tutorialspoint.com/data_structures_algorithms/images/dsa_linkedlist.jpg alt=tutorialspoint></p><div class=highlight><pre class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>LinkedList</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-  <span class=kr>const</span> <span class=nx>Node</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>this</span><span class=p>.</span><span class=nx>element</span> <span class=o>=</span> <span class=nx>element</span><span class=p>;</span>
-    <span class=k>this</span><span class=p>.</span><span class=nx>next</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=kd>let</span> <span class=nx>length</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>            <span class=c1>// 存放 LinkedList 長度
-</span><span class=c1></span>  <span class=kd>let</span> <span class=nx>head</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>           <span class=c1>// 第一個節點的指標
-</span><span class=c1></span>
-  <span class=k>this</span><span class=p>.</span><span class=nx>getHead</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>head</span><span class=p>;</span>
-  <span class=p>}</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>append</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kr>const</span> <span class=nx>node</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Node</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span>
-    <span class=kd>let</span> <span class=nx>current</span><span class=p>;</span>
-
-    <span class=k>if</span><span class=p>(</span><span class=nx>head</span> <span class=o>===</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>head</span> <span class=o>=</span> <span class=nx>node</span><span class=p>;</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-      <span class=nx>current</span> <span class=o>=</span> <span class=nx>head</span><span class=p>;</span>
-      <span class=k>while</span><span class=p>(</span><span class=nx>current</span><span class=p>.</span><span class=nx>next</span><span class=p>)</span> <span class=p>{</span>
-          <span class=nx>current</span> <span class=o>=</span> <span class=nx>current</span><span class=p>.</span><span class=nx>next</span><span class=p>;</span>
-      <span class=p>}</span>
-      <span class=nx>current</span><span class=p>.</span><span class=nx>next</span> <span class=o>=</span> <span class=nx>node</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=nx>length</span><span class=o>++</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>insert</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>position</span><span class=p>,</span> <span class=nx>element</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=nx>position</span> <span class=o>&gt;=</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=nx>position</span> <span class=o>&lt;=</span> <span class=nx>length</span><span class=p>)</span> <span class=p>{</span>
-      <span class=kd>let</span> <span class=nx>node</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Node</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span><span class=p>;</span>
-      <span class=kd>let</span> <span class=nx>current</span> <span class=o>=</span> <span class=nx>head</span><span class=p>;</span>
-      <span class=kd>let</span> <span class=nx>previous</span><span class=p>;</span>
-      <span class=kd>let</span> <span class=nx>index</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
-
-      <span class=k>if</span><span class=p>(</span><span class=nx>position</span> <span class=o>===</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>node</span><span class=p>.</span><span class=nx>next</span> <span class=o>=</span> <span class=nx>current</span><span class=p>;</span>
-        <span class=nx>head</span> <span class=o>=</span> <span class=nx>node</span><span class=p>;</span>
-      <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-        <span class=k>while</span><span class=p>(</span><span class=nx>index</span><span class=o>++</span> <span class=o>&lt;</span> <span class=nx>position</span><span class=p>)</span> <span class=p>{</span>
-            <span class=nx>previous</span> <span class=o>=</span> <span class=nx>current</span><span class=p>;</span>
-            <span class=nx>current</span> <span class=o>=</span> <span class=nx>current</span><span class=p>.</span><span class=nx>next</span><span class=p>;</span>
-        <span class=p>}</span>
-        <span class=nx>node</span><span class=p>.</span><span class=nx>next</span> <span class=o>=</span> <span class=nx>current</span><span class=p>;</span>
-        <span class=nx>previous</span><span class=p>.</span><span class=nx>next</span> <span class=o>=</span> <span class=nx>node</span><span class=p>;</span>
-      <span class=p>}</span>
-      <span class=nx>length</span><span class=o>++</span><span class=p>;</span>
-      <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
-    <span class=p>}</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>remove</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kd>let</span> <span class=nx>index</span> <span class=o>=</span> <span class=k>this</span><span class=p>.</span><span class=nx>indexOf</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span><span class=p>;</span>
-    <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>removeAt</span><span class=p>(</span><span class=nx>index</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>removeAt</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>position</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=nx>position</span> <span class=o>&gt;</span> <span class=o>-</span><span class=mi>1</span> <span class=o>&amp;&amp;</span> <span class=nx>position</span> <span class=o>&lt;</span> <span class=nx>length</span><span class=p>)</span> <span class=p>{</span>
-      <span class=kd>let</span> <span class=nx>current</span> <span class=o>=</span> <span class=nx>head</span><span class=p>;</span>
-      <span class=kd>let</span> <span class=nx>previous</span><span class=p>;</span>
-      <span class=kd>let</span> <span class=nx>index</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
-      <span class=k>if</span><span class=p>(</span><span class=nx>position</span> <span class=o>===</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>head</span> <span class=o>=</span> <span class=nx>current</span><span class=p>.</span><span class=nx>next</span><span class=p>;</span>
-      <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-        <span class=k>while</span><span class=p>(</span><span class=nx>index</span><span class=o>++</span> <span class=o>&lt;</span> <span class=nx>position</span><span class=p>)</span> <span class=p>{</span>
-          <span class=nx>previous</span> <span class=o>=</span> <span class=nx>current</span><span class=p>;</span>
-          <span class=nx>current</span> <span class=o>=</span> <span class=nx>current</span><span class=p>.</span><span class=nx>next</span><span class=p>;</span>
-        <span class=p>}</span>
-        <span class=nx>previous</span><span class=p>.</span><span class=nx>next</span> <span class=o>=</span> <span class=nx>current</span><span class=p>.</span><span class=nx>next</span><span class=p>;</span>
-      <span class=p>}</span>
-      <span class=nx>length</span><span class=o>--</span><span class=p>;</span>
-      <span class=k>return</span> <span class=nx>current</span><span class=p>.</span><span class=nx>element</span><span class=p>;</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=kc>null</span><span class=p>;</span>
-    <span class=p>}</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>indexOf</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kd>var</span> <span class=nx>current</span> <span class=o>=</span> <span class=nx>head</span><span class=p>;</span>
-    <span class=kd>var</span> <span class=nx>index</span> <span class=o>=</span> <span class=o>-</span><span class=mi>1</span><span class=p>;</span>
-
-    <span class=k>while</span><span class=p>(</span><span class=nx>current</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>if</span><span class=p>(</span><span class=nx>element</span> <span class=o>===</span> <span class=nx>current</span><span class=p>.</span><span class=nx>element</span><span class=p>)</span> <span class=p>{</span>
-          <span class=k>return</span> <span class=nx>index</span><span class=p>;</span>
-      <span class=p>}</span>
-      <span class=nx>index</span><span class=o>++</span><span class=p>;</span>
-      <span class=nx>current</span> <span class=o>=</span> <span class=nx>current</span><span class=p>.</span><span class=nx>next</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=k>return</span> <span class=o>-</span><span class=mi>1</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>isEmpty</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>length</span> <span class=o>===</span> <span class=mi>0</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>size</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=nx>length</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>toString</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kd>let</span> <span class=nx>current</span> <span class=o>=</span> <span class=nx>head</span><span class=p>;</span>
-    <span class=kd>let</span> <span class=nx>string</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span><span class=p>;</span>
-    <span class=k>while</span><span class=p>(</span><span class=nx>current</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>string</span> <span class=o>+=</span> <span class=nx>current</span><span class=p>.</span><span class=nx>element</span><span class=p>;</span>
-      <span class=nx>current</span> <span class=o>=</span> <span class=nx>current</span><span class=p>.</span><span class=nx>next</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=k>return</span> <span class=nx>string</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>print</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>toString</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-<span class=p>}</span><span class=p>;</span>
-
-<span class=kr>const</span> <span class=nx>linkdeList</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>LinkedList</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>linkdeList</span><span class=p>.</span><span class=nx>isEmpty</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>     <span class=c1>// true
-</span><span class=c1></span>
-<span class=nx>linkedList</span><span class=p>.</span><span class=nx>append</span><span class=p>(</span><span class=s1>&#39;A&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>linkedList</span><span class=p>.</span><span class=nx>append</span><span class=p>(</span><span class=s1>&#39;B&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>linkedList</span><span class=p>.</span><span class=nx>append</span><span class=p>(</span><span class=s1>&#39;C&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>linkedList</span><span class=p>.</span><span class=nx>append</span><span class=p>(</span><span class=s1>&#39;D&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>linkedList</span><span class=p>.</span><span class=nx>print</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>                    <span class=c1>// ABCD
-</span><span class=c1></span><span class=nx>linkedList</span><span class=p>.</span><span class=nx>insert</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span> <span class=s1>&#39;X&#39;</span><span class=p>)</span><span class=p>;</span>             <span class=c1>// add X after node2(B)
-</span><span class=c1></span><span class=nx>linkedList</span><span class=p>.</span><span class=nx>print</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>                    <span class=c1>// ABbCD
-</span><span class=c1></span><span class=nx>linkedList</span><span class=p>.</span><span class=nx>remove</span><span class=p>(</span><span class=s1>&#39;B&#39;</span><span class=p>)</span><span class=p>;</span>                <span class=c1>// remove B
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>linkedList</span><span class=p>.</span><span class=nx>size</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>        <span class=c1>// 4
-</span><span class=c1></span><span class=nx>linkedList</span><span class=p>.</span><span class=nx>removeAt</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span><span class=p>;</span>                <span class=c1>// remove node0 (A)
-</span><span class=c1></span><span class=nx>linkedList</span><span class=p>.</span><span class=nx>print</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>                    <span class=c1>// XCD
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>linkedList</span><span class=p>.</span><span class=nx>indexOf</span><span class=p>(</span><span class=s1>&#39;X&#39;</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>  <span class=c1>// -1
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>linkedList</span><span class=p>.</span><span class=nx>indexOf</span><span class=p>(</span><span class=s1>&#39;D&#39;</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>  <span class=c1>// 1
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>linkedList</span><span class=p>.</span><span class=nx>getHead</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>     <span class=c1>// { element: &#34;X&#34;, next: { element: &#34;C&#34;, next: { ... } } }
-</span></code></pre></div><h3 id=types>Types</h3><ul><li>Singly Linked List<br><img src=https://www.studytonight.com/data-structures/images/linked-list-linear.png alt=studytonight></li><li>Doubly Linked List<br><img src=https://www.studytonight.com/data-structures/images/linked-list-double.png alt=studytonight></li><li>Circular Linked List<br><img src=https://www.studytonight.com/data-structures/images/linked-list-circular.png alt=studytonight></li></ul><h2 id=set>Set</h2><p><img src=http://wikistack.com/wp-content/uploads/2015/04/disjsds.jpeg alt=wikistack></p><div class=highlight><pre class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>Set</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-  <span class=kd>var</span> <span class=nx>items</span> <span class=o>=</span> <span class=p>{</span><span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>add</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>value</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=o>!</span><span class=k>this</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=nx>value</span><span class=p>)</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>items</span><span class=p>[</span><span class=nx>value</span><span class=p>]</span> <span class=o>=</span> <span class=nx>value</span><span class=p>;</span>
-      <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>remove</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>value</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=nx>value</span><span class=p>)</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>delete</span> <span class=nx>items</span><span class=p>[</span><span class=nx>value</span><span class=p>]</span><span class=p>;</span>
-      <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>has</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>value</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>items</span><span class=p>.</span><span class=nx>hasOwnProperty</span><span class=p>(</span><span class=nx>value</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>clear</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>items</span> <span class=o>=</span> <span class=p>{</span><span class=p>}</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>size</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kd>let</span> <span class=nx>count</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
-    <span class=k>for</span><span class=p>(</span><span class=kd>let</span> <span class=nx>key</span> <span class=k>in</span> <span class=nx>items</span><span class=p>)</span> <span class=p>{</span>
-      <span class=o>++</span><span class=nx>count</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=k>return</span> <span class=nx>count</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>value</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kd>let</span> <span class=nx>keys</span> <span class=o>=</span> <span class=p>[</span><span class=p>]</span><span class=p>;</span>
-    <span class=k>for</span><span class=p>(</span><span class=kd>let</span> <span class=nx>key</span> <span class=k>in</span> <span class=nx>items</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>keys</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=k>return</span> <span class=nx>keys</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>union</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>otherSet</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kd>let</span> <span class=nx>unionSet</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Set</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-    <span class=kd>let</span> <span class=nx>value</span> <span class=o>=</span> <span class=k>this</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-    <span class=k>for</span><span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>value</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>unionSet</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=nx>value</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=nx>value</span> <span class=o>=</span> <span class=nx>otherSet</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-    <span class=k>for</span><span class=p>(</span><span class=kd>var</span> <span class=nx>j</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>j</span> <span class=o>&lt;</span> <span class=nx>value</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>j</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>unionSet</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=nx>value</span><span class=p>[</span><span class=nx>j</span><span class=p>]</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=k>return</span> <span class=nx>unionSet</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>intersection</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>otherSet</span><span class=p>)</span> <span class=p>{</span>
-  <span class=kd>let</span> <span class=nx>intersectionSet</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Set</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-  <span class=kd>let</span> <span class=nx>value</span> <span class=o>=</span> <span class=k>this</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-  <span class=k>for</span><span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>value</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=nx>otherSet</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=nx>value</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=p>)</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>intersectionSet</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=nx>value</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span>
-  <span class=p>}</span>
-  <span class=k>return</span> <span class=nx>intersectionSet</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>difference</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>otherSet</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kd>let</span> <span class=nx>differenceSet</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Set</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-    <span class=kd>let</span> <span class=nx>value</span> <span class=o>=</span> <span class=k>this</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-    <span class=k>for</span><span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>value</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>if</span><span class=p>(</span><span class=o>!</span><span class=nx>otherSet</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=nx>value</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=p>)</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>differenceSet</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=nx>value</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=p>)</span><span class=p>;</span>
-      <span class=p>}</span>
-    <span class=p>}</span>
-    <span class=k>return</span> <span class=nx>differenceSet</span><span class=p>;</span>
-  <span class=p>}</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>isSub</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>otherSet</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>size</span><span class=p>(</span><span class=p>)</span> <span class=o>&gt;</span> <span class=nx>otherSet</span><span class=p>.</span><span class=nx>size</span><span class=p>(</span><span class=p>)</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-      <span class=kd>let</span> <span class=nx>value</span> <span class=o>=</span> <span class=k>this</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-      <span class=k>for</span><span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>value</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-        <span class=k>if</span><span class=p>(</span><span class=o>!</span><span class=nx>otherSet</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=nx>value</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=p>)</span><span class=p>)</span> <span class=p>{</span>
-          <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
-        <span class=p>}</span>
-      <span class=p>}</span>
-      <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
-    <span class=p>}</span>
-  <span class=p>}</span><span class=p>;</span>
-<span class=p>}</span>
-
-<span class=kr>const</span> <span class=nx>set</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Set</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-
-<span class=nx>set</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=mi>12</span><span class=p>)</span><span class=p>;</span>                                         <span class=c1>// add 12
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>set</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                            <span class=c1>// [&#39;12&#39;]
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>set</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=mi>12</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                            <span class=c1>// true
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>set</span><span class=p>.</span><span class=nx>size</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                             <span class=c1>// 1
-</span><span class=c1></span><span class=nx>set</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=mi>15</span><span class=p>)</span><span class=p>;</span>                                         <span class=c1>// add 15
-</span><span class=c1></span><span class=nx>set</span><span class=p>.</span><span class=nx>remove</span><span class=p>(</span><span class=mi>12</span><span class=p>)</span><span class=p>;</span>                                      <span class=c1>// remove 12
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>set</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=mi>12</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                            <span class=c1>// false
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>set</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                            <span class=c1>// [&#39;15&#39;]
-</span><span class=c1></span>
-<span class=kd>let</span> <span class=nx>setA</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Set</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>setA</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;A&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>setA</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;B&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>setA</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;C&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>setA</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;D&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>setA</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                           <span class=c1>// [&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;]
-</span><span class=c1></span>
-<span class=kd>let</span> <span class=nx>setB</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Set</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>setB</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;A&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>setB</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;C&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>setB</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;E&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>setB</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;F&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>setB</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                           <span class=c1>// [&#34;A&#34;, &#34;C&#34;, &#34;E&#34;, &#34;F&#34;]
-</span><span class=c1></span>
-<span class=kd>let</span> <span class=nx>setC</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Set</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>setC</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;A&#39;</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>setC</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;B&#39;</span><span class=p>)</span><span class=p>;</span>
-
-<span class=kr>const</span> <span class=nx>unionSet</span> <span class=o>=</span> <span class=nx>setA</span><span class=p>.</span><span class=nx>union</span><span class=p>(</span><span class=nx>setB</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>unionSet</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                       <span class=c1>// [&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;, &#34;E&#34;, &#34;F&#34;]
-</span><span class=c1></span>
-<span class=kr>const</span> <span class=nx>intersectionSet</span> <span class=o>=</span> <span class=nx>setA</span><span class=p>.</span><span class=nx>intersection</span><span class=p>(</span><span class=nx>setB</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>intersectionSet</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                <span class=c1>// [&#34;A&#34;, &#34;C&#34;]
-</span><span class=c1></span>
-<span class=kr>const</span> <span class=nx>differenceSet</span> <span class=o>=</span> <span class=nx>setA</span><span class=p>.</span><span class=nx>difference</span><span class=p>(</span><span class=nx>setB</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>differenceSet</span><span class=p>.</span><span class=nx>value</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                  <span class=c1>// [&#34;A&#34;, &#34;C&#34;]
-</span><span class=c1></span>
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>setB</span><span class=p>.</span><span class=nx>isSub</span><span class=p>(</span><span class=nx>setA</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                       <span class=c1>// false
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>setC</span><span class=p>.</span><span class=nx>isSub</span><span class=p>(</span><span class=nx>setA</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                       <span class=c1>// true
-</span></code></pre></div><h2 id=tree>Tree</h2><ul><li><strong>inorder</strong>: left -> root -> right (A -> B -> C)</li><li><strong>preorder</strong>: root -> left -> right (B -> A -> C)</li><li><strong>postorder</strong>: left -> right -> root (A -> C -> B)</li></ul><p><img src=https://cdn-images-1.medium.com/max/800/1*87h2uhCJ5qztBNwfck2b6g.jpeg alt=medium></p><div class=highlight><pre class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>BinarySearchTree</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-  <span class=kr>const</span> <span class=nx>Node</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>key</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>this</span><span class=p>.</span><span class=nx>key</span> <span class=o>=</span> <span class=nx>key</span><span class=p>;</span>
-    <span class=k>this</span><span class=p>.</span><span class=nx>left</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
-    <span class=k>this</span><span class=p>.</span><span class=nx>right</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=kd>let</span> <span class=nx>root</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>insert</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>key</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kd>let</span> <span class=nx>newNode</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Node</span><span class=p>(</span><span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-
-    <span class=k>if</span><span class=p>(</span><span class=nx>root</span> <span class=o>===</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>root</span> <span class=o>=</span> <span class=nx>newNode</span><span class=p>;</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-      <span class=nx>insertNode</span><span class=p>(</span><span class=nx>root</span><span class=p>,</span> <span class=nx>newNode</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=kr>const</span> <span class=nx>insertNode</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>node</span><span class=p>,</span> <span class=nx>newNode</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=nx>newNode</span><span class=p>.</span><span class=nx>key</span> <span class=o>&lt;</span> <span class=nx>node</span><span class=p>.</span><span class=nx>key</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>if</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>left</span> <span class=o>===</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>node</span><span class=p>.</span><span class=nx>left</span> <span class=o>=</span> <span class=nx>newNode</span><span class=p>;</span>
-      <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-        <span class=nx>insertNode</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>left</span><span class=p>,</span> <span class=nx>newNode</span><span class=p>)</span><span class=p>;</span>
-      <span class=p>}</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-      <span class=k>if</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>right</span> <span class=o>===</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>node</span><span class=p>.</span><span class=nx>right</span> <span class=o>=</span> <span class=nx>newNode</span><span class=p>;</span>
-      <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-        <span class=nx>insertNode</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>right</span><span class=p>,</span> <span class=nx>newNode</span><span class=p>)</span><span class=p>;</span>
-      <span class=p>}</span>
-    <span class=p>}</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>inOrderTraverse</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>callback</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>inOrderTraverseNode</span><span class=p>(</span><span class=nx>root</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=kr>const</span> <span class=nx>inOrderTraverseNode</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>node</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=nx>node</span> <span class=o>!==</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>inOrderTraverseNode</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>left</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span><span class=p>;</span>
-      <span class=nx>callback</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-      <span class=nx>inOrderTraverseNode</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>right</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span>
-  <span class=p>}</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>preOrderTraverse</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>callback</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>preOrderTraverseNode</span><span class=p>(</span><span class=nx>root</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=kr>const</span> <span class=nx>preOrderTraverseNode</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>node</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=nx>node</span> <span class=o>!==</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>callback</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-      <span class=nx>preOrderTraverseNode</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>left</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span><span class=p>;</span>
-      <span class=nx>preOrderTraverseNode</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>right</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>postOrderTraverse</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>callback</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>postOrderTraverseNode</span><span class=p>(</span><span class=nx>root</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=kr>const</span> <span class=nx>postOrderTraverseNode</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>node</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=nx>node</span> <span class=o>!==</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>postOrderTraverseNode</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>left</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span><span class=p>;</span>
-      <span class=nx>postOrderTraverseNode</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>right</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span><span class=p>;</span>
-      <span class=nx>callback</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>search</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>key</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>searchNode</span><span class=p>(</span><span class=nx>root</span><span class=p>,</span> <span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=kr>const</span> <span class=nx>searchNode</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>node</span><span class=p>,</span> <span class=nx>key</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=nx>node</span> <span class=o>===</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=k>if</span> <span class=p>(</span><span class=nx>key</span> <span class=o>===</span> <span class=nx>node</span><span class=p>.</span><span class=nx>key</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=k>if</span> <span class=p>(</span><span class=nx>key</span> <span class=o>&lt;</span> <span class=nx>node</span><span class=p>.</span><span class=nx>key</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=nx>searchNode</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>left</span><span class=p>,</span> <span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=nx>key</span> <span class=o>&gt;</span> <span class=nx>node</span><span class=p>.</span><span class=nx>key</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=nx>searchNode</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>right</span><span class=p>,</span> <span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>min</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>minNode</span><span class=p>(</span><span class=nx>root</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=kr>const</span> <span class=nx>minNode</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>node</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=nx>node</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>while</span><span class=p>(</span><span class=nx>node</span> <span class=o>&amp;&amp;</span> <span class=nx>node</span><span class=p>.</span><span class=nx>left</span> <span class=o>!==</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>node</span> <span class=o>=</span> <span class=nx>node</span><span class=p>.</span><span class=nx>left</span><span class=p>;</span>
-      <span class=p>}</span>
-      <span class=k>return</span> <span class=nx>node</span><span class=p>.</span><span class=nx>key</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=k>return</span> <span class=kc>null</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>max</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>maxNode</span><span class=p>(</span><span class=nx>root</span><span class=p>)</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=kr>const</span> <span class=nx>maxNode</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>node</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=nx>node</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>while</span><span class=p>(</span><span class=nx>node</span> <span class=o>&amp;&amp;</span> <span class=nx>node</span><span class=p>.</span><span class=nx>right</span> <span class=o>!==</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>node</span> <span class=o>=</span> <span class=nx>node</span><span class=p>.</span><span class=nx>right</span><span class=p>;</span>
-      <span class=p>}</span>
-      <span class=k>return</span> <span class=nx>node</span><span class=p>.</span><span class=nx>key</span><span class=p>;</span>
-    <span class=p>}</span>
-    <span class=k>return</span> <span class=kc>null</span><span class=p>;</span>
-  <span class=p>}</span><span class=p>;</span>
-
-  <span class=k>this</span><span class=p>.</span><span class=nx>remove</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>key</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>search</span><span class=p>(</span><span class=nx>key</span><span class=p>)</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=nx>removeAt</span><span class=p>(</span><span class=nx>root</span><span class=p>,</span> <span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;No such node.&#39;</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span>
-  <span class=p>}</span><span class=p>;</span>
-  <span class=kr>const</span> <span class=nx>removeAt</span> <span class=o>=</span> <span class=kd>function</span><span class=p>(</span><span class=nx>node</span><span class=p>,</span> <span class=nx>key</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span><span class=p>(</span><span class=nx>node</span> <span class=o>===</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>node</span><span class=p>.</span><span class=nx>left</span> <span class=o>=</span> <span class=nx>removeAt</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>left</span><span class=p>,</span> <span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-      <span class=k>return</span> <span class=nx>node</span><span class=p>;</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=k>if</span><span class=p>(</span><span class=nx>key</span> <span class=o>&gt;</span> <span class=nx>node</span><span class=p>.</span><span class=nx>key</span><span class=p>)</span> <span class=p>{</span>
-      <span class=nx>node</span><span class=p>.</span><span class=nx>right</span> <span class=o>=</span> <span class=nx>removeAt</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>right</span><span class=p>,</span> <span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-      <span class=k>if</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>left</span> <span class=o>===</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>node</span> <span class=o>=</span> <span class=nx>node</span><span class=p>.</span><span class=nx>right</span><span class=p>;</span>
-        <span class=k>return</span> <span class=nx>node</span><span class=p>;</span>
-      <span class=p>}</span>
-      <span class=k>if</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>left</span> <span class=o>===</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>node</span> <span class=o>=</span> <span class=nx>node</span><span class=p>.</span><span class=nx>right</span><span class=p>;</span>
-        <span class=k>return</span> <span class=nx>node</span><span class=p>;</span>
-      <span class=p>}</span> <span class=k>else</span> <span class=k>if</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>right</span> <span class=o>===</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>node</span> <span class=o>=</span> <span class=nx>node</span><span class=p>.</span><span class=nx>left</span><span class=p>;</span>
-        <span class=k>return</span> <span class=nx>node</span><span class=p>;</span>
-      <span class=p>}</span>
-      <span class=kr>const</span> <span class=nx>aux</span> <span class=o>=</span> <span class=k>this</span><span class=p>.</span><span class=nx>search</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>right</span><span class=p>)</span><span class=p>;</span>
-      <span class=nx>node</span><span class=p>.</span><span class=nx>key</span> <span class=o>=</span> <span class=nx>removeAt</span><span class=p>(</span><span class=nx>node</span><span class=p>.</span><span class=nx>right</span><span class=p>,</span> <span class=nx>aux</span><span class=p>.</span><span class=nx>key</span><span class=p>)</span><span class=p>;</span>
-      <span class=k>return</span> <span class=nx>node</span><span class=p>;</span>
-    <span class=p>}</span>
-  <span class=p>}</span><span class=p>;</span>
-<span class=p>}</span><span class=p>;</span>
-
-<span class=kd>function</span> <span class=nx>printNode</span><span class=p>(</span><span class=nx>value</span><span class=p>)</span> <span class=p>{</span>
-  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>value</span><span class=p>)</span><span class=p>;</span>
-<span class=p>}</span>
-
-<span class=kd>let</span> <span class=nx>tree</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>BinarySearchTree</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>tree</span><span class=p>.</span><span class=nx>insert</span><span class=p>(</span><span class=mi>35</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>tree</span><span class=p>.</span><span class=nx>insert</span><span class=p>(</span><span class=mi>22</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>tree</span><span class=p>.</span><span class=nx>insert</span><span class=p>(</span><span class=mi>7</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>tree</span><span class=p>.</span><span class=nx>insert</span><span class=p>(</span><span class=mi>2</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>tree</span><span class=p>.</span><span class=nx>insert</span><span class=p>(</span><span class=mi>4</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>tree</span><span class=p>.</span><span class=nx>insert</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>tree</span><span class=p>.</span><span class=nx>insert</span><span class=p>(</span><span class=mi>32</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>tree</span><span class=p>.</span><span class=nx>insert</span><span class=p>(</span><span class=mi>40</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>tree</span><span class=p>.</span><span class=nx>inOrderTraverse</span><span class=p>(</span><span class=nx>printNode</span><span class=p>)</span><span class=p>;</span>            <span class=c1>// 2 4 5 7 22 32 35 40
-</span><span class=c1></span><span class=nx>tree</span><span class=p>.</span><span class=nx>preOrderTraverse</span><span class=p>(</span><span class=nx>printNode</span><span class=p>)</span><span class=p>;</span>           <span class=c1>// 35 22 7 2 4 5 32 40
-</span><span class=c1></span><span class=nx>tree</span><span class=p>.</span><span class=nx>postOrderTraverse</span><span class=p>(</span><span class=nx>printNode</span><span class=p>)</span><span class=p>;</span>          <span class=c1>// 5 4 2 7 32 22 40 35
-</span><span class=c1></span>
-<span class=c1>// tree.remove(5);
-</span><span class=c1></span><span class=c1>// tree.inOrderTraverse(printNode);            // 2 4 5 7 22 32 35 40
-</span><span class=c1></span><span class=nx>tree</span><span class=p>.</span><span class=nx>remove</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span><span class=p>;</span>
-<span class=nx>tree</span><span class=p>.</span><span class=nx>inOrderTraverse</span><span class=p>(</span><span class=nx>printNode</span><span class=p>)</span><span class=p>;</span>            <span class=c1>// 2 4 5 7 22 32 35 40
-</span><span class=c1></span>
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>tree</span><span class=p>.</span><span class=nx>min</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                    <span class=c1>// 2
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>tree</span><span class=p>.</span><span class=nx>max</span><span class=p>(</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                    <span class=c1>// 40
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>tree</span><span class=p>.</span><span class=nx>search</span><span class=p>(</span><span class=mi>8</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>                <span class=c1>// false
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>tree</span><span class=p>.</span><span class=nx>search</span><span class=p>(</span><span class=mi>22</span><span class=p>)</span><span class=p>)</span><span class=p>;</span>               <span class=c1>// true
-</span></code></pre></div></main><footer class="footer text-center"><p class=text-muted><small>Designed by EstherJ <span class=mx-2>|</span> Copyright © 2023</small></p></footer><script src=/js/feather.min.js></script><script>feather.replace()</script><script src=/js/jquery-3.5.1.min.js></script><script src=/js/jquery.fancybox.min.js></script></body></html>
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=preconnect href=https://fonts.gstatic.com><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css integrity=sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l crossorigin=anonymous><link rel=stylesheet type=text/css href=/css/style.css><link rel=stylesheet type=text/css href=/css/syntax.css><title>Data Structures ｜ Esther's Life</title><meta name=description content="esther From data structure to algorithm&mldr;?
+Still working on the tree removing part T^T
+"><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS1GBZ1JP6"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZS1GBZ1JP6")}</script><link rel="shortcut icon" href=/images/favicon.ico></head><body><header><div><a href=/ class=logo><img width=160px src=/img/esther.png></a></div><div><nav id=nav class="nav justify-content-end"><a class=nav-link title=Esther href=/esther/ target=_self><i data-feather=message-circle></i>
+</a><a class=nav-link title=Blog href=/posts/ target=_self><i data-feather=book-open></i>
+</a><a class=nav-link title=Portfolio href=/portfolio/ target=_self><i data-feather=briefcase></i>
+</a><a class=nav-link title=Playground href=/playground/ target=_self><i data-feather=box></i>
+</a><a class=nav-link title=Github href=https://github.com/estherj-hsu target=_blank><i data-feather=github></i>
+</a><a class=nav-link title=LinkedIn href=https://www.linkedin.com/in/estherjhsu/ target=_blank><i data-feather=linkedin></i></a></nav></div></header><main><h1 class=text-center>Data Structures</h1><div class="text-center mt-4 mb-5"><div class=meta><i width=14px height=14px data-feather=calendar></i>
+<time datetime=2018-01-29>Jan 29, 2018</time>
+<span class=mx-3></span>
+<i width=14px height=14px data-feather=tag></i>
+<a class=tag href=/tags/js>JS</a>
+<a class=tag href=/tags/front-end>Front-End</a></div></div><h3 id=esther>esther</h3><p>From data structure to algorithm&mldr;?<br>Still working on the tree removing part T^T</p><hr><h2 id=references>References</h2><ul><li><a href=https://medium.com/@limichelle21/5-data-structures-in-5-minutes-7f4b34d00b8e>6 Data Structures in 6 Minutes</a></li><li><a href=https://www.quora.com/How-do-you-use-Queue-Stack-List-Map-and-Set-in-Java>How do you use Queue, Stack, List, Map, and Set in Java?</a></li><li>用 JavaScript 學習資料結構和演算法 系列<ul><li><a href=https://blog.kdchang.cc/2016/06/23/javascript-data-structure-algorithm-array/>陣列（Array）篇</a></li><li><a href=https://blog.kdchang.cc/2016/06/24/javascript-data-structure-algorithm-stack/>堆疊（Stack）篇</a> *</li><li><a href=https://blog.kdchang.cc/2016/09/11/javascript-data-structure-algorithm-queue/>佇列（Queue）篇</a> *</li><li><a href=https://blog.kdchang.cc/2016/09/21/javascript-data-structure-algorithm-linked-list/>鏈結串列（Linked List）篇</a> *</li><li><a href=https://blog.kdchang.cc/2016/09/23/javascript-data-structure-algorithm-set/>集合（Set）篇</a> *</li><li><a href=https://blog.kdchang.cc/2016/09/23/javascript-data-structure-algorithm-dictionary-hash-table/>字典（Dictionary）和雜湊表（Hash Table）篇</a></li><li><a href=https://blog.kdchang.cc/2016/09/25/javascript-data-structure-algorithm-tree/>樹（Tree）篇</a> *</li><li><a href=https://blog.kdchang.cc/2016/09/26/javascript-data-structure-algorithm-graph/>圖形（Graph）篇</a></li><li><a href=https://blog.kdchang.cc/2016/09/27/javascript-data-structure-algorithm-sort-and-search/>排序（Sort）與搜尋（Search）篇</a></li><li><a href=https://blog.kdchang.cc/2016/09/27/javascript-data-structure-algorithm-advance/>演算法進階補充篇</a></li></ul></li></ul><h2 id=array>Array</h2><p><img src=https://blog.kdchang.cc/2016/06/23/javascript-data-structure-algorithm-array/ja-array-operation.jpg alt=@tooto1985></p><h2 id=stack>Stack</h2><p>Last In First Out (LIFO)</p><p><img src=https://www.tutorialspoint.com/data_structures_algorithms/images/stack_representation.jpg alt=tutorialspoint></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Stack</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>items</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>push</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>element</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>push</span>(<span style=color:#a6e22e>element</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>pop</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>peek</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>[<span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>];
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isEmpty</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>clear</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>items</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>length</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>print</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>toString</span>());
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>stack</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Stack</span>();
+</span></span><span style=display:flex><span><span style=color:#a6e22e>stack</span>.<span style=color:#a6e22e>push</span>(<span style=color:#e6db74>&#39;Book I&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>stack</span>.<span style=color:#a6e22e>push</span>(<span style=color:#e6db74>&#39;Book II&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>stack</span>.<span style=color:#a6e22e>push</span>(<span style=color:#e6db74>&#39;Book III&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>stack</span>.<span style=color:#a6e22e>push</span>(<span style=color:#e6db74>&#39;Book IV&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>stack</span>.<span style=color:#a6e22e>pop</span>();                   <span style=color:#75715e>// remove BookIV
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>stack</span>.<span style=color:#a6e22e>size</span>());     <span style=color:#75715e>// 3
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>stack</span>.<span style=color:#a6e22e>peek</span>());     <span style=color:#75715e>// Book III
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>stack</span>.<span style=color:#a6e22e>clear</span>();                 <span style=color:#75715e>// Clear stack
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>stack</span>.<span style=color:#a6e22e>isEmpty</span>());  <span style=color:#75715e>// true
+</span></span></span></code></pre></div><h2 id=queue>Queue</h2><p>First In First Out (FIFO): In <strong>Rear</strong>, Out <strong>Front</strong></p><p><img src=https://www.tutorialspoint.com/data_structures_algorithms/images/queue_diagram.jpg alt=tutorialspoint></p><p><img src=https://www.tutorialspoint.com/data_structures_algorithms/images/queue_enqueue_diagram.jpg alt=tutorialspoint></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Queue</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>items</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>enqueue</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>element</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>push</span>(<span style=color:#a6e22e>element</span>);
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>dequeue</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>shift</span>();
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>front</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>[<span style=color:#ae81ff>0</span>];
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isEmpty</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>clear</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>items</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>length</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>print</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>toString</span>());
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>queue</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Queue</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>isEmpty</span>());     <span style=color:#75715e>// true
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>enqueue</span>(<span style=color:#e6db74>&#39;Car 1&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>enqueue</span>(<span style=color:#e6db74>&#39;Car 2&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>enqueue</span>(<span style=color:#e6db74>&#39;Car 3&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>enqueue</span>(<span style=color:#e6db74>&#39;Car 4&#39;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>front</span>());       <span style=color:#75715e>// Car 1
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>size</span>());        <span style=color:#75715e>// 4
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>print</span>();                    <span style=color:#75715e>// Car 1,Car 2,Car 3,Car 4
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>dequeue</span>();                  <span style=color:#75715e>// remove Car 1
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>front</span>());       <span style=color:#75715e>// Car 2
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>size</span>());        <span style=color:#75715e>// 3
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>queue</span>.<span style=color:#a6e22e>print</span>();                    <span style=color:#75715e>// Car 2,Car 3,Car 4
+</span></span></span></code></pre></div><h3 id=priority-queue>Priority Queue</h3><p>Set priority to each item in array.</p><p><img src=https://netmatze.files.wordpress.com/2014/08/priorityqueue.png alt=netmatze></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>PriorityQueue</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>items</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>QueueElement</span>(<span style=color:#a6e22e>element</span>, <span style=color:#a6e22e>priority</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>element</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>element</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>priority</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>priority</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>enqueue</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>element</span>, <span style=color:#a6e22e>priority</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>queueElement</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>QueueElement</span>(<span style=color:#a6e22e>element</span>, <span style=color:#a6e22e>priority</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isEmpty</span>()) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>push</span>(<span style=color:#a6e22e>queueElement</span>);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>added</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>queueElement</span>.<span style=color:#a6e22e>priority</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>items</span>[<span style=color:#a6e22e>i</span>].<span style=color:#a6e22e>priority</span>) {
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>splice</span>(<span style=color:#a6e22e>i</span>, <span style=color:#ae81ff>0</span>, <span style=color:#a6e22e>queueElement</span>);
+</span></span><span style=display:flex><span>                    <span style=color:#a6e22e>added</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>added</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>push</span>(<span style=color:#a6e22e>queueElement</span>);
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>dequeue</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>shift</span>();
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>front</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>[<span style=color:#ae81ff>0</span>];
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isEmpty</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>clear</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>items</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>length</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>print</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>JSON</span>.<span style=color:#a6e22e>stringify</span>(<span style=color:#a6e22e>items</span>));
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>priorityQueue</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>PriorityQueue</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>isEmpty</span>());      <span style=color:#75715e>// true
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>enqueue</span>(<span style=color:#e6db74>&#39;Tom&#39;</span>, <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>enqueue</span>(<span style=color:#e6db74>&#39;Jane&#39;</span>, <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>enqueue</span>(<span style=color:#e6db74>&#39;Ann&#39;</span>, <span style=color:#ae81ff>4</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>enqueue</span>(<span style=color:#e6db74>&#39;Tina&#39;</span>, <span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>front</span>());        <span style=color:#75715e>// {element: &#34;Jane&#34;, priority: 1}
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>size</span>());         <span style=color:#75715e>// 4
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>print</span>();                     <span style=color:#75715e>// [{element: &#34;Jane&#34;, priority: 1}, {element: &#34;Tom&#34;, priority: 2}, ...]
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>dequeue</span>();                   <span style=color:#75715e>// remove Jane
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>front</span>());        <span style=color:#75715e>// {element: &#34;Tom&#34;, priority: 2}
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>size</span>());         <span style=color:#75715e>// 3
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>priorityQueue</span>.<span style=color:#a6e22e>print</span>();                     <span style=color:#75715e>// [{element: &#34;Tom&#34;, priority: 2}, {element: &#34;Tina&#34;, priority: 3}, ...]
+</span></span></span></code></pre></div><h2 id=linked-list>Linked List</h2><p>A sequence of data structures which are connected together via links.</p><ul><li><strong>Link</strong> − Each Link of a linked list can store a data called an element.</li><li><strong>Next</strong> − Each Link of a linked list contain a link to next link called Next.</li><li><strong>LinkedList</strong> − A LinkedList contains the connection link to the first Link called First.</li></ul><p><img src=https://www.tutorialspoint.com/data_structures_algorithms/images/dsa_linkedlist.jpg alt=tutorialspoint></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>LinkedList</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>Node</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>element</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>element</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>element</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>next</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>length</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;            <span style=color:#75715e>// 存放 LinkedList 長度
+</span></span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>head</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;           <span style=color:#75715e>// 第一個節點的指標
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>getHead</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>head</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>append</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>element</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>node</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Node</span>(<span style=color:#a6e22e>element</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>current</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>head</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>head</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>node</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>current</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>head</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>while</span>(<span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>next</span>) {
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>current</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>next</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>node</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>length</span><span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>insert</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>position</span>, <span style=color:#a6e22e>element</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>position</span> <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>position</span> <span style=color:#f92672>&lt;=</span> <span style=color:#a6e22e>length</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>node</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Node</span>(<span style=color:#a6e22e>element</span>);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>current</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>head</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>previous</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>index</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>position</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>next</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>current</span>;
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>head</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>node</span>;
+</span></span><span style=display:flex><span>      } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>while</span>(<span style=color:#a6e22e>index</span><span style=color:#f92672>++</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>position</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>previous</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>current</span>;
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>current</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>next</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>current</span>;
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>previous</span>.<span style=color:#a6e22e>next</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>node</span>;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>length</span><span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>remove</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>element</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>index</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>indexOf</span>(<span style=color:#a6e22e>element</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>removeAt</span>(<span style=color:#a6e22e>index</span>);
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>removeAt</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>position</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>position</span> <span style=color:#f92672>&gt;</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>position</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>length</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>current</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>head</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>previous</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>index</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>position</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>head</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>      } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>while</span>(<span style=color:#a6e22e>index</span><span style=color:#f92672>++</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>position</span>) {
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>previous</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>current</span>;
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>current</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>previous</span>.<span style=color:#a6e22e>next</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>length</span><span style=color:#f92672>--</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>element</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>indexOf</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>element</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>current</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>head</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>index</span> <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span>(<span style=color:#a6e22e>current</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>element</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>element</span>) {
+</span></span><span style=display:flex><span>          <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>index</span>;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>index</span><span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>current</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isEmpty</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>length</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>length</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>toString</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>current</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>head</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>string</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span>(<span style=color:#a6e22e>current</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>string</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>element</span>;
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>current</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>string</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>print</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>toString</span>());
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>linkdeList</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>LinkedList</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>linkdeList</span>.<span style=color:#a6e22e>isEmpty</span>());     <span style=color:#75715e>// true
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>append</span>(<span style=color:#e6db74>&#39;A&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>append</span>(<span style=color:#e6db74>&#39;B&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>append</span>(<span style=color:#e6db74>&#39;C&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>append</span>(<span style=color:#e6db74>&#39;D&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>print</span>();                    <span style=color:#75715e>// ABCD
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>insert</span>(<span style=color:#ae81ff>2</span>, <span style=color:#e6db74>&#39;X&#39;</span>);             <span style=color:#75715e>// add X after node2(B)
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>print</span>();                    <span style=color:#75715e>// ABbCD
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>remove</span>(<span style=color:#e6db74>&#39;B&#39;</span>);                <span style=color:#75715e>// remove B
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>size</span>());        <span style=color:#75715e>// 4
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>removeAt</span>(<span style=color:#ae81ff>0</span>);                <span style=color:#75715e>// remove node0 (A)
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>print</span>();                    <span style=color:#75715e>// XCD
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>indexOf</span>(<span style=color:#e6db74>&#39;X&#39;</span>));  <span style=color:#75715e>// -1
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>indexOf</span>(<span style=color:#e6db74>&#39;D&#39;</span>));  <span style=color:#75715e>// 1
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>linkedList</span>.<span style=color:#a6e22e>getHead</span>());     <span style=color:#75715e>// { element: &#34;X&#34;, next: { element: &#34;C&#34;, next: { ... } } }
+</span></span></span></code></pre></div><h3 id=types>Types</h3><ul><li>Singly Linked List<br><img src=https://www.studytonight.com/data-structures/images/linked-list-linear.png alt=studytonight></li><li>Doubly Linked List<br><img src=https://www.studytonight.com/data-structures/images/linked-list-double.png alt=studytonight></li><li>Circular Linked List<br><img src=https://www.studytonight.com/data-structures/images/linked-list-circular.png alt=studytonight></li></ul><h2 id=set>Set</h2><p><img src=http://wikistack.com/wp-content/uploads/2015/04/disjsds.jpeg alt=wikistack></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Set</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>items</span> <span style=color:#f92672>=</span> {};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>add</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>value</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>has</span>(<span style=color:#a6e22e>value</span>)) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>items</span>[<span style=color:#a6e22e>value</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>value</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>remove</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>value</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>has</span>(<span style=color:#a6e22e>value</span>)) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>delete</span> <span style=color:#a6e22e>items</span>[<span style=color:#a6e22e>value</span>];
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>has</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>value</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>hasOwnProperty</span>(<span style=color:#a6e22e>value</span>);
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>clear</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>items</span> <span style=color:#f92672>=</span> {};
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>count</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>key</span> <span style=color:#66d9ef>in</span> <span style=color:#a6e22e>items</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>++</span><span style=color:#a6e22e>count</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>count</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>value</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>keys</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>key</span> <span style=color:#66d9ef>in</span> <span style=color:#a6e22e>items</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>keys</span>.<span style=color:#a6e22e>push</span>(<span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>keys</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>union</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>otherSet</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>unionSet</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>value</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>value</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>value</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>unionSet</span>.<span style=color:#a6e22e>add</span>(<span style=color:#a6e22e>value</span>[<span style=color:#a6e22e>i</span>]);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>value</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>otherSet</span>.<span style=color:#a6e22e>value</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>j</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>j</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>value</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>j</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>unionSet</span>.<span style=color:#a6e22e>add</span>(<span style=color:#a6e22e>value</span>[<span style=color:#a6e22e>j</span>]);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>unionSet</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>intersection</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>otherSet</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>intersectionSet</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>value</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>value</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>value</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>otherSet</span>.<span style=color:#a6e22e>has</span>(<span style=color:#a6e22e>value</span>[<span style=color:#a6e22e>i</span>])) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>intersectionSet</span>.<span style=color:#a6e22e>add</span>(<span style=color:#a6e22e>value</span>[<span style=color:#a6e22e>i</span>]);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>intersectionSet</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>difference</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>otherSet</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>differenceSet</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>value</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>value</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>value</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>otherSet</span>.<span style=color:#a6e22e>has</span>(<span style=color:#a6e22e>value</span>[<span style=color:#a6e22e>i</span>])) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>differenceSet</span>.<span style=color:#a6e22e>add</span>(<span style=color:#a6e22e>value</span>[<span style=color:#a6e22e>i</span>]);
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>differenceSet</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>isSub</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>otherSet</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>size</span>() <span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>otherSet</span>.<span style=color:#a6e22e>size</span>()) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>value</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>value</span>();
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>value</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>otherSet</span>.<span style=color:#a6e22e>has</span>(<span style=color:#a6e22e>value</span>[<span style=color:#a6e22e>i</span>])) {
+</span></span><span style=display:flex><span>          <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>set</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>add</span>(<span style=color:#ae81ff>12</span>);                                         <span style=color:#75715e>// add 12
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>value</span>());                            <span style=color:#75715e>// [&#39;12&#39;]
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>has</span>(<span style=color:#ae81ff>12</span>));                            <span style=color:#75715e>// true
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>size</span>());                             <span style=color:#75715e>// 1
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>add</span>(<span style=color:#ae81ff>15</span>);                                         <span style=color:#75715e>// add 15
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>remove</span>(<span style=color:#ae81ff>12</span>);                                      <span style=color:#75715e>// remove 12
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>has</span>(<span style=color:#ae81ff>12</span>));                            <span style=color:#75715e>// false
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>value</span>());                            <span style=color:#75715e>// [&#39;15&#39;]
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>setA</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>();
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setA</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#39;A&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setA</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#39;B&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setA</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#39;C&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setA</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#39;D&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>setA</span>.<span style=color:#a6e22e>value</span>());                           <span style=color:#75715e>// [&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;]
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>setB</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>();
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setB</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#39;A&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setB</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#39;C&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setB</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#39;E&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setB</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#39;F&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>setB</span>.<span style=color:#a6e22e>value</span>());                           <span style=color:#75715e>// [&#34;A&#34;, &#34;C&#34;, &#34;E&#34;, &#34;F&#34;]
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>setC</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>();
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setC</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#39;A&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>setC</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#39;B&#39;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>unionSet</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>setA</span>.<span style=color:#a6e22e>union</span>(<span style=color:#a6e22e>setB</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>unionSet</span>.<span style=color:#a6e22e>value</span>());                       <span style=color:#75715e>// [&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;, &#34;E&#34;, &#34;F&#34;]
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>intersectionSet</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>setA</span>.<span style=color:#a6e22e>intersection</span>(<span style=color:#a6e22e>setB</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>intersectionSet</span>.<span style=color:#a6e22e>value</span>());                <span style=color:#75715e>// [&#34;A&#34;, &#34;C&#34;]
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>differenceSet</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>setA</span>.<span style=color:#a6e22e>difference</span>(<span style=color:#a6e22e>setB</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>differenceSet</span>.<span style=color:#a6e22e>value</span>());                  <span style=color:#75715e>// [&#34;A&#34;, &#34;C&#34;]
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>setB</span>.<span style=color:#a6e22e>isSub</span>(<span style=color:#a6e22e>setA</span>));                       <span style=color:#75715e>// false
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>setC</span>.<span style=color:#a6e22e>isSub</span>(<span style=color:#a6e22e>setA</span>));                       <span style=color:#75715e>// true
+</span></span></span></code></pre></div><h2 id=tree>Tree</h2><ul><li><strong>inorder</strong>: left -> root -> right (A -> B -> C)</li><li><strong>preorder</strong>: root -> left -> right (B -> A -> C)</li><li><strong>postorder</strong>: left -> right -> root (A -> C -> B)</li></ul><p><img src=https://cdn-images-1.medium.com/max/800/1*87h2uhCJ5qztBNwfck2b6g.jpeg alt=medium></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>BinarySearchTree</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>Node</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>key</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>key</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>left</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>right</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>root</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>insert</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>newNode</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Node</span>(<span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>root</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>root</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newNode</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>insertNode</span>(<span style=color:#a6e22e>root</span>, <span style=color:#a6e22e>newNode</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>insertNode</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>node</span>, <span style=color:#a6e22e>newNode</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>newNode</span>.<span style=color:#a6e22e>key</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newNode</span>;
+</span></span><span style=display:flex><span>      } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>insertNode</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span>, <span style=color:#a6e22e>newNode</span>);
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>newNode</span>;
+</span></span><span style=display:flex><span>      } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>insertNode</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span>, <span style=color:#a6e22e>newNode</span>);
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>inOrderTraverse</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>callback</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>inOrderTraverseNode</span>(<span style=color:#a6e22e>root</span>, <span style=color:#a6e22e>callback</span>);
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>inOrderTraverseNode</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>node</span>, <span style=color:#a6e22e>callback</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>inOrderTraverseNode</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span>, <span style=color:#a6e22e>callback</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>callback</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>inOrderTraverseNode</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span>, <span style=color:#a6e22e>callback</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>preOrderTraverse</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>callback</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>preOrderTraverseNode</span>(<span style=color:#a6e22e>root</span>, <span style=color:#a6e22e>callback</span>);
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>preOrderTraverseNode</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>node</span>, <span style=color:#a6e22e>callback</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>callback</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>preOrderTraverseNode</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span>, <span style=color:#a6e22e>callback</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>preOrderTraverseNode</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span>, <span style=color:#a6e22e>callback</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>postOrderTraverse</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>callback</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>postOrderTraverseNode</span>(<span style=color:#a6e22e>root</span>, <span style=color:#a6e22e>callback</span>);
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>postOrderTraverseNode</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>node</span>, <span style=color:#a6e22e>callback</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>postOrderTraverseNode</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span>, <span style=color:#a6e22e>callback</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>postOrderTraverseNode</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span>, <span style=color:#a6e22e>callback</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>callback</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>search</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>searchNode</span>(<span style=color:#a6e22e>root</span>, <span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>searchNode</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>node</span>, <span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>key</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>key</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>searchNode</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span>, <span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>key</span> <span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>searchNode</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span>, <span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>min</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>minNode</span>(<span style=color:#a6e22e>root</span>);
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>minNode</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>node</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>while</span>(<span style=color:#a6e22e>node</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>node</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span>;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>key</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>max</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>maxNode</span>(<span style=color:#a6e22e>root</span>);
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>maxNode</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>node</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>while</span>(<span style=color:#a6e22e>node</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>node</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span>;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>key</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>remove</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>search</span>(<span style=color:#a6e22e>key</span>)) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>removeAt</span>(<span style=color:#a6e22e>root</span>, <span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;No such node.&#39;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>removeAt</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>node</span>, <span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>removeAt</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span>, <span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>node</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>key</span> <span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>key</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>removeAt</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span>, <span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>node</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>node</span>;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>node</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>node</span>;
+</span></span><span style=display:flex><span>      } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>node</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>left</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>node</span>;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>aux</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>search</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>key</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>removeAt</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>right</span>, <span style=color:#a6e22e>aux</span>.<span style=color:#a6e22e>key</span>);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>node</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>printNode</span>(<span style=color:#a6e22e>value</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>value</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>tree</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>BinarySearchTree</span>();
+</span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>insert</span>(<span style=color:#ae81ff>35</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>insert</span>(<span style=color:#ae81ff>22</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>insert</span>(<span style=color:#ae81ff>7</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>insert</span>(<span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>insert</span>(<span style=color:#ae81ff>4</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>insert</span>(<span style=color:#ae81ff>5</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>insert</span>(<span style=color:#ae81ff>32</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>insert</span>(<span style=color:#ae81ff>40</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>inOrderTraverse</span>(<span style=color:#a6e22e>printNode</span>);            <span style=color:#75715e>// 2 4 5 7 22 32 35 40
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>preOrderTraverse</span>(<span style=color:#a6e22e>printNode</span>);           <span style=color:#75715e>// 35 22 7 2 4 5 32 40
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>postOrderTraverse</span>(<span style=color:#a6e22e>printNode</span>);          <span style=color:#75715e>// 5 4 2 7 32 22 40 35
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// tree.remove(5);
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// tree.inOrderTraverse(printNode);            // 2 4 5 7 22 32 35 40
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>remove</span>(<span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>inOrderTraverse</span>(<span style=color:#a6e22e>printNode</span>);            <span style=color:#75715e>// 2 4 5 7 22 32 35 40
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>min</span>());                    <span style=color:#75715e>// 2
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>max</span>());                    <span style=color:#75715e>// 40
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>search</span>(<span style=color:#ae81ff>8</span>));                <span style=color:#75715e>// false
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>tree</span>.<span style=color:#a6e22e>search</span>(<span style=color:#ae81ff>22</span>));               <span style=color:#75715e>// true
+</span></span></span></code></pre></div></main><footer class="footer text-center"><p class=text-muted><small>Designed by EstherJ <span class=mx-2>|</span> Copyright © 2026</small></p></footer><script src=/js/feather.min.js></script><script>feather.replace()</script><script src=/js/jquery-3.5.1.min.js></script><script src=/js/jquery.fancybox.min.js></script></body></html>

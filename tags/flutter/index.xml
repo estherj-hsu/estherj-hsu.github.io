@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>flutter on Esther's Life</title><link>/tags/flutter/</link><description>Recent content in flutter on Esther's Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 11 Dec 2019 15:22:41 +0000</lastBuildDate><atom:link href="/tags/flutter/index.xml" rel="self" type="application/rss+xml"/><item><title>Flutter Part 3: State</title><link>/posts/flutter-3/</link><pubDate>Wed, 11 Dec 2019 15:22:41 +0000</pubDate><guid>/posts/flutter-3/</guid><description>&lt;h3 id="state-http-request">State &amp;amp; HTTP request&lt;/h3>
-&lt;p>&lt;strong>Dart and Flutter: The Complete Developer&amp;rsquo;s Guide&lt;/strong>: Chapter 9~11&lt;br />
-Let&amp;rsquo;s learn more about flutter widget.&lt;br />
-Main Goal: Click the action button to request one more image&lt;br />
-Also, play with material wedgets. 🌟&lt;/p></description></item><item><title>Flutter Part 2: with Dart</title><link>/posts/flutter-2/</link><pubDate>Fri, 22 Nov 2019 14:14:58 +0000</pubDate><guid>/posts/flutter-2/</guid><description>&lt;h3 id="instructon-of-dart">Instructon of Dart&lt;/h3>
-&lt;p>Get basic idea of both flutter and dart:
-- &lt;a href="https://medium.com/swlh/flutter-with-dart-is-it-worth-it-3f60ed5df9da" target="_blank">Flutter with Dart&lt;/a>
-- &lt;a href="https://flutter.dev/docs/get-started/flutter-for/web-devs" target="_blank">Flutter for web developers&lt;/a>&lt;/p></description></item><item><title>Flutter Part 1: Install</title><link>/posts/flutter-1/</link><pubDate>Tue, 19 Nov 2019 17:03:38 +0000</pubDate><guid>/posts/flutter-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Make sure that you unzip the flutter folder into the right directory.&lt;br />
-If you&amp;rsquo;d like to move the flutter folder after ran flutter, you might see the same error as mine. 🙈&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Flutter on Esther's Life</title><link>/tags/flutter/</link><description>Recent content in Flutter on Esther's Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 11 Dec 2019 15:22:41 +0000</lastBuildDate><atom:link href="/tags/flutter/index.xml" rel="self" type="application/rss+xml"/><item><title>Flutter Part 3: State</title><link>/posts/flutter-3/</link><pubDate>Wed, 11 Dec 2019 15:22:41 +0000</pubDate><guid>/posts/flutter-3/</guid><description>&lt;h3 id="state--http-request"&gt;State &amp;amp; HTTP request&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Dart and Flutter: The Complete Developer&amp;rsquo;s Guide&lt;/strong&gt;: Chapter 9~11&lt;br&gt;
+Let&amp;rsquo;s learn more about flutter widget.&lt;br&gt;
+Main Goal: Click the action button to request one more image&lt;br&gt;
+Also, play with material wedgets. 🌟&lt;/p&gt;</description></item><item><title>Flutter Part 2: with Dart</title><link>/posts/flutter-2/</link><pubDate>Fri, 22 Nov 2019 14:14:58 +0000</pubDate><guid>/posts/flutter-2/</guid><description>&lt;h3 id="instructon-of-dart"&gt;Instructon of Dart&lt;/h3&gt;
+&lt;p&gt;Get basic idea of both flutter and dart:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://medium.com/swlh/flutter-with-dart-is-it-worth-it-3f60ed5df9da"&gt;Flutter with Dart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://flutter.dev/docs/get-started/flutter-for/web-devs"&gt;Flutter for web developers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Flutter Part 1: Install</title><link>/posts/flutter-1/</link><pubDate>Tue, 19 Nov 2019 17:03:38 +0000</pubDate><guid>/posts/flutter-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Make sure that you unzip the flutter folder into the right directory.&lt;br&gt;
+If you&amp;rsquo;d like to move the flutter folder after ran flutter, you might see the same error as mine. 🙈&lt;/p&gt;</description></item></channel></rss>

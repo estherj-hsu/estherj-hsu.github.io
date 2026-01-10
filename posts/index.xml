@@ -1,274 +1,284 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Esther's Life</title><link>/posts/</link><description>Recent content in Posts on Esther's Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 23 Mar 2023 12:17:38 -0700</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript 2: Union, Narrowing &amp; Interface</title><link>/posts/typescript-2/</link><pubDate>Thu, 23 Mar 2023 12:17:38 -0700</pubDate><guid>/posts/typescript-2/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Dive a bit deeper! 🧐&lt;/p></description></item><item><title>TypeScript I: Types, Functions &amp; Gernerics</title><link>/posts/typescript-1/</link><pubDate>Wed, 22 Mar 2023 11:26:14 -0700</pubDate><guid>/posts/typescript-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Dive into Typescript! 🧐&lt;br />
-Took a free course on &lt;a href="https://www.codecademy.com/learn/learn-typescript" target="_blank">codecademy&lt;/a> 🙇🏻‍♀️&lt;/p></description></item><item><title>2023 Feb Update</title><link>/posts/2023-feb-update/</link><pubDate>Fri, 10 Mar 2023 11:27:04 -0800</pubDate><guid>/posts/2023-feb-update/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>It has been a while since the last update.&lt;br />
-The good news is I got the invitation to IEC and will obtain a one-year open work permit. 🥳&lt;/p></description></item><item><title>2022 Nov Update</title><link>/posts/2022-nov-update/</link><pubDate>Tue, 06 Dec 2022 10:46:53 -0800</pubDate><guid>/posts/2022-nov-update/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Checked some items on the list&lt;br />
-Also attended some in-person events (WomenHack, HackerX and IxDA) in Vancouver&lt;br />
-Keep having calls and interviews 🥶&lt;/p></description></item><item><title>2022 Oct Update</title><link>/posts/2022-oct-update/</link><pubDate>Sat, 22 Oct 2022 09:42:00 -0700</pubDate><guid>/posts/2022-oct-update/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Found some mock interview practice topics.&lt;br />
-My to-do list is getting longer&amp;hellip;&lt;/p></description></item><item><title>2022 Sep Update</title><link>/posts/2022-sep-update/</link><pubDate>Mon, 03 Oct 2022 14:31:15 -0700</pubDate><guid>/posts/2022-sep-update/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>I am in the term break recently.&lt;br />
-So glad that I finally finished my study for UX Design and can focus on job hunting now. 🤞&lt;br />
-Came up an idea for my side project: Trivia Taiwan 🇹🇼&lt;/p></description></item><item><title>2022 Aug Reading Ref</title><link>/posts/2022-aug/</link><pubDate>Thu, 25 Aug 2022 17:20:22 -0700</pubDate><guid>/posts/2022-aug/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Time to read (again)!&lt;/p></description></item><item><title>LocalWP</title><link>/posts/localwp/</link><pubDate>Wed, 24 Aug 2022 13:51:52 -0700</pubDate><guid>/posts/localwp/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Recently started to work on WordPress (again) 🙈&lt;br />
-Found a perfect tool for macOS to build WordPress without AMP (Apache+MySQL+PHP)&lt;/p></description></item><item><title>Storybook Time</title><link>/posts/storybook/</link><pubDate>Wed, 20 Jul 2022 13:56:13 -0700</pubDate><guid>/posts/storybook/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Built a Storybook playground for me 🥳&lt;br />
-Can&amp;rsquo;t wait to create my own component library!&lt;/p></description></item><item><title>Notes from Interviews</title><link>/posts/notes-from-interveiws/</link><pubDate>Mon, 18 Jul 2022 12:02:07 -0700</pubDate><guid>/posts/notes-from-interveiws/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Some notes from those technical interviews I had so far&lt;br />
-Talked with some mentors on &lt;a href="https://app.adplist.org/signup?referral_id=99993&amp;amp;src=user" target="_blank">ADPList&lt;/a> 🥰&lt;/p></description></item><item><title>Amazon Interview</title><link>/posts/amazon-interview/</link><pubDate>Fri, 17 Jun 2022 22:43:58 -0700</pubDate><guid>/posts/amazon-interview/</guid><description>&lt;h3 id="esther">Esther&lt;/h3>
-&lt;p>After the phone screening, I got an interview chance with &lt;em>Amazon AWS&lt;/em>.&lt;br />
-Only about 10 days to prepare for it, and finally, it’s today!&lt;/p></description></item><item><title>Portfolio Updated</title><link>/posts/portfolio-updated/</link><pubDate>Sat, 14 May 2022 10:49:38 -0700</pubDate><guid>/posts/portfolio-updated/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Long time no see. ☺️&lt;br />
-In Vancouver now.&lt;br />
-Looking for a new opportunity.&lt;/p></description></item><item><title>UX WCAG</title><link>/posts/ux-wcga/</link><pubDate>Fri, 25 Mar 2022 15:57:54 -0700</pubDate><guid>/posts/ux-wcga/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>WCAG 2.1 POUR!&lt;/p></description></item><item><title>Hugo Theme</title><link>/posts/hugo-theme/</link><pubDate>Fri, 30 Apr 2021 11:24:00 +0800</pubDate><guid>/posts/hugo-theme/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>My hugo theme is done! 🎉&lt;br />
-The most simple but nice theme ☺&lt;/p></description></item><item><title>Thank you letter from MS</title><link>/posts/ms-interview-result/</link><pubDate>Sat, 03 Apr 2021 08:13:53 +0800</pubDate><guid>/posts/ms-interview-result/</guid><description>&lt;h3 id="esther">Esther&lt;/h3>
-&lt;p>I just got a thank you letter from Microsoft. 😭&lt;br />
-I&amp;rsquo;m really upsad, but it&amp;rsquo;s a such nice interview experiece.&lt;/p></description></item><item><title>MS UX Engineer Interview</title><link>/posts/ms-interview/</link><pubDate>Tue, 30 Mar 2021 11:21:12 +0800</pubDate><guid>/posts/ms-interview/</guid><description>&lt;h3 id="esther">Esther&lt;/h3>
-&lt;p>OMG!!!&lt;br />
-Just had a virtual interview for UX Engineer position!&lt;br />
-And&amp;hellip; it&amp;rsquo;s Microsoft!!! 😳&lt;br />
-(My comment of this experience is in CHINESE.)&lt;/p></description></item><item><title>Hugo</title><link>/posts/hugo/</link><pubDate>Sat, 16 Jan 2021 12:06:56 +0800</pubDate><guid>/posts/hugo/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Finally&amp;hellip; Hello Hugo! Bye Hexo!&lt;/p></description></item><item><title>2020 Dec Reading Ref 1</title><link>/posts/2020-dec-1/</link><pubDate>Thu, 31 Dec 2020 08:58:52 +0000</pubDate><guid>/posts/2020-dec-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Merry Xmas🎄&lt;br />
-Happy New Year🎉&lt;/p></description></item><item><title>2020 Nov Reading Ref 1</title><link>/posts/2020-nov-1/</link><pubDate>Tue, 10 Nov 2020 10:04:38 +0000</pubDate><guid>/posts/2020-nov-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>It&amp;rsquo;s almost time to say goodbye to 2020 😷&lt;/p></description></item><item><title>CHT 致科技人</title><link>/posts/cht/</link><pubDate>Thu, 08 Oct 2020 15:24:13 +0000</pubDate><guid>/posts/cht/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>看完 &lt;a href="https://www.netflix.com/tw/title/81254224" target="_blank">The Social Dilemma&lt;/a> 之後訪問了 Center for Humane Technology 的網站，然後讀到這篇讓我很有感觸的文章。因為工作的關係，對科技其實很熟悉也更加理解科技的問題，希望大家都能意識到這些問題，也希望未來法律或是教育能追上科技的發展。&lt;br />
-CHT 也有提供找回掌控權的相關建議，可以參考&lt;a href="https://www.humanetech.com/take-control" target="_blank">Take Control&lt;/a>&lt;/p>
-&lt;blockquote>
-&lt;p>原文 Center for Humane Technology: For Technologists
-&lt;a href="https://www.humanetech.com/technologists" target="_blank">https://www.humanetech.com/technologists&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>2020 Oct Reading Ref 1</title><link>/posts/2020-oct-1/</link><pubDate>Tue, 06 Oct 2020 14:26:40 +0000</pubDate><guid>/posts/2020-oct-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>My summer vacation is coming!!!&lt;/p></description></item><item><title>2020 September Reading Ref 1</title><link>/posts/2020-september-1/</link><pubDate>Wed, 09 Sep 2020 16:27:12 +0000</pubDate><guid>/posts/2020-september-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>&lt;a href="https://technology.blog.gov.uk/2020/07/24/why-you-should-hire-a-frontend-developer/" target="_blank">Why you should hire a frontend developer&lt;/a> 🤣&lt;/p></description></item><item><title>2020 August Weekly Reading Ref 2</title><link>/posts/2020-august-2/</link><pubDate>Tue, 25 Aug 2020 13:07:22 +0000</pubDate><guid>/posts/2020-august-2/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Finally, it&amp;rsquo;s getting cooler 🌬&lt;/p></description></item><item><title>2020 August Weekly Reading Ref 1</title><link>/posts/2020-august-1/</link><pubDate>Wed, 12 Aug 2020 10:41:19 +0000</pubDate><guid>/posts/2020-august-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Need more time to flutter 🥺&lt;/p></description></item><item><title>2020 July Reading Ref 2</title><link>/posts/2020-july-2/</link><pubDate>Fri, 31 Jul 2020 17:17:21 +0000</pubDate><guid>/posts/2020-july-2/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>When will the summer end? 🥵&lt;/p></description></item><item><title>2020 July Reading Ref 1</title><link>/posts/2020-july-1/</link><pubDate>Fri, 24 Jul 2020 17:34:46 +0000</pubDate><guid>/posts/2020-july-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>🌡️🥵&lt;/p></description></item><item><title>2020 June Reading Ref 2</title><link>/posts/2020-june-2/</link><pubDate>Wed, 01 Jul 2020 11:07:41 +0000</pubDate><guid>/posts/2020-june-2/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Summer in Taiwan ☀️ 🔥🔥🔥🔥🔥&lt;/p></description></item><item><title>2020 June Reading Ref 1</title><link>/posts/2020-june-1/</link><pubDate>Wed, 03 Jun 2020 10:57:41 +0000</pubDate><guid>/posts/2020-june-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Happy Birthday to RWD 🥳&lt;/p></description></item><item><title>2020 May Reading Ref 2</title><link>/posts/2020-may-2/</link><pubDate>Mon, 25 May 2020 11:35:54 +0000</pubDate><guid>/posts/2020-may-2/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Say hi to Green Island!&lt;/p>
-&lt;div class="m-2">
-&lt;iframe src="https://drive.google.com/file/d/17peSkZn0LsN5vJQkhdACTUkcu8LSgw1l/preview" width="100%" height="400">&lt;/iframe>
-&lt;/div></description></item><item><title>2020 May Reading Ref 1</title><link>/posts/2020-may-1/</link><pubDate>Wed, 06 May 2020 14:52:10 +0000</pubDate><guid>/posts/2020-may-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Oh yeah, going to have my vacation next week 🏖&lt;br />
-Taiwan No 1 🎉&lt;br />
-Recommend Article: &lt;a href="https://www.nytimes.com/interactive/2020/04/07/technology/coronavirus-internet-use.html?" target="_blank">The Virus Changed the Way We Internet&lt;/a>&lt;/p></description></item><item><title>2020 April Weekly Reading Ref 2</title><link>/posts/2020-april-2/</link><pubDate>Tue, 21 Apr 2020 12:04:57 +0000</pubDate><guid>/posts/2020-april-2/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>💬&lt;/p></description></item><item><title>2020 April Weekly Reading Ref 1</title><link>/posts/2020-april-1/</link><pubDate>Fri, 10 Apr 2020 17:00:43 +0000</pubDate><guid>/posts/2020-april-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Exhausted 😫&lt;/p></description></item><item><title>2020 March Reading Ref 3</title><link>/posts/2020-march-3/</link><pubDate>Thu, 26 Mar 2020 14:29:32 +0000</pubDate><guid>/posts/2020-march-3/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Recently, working with &lt;a href="https://chartjs.org/" target="_blank">Chart.js&lt;/a> to generate &amp;ldquo;pretty PDF report&amp;rdquo; 😵&lt;br />
-And got no time to learn flutter 😩&lt;/p></description></item><item><title>2020 March Reading Ref 2</title><link>/posts/2020-march-2/</link><pubDate>Thu, 19 Mar 2020 12:56:58 +0000</pubDate><guid>/posts/2020-march-2/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>🤦🏻‍♀️&lt;/p></description></item><item><title>2020 March Reading Ref 1</title><link>/posts/2020-march-1/</link><pubDate>Fri, 06 Mar 2020 14:24:30 +0000</pubDate><guid>/posts/2020-march-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>It has been a busy week 🤯&lt;/p></description></item><item><title>2020 Feb Reading Ref 3</title><link>/posts/2020-feb-3/</link><pubDate>Mon, 24 Feb 2020 14:06:53 +0000</pubDate><guid>/posts/2020-feb-3/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>&amp;ldquo;If you need to label something, it is poorly designed&amp;rdquo; 🤭&lt;/p></description></item><item><title>2020 Feb Reading Ref 2</title><link>/posts/2020-feb-2/</link><pubDate>Wed, 12 Feb 2020 11:49:05 +0000</pubDate><guid>/posts/2020-feb-2/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Wuhan coronavirus 😱&lt;br />
-Take care and stay healthy 💪&lt;/p></description></item><item><title>2020 Feb Reading Ref 1</title><link>/posts/2020-feb-1/</link><pubDate>Tue, 04 Feb 2020 15:23:32 +0000</pubDate><guid>/posts/2020-feb-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>🙌 CSS 4 🙌&lt;/p></description></item><item><title>2020 Jan Reading Ref 2</title><link>/posts/2020-jan-2/</link><pubDate>Wed, 22 Jan 2020 16:22:44 +0000</pubDate><guid>/posts/2020-jan-2/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Happy Lunar New Year 🧨&lt;br />
-Going to Vladivostok and enjoy my (freezing) vacation 🥶&lt;/p></description></item><item><title>2020 Jan Reading Ref 1</title><link>/posts/2020-jan-1/</link><pubDate>Mon, 13 Jan 2020 15:44:44 +0000</pubDate><guid>/posts/2020-jan-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Hi 2020 🤩&lt;br />
-First lesson of 2020 from Pablo Stanley, Design Lead at InvisionApp: &lt;a href="https://www.youtube.com/embed/bEg5ySTUGxE" target="_blank">The Faker You Are, the More Successful You Can Be&lt;/a>.&lt;br />
-Become a &lt;strong>SUCCESSFUL&lt;/strong> designer together! 🤣&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/bEg5ySTUGxE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe></description></item><item><title>2019 Dec Weekly Reading Ref 3</title><link>/posts/2019-dec-3/</link><pubDate>Tue, 24 Dec 2019 15:18:12 +0000</pubDate><guid>/posts/2019-dec-3/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>🎄Merry Christmas🎄&lt;/p></description></item><item><title>2019 Dec Weekly Reading Ref 2</title><link>/posts/2019-dec-2/</link><pubDate>Tue, 17 Dec 2019 11:31:45 +0000</pubDate><guid>/posts/2019-dec-2/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Highlight of this week: &lt;strong>Quiting Job Signs&lt;/strong> 🤙&lt;br />
-Principle #1: Your Job Violates Your Boundaries&lt;br />
-Principle #2: Your Job Goes Against Your Goals&lt;br />
-Principle #3: Your Job (Consistently) Violates a Healthy Mode of Being&lt;br />
-Principle #4: Your Job Forces You to Choose between Relationship and Safety&lt;br />
-Principle #5: Your Job Erodes Your Status, Dignity or Self-respect&lt;/p></description></item><item><title>Flutter Part 3: State</title><link>/posts/flutter-3/</link><pubDate>Wed, 11 Dec 2019 15:22:41 +0000</pubDate><guid>/posts/flutter-3/</guid><description>&lt;h3 id="state-http-request">State &amp;amp; HTTP request&lt;/h3>
-&lt;p>&lt;strong>Dart and Flutter: The Complete Developer&amp;rsquo;s Guide&lt;/strong>: Chapter 9~11&lt;br />
-Let&amp;rsquo;s learn more about flutter widget.&lt;br />
-Main Goal: Click the action button to request one more image&lt;br />
-Also, play with material wedgets. 🌟&lt;/p></description></item><item><title>2019 Dec Weekly Reading Ref 1</title><link>/posts/2019-dec-1/</link><pubDate>Tue, 10 Dec 2019 10:56:00 +0000</pubDate><guid>/posts/2019-dec-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>❄️Winter is coming ⛄&lt;/p></description></item><item><title>2019 Nov Weekly Reading Ref 3</title><link>/posts/2019-nov-3/</link><pubDate>Mon, 02 Dec 2019 13:05:07 +0000</pubDate><guid>/posts/2019-nov-3/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Add new tag App 🎉
-Special topic of this week: &lt;strong>The Ethics Of Algorithms&lt;/strong>
-How to &lt;a href="https://www.forbes.com/sites/insights-intelai/2019/03/27/managing-the-ethics-of-algorithms/" target="_blank">manage the ethics of algorithms&lt;/a>?&lt;br />
-Why should we care?&lt;br />
-Cuz &lt;a href="https://css-tricks.com/its-my-job-and-yours/" target="_blank">It’s my job, and yours&lt;/a>.&lt;/p>
-&lt;p>Read more if you&amp;rsquo;re interested in this topic:&lt;br />
-- &lt;a href="https://g.co/kgs/f6ciDs" target="_blank">Hello World: How to Be Human in the Age of the Machine&lt;/a>
-- &lt;a href="https://g.co/kgs/f58D26" target="_blank">Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy&lt;/a>&lt;/p></description></item><item><title>Flutter Part 2: with Dart</title><link>/posts/flutter-2/</link><pubDate>Fri, 22 Nov 2019 14:14:58 +0000</pubDate><guid>/posts/flutter-2/</guid><description>&lt;h3 id="instructon-of-dart">Instructon of Dart&lt;/h3>
-&lt;p>Get basic idea of both flutter and dart:
-- &lt;a href="https://medium.com/swlh/flutter-with-dart-is-it-worth-it-3f60ed5df9da" target="_blank">Flutter with Dart&lt;/a>
-- &lt;a href="https://flutter.dev/docs/get-started/flutter-for/web-devs" target="_blank">Flutter for web developers&lt;/a>&lt;/p></description></item><item><title>Flutter Part 1: Install</title><link>/posts/flutter-1/</link><pubDate>Tue, 19 Nov 2019 17:03:38 +0000</pubDate><guid>/posts/flutter-1/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Make sure that you unzip the flutter folder into the right directory.&lt;br />
-If you&amp;rsquo;d like to move the flutter folder after ran flutter, you might see the same error as mine. 🙈&lt;/p></description></item><item><title>2019 Nov 18th Reading Ref</title><link>/posts/2019-nov-18th/</link><pubDate>Mon, 18 Nov 2019 17:56:04 +0000</pubDate><guid>/posts/2019-nov-18th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Long time no see 👻&lt;br />
-Just started to play with &lt;strong>dart&lt;/strong> &amp;amp; &lt;strong>Flutter&lt;/strong>.&lt;br />
-Highlight of today&amp;rsquo;s reference: &lt;em>Dark mode&lt;/em> is really helpful for our eyes?&lt;/p></description></item><item><title>2019 Feb 23th Reading Ref</title><link>/posts/2019-feb-23th/</link><pubDate>Sat, 23 Feb 2019 14:56:14 +0000</pubDate><guid>/posts/2019-feb-23th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Hmmmmmmmmm&amp;hellip;&lt;/p></description></item><item><title>2019 Feb 10th Reading Ref</title><link>/posts/2019-feb-10th/</link><pubDate>Sun, 10 Feb 2019 11:34:58 +0000</pubDate><guid>/posts/2019-feb-10th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Happy Lunar New Year 🐽&lt;br />
-Let&amp;rsquo;s start over.&lt;/p></description></item><item><title>2018 July 17th Reading Ref</title><link>/posts/2018-july-17th/</link><pubDate>Tue, 07 Aug 2018 21:04:52 +0000</pubDate><guid>/posts/2018-july-17th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Built and new NGO project with vue.js: &lt;a href="https://taiwaneducationprogram.github.io/" target="_blank">https://taiwaneducationprogram.github.io/&lt;/a>&lt;/p></description></item><item><title>2018 June 28th Reading Ref</title><link>/posts/2018-june-28th/</link><pubDate>Thu, 28 Jun 2018 20:34:22 +0000</pubDate><guid>/posts/2018-june-28th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Finally, I got a new laptop &amp;ndash; Thinkpad T580!!! ❤❤❤&lt;/p></description></item><item><title>2018 May 24th Reading Ref</title><link>/posts/2018-may-24th/</link><pubDate>Thu, 24 May 2018 09:21:35 +0000</pubDate><guid>/posts/2018-may-24th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Keeping updated with new stuff&amp;hellip;&lt;br />
-Working on vue project on my own ;)&lt;/p></description></item><item><title>2018 March 26th Reading Ref</title><link>/posts/2018-march-26th/</link><pubDate>Tue, 17 Apr 2018 09:43:38 +0000</pubDate><guid>/posts/2018-march-26th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Updating reference of last month ;)&lt;/p></description></item><item><title>2018 March 12th Reading Ref</title><link>/posts/2018-march-12th/</link><pubDate>Mon, 12 Mar 2018 11:47:03 +0000</pubDate><guid>/posts/2018-march-12th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Learning to use Grid flexbox correctly.&lt;/p></description></item><item><title>2018 March 1st Reading Ref</title><link>/posts/2018-march-1st/</link><pubDate>Thu, 01 Mar 2018 12:26:45 +0000</pubDate><guid>/posts/2018-march-1st/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>CSS variables!&lt;/p></description></item><item><title>Data Structures</title><link>/posts/data-structures/</link><pubDate>Mon, 29 Jan 2018 17:53:32 +0000</pubDate><guid>/posts/data-structures/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>From data structure to algorithm&amp;hellip;?&lt;br />
-Still working on the tree removing part T^T&lt;/p></description></item><item><title>2018 Jan 23th Reading Ref</title><link>/posts/2018-jan-23th/</link><pubDate>Tue, 23 Jan 2018 09:24:28 +0000</pubDate><guid>/posts/2018-jan-23th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>It&amp;rsquo;s been a while.&lt;br />
-Everything goes well and even better.&lt;br />
-Let&amp;rsquo;s keep going and being better.&lt;/p></description></item><item><title>2017 Oct 16th Reading Ref</title><link>/posts/2017-oct-16th/</link><pubDate>Mon, 16 Oct 2017 13:59:11 +0000</pubDate><guid>/posts/2017-oct-16th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>一連串的意外、機會，&lt;br />
-接著經過了爆炸性的兩週後，&lt;br />
-終於，可以慢慢地開始為新生活做準備了。&lt;br />
-Life is about timing.&lt;br />
-Life always begins with ONE STEP outside of your COMFORT ZONE. ;)&lt;/p></description></item><item><title>CSS優化項目之一：多語系選單</title><link>/posts/css-opt-menu/</link><pubDate>Mon, 18 Sep 2017 14:11:21 +0000</pubDate><guid>/posts/css-opt-menu/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>想記錄一下自己去年優化的幾個部分，不堪回想的血淚&amp;hellip; T^T&lt;br />
-剛接觸 sass 時，會被他很厲害的功能迷惑，&lt;br />
-曾經我也不自覺地濫用了很多的 &lt;code>@extend&lt;/code>，&lt;br />
-但是如果弄清楚需求與效能後，&lt;br />
-會知道很多東西其實維持舊寫法才是比較適當的選擇。&lt;br />
-就讓我們繼續看下去吧&amp;hellip;&lt;/p></description></item><item><title>2017 Sep 4th Reading Ref</title><link>/posts/2017-sep-4th/</link><pubDate>Mon, 04 Sep 2017 15:20:14 +0000</pubDate><guid>/posts/2017-sep-4th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Looking for opportunities abroad. :(&lt;/p></description></item><item><title>CSS Pixel Art</title><link>/posts/css-pixel-art/</link><pubDate>Fri, 01 Sep 2017 13:40:32 +0000</pubDate><guid>/posts/css-pixel-art/</guid><description>&lt;h3 id="esther">Esther&lt;/h3>
-&lt;p>看了 Una Kravets 的純 CSS 遊戲，覺得 Pixel 實在太有趣，就自己跟著做了一個。
-基本概念是用迴圈去跑出map 中的 x 軸和 y 軸 ，然後套用在 &lt;code>box-shadow&lt;/code> ，完全活用了 sass 的幾個特性：&lt;/p>
-&lt;ul>
-&lt;li>function&lt;/li>
-&lt;li>map&lt;/li>
-&lt;li>for&lt;/li>
-&lt;/ul></description></item><item><title>2017 Aug 28th Reading Ref</title><link>/posts/2017-aug-28th/</link><pubDate>Mon, 28 Aug 2017 17:26:05 +0000</pubDate><guid>/posts/2017-aug-28th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Nice point: &lt;a href="https://www.smashingmagazine.com/2017/08/ux-mba-designer-business/" target="_blank">UX Meets MBA&lt;/a>
-Let&amp;rsquo;s study more about &lt;a href="https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/" target="_blank">Quantum CSS(aka Stylo)&lt;/a>&lt;/p></description></item><item><title>2017 Aug 11th Reading Ref</title><link>/posts/2017-aug-11th/</link><pubDate>Fri, 11 Aug 2017 16:15:23 +0000</pubDate><guid>/posts/2017-aug-11th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Design trends: &lt;strong>THIN(NER) TYPOGRAPHY&lt;/strong> / &lt;strong>ELABORATE DETAILS&lt;/strong> / &lt;strong>ICON LOGOS&lt;/strong>&lt;br />
-Highlight: &lt;a href="https://www.sitepoint.com/ui-vs-ux-what-is-the-difference/" target="_blank">UI vs UX: What is the Difference?&lt;/a>&lt;/p></description></item><item><title>2017 Jul 31th Reading Ref</title><link>/posts/2016-jul-31th/</link><pubDate>Mon, 31 Jul 2017 17:32:00 +0000</pubDate><guid>/posts/2016-jul-31th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>vue.js: methods/computed/filter/data/v-if/v-show&lt;/p></description></item><item><title>2017 Jul 25th Reading Ref</title><link>/posts/2016-jul-25th/</link><pubDate>Tue, 25 Jul 2017 12:05:21 +0000</pubDate><guid>/posts/2016-jul-25th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>New skill: API calls / react js&lt;br />
-Business trip to Ho Chi Ming City&lt;br />
-Looking for opportunities in SEA&lt;/p></description></item><item><title>2017 Jun 22th Reading Ref</title><link>/posts/2016-jun-22th/</link><pubDate>Fri, 23 Jun 2017 16:07:35 +0000</pubDate><guid>/posts/2016-jun-22th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Working on the new project prototype based on vue.js.&lt;/p></description></item><item><title>2017 Jun 6th Reading Ref</title><link>/posts/2016-jun-6th/</link><pubDate>Tue, 06 Jun 2017 14:04:11 +0000</pubDate><guid>/posts/2016-jun-6th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>New topic to study: &lt;strong>Scrum&lt;/strong>&lt;br />
-Highlight: &lt;a href="https://css-tricks.com/future-front-end-web-development/" target="_blank">What is the Future of Front End Web Development?&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>User expectations on the rise.&lt;/li>
-&lt;li>New JavaScript is here.&lt;/li>
-&lt;li>&lt;strong>We&amp;rsquo;re not building pages, we&amp;rsquo;re building systems.&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>The line between native and web is blurring.&lt;/strong>&lt;/li>
-&lt;li>URLs are still a killer feature.&lt;/li>
-&lt;li>Performance is a key player.&lt;/li>
-&lt;li>&lt;strong>CSS will get much more modular.&lt;/strong>&lt;/li>
-&lt;li>CSS preprocessing will slowly fade away.&lt;/li>
-&lt;li>&lt;strong>Being good at HTML and CSS remains vital.&lt;/strong>&lt;/li>
-&lt;li>Build processes will get competitive.&lt;/li>
-&lt;/ul></description></item><item><title>2017 May 3rd Reading Ref</title><link>/posts/2016-may-3rd/</link><pubDate>Wed, 03 May 2017 10:54:33 +0000</pubDate><guid>/posts/2016-may-3rd/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Let&amp;rsquo;s TED!&lt;br />
-&lt;a href="https://1stwebdesigner.com/ted-talks-for-web-designers/" target="_blank">10 Inspirational &amp;amp; Insightful TED Talks for Web Designers&lt;/a>&lt;br />
-Todo list: Grid study&lt;/p></description></item><item><title>2017 Apr 17th Reading Ref</title><link>/posts/2017-apr-17th/</link><pubDate>Mon, 17 Apr 2017 14:42:43 +0000</pubDate><guid>/posts/2017-apr-17th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Highlight: &lt;a href="http://cssgridgarden.com/" target="_blank">GRID GARDEN&lt;/a>&lt;/p></description></item><item><title>2017 Apr 6th Reading Ref</title><link>/posts/2017-apr-6th/</link><pubDate>Thu, 06 Apr 2017 14:27:43 +0000</pubDate><guid>/posts/2017-apr-6th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>What&amp;rsquo;s the difference between Grid and Table?&lt;br />
-How does Grid help?&lt;br />
-Do we really need a grid system for any sites?&lt;/p></description></item><item><title>2017 Mar 17th Reading Ref</title><link>/posts/2016-mar-17th/</link><pubDate>Fri, 17 Mar 2017 16:17:02 +0000</pubDate><guid>/posts/2016-mar-17th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>CSS Grid: partial support in IE?! WTF?&lt;br />
-Time to learn new things!&lt;br />
-And, please keep this in ming: &amp;ldquo;&lt;strong>A bad designer makes your CSS/HTML a mess.&lt;/strong>&amp;ldquo;&lt;/p></description></item><item><title>EQCSS</title><link>/posts/eqcss/</link><pubDate>Tue, 14 Mar 2017 10:06:02 +0000</pubDate><guid>/posts/eqcss/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>前端技術、觀念持續進步中，快要跟不上惹啊啊啊！！！！！ &amp;gt;O&amp;lt;&lt;br />
-今年初發現的EQCSS被我閒置了兩個月後再次開封，細細品嚐這新玩意究竟改變了些什麼，忽然發現這東西不容小覷啊！&lt;br />
-但我個人對於「支援各種瀏覽器的版本」這件事情本身就抱持保留態度，所以EQCSS未來是否真能應用到實際專案呢&amp;hellip;？&lt;br />
-Anyway, 簡單翻譯了一些EQCSS的重點跟背景和相關應用，留檔備用。&lt;/p></description></item><item><title>Theme: Daily</title><link>/posts/theme-daily/</link><pubDate>Wed, 08 Mar 2017 16:26:29 +0000</pubDate><guid>/posts/theme-daily/</guid><description>&lt;p>Finally, I got time to update my blog theme.&lt;br />
-Goodbye &lt;a href="https://github.com/iissnan/hexo-theme-next" target="_blank">Next&lt;/a> and hello &lt;a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily&lt;/a>.&lt;br />
-Thanks a lot for this beautiful theme. :)&lt;/p></description></item><item><title>2017 Feb 24th Reading Ref</title><link>/posts/2016-feb-24th/</link><pubDate>Fri, 24 Feb 2017 17:10:59 +0000</pubDate><guid>/posts/2016-feb-24th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Flexbox note was updated. :&amp;ldquo;)&lt;/p></description></item><item><title>2017 Feb 7th Reading Ref</title><link>/posts/2017-feb-7th/</link><pubDate>Tue, 07 Feb 2017 10:05:54 +0000</pubDate><guid>/posts/2017-feb-7th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>The simple formula for great UX design: RECEIVE, APPRECIATE, SUMMARIZE, ASK&lt;/p></description></item><item><title>2017 Jan 20th Reading Ref</title><link>/posts/2016-jan-20th/</link><pubDate>Fri, 20 Jan 2017 11:40:46 +0000</pubDate><guid>/posts/2016-jan-20th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Hello, 2017!&lt;br />
-But, sorry, there&amp;rsquo;s no new plan for this year. XD&lt;br />
-Here&amp;rsquo;s my highlight for this references list: &lt;a href="http://designguidelines.co" target="_blank">Design Guidelines.&lt;/a> ★★★★★&lt;br />
-And, &lt;a href="https://github.com/eqcss/eqcss" target="_blank">EQCSS&lt;/a>?! WTF?&lt;/p></description></item><item><title>z-index 之亂</title><link>/posts/zindex-mess/</link><pubDate>Fri, 09 Dec 2016 10:22:23 +0000</pubDate><guid>/posts/zindex-mess/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>再次強調：*所有強人分享的方法都有優缺點，也都有適用性的問題*。&lt;br />
-找到好方法，要先能完整理解概念後，再來思考如何針對自己需求做調整，不要只知道照抄，若不了解其中原理，用到最後也會失去方向。&lt;br />
-另外，對頁面圖層概念若不清楚，有再好的工具/方法都無法做到正確管理 &lt;code>z-index&lt;/code>！&lt;br />
-盡量藉由切版來避免元件中子元件的層次問題，而非一昧的堆疊元件後再利用工具/方法去做 &lt;code>z-index&lt;/code> 管理，這種方式只會本末倒置！&lt;/p></description></item><item><title>2016 Dec 8th Reading Ref</title><link>/posts/2016-august-17th/</link><pubDate>Thu, 08 Dec 2016 15:43:57 +0000</pubDate><guid>/posts/2016-august-17th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>CSS Loops!!!!!&lt;/p></description></item><item><title>sass快速入門</title><link>/posts/sass/</link><pubDate>Mon, 05 Dec 2016 17:11:02 +0000</pubDate><guid>/posts/sass/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>自己整理的sass快速入門重點，對於已有CSS經驗、不想花時間研讀sass手冊的懶人們應該會節省不少時間。&lt;/p></description></item><item><title>2016 Nov 30th Reading Ref</title><link>/posts/2016-nov-30th/</link><pubDate>Thu, 01 Dec 2016 10:41:51 +0000</pubDate><guid>/posts/2016-nov-30th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>5-1-1 Rule of Thumb&lt;br />
-Got lots of great posts this week ❤&lt;/p></description></item><item><title>2016 Nov 21th Reading Ref</title><link>/posts/2016-nov-21th/</link><pubDate>Mon, 21 Nov 2016 12:13:54 +0000</pubDate><guid>/posts/2016-nov-21th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Dear Microsoft, Could you please stop support IE11 please please please? T^T&lt;/p></description></item><item><title>2016 Nov 10th Reading Ref</title><link>/posts/2016-nov-10th/</link><pubDate>Mon, 14 Nov 2016 12:00:07 +0000</pubDate><guid>/posts/2016-nov-10th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>I hate CSS refactoring&amp;hellip; T^T&lt;/p></description></item><item><title>CSS Methodologies</title><link>/posts/css-methodologies/</link><pubDate>Wed, 02 Nov 2016 11:14:32 +0000</pubDate><guid>/posts/css-methodologies/</guid><description>&lt;h3 id="css-方法論們">CSS 方法論們&lt;/h3>
-&lt;p>因應公司目前專案需求簡單整理了目前線上的 CSS 方法論們 (OOCSS、SMACSS、BEM、SUIT CSS、ITCSS、The 7-1 Pattern、MVCSS)，包含架構、命名等相關規範，除 Atomic 外，Atomic 簡單來說就是原子概念，將 CSS 拆分成許多不同的小部件，如 &lt;code>.border-bottom&lt;/code> &lt;code>.border-1px&lt;/code> &lt;code>.border-solid&lt;/code> &amp;hellip;等，在實際頁面中做組裝動作，嚴格來說不是很符合一般專案的情境。&lt;/p>
-&lt;p>雖然整理完所有方法論，以目前專案而言，沒有實際適合的命名規則可以使用，現階段應該會以 The 7-1 Pattern 作為主要架構基底搭配 SUIT CSS 的命名概念，再去做一套專屬的命名規範。&lt;/p>
-&lt;p>維持基本的 CSS 要求：&lt;/p>
-&lt;ul>
-&lt;li>不針對 html tag 做樣式&lt;/li>
-&lt;li>低耦合&lt;/li>
-&lt;li>提升樣式名稱語意&lt;/li>
-&lt;/ul>
-&lt;p>規範百百種，不要通通都覺得可以用，混到最後沒有一個規則，就是四不像呀！現在開始要還債惹！T^T&lt;/p></description></item><item><title>2016 Oct 28th Reading Ref</title><link>/posts/2016-oct-28th/</link><pubDate>Fri, 28 Oct 2016 14:25:33 +0000</pubDate><guid>/posts/2016-oct-28th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Highlight this week: &lt;em>CSS variables&lt;/em>&lt;/p></description></item><item><title>CSS Architecture</title><link>/posts/css-architecture/</link><pubDate>Wed, 26 Oct 2016 10:37:46 +0000</pubDate><guid>/posts/css-architecture/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>CCS架構到命名方式的應用與舉例，沒有細部介紹現有的架構跟命名規則有點可惜，有大概提到幾個命名方式的優缺點，Naming Methodologies跟Namespacing內容不錯。&lt;br />
-ITCSS &amp;amp; SUIT CSS 可以再深入研究。（筆記）&lt;/p></description></item><item><title>2016 Oct 24th Reading Ref</title><link>/posts/2016-oct-24th/</link><pubDate>Mon, 24 Oct 2016 15:25:55 +0000</pubDate><guid>/posts/2016-oct-24th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>I&amp;rsquo;m studying &lt;a href="https://courses.edx.org/courses/course-v1:MichiganX+UX501x+3T2016/info" target="_blank">UX&lt;/a> at University of Michigan (online) :&amp;ldquo;)&lt;br />
-Codepen CSS Collective:
-- &lt;a href="http://codepen.io/rachel_web/full/JKzrav/" target="_blank">Angry Birds (pure CSS)&lt;/a>
-- &lt;a href="http://codepen.io/fbrz/pen/vlrnd" target="_blank">iPhone 6 (pure CSS)&lt;/a>
-- &lt;a href="http://codepen.io/Nvagelis/full/yaQGAL/" target="_blank">Lighting Storm with Rain (Canvas)&lt;/a>&lt;/p></description></item><item><title>Refactoring CSS without Losing Your Mind</title><link>/posts/refactoring-css/</link><pubDate>Mon, 17 Oct 2016 11:10:15 +0000</pubDate><guid>/posts/refactoring-css/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>少數針對CSS重構的討論，喜歡講者一開始針對technical debt的解說和refactoring/rewrite的區分。&lt;br />
-劃重點：Use &lt;code>all: initial;&lt;/code> to buy you more time! XDDDD&lt;br />
-另外作者提到的小故事也滿讓人值得思考的：&lt;br />
-Refactoring is a second chance that most industries don&amp;rsquo;t get.&lt;/p></description></item><item><title>2016 Oct 14th Reading Ref</title><link>/posts/2016-oct-14th/</link><pubDate>Fri, 14 Oct 2016 15:46:19 +0000</pubDate><guid>/posts/2016-oct-14th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Looking for the suitable structure for CSS Modules + React&amp;hellip;(with sprite, sass, etc.)&lt;/p></description></item><item><title>2016 Sep 30th Reading Ref</title><link>/posts/2016-sep-30th/</link><pubDate>Fri, 30 Sep 2016 16:31:55 +0000</pubDate><guid>/posts/2016-sep-30th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>&lt;a href="http://blog.hinablue.me/layout-2012-web-design-layout-part-1/" target="_blank">Layout Lessons&lt;/a> :&amp;ldquo;)&lt;/p></description></item><item><title>2016 Sep 22th Reading Ref</title><link>/posts/2016-sep-22th/</link><pubDate>Thu, 22 Sep 2016 14:22:32 +0000</pubDate><guid>/posts/2016-sep-22th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Free UX online courses from University of Michigan: &lt;a href="https://www.edx.org/micromasters/michiganx-user-experience-ux-research-design" target="_blank">User Experience (UX) Research and Design&lt;/a>&lt;br />
-Enroll now! :)&lt;/p></description></item><item><title>2016 Sep 13th Reading Ref</title><link>/posts/2016-sep-13th/</link><pubDate>Tue, 13 Sep 2016 12:15:09 +0000</pubDate><guid>/posts/2016-sep-13th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Amazing online color for print and web-use. ❤
-&lt;a href="http://nipponcolors.com/" target="_blank">&lt;em>Nippon Colors&lt;/em>&lt;/a>&lt;br />
-JS new toy: &lt;a href="~/Toys/Rocket/" target="_blank">Rocket Game&lt;/a>&lt;/p></description></item><item><title>2016 Sep 1st Reading Ref</title><link>/posts/2016-sep-1st/</link><pubDate>Thu, 01 Sep 2016 10:20:10 +0000</pubDate><guid>/posts/2016-sep-1st/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>&lt;em>Recently JS toys&lt;/em>
-Done: &lt;a href="https://github.com/estherj-hsu/js-sandbox/blob/master/Projects/LottoDraw/" target="_blank">Lotto Draw&lt;/a>&lt;br />
-On going: Tetris, Todo List&lt;/p>
-&lt;p>&lt;em>Recommended References&lt;/em>
-&lt;a href="https://thedesignteam.io/the-design-process-67df3e8ec68f#.khdvc4v4b" target="_blank">The Design Process&lt;/a>&lt;br />
-It&amp;rsquo;s not easy to explain the whole design process with this kind of comics.&lt;br />
-Just say hi to Frank! :&amp;ldquo;)&lt;/p></description></item><item><title>2016 August 17th Reading Ref</title><link>/posts/2016-august-17th/</link><pubDate>Wed, 17 Aug 2016 15:17:41 +0000</pubDate><guid>/posts/2016-august-17th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Oooops&amp;hellip; T^T&lt;br />
-Lots of catching up need to do.&lt;/p></description></item><item><title>2016 Sep 5th Reading Ref</title><link>/posts/2016-sep-5th/</link><pubDate>Wed, 17 Aug 2016 15:17:41 +0000</pubDate><guid>/posts/2016-sep-5th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>&lt;em>Funny and creative CSS things:&lt;/em>
-&lt;a href="https://css-tricks.com/emotionally-complicated-class-names/" target="_blank">Emotionally Complicated Class Names&lt;/a>&lt;br />
-&lt;a href="http://saijogeorge.com/css-puns/" target="_blank">CSS Puns&lt;/a>&lt;br />
-Make work FUN!!! ❤&lt;/p></description></item><item><title>2016 July 22th Reading Ref</title><link>/posts/2016-july-22th/</link><pubDate>Fri, 22 Jul 2016 17:08:27 +0000</pubDate><guid>/posts/2016-july-22th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Personal highlight: &lt;a href="https://designshack.net/articles/graphics/is-the-gradient-making-a-comeback/" target="_blank">&lt;em>Is the Gradient Making a Comeback?&lt;/em>&lt;/a>
-New online service toy to share: &lt;a href="https://zeplin.io/" target="_blank">&lt;em>Zeplin&lt;/em>&lt;/a>&lt;/p></description></item><item><title>Oriental Web Design 東方網頁設計</title><link>/posts/oriental-web-design/</link><pubDate>Thu, 21 Jul 2016 09:58:55 +0000</pubDate><guid>/posts/oriental-web-design/</guid><description>&lt;h3 id="esther">Esther&lt;/h3>
-&lt;p>此文節取自&lt;a href="http://1stwebdesigner.com/graphic-web-design-trends-2016/#globe" target="_blank">Graphic And Web Design Trends 2016 – What Are Top 7 To Look Out For?&lt;/a>中的亞洲部分，並作簡要翻譯。&lt;/p></description></item><item><title>2016 July 12th Reading Ref</title><link>/posts/2016-july-12th/</link><pubDate>Tue, 12 Jul 2016 15:50:12 +0000</pubDate><guid>/posts/2016-july-12th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Favorite: &lt;em>A Front End Developer is Aware&lt;/em>:
-Design, back end, network, performance, content strategy, databases, testing, systems, devops, servers, accessibility, device landscape.&lt;/p></description></item><item><title>2016 July 7th Reading Ref</title><link>/posts/2016-july-7th/</link><pubDate>Thu, 07 Jul 2016 15:01:11 +0000</pubDate><guid>/posts/2016-july-7th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Can&amp;rsquo;t wait CSS4!&lt;br />
-Study react exapmles!&lt;/p></description></item><item><title>2016 June 27th Reading Ref</title><link>/posts/2016-june-27th/</link><pubDate>Tue, 28 Jun 2016 15:45:55 +0000</pubDate><guid>/posts/2016-june-27th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Queting design?&lt;/p></description></item><item><title>Head First JavaScript</title><link>/posts/head-first-javascript/</link><pubDate>Fri, 17 Jun 2016 14:26:29 +0000</pubDate><guid>/posts/head-first-javascript/</guid><description>&lt;h2 id="read-note">Read note&lt;/h2>
-&lt;p>From &amp;ldquo;Head First JavaScript Programming&amp;rdquo;&lt;/p>
-&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>&lt;a href="https://github.com/estherj-hsu/js-sandbox/blob/master/HeadFirstJS/" target="_blank">練習code Github&lt;/a>
-需補強：控制DOM、實際應用&lt;br />
-閱讀中，You don&amp;rsquo;t know JS系列：&lt;br />
-1. You don&amp;rsquo;t know JS: UP &amp;amp; GOING (done)
-2. You don&amp;rsquo;t know JS: SCOPE &amp;amp; CLOSURE&lt;/p></description></item><item><title>2016 June 15th Reading Ref</title><link>/posts/2016-june-15th/</link><pubDate>Wed, 15 Jun 2016 10:47:20 +0000</pubDate><guid>/posts/2016-june-15th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Bootstrap大(?)變身?&lt;/p></description></item><item><title>2016 June 13th Reading Ref</title><link>/posts/2016-june-13th/</link><pubDate>Mon, 13 Jun 2016 12:25:04 +0000</pubDate><guid>/posts/2016-june-13th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>!&lt;/p></description></item><item><title>Flexbox</title><link>/posts/flexbox/</link><pubDate>Wed, 08 Jun 2016 15:32:52 +0000</pubDate><guid>/posts/flexbox/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>A Brief Note of CSS Selector&lt;br />
-Noted by myself in the end of 2015.&lt;br />
-P.S. &lt;strong>NEW&lt;/strong> &lt;a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS Grid Layout&lt;/a> is coming soon!&lt;br />
-2017/02/15 updated!&lt;/p>
-&lt;p>&lt;em>實作/範例&lt;/em>
-* &lt;a href="http://codepen.io/estherj-hsu/pen/bVXOMY" target="_blank">Pinterest Grid with Flexbox&lt;/a>
-* &lt;a href="http://progressivered.com/fla/" target="_blank">Flex Layout Attribute&lt;/a>&lt;/p></description></item><item><title>2016 June 8th Reading Ref</title><link>/posts/2016-june-8th/</link><pubDate>Wed, 08 Jun 2016 15:20:11 +0000</pubDate><guid>/posts/2016-june-8th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>!&lt;/p></description></item><item><title>CSS Selector</title><link>/posts/css-selector/</link><pubDate>Thu, 02 Jun 2016 08:59:15 +0000</pubDate><guid>/posts/css-selector/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Noted by myself in the end of 2015.&lt;/p></description></item><item><title>2016 June 2nd Reading Ref</title><link>/posts/2016-june-2nd/</link><pubDate>Thu, 02 Jun 2016 08:06:11 +0000</pubDate><guid>/posts/2016-june-2nd/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>!&lt;/p></description></item><item><title>A Brief Note of CSS Transform</title><link>/posts/css-transform/</link><pubDate>Wed, 01 Jun 2016 21:49:35 +0000</pubDate><guid>/posts/css-transform/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>Noted by myself in the end of 2015.&lt;/p></description></item><item><title>2016 May - Tools</title><link>/posts/2016-may-tools/</link><pubDate>Tue, 31 May 2016 08:06:11 +0000</pubDate><guid>/posts/2016-may-tools/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>!&lt;/p></description></item><item><title>2016 May 30th Reading Ref</title><link>/posts/2016-may-30th/</link><pubDate>Mon, 30 May 2016 08:06:11 +0000</pubDate><guid>/posts/2016-may-30th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>!&lt;/p></description></item><item><title>2016 May 25th Reading Ref</title><link>/posts/2016-may-25th/</link><pubDate>Wed, 25 May 2016 08:06:11 +0000</pubDate><guid>/posts/2016-may-25th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>!&lt;/p></description></item><item><title>2016 May 15th Reading Ref</title><link>/posts/2016-may-15th/</link><pubDate>Sun, 15 May 2016 08:06:11 +0000</pubDate><guid>/posts/2016-may-15th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>!&lt;/p></description></item><item><title>2016 May 10th Reading Ref</title><link>/posts/2016-may-10th/</link><pubDate>Tue, 10 May 2016 08:06:11 +0000</pubDate><guid>/posts/2016-may-10th/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>!&lt;/p></description></item><item><title>2016 Feb&amp;Jan</title><link>/posts/2016-febjan/</link><pubDate>Thu, 31 Mar 2016 08:06:11 +0000</pubDate><guid>/posts/2016-febjan/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>!&lt;/p></description></item><item><title>2016 March Reading Ref</title><link>/posts/2016-march/</link><pubDate>Thu, 31 Mar 2016 08:06:11 +0000</pubDate><guid>/posts/2016-march/</guid><description>&lt;h3 id="esther">esther&lt;/h3>
-&lt;p>!&lt;/p></description></item><item><title>First challenge</title><link>/posts/first-challenge/</link><pubDate>Wed, 09 Mar 2016 21:49:35 +0000</pubDate><guid>/posts/first-challenge/</guid><description>&lt;h3 id="not-easy">Not easy!&lt;/h3>
-&lt;p>I love this theme.&lt;br />
-It&amp;rsquo;s really simple and clean as I need.&lt;br />
-However, I also want to use other &amp;ldquo;advanced&amp;rdquo; function, like tags and categories&amp;hellip;&lt;/p>
-&lt;p>So, here&amp;rsquo;s what I&amp;rsquo;m going to do this:&lt;/p></description></item><item><title>2016 Arpil</title><link>/posts/2016-april/</link><pubDate>Sat, 20 Feb 2016 11:38:15 +0000</pubDate><guid>/posts/2016-april/</guid><description>&lt;h3 id="esther">Esther&lt;/h3>
-&lt;p>!&lt;/p></description></item><item><title>First Post - Hello World!</title><link>/posts/first-post/</link><pubDate>Sat, 20 Feb 2016 11:38:15 +0000</pubDate><guid>/posts/first-post/</guid><description>Hexo is the new sexy&amp;hellip;?</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Esther's Life</title><link>/posts/</link><description>Recent content in Posts on Esther's Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 23 Mar 2023 12:17:38 -0700</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript 2: Union, Narrowing &amp; Interface</title><link>/posts/typescript-2/</link><pubDate>Thu, 23 Mar 2023 12:17:38 -0700</pubDate><guid>/posts/typescript-2/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Dive a bit deeper! 🧐&lt;/p&gt;</description></item><item><title>TypeScript I: Types, Functions &amp; Gernerics</title><link>/posts/typescript-1/</link><pubDate>Wed, 22 Mar 2023 11:26:14 -0700</pubDate><guid>/posts/typescript-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Dive into Typescript! 🧐&lt;br&gt;
+Took a free course on &lt;a href="https://www.codecademy.com/learn/learn-typescript"&gt;codecademy&lt;/a&gt; 🙇🏻‍♀️&lt;/p&gt;</description></item><item><title>2023 Feb Update</title><link>/posts/2023-feb-update/</link><pubDate>Fri, 10 Mar 2023 11:27:04 -0800</pubDate><guid>/posts/2023-feb-update/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;It has been a while since the last update.&lt;br&gt;
+The good news is I got the invitation to IEC and will obtain a one-year open work permit. 🥳&lt;/p&gt;</description></item><item><title>2022 Nov Update</title><link>/posts/2022-nov-update/</link><pubDate>Tue, 06 Dec 2022 10:46:53 -0800</pubDate><guid>/posts/2022-nov-update/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Checked some items on the list&lt;br&gt;
+Also attended some in-person events (WomenHack, HackerX and IxDA) in Vancouver&lt;br&gt;
+Keep having calls and interviews 🥶&lt;/p&gt;</description></item><item><title>2022 Oct Update</title><link>/posts/2022-oct-update/</link><pubDate>Sat, 22 Oct 2022 09:42:00 -0700</pubDate><guid>/posts/2022-oct-update/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Found some mock interview practice topics.&lt;br&gt;
+My to-do list is getting longer&amp;hellip;&lt;/p&gt;</description></item><item><title>2022 Sep Update</title><link>/posts/2022-sep-update/</link><pubDate>Mon, 03 Oct 2022 14:31:15 -0700</pubDate><guid>/posts/2022-sep-update/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;I am in the term break recently.&lt;br&gt;
+So glad that I finally finished my study for UX Design and can focus on job hunting now. 🤞&lt;br&gt;
+Came up an idea for my side project: Trivia Taiwan 🇹🇼&lt;/p&gt;</description></item><item><title>2022 Aug Reading Ref</title><link>/posts/2022-aug/</link><pubDate>Thu, 25 Aug 2022 17:20:22 -0700</pubDate><guid>/posts/2022-aug/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Time to read (again)!&lt;/p&gt;</description></item><item><title>LocalWP</title><link>/posts/localwp/</link><pubDate>Wed, 24 Aug 2022 13:51:52 -0700</pubDate><guid>/posts/localwp/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Recently started to work on WordPress (again) 🙈&lt;br&gt;
+Found a perfect tool for macOS to build WordPress without AMP (Apache+MySQL+PHP)&lt;/p&gt;</description></item><item><title>Storybook Time</title><link>/posts/storybook/</link><pubDate>Wed, 20 Jul 2022 13:56:13 -0700</pubDate><guid>/posts/storybook/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Built a Storybook playground for me 🥳&lt;br&gt;
+Can&amp;rsquo;t wait to create my own component library!&lt;/p&gt;</description></item><item><title>Notes from Interviews</title><link>/posts/notes-from-interveiws/</link><pubDate>Mon, 18 Jul 2022 12:02:07 -0700</pubDate><guid>/posts/notes-from-interveiws/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Some notes from those technical interviews I had so far&lt;br&gt;
+Talked with some mentors on &lt;a href="https://app.adplist.org/signup?referral_id=99993&amp;amp;src=user"&gt;ADPList&lt;/a&gt; 🥰&lt;/p&gt;</description></item><item><title>Amazon Interview</title><link>/posts/amazon-interview/</link><pubDate>Fri, 17 Jun 2022 22:43:58 -0700</pubDate><guid>/posts/amazon-interview/</guid><description>&lt;h3 id="esther"&gt;Esther&lt;/h3&gt;
+&lt;p&gt;After the phone screening, I got an interview chance with &lt;em&gt;Amazon AWS&lt;/em&gt;.&lt;br&gt;
+Only about 10 days to prepare for it, and finally, it’s today!&lt;/p&gt;</description></item><item><title>Portfolio Updated</title><link>/posts/portfolio-updated/</link><pubDate>Sat, 14 May 2022 10:49:38 -0700</pubDate><guid>/posts/portfolio-updated/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Long time no see. ☺️&lt;br&gt;
+In Vancouver now.&lt;br&gt;
+Looking for a new opportunity.&lt;/p&gt;</description></item><item><title>UX WCAG</title><link>/posts/ux-wcga/</link><pubDate>Fri, 25 Mar 2022 15:57:54 -0700</pubDate><guid>/posts/ux-wcga/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;WCAG 2.1 POUR!&lt;/p&gt;</description></item><item><title>Hugo Theme</title><link>/posts/hugo-theme/</link><pubDate>Fri, 30 Apr 2021 11:24:00 +0800</pubDate><guid>/posts/hugo-theme/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;My hugo theme is done! 🎉&lt;br&gt;
+The most simple but nice theme ☺&lt;/p&gt;</description></item><item><title>Thank you letter from MS</title><link>/posts/ms-interview-result/</link><pubDate>Sat, 03 Apr 2021 08:13:53 +0800</pubDate><guid>/posts/ms-interview-result/</guid><description>&lt;h3 id="esther"&gt;Esther&lt;/h3&gt;
+&lt;p&gt;I just got a thank you letter from Microsoft. 😭&lt;br&gt;
+I&amp;rsquo;m really upsad, but it&amp;rsquo;s a such nice interview experiece.&lt;/p&gt;</description></item><item><title>MS UX Engineer Interview</title><link>/posts/ms-interview/</link><pubDate>Tue, 30 Mar 2021 11:21:12 +0800</pubDate><guid>/posts/ms-interview/</guid><description>&lt;h3 id="esther"&gt;Esther&lt;/h3&gt;
+&lt;p&gt;OMG!!!&lt;br&gt;
+Just had a virtual interview for UX Engineer position!&lt;br&gt;
+And&amp;hellip; it&amp;rsquo;s Microsoft!!! 😳&lt;br&gt;
+(My comment of this experience is in CHINESE.)&lt;/p&gt;</description></item><item><title>Hugo</title><link>/posts/hugo/</link><pubDate>Sat, 16 Jan 2021 12:06:56 +0800</pubDate><guid>/posts/hugo/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Finally&amp;hellip; Hello Hugo! Bye Hexo!&lt;/p&gt;</description></item><item><title>2020 Dec Reading Ref 1</title><link>/posts/2020-dec-1/</link><pubDate>Thu, 31 Dec 2020 08:58:52 +0000</pubDate><guid>/posts/2020-dec-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Merry Xmas🎄&lt;br&gt;
+Happy New Year🎉&lt;/p&gt;</description></item><item><title>2020 Nov Reading Ref 1</title><link>/posts/2020-nov-1/</link><pubDate>Tue, 10 Nov 2020 10:04:38 +0000</pubDate><guid>/posts/2020-nov-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s almost time to say goodbye to 2020 😷&lt;/p&gt;</description></item><item><title>CHT 致科技人</title><link>/posts/cht/</link><pubDate>Thu, 08 Oct 2020 15:24:13 +0000</pubDate><guid>/posts/cht/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;看完 &lt;a href="https://www.netflix.com/tw/title/81254224"&gt;The Social Dilemma&lt;/a&gt; 之後訪問了 Center for Humane Technology 的網站，然後讀到這篇讓我很有感觸的文章。因為工作的關係，對科技其實很熟悉也更加理解科技的問題，希望大家都能意識到這些問題，也希望未來法律或是教育能追上科技的發展。&lt;br&gt;
+CHT 也有提供找回掌控權的相關建議，可以參考&lt;a href="https://www.humanetech.com/take-control"&gt;Take Control&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原文 Center for Humane Technology: For Technologists
+&lt;a href="https://www.humanetech.com/technologists"&gt;https://www.humanetech.com/technologists&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>2020 Oct Reading Ref 1</title><link>/posts/2020-oct-1/</link><pubDate>Tue, 06 Oct 2020 14:26:40 +0000</pubDate><guid>/posts/2020-oct-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;My summer vacation is coming!!!&lt;/p&gt;</description></item><item><title>2020 September Reading Ref 1</title><link>/posts/2020-september-1/</link><pubDate>Wed, 09 Sep 2020 16:27:12 +0000</pubDate><guid>/posts/2020-september-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://technology.blog.gov.uk/2020/07/24/why-you-should-hire-a-frontend-developer/"&gt;Why you should hire a frontend developer&lt;/a&gt; 🤣&lt;/p&gt;</description></item><item><title>2020 August Weekly Reading Ref 2</title><link>/posts/2020-august-2/</link><pubDate>Tue, 25 Aug 2020 13:07:22 +0000</pubDate><guid>/posts/2020-august-2/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Finally, it&amp;rsquo;s getting cooler 🌬&lt;/p&gt;</description></item><item><title>2020 August Weekly Reading Ref 1</title><link>/posts/2020-august-1/</link><pubDate>Wed, 12 Aug 2020 10:41:19 +0000</pubDate><guid>/posts/2020-august-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Need more time to flutter 🥺&lt;/p&gt;</description></item><item><title>2020 July Reading Ref 2</title><link>/posts/2020-july-2/</link><pubDate>Fri, 31 Jul 2020 17:17:21 +0000</pubDate><guid>/posts/2020-july-2/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;When will the summer end? 🥵&lt;/p&gt;</description></item><item><title>2020 July Reading Ref 1</title><link>/posts/2020-july-1/</link><pubDate>Fri, 24 Jul 2020 17:34:46 +0000</pubDate><guid>/posts/2020-july-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;🌡️🥵&lt;/p&gt;</description></item><item><title>2020 June Reading Ref 2</title><link>/posts/2020-june-2/</link><pubDate>Wed, 01 Jul 2020 11:07:41 +0000</pubDate><guid>/posts/2020-june-2/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Summer in Taiwan ☀️ 🔥🔥🔥🔥🔥&lt;/p&gt;</description></item><item><title>2020 June Reading Ref 1</title><link>/posts/2020-june-1/</link><pubDate>Wed, 03 Jun 2020 10:57:41 +0000</pubDate><guid>/posts/2020-june-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Happy Birthday to RWD 🥳&lt;/p&gt;</description></item><item><title>2020 May Reading Ref 2</title><link>/posts/2020-may-2/</link><pubDate>Mon, 25 May 2020 11:35:54 +0000</pubDate><guid>/posts/2020-may-2/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Say hi to Green Island!&lt;/p&gt;
+&lt;div class="m-2"&gt;
+ &lt;iframe src="https://drive.google.com/file/d/17peSkZn0LsN5vJQkhdACTUkcu8LSgw1l/preview" width="100%" height="400"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description></item><item><title>2020 May Reading Ref 1</title><link>/posts/2020-may-1/</link><pubDate>Wed, 06 May 2020 14:52:10 +0000</pubDate><guid>/posts/2020-may-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Oh yeah, going to have my vacation next week 🏖&lt;br&gt;
+Taiwan No 1 🎉&lt;br&gt;
+Recommend Article: &lt;a href="https://www.nytimes.com/interactive/2020/04/07/technology/coronavirus-internet-use.html?"&gt;The Virus Changed the Way We Internet&lt;/a&gt;&lt;/p&gt;</description></item><item><title>2020 April Weekly Reading Ref 2</title><link>/posts/2020-april-2/</link><pubDate>Tue, 21 Apr 2020 12:04:57 +0000</pubDate><guid>/posts/2020-april-2/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;💬&lt;/p&gt;</description></item><item><title>2020 April Weekly Reading Ref 1</title><link>/posts/2020-april-1/</link><pubDate>Fri, 10 Apr 2020 17:00:43 +0000</pubDate><guid>/posts/2020-april-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Exhausted 😫&lt;/p&gt;</description></item><item><title>2020 March Reading Ref 3</title><link>/posts/2020-march-3/</link><pubDate>Thu, 26 Mar 2020 14:29:32 +0000</pubDate><guid>/posts/2020-march-3/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Recently, working with &lt;a href="https://chartjs.org/"&gt;Chart.js&lt;/a&gt; to generate &amp;ldquo;pretty PDF report&amp;rdquo; 😵&lt;br&gt;
+And got no time to learn flutter 😩&lt;/p&gt;</description></item><item><title>2020 March Reading Ref 2</title><link>/posts/2020-march-2/</link><pubDate>Thu, 19 Mar 2020 12:56:58 +0000</pubDate><guid>/posts/2020-march-2/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;🤦🏻‍♀️&lt;/p&gt;</description></item><item><title>2020 March Reading Ref 1</title><link>/posts/2020-march-1/</link><pubDate>Fri, 06 Mar 2020 14:24:30 +0000</pubDate><guid>/posts/2020-march-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;It has been a busy week 🤯&lt;/p&gt;</description></item><item><title>2020 Feb Reading Ref 3</title><link>/posts/2020-feb-3/</link><pubDate>Mon, 24 Feb 2020 14:06:53 +0000</pubDate><guid>/posts/2020-feb-3/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;&amp;ldquo;If you need to label something, it is poorly designed&amp;rdquo; 🤭&lt;/p&gt;</description></item><item><title>2020 Feb Reading Ref 2</title><link>/posts/2020-feb-2/</link><pubDate>Wed, 12 Feb 2020 11:49:05 +0000</pubDate><guid>/posts/2020-feb-2/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Wuhan coronavirus 😱&lt;br&gt;
+Take care and stay healthy 💪&lt;/p&gt;</description></item><item><title>2020 Feb Reading Ref 1</title><link>/posts/2020-feb-1/</link><pubDate>Tue, 04 Feb 2020 15:23:32 +0000</pubDate><guid>/posts/2020-feb-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;🙌 CSS 4 🙌&lt;/p&gt;</description></item><item><title>2020 Jan Reading Ref 2</title><link>/posts/2020-jan-2/</link><pubDate>Wed, 22 Jan 2020 16:22:44 +0000</pubDate><guid>/posts/2020-jan-2/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Happy Lunar New Year 🧨&lt;br&gt;
+Going to Vladivostok and enjoy my (freezing) vacation 🥶&lt;/p&gt;</description></item><item><title>2020 Jan Reading Ref 1</title><link>/posts/2020-jan-1/</link><pubDate>Mon, 13 Jan 2020 15:44:44 +0000</pubDate><guid>/posts/2020-jan-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Hi 2020 🤩&lt;br&gt;
+First lesson of 2020 from Pablo Stanley, Design Lead at InvisionApp: &lt;a href="https://www.youtube.com/embed/bEg5ySTUGxE"&gt;The Faker You Are, the More Successful You Can Be&lt;/a&gt;.&lt;br&gt;
+Become a &lt;strong&gt;SUCCESSFUL&lt;/strong&gt; designer together! 🤣&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/bEg5ySTUGxE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</description></item><item><title>2019 Dec Weekly Reading Ref 3</title><link>/posts/2019-dec-3/</link><pubDate>Tue, 24 Dec 2019 15:18:12 +0000</pubDate><guid>/posts/2019-dec-3/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;🎄Merry Christmas🎄&lt;/p&gt;</description></item><item><title>2019 Dec Weekly Reading Ref 2</title><link>/posts/2019-dec-2/</link><pubDate>Tue, 17 Dec 2019 11:31:45 +0000</pubDate><guid>/posts/2019-dec-2/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Highlight of this week: &lt;strong&gt;Quiting Job Signs&lt;/strong&gt; 🤙&lt;br&gt;
+Principle #1: Your Job Violates Your Boundaries&lt;br&gt;
+Principle #2: Your Job Goes Against Your Goals&lt;br&gt;
+Principle #3: Your Job (Consistently) Violates a Healthy Mode of Being&lt;br&gt;
+Principle #4: Your Job Forces You to Choose between Relationship and Safety&lt;br&gt;
+Principle #5: Your Job Erodes Your Status, Dignity or Self-respect&lt;/p&gt;</description></item><item><title>Flutter Part 3: State</title><link>/posts/flutter-3/</link><pubDate>Wed, 11 Dec 2019 15:22:41 +0000</pubDate><guid>/posts/flutter-3/</guid><description>&lt;h3 id="state--http-request"&gt;State &amp;amp; HTTP request&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Dart and Flutter: The Complete Developer&amp;rsquo;s Guide&lt;/strong&gt;: Chapter 9~11&lt;br&gt;
+Let&amp;rsquo;s learn more about flutter widget.&lt;br&gt;
+Main Goal: Click the action button to request one more image&lt;br&gt;
+Also, play with material wedgets. 🌟&lt;/p&gt;</description></item><item><title>2019 Dec Weekly Reading Ref 1</title><link>/posts/2019-dec-1/</link><pubDate>Tue, 10 Dec 2019 10:56:00 +0000</pubDate><guid>/posts/2019-dec-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;❄️Winter is coming ⛄&lt;/p&gt;</description></item><item><title>2019 Nov Weekly Reading Ref 3</title><link>/posts/2019-nov-3/</link><pubDate>Mon, 02 Dec 2019 13:05:07 +0000</pubDate><guid>/posts/2019-nov-3/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Add new tag App 🎉
+Special topic of this week: &lt;strong&gt;The Ethics Of Algorithms&lt;/strong&gt;
+How to &lt;a href="https://www.forbes.com/sites/insights-intelai/2019/03/27/managing-the-ethics-of-algorithms/"&gt;manage the ethics of algorithms&lt;/a&gt;?&lt;br&gt;
+Why should we care?&lt;br&gt;
+Cuz &lt;a href="https://css-tricks.com/its-my-job-and-yours/"&gt;It’s my job, and yours&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Read more if you&amp;rsquo;re interested in this topic:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://g.co/kgs/f6ciDs"&gt;Hello World: How to Be Human in the Age of the Machine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://g.co/kgs/f58D26"&gt;Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Flutter Part 2: with Dart</title><link>/posts/flutter-2/</link><pubDate>Fri, 22 Nov 2019 14:14:58 +0000</pubDate><guid>/posts/flutter-2/</guid><description>&lt;h3 id="instructon-of-dart"&gt;Instructon of Dart&lt;/h3&gt;
+&lt;p&gt;Get basic idea of both flutter and dart:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://medium.com/swlh/flutter-with-dart-is-it-worth-it-3f60ed5df9da"&gt;Flutter with Dart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://flutter.dev/docs/get-started/flutter-for/web-devs"&gt;Flutter for web developers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Flutter Part 1: Install</title><link>/posts/flutter-1/</link><pubDate>Tue, 19 Nov 2019 17:03:38 +0000</pubDate><guid>/posts/flutter-1/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Make sure that you unzip the flutter folder into the right directory.&lt;br&gt;
+If you&amp;rsquo;d like to move the flutter folder after ran flutter, you might see the same error as mine. 🙈&lt;/p&gt;</description></item><item><title>2019 Nov 18th Reading Ref</title><link>/posts/2019-nov-18th/</link><pubDate>Mon, 18 Nov 2019 17:56:04 +0000</pubDate><guid>/posts/2019-nov-18th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Long time no see 👻&lt;br&gt;
+Just started to play with &lt;strong&gt;dart&lt;/strong&gt; &amp;amp; &lt;strong&gt;Flutter&lt;/strong&gt;.&lt;br&gt;
+Highlight of today&amp;rsquo;s reference: &lt;em&gt;Dark mode&lt;/em&gt; is really helpful for our eyes?&lt;/p&gt;</description></item><item><title>2019 Feb 23th Reading Ref</title><link>/posts/2019-feb-23th/</link><pubDate>Sat, 23 Feb 2019 14:56:14 +0000</pubDate><guid>/posts/2019-feb-23th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Hmmmmmmmmm&amp;hellip;&lt;/p&gt;</description></item><item><title>2019 Feb 10th Reading Ref</title><link>/posts/2019-feb-10th/</link><pubDate>Sun, 10 Feb 2019 11:34:58 +0000</pubDate><guid>/posts/2019-feb-10th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Happy Lunar New Year 🐽&lt;br&gt;
+Let&amp;rsquo;s start over.&lt;/p&gt;</description></item><item><title>2018 July 17th Reading Ref</title><link>/posts/2018-july-17th/</link><pubDate>Tue, 07 Aug 2018 21:04:52 +0000</pubDate><guid>/posts/2018-july-17th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Built and new NGO project with vue.js: &lt;a href="https://taiwaneducationprogram.github.io/"&gt;https://taiwaneducationprogram.github.io/&lt;/a&gt;&lt;/p&gt;</description></item><item><title>2018 June 28th Reading Ref</title><link>/posts/2018-june-28th/</link><pubDate>Thu, 28 Jun 2018 20:34:22 +0000</pubDate><guid>/posts/2018-june-28th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Finally, I got a new laptop &amp;ndash; Thinkpad T580!!! ❤❤❤&lt;/p&gt;</description></item><item><title>2018 May 24th Reading Ref</title><link>/posts/2018-may-24th/</link><pubDate>Thu, 24 May 2018 09:21:35 +0000</pubDate><guid>/posts/2018-may-24th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Keeping updated with new stuff&amp;hellip;&lt;br&gt;
+Working on vue project on my own ;)&lt;/p&gt;</description></item><item><title>2018 March 26th Reading Ref</title><link>/posts/2018-march-26th/</link><pubDate>Tue, 17 Apr 2018 09:43:38 +0000</pubDate><guid>/posts/2018-march-26th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Updating reference of last month ;)&lt;/p&gt;</description></item><item><title>2018 March 12th Reading Ref</title><link>/posts/2018-march-12th/</link><pubDate>Mon, 12 Mar 2018 11:47:03 +0000</pubDate><guid>/posts/2018-march-12th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Learning to use Grid flexbox correctly.&lt;/p&gt;</description></item><item><title>2018 March 1st Reading Ref</title><link>/posts/2018-march-1st/</link><pubDate>Thu, 01 Mar 2018 12:26:45 +0000</pubDate><guid>/posts/2018-march-1st/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;CSS variables!&lt;/p&gt;</description></item><item><title>Data Structures</title><link>/posts/data-structures/</link><pubDate>Mon, 29 Jan 2018 17:53:32 +0000</pubDate><guid>/posts/data-structures/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;From data structure to algorithm&amp;hellip;?&lt;br&gt;
+Still working on the tree removing part T^T&lt;/p&gt;</description></item><item><title>2018 Jan 23th Reading Ref</title><link>/posts/2018-jan-23th/</link><pubDate>Tue, 23 Jan 2018 09:24:28 +0000</pubDate><guid>/posts/2018-jan-23th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s been a while.&lt;br&gt;
+Everything goes well and even better.&lt;br&gt;
+Let&amp;rsquo;s keep going and being better.&lt;/p&gt;</description></item><item><title>2017 Oct 16th Reading Ref</title><link>/posts/2017-oct-16th/</link><pubDate>Mon, 16 Oct 2017 13:59:11 +0000</pubDate><guid>/posts/2017-oct-16th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;一連串的意外、機會，&lt;br&gt;
+接著經過了爆炸性的兩週後，&lt;br&gt;
+終於，可以慢慢地開始為新生活做準備了。&lt;br&gt;
+Life is about timing.&lt;br&gt;
+Life always begins with ONE STEP outside of your COMFORT ZONE. ;)&lt;/p&gt;</description></item><item><title>CSS優化項目之一：多語系選單</title><link>/posts/css-opt-menu/</link><pubDate>Mon, 18 Sep 2017 14:11:21 +0000</pubDate><guid>/posts/css-opt-menu/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;想記錄一下自己去年優化的幾個部分，不堪回想的血淚&amp;hellip; T^T&lt;br&gt;
+剛接觸 sass 時，會被他很厲害的功能迷惑，&lt;br&gt;
+曾經我也不自覺地濫用了很多的 &lt;code&gt;@extend&lt;/code&gt;，&lt;br&gt;
+但是如果弄清楚需求與效能後，&lt;br&gt;
+會知道很多東西其實維持舊寫法才是比較適當的選擇。&lt;br&gt;
+就讓我們繼續看下去吧&amp;hellip;&lt;/p&gt;</description></item><item><title>2017 Sep 4th Reading Ref</title><link>/posts/2017-sep-4th/</link><pubDate>Mon, 04 Sep 2017 15:20:14 +0000</pubDate><guid>/posts/2017-sep-4th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Looking for opportunities abroad. :(&lt;/p&gt;</description></item><item><title>CSS Pixel Art</title><link>/posts/css-pixel-art/</link><pubDate>Fri, 01 Sep 2017 13:40:32 +0000</pubDate><guid>/posts/css-pixel-art/</guid><description>&lt;h3 id="esther"&gt;Esther&lt;/h3&gt;
+&lt;p&gt;看了 Una Kravets 的純 CSS 遊戲，覺得 Pixel 實在太有趣，就自己跟著做了一個。
+基本概念是用迴圈去跑出map 中的 x 軸和 y 軸 ，然後套用在 &lt;code&gt;box-shadow&lt;/code&gt; ，完全活用了 sass 的幾個特性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;function&lt;/li&gt;
+&lt;li&gt;map&lt;/li&gt;
+&lt;li&gt;for&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>2017 Aug 28th Reading Ref</title><link>/posts/2017-aug-28th/</link><pubDate>Mon, 28 Aug 2017 17:26:05 +0000</pubDate><guid>/posts/2017-aug-28th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Nice point: &lt;a href="https://www.smashingmagazine.com/2017/08/ux-mba-designer-business/"&gt;UX Meets MBA&lt;/a&gt;
+Let&amp;rsquo;s study more about &lt;a href="https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/"&gt;Quantum CSS(aka Stylo)&lt;/a&gt;&lt;/p&gt;</description></item><item><title>2017 Aug 11th Reading Ref</title><link>/posts/2017-aug-11th/</link><pubDate>Fri, 11 Aug 2017 16:15:23 +0000</pubDate><guid>/posts/2017-aug-11th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Design trends: &lt;strong&gt;THIN(NER) TYPOGRAPHY&lt;/strong&gt; / &lt;strong&gt;ELABORATE DETAILS&lt;/strong&gt; / &lt;strong&gt;ICON LOGOS&lt;/strong&gt;&lt;br&gt;
+Highlight: &lt;a href="https://www.sitepoint.com/ui-vs-ux-what-is-the-difference/"&gt;UI vs UX: What is the Difference?&lt;/a&gt;&lt;/p&gt;</description></item><item><title>2017 Jul 31th Reading Ref</title><link>/posts/2016-jul-31th/</link><pubDate>Mon, 31 Jul 2017 17:32:00 +0000</pubDate><guid>/posts/2016-jul-31th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;vue.js: methods/computed/filter/data/v-if/v-show&lt;/p&gt;</description></item><item><title>2017 Jul 25th Reading Ref</title><link>/posts/2016-jul-25th/</link><pubDate>Tue, 25 Jul 2017 12:05:21 +0000</pubDate><guid>/posts/2016-jul-25th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;New skill: API calls / react js&lt;br&gt;
+Business trip to Ho Chi Ming City&lt;br&gt;
+Looking for opportunities in SEA&lt;/p&gt;</description></item><item><title>2017 Jun 22th Reading Ref</title><link>/posts/2016-jun-22th/</link><pubDate>Fri, 23 Jun 2017 16:07:35 +0000</pubDate><guid>/posts/2016-jun-22th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Working on the new project prototype based on vue.js.&lt;/p&gt;</description></item><item><title>2017 Jun 6th Reading Ref</title><link>/posts/2016-jun-6th/</link><pubDate>Tue, 06 Jun 2017 14:04:11 +0000</pubDate><guid>/posts/2016-jun-6th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;New topic to study: &lt;strong&gt;Scrum&lt;/strong&gt;&lt;br&gt;
+Highlight: &lt;a href="https://css-tricks.com/future-front-end-web-development/"&gt;What is the Future of Front End Web Development?&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User expectations on the rise.&lt;/li&gt;
+&lt;li&gt;New JavaScript is here.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;We&amp;rsquo;re not building pages, we&amp;rsquo;re building systems.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The line between native and web is blurring.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;URLs are still a killer feature.&lt;/li&gt;
+&lt;li&gt;Performance is a key player.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSS will get much more modular.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;CSS preprocessing will slowly fade away.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Being good at HTML and CSS remains vital.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Build processes will get competitive.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>2017 May 3rd Reading Ref</title><link>/posts/2016-may-3rd/</link><pubDate>Wed, 03 May 2017 10:54:33 +0000</pubDate><guid>/posts/2016-may-3rd/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s TED!&lt;br&gt;
+&lt;a href="https://1stwebdesigner.com/ted-talks-for-web-designers/"&gt;10 Inspirational &amp;amp; Insightful TED Talks for Web Designers&lt;/a&gt;&lt;br&gt;
+Todo list: Grid study&lt;/p&gt;</description></item><item><title>2017 Apr 17th Reading Ref</title><link>/posts/2017-apr-17th/</link><pubDate>Mon, 17 Apr 2017 14:42:43 +0000</pubDate><guid>/posts/2017-apr-17th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Highlight: &lt;a href="http://cssgridgarden.com/"&gt;GRID GARDEN&lt;/a&gt;&lt;/p&gt;</description></item><item><title>2017 Apr 6th Reading Ref</title><link>/posts/2017-apr-6th/</link><pubDate>Thu, 06 Apr 2017 14:27:43 +0000</pubDate><guid>/posts/2017-apr-6th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;What&amp;rsquo;s the difference between Grid and Table?&lt;br&gt;
+How does Grid help?&lt;br&gt;
+Do we really need a grid system for any sites?&lt;/p&gt;</description></item><item><title>2017 Mar 17th Reading Ref</title><link>/posts/2016-mar-17th/</link><pubDate>Fri, 17 Mar 2017 16:17:02 +0000</pubDate><guid>/posts/2016-mar-17th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;CSS Grid: partial support in IE?! WTF?&lt;br&gt;
+Time to learn new things!&lt;br&gt;
+And, please keep this in ming: &amp;ldquo;&lt;strong&gt;A bad designer makes your CSS/HTML a mess.&lt;/strong&gt;&amp;rdquo;&lt;/p&gt;</description></item><item><title>EQCSS</title><link>/posts/eqcss/</link><pubDate>Tue, 14 Mar 2017 10:06:02 +0000</pubDate><guid>/posts/eqcss/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;前端技術、觀念持續進步中，快要跟不上惹啊啊啊！！！！！ &amp;gt;O&amp;lt;&lt;br&gt;
+今年初發現的EQCSS被我閒置了兩個月後再次開封，細細品嚐這新玩意究竟改變了些什麼，忽然發現這東西不容小覷啊！&lt;br&gt;
+但我個人對於「支援各種瀏覽器的版本」這件事情本身就抱持保留態度，所以EQCSS未來是否真能應用到實際專案呢&amp;hellip;？&lt;br&gt;
+Anyway, 簡單翻譯了一些EQCSS的重點跟背景和相關應用，留檔備用。&lt;/p&gt;</description></item><item><title>Theme: Daily</title><link>/posts/theme-daily/</link><pubDate>Wed, 08 Mar 2017 16:26:29 +0000</pubDate><guid>/posts/theme-daily/</guid><description>&lt;p&gt;Finally, I got time to update my blog theme.&lt;br&gt;
+Goodbye &lt;a href="https://github.com/iissnan/hexo-theme-next"&gt;Next&lt;/a&gt; and hello &lt;a href="https://github.com/GallenHu/hexo-theme-Daily"&gt;Daily&lt;/a&gt;.&lt;br&gt;
+Thanks a lot for this beautiful theme. :)&lt;/p&gt;</description></item><item><title>2017 Feb 24th Reading Ref</title><link>/posts/2016-feb-24th/</link><pubDate>Fri, 24 Feb 2017 17:10:59 +0000</pubDate><guid>/posts/2016-feb-24th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Flexbox note was updated. :&amp;quot;)&lt;/p&gt;</description></item><item><title>2017 Feb 7th Reading Ref</title><link>/posts/2017-feb-7th/</link><pubDate>Tue, 07 Feb 2017 10:05:54 +0000</pubDate><guid>/posts/2017-feb-7th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;The simple formula for great UX design: RECEIVE, APPRECIATE, SUMMARIZE, ASK&lt;/p&gt;</description></item><item><title>2017 Jan 20th Reading Ref</title><link>/posts/2016-jan-20th/</link><pubDate>Fri, 20 Jan 2017 11:40:46 +0000</pubDate><guid>/posts/2016-jan-20th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Hello, 2017!&lt;br&gt;
+But, sorry, there&amp;rsquo;s no new plan for this year. XD&lt;br&gt;
+Here&amp;rsquo;s my highlight for this references list: &lt;a href="http://designguidelines.co"&gt;Design Guidelines.&lt;/a&gt; ★★★★★&lt;br&gt;
+And, &lt;a href="https://github.com/eqcss/eqcss"&gt;EQCSS&lt;/a&gt;?! WTF?&lt;/p&gt;</description></item><item><title>z-index 之亂</title><link>/posts/zindex-mess/</link><pubDate>Fri, 09 Dec 2016 10:22:23 +0000</pubDate><guid>/posts/zindex-mess/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;再次強調：&lt;em&gt;所有強人分享的方法都有優缺點，也都有適用性的問題&lt;/em&gt;。&lt;br&gt;
+找到好方法，要先能完整理解概念後，再來思考如何針對自己需求做調整，不要只知道照抄，若不了解其中原理，用到最後也會失去方向。&lt;br&gt;
+另外，對頁面圖層概念若不清楚，有再好的工具/方法都無法做到正確管理 &lt;code&gt;z-index&lt;/code&gt;！&lt;br&gt;
+盡量藉由切版來避免元件中子元件的層次問題，而非一昧的堆疊元件後再利用工具/方法去做 &lt;code&gt;z-index&lt;/code&gt; 管理，這種方式只會本末倒置！&lt;/p&gt;</description></item><item><title>2016 Dec 8th Reading Ref</title><link>/posts/2016-august-17th/</link><pubDate>Thu, 08 Dec 2016 15:43:57 +0000</pubDate><guid>/posts/2016-august-17th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;CSS Loops!!!!!&lt;/p&gt;</description></item><item><title>sass快速入門</title><link>/posts/sass/</link><pubDate>Mon, 05 Dec 2016 17:11:02 +0000</pubDate><guid>/posts/sass/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;自己整理的sass快速入門重點，對於已有CSS經驗、不想花時間研讀sass手冊的懶人們應該會節省不少時間。&lt;/p&gt;</description></item><item><title>2016 Nov 30th Reading Ref</title><link>/posts/2016-nov-30th/</link><pubDate>Thu, 01 Dec 2016 10:41:51 +0000</pubDate><guid>/posts/2016-nov-30th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;5-1-1 Rule of Thumb&lt;br&gt;
+Got lots of great posts this week ❤&lt;/p&gt;</description></item><item><title>2016 Nov 21th Reading Ref</title><link>/posts/2016-nov-21th/</link><pubDate>Mon, 21 Nov 2016 12:13:54 +0000</pubDate><guid>/posts/2016-nov-21th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Dear Microsoft, Could you please stop support IE11 please please please? T^T&lt;/p&gt;</description></item><item><title>2016 Nov 10th Reading Ref</title><link>/posts/2016-nov-10th/</link><pubDate>Mon, 14 Nov 2016 12:00:07 +0000</pubDate><guid>/posts/2016-nov-10th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;I hate CSS refactoring&amp;hellip; T^T&lt;/p&gt;</description></item><item><title>CSS Methodologies</title><link>/posts/css-methodologies/</link><pubDate>Wed, 02 Nov 2016 11:14:32 +0000</pubDate><guid>/posts/css-methodologies/</guid><description>&lt;h3 id="css-方法論們"&gt;CSS 方法論們&lt;/h3&gt;
+&lt;p&gt;因應公司目前專案需求簡單整理了目前線上的 CSS 方法論們 (OOCSS、SMACSS、BEM、SUIT CSS、ITCSS、The 7-1 Pattern、MVCSS)，包含架構、命名等相關規範，除 Atomic 外，Atomic 簡單來說就是原子概念，將 CSS 拆分成許多不同的小部件，如 &lt;code&gt;.border-bottom&lt;/code&gt; &lt;code&gt;.border-1px&lt;/code&gt; &lt;code&gt;.border-solid&lt;/code&gt; &amp;hellip;等，在實際頁面中做組裝動作，嚴格來說不是很符合一般專案的情境。&lt;/p&gt;
+&lt;p&gt;雖然整理完所有方法論，以目前專案而言，沒有實際適合的命名規則可以使用，現階段應該會以 The 7-1 Pattern 作為主要架構基底搭配 SUIT CSS 的命名概念，再去做一套專屬的命名規範。&lt;/p&gt;
+&lt;p&gt;維持基本的 CSS 要求：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不針對 html tag 做樣式&lt;/li&gt;
+&lt;li&gt;低耦合&lt;/li&gt;
+&lt;li&gt;提升樣式名稱語意&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;規範百百種，不要通通都覺得可以用，混到最後沒有一個規則，就是四不像呀！現在開始要還債惹！T^T&lt;/p&gt;</description></item><item><title>2016 Oct 28th Reading Ref</title><link>/posts/2016-oct-28th/</link><pubDate>Fri, 28 Oct 2016 14:25:33 +0000</pubDate><guid>/posts/2016-oct-28th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Highlight this week: &lt;em&gt;CSS variables&lt;/em&gt;&lt;/p&gt;</description></item><item><title>CSS Architecture</title><link>/posts/css-architecture/</link><pubDate>Wed, 26 Oct 2016 10:37:46 +0000</pubDate><guid>/posts/css-architecture/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;CCS架構到命名方式的應用與舉例，沒有細部介紹現有的架構跟命名規則有點可惜，有大概提到幾個命名方式的優缺點，Naming Methodologies跟Namespacing內容不錯。&lt;br&gt;
+ITCSS &amp;amp; SUIT CSS 可以再深入研究。（筆記）&lt;/p&gt;</description></item><item><title>2016 Oct 24th Reading Ref</title><link>/posts/2016-oct-24th/</link><pubDate>Mon, 24 Oct 2016 15:25:55 +0000</pubDate><guid>/posts/2016-oct-24th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;m studying &lt;a href="https://courses.edx.org/courses/course-v1:MichiganX+UX501x+3T2016/info"&gt;UX&lt;/a&gt; at University of Michigan (online) :&amp;quot;)&lt;br&gt;
+Codepen CSS Collective:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://codepen.io/rachel_web/full/JKzrav/"&gt;Angry Birds (pure CSS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://codepen.io/fbrz/pen/vlrnd"&gt;iPhone 6 (pure CSS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://codepen.io/Nvagelis/full/yaQGAL/"&gt;Lighting Storm with Rain (Canvas)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Refactoring CSS without Losing Your Mind</title><link>/posts/refactoring-css/</link><pubDate>Mon, 17 Oct 2016 11:10:15 +0000</pubDate><guid>/posts/refactoring-css/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;少數針對CSS重構的討論，喜歡講者一開始針對technical debt的解說和refactoring/rewrite的區分。&lt;br&gt;
+劃重點：Use &lt;code&gt;all: initial;&lt;/code&gt; to buy you more time! XDDDD&lt;br&gt;
+另外作者提到的小故事也滿讓人值得思考的：&lt;br&gt;
+Refactoring is a second chance that most industries don&amp;rsquo;t get.&lt;/p&gt;</description></item><item><title>2016 Oct 14th Reading Ref</title><link>/posts/2016-oct-14th/</link><pubDate>Fri, 14 Oct 2016 15:46:19 +0000</pubDate><guid>/posts/2016-oct-14th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Looking for the suitable structure for CSS Modules + React&amp;hellip;(with sprite, sass, etc.)&lt;/p&gt;</description></item><item><title>2016 Sep 30th Reading Ref</title><link>/posts/2016-sep-30th/</link><pubDate>Fri, 30 Sep 2016 16:31:55 +0000</pubDate><guid>/posts/2016-sep-30th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://blog.hinablue.me/layout-2012-web-design-layout-part-1/"&gt;Layout Lessons&lt;/a&gt; :&amp;quot;)&lt;/p&gt;</description></item><item><title>2016 Sep 22th Reading Ref</title><link>/posts/2016-sep-22th/</link><pubDate>Thu, 22 Sep 2016 14:22:32 +0000</pubDate><guid>/posts/2016-sep-22th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Free UX online courses from University of Michigan: &lt;a href="https://www.edx.org/micromasters/michiganx-user-experience-ux-research-design"&gt;User Experience (UX) Research and Design&lt;/a&gt;&lt;br&gt;
+Enroll now! :)&lt;/p&gt;</description></item><item><title>2016 Sep 13th Reading Ref</title><link>/posts/2016-sep-13th/</link><pubDate>Tue, 13 Sep 2016 12:15:09 +0000</pubDate><guid>/posts/2016-sep-13th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Amazing online color for print and web-use. ❤
+&lt;a href="http://nipponcolors.com/"&gt;&lt;em&gt;Nippon Colors&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
+JS new toy: &lt;a href="~/Toys/Rocket/"&gt;Rocket Game&lt;/a&gt;&lt;/p&gt;</description></item><item><title>2016 Sep 1st Reading Ref</title><link>/posts/2016-sep-1st/</link><pubDate>Thu, 01 Sep 2016 10:20:10 +0000</pubDate><guid>/posts/2016-sep-1st/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Recently JS toys&lt;/em&gt;
+Done: &lt;a href="https://github.com/estherj-hsu/js-sandbox/blob/master/Projects/LottoDraw/"&gt;Lotto Draw&lt;/a&gt;&lt;br&gt;
+On going: Tetris, Todo List&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Recommended References&lt;/em&gt;
+&lt;a href="https://thedesignteam.io/the-design-process-67df3e8ec68f#.khdvc4v4b"&gt;The Design Process&lt;/a&gt;&lt;br&gt;
+It&amp;rsquo;s not easy to explain the whole design process with this kind of comics.&lt;br&gt;
+Just say hi to Frank! :&amp;quot;)&lt;/p&gt;</description></item><item><title>2016 August 17th Reading Ref</title><link>/posts/2016-august-17th/</link><pubDate>Wed, 17 Aug 2016 15:17:41 +0000</pubDate><guid>/posts/2016-august-17th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Oooops&amp;hellip; T^T&lt;br&gt;
+Lots of catching up need to do.&lt;/p&gt;</description></item><item><title>2016 Sep 5th Reading Ref</title><link>/posts/2016-sep-5th/</link><pubDate>Wed, 17 Aug 2016 15:17:41 +0000</pubDate><guid>/posts/2016-sep-5th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Funny and creative CSS things:&lt;/em&gt;
+&lt;a href="https://css-tricks.com/emotionally-complicated-class-names/"&gt;Emotionally Complicated Class Names&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://saijogeorge.com/css-puns/"&gt;CSS Puns&lt;/a&gt;&lt;br&gt;
+Make work FUN!!! ❤&lt;/p&gt;</description></item><item><title>2016 July 22th Reading Ref</title><link>/posts/2016-july-22th/</link><pubDate>Fri, 22 Jul 2016 17:08:27 +0000</pubDate><guid>/posts/2016-july-22th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Personal highlight: &lt;a href="https://designshack.net/articles/graphics/is-the-gradient-making-a-comeback/"&gt;&lt;em&gt;Is the Gradient Making a Comeback?&lt;/em&gt;&lt;/a&gt;
+New online service toy to share: &lt;a href="https://zeplin.io/"&gt;&lt;em&gt;Zeplin&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Oriental Web Design 東方網頁設計</title><link>/posts/oriental-web-design/</link><pubDate>Thu, 21 Jul 2016 09:58:55 +0000</pubDate><guid>/posts/oriental-web-design/</guid><description>&lt;h3 id="esther"&gt;Esther&lt;/h3&gt;
+&lt;p&gt;此文節取自&lt;a href="http://1stwebdesigner.com/graphic-web-design-trends-2016/#globe"&gt;Graphic And Web Design Trends 2016 – What Are Top 7 To Look Out For?&lt;/a&gt;中的亞洲部分，並作簡要翻譯。&lt;/p&gt;</description></item><item><title>2016 July 12th Reading Ref</title><link>/posts/2016-july-12th/</link><pubDate>Tue, 12 Jul 2016 15:50:12 +0000</pubDate><guid>/posts/2016-july-12th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Favorite: &lt;em&gt;A Front End Developer is Aware&lt;/em&gt;:
+Design, back end, network, performance, content strategy, databases, testing, systems, devops, servers, accessibility, device landscape.&lt;/p&gt;</description></item><item><title>2016 July 7th Reading Ref</title><link>/posts/2016-july-7th/</link><pubDate>Thu, 07 Jul 2016 15:01:11 +0000</pubDate><guid>/posts/2016-july-7th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Can&amp;rsquo;t wait CSS4!&lt;br&gt;
+Study react exapmles!&lt;/p&gt;</description></item><item><title>2016 June 27th Reading Ref</title><link>/posts/2016-june-27th/</link><pubDate>Tue, 28 Jun 2016 15:45:55 +0000</pubDate><guid>/posts/2016-june-27th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Queting design?&lt;/p&gt;</description></item><item><title>Head First JavaScript</title><link>/posts/head-first-javascript/</link><pubDate>Fri, 17 Jun 2016 14:26:29 +0000</pubDate><guid>/posts/head-first-javascript/</guid><description>&lt;h2 id="read-note"&gt;Read note&lt;/h2&gt;
+&lt;p&gt;From &amp;ldquo;Head First JavaScript Programming&amp;rdquo;&lt;/p&gt;
+&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/estherj-hsu/js-sandbox/blob/master/HeadFirstJS/"&gt;練習code Github&lt;/a&gt;
+需補強：控制DOM、實際應用&lt;br&gt;
+閱讀中，You don&amp;rsquo;t know JS系列：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;You don&amp;rsquo;t know JS: UP &amp;amp; GOING (done)&lt;/li&gt;
+&lt;li&gt;You don&amp;rsquo;t know JS: SCOPE &amp;amp; CLOSURE&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>2016 June 15th Reading Ref</title><link>/posts/2016-june-15th/</link><pubDate>Wed, 15 Jun 2016 10:47:20 +0000</pubDate><guid>/posts/2016-june-15th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Bootstrap大(?)變身?&lt;/p&gt;</description></item><item><title>2016 June 13th Reading Ref</title><link>/posts/2016-june-13th/</link><pubDate>Mon, 13 Jun 2016 12:25:04 +0000</pubDate><guid>/posts/2016-june-13th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;!&lt;/p&gt;</description></item><item><title>Flexbox</title><link>/posts/flexbox/</link><pubDate>Wed, 08 Jun 2016 15:32:52 +0000</pubDate><guid>/posts/flexbox/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;A Brief Note of CSS Selector&lt;br&gt;
+Noted by myself in the end of 2015.&lt;br&gt;
+P.S. &lt;strong&gt;NEW&lt;/strong&gt; &lt;a href="https://css-tricks.com/snippets/css/complete-guide-grid/"&gt;CSS Grid Layout&lt;/a&gt; is coming soon!&lt;br&gt;
+2017/02/15 updated!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;實作/範例&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://codepen.io/estherj-hsu/pen/bVXOMY"&gt;Pinterest Grid with Flexbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://progressivered.com/fla/"&gt;Flex Layout Attribute&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>2016 June 8th Reading Ref</title><link>/posts/2016-june-8th/</link><pubDate>Wed, 08 Jun 2016 15:20:11 +0000</pubDate><guid>/posts/2016-june-8th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;!&lt;/p&gt;</description></item><item><title>CSS Selector</title><link>/posts/css-selector/</link><pubDate>Thu, 02 Jun 2016 08:59:15 +0000</pubDate><guid>/posts/css-selector/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Noted by myself in the end of 2015.&lt;/p&gt;</description></item><item><title>2016 June 2nd Reading Ref</title><link>/posts/2016-june-2nd/</link><pubDate>Thu, 02 Jun 2016 08:06:11 +0000</pubDate><guid>/posts/2016-june-2nd/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;!&lt;/p&gt;</description></item><item><title>A Brief Note of CSS Transform</title><link>/posts/css-transform/</link><pubDate>Wed, 01 Jun 2016 21:49:35 +0000</pubDate><guid>/posts/css-transform/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;Noted by myself in the end of 2015.&lt;/p&gt;</description></item><item><title>2016 May - Tools</title><link>/posts/2016-may-tools/</link><pubDate>Tue, 31 May 2016 08:06:11 +0000</pubDate><guid>/posts/2016-may-tools/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;!&lt;/p&gt;</description></item><item><title>2016 May 30th Reading Ref</title><link>/posts/2016-may-30th/</link><pubDate>Mon, 30 May 2016 08:06:11 +0000</pubDate><guid>/posts/2016-may-30th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;!&lt;/p&gt;</description></item><item><title>2016 May 25th Reading Ref</title><link>/posts/2016-may-25th/</link><pubDate>Wed, 25 May 2016 08:06:11 +0000</pubDate><guid>/posts/2016-may-25th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;!&lt;/p&gt;</description></item><item><title>2016 May 15th Reading Ref</title><link>/posts/2016-may-15th/</link><pubDate>Sun, 15 May 2016 08:06:11 +0000</pubDate><guid>/posts/2016-may-15th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;!&lt;/p&gt;</description></item><item><title>2016 May 10th Reading Ref</title><link>/posts/2016-may-10th/</link><pubDate>Tue, 10 May 2016 08:06:11 +0000</pubDate><guid>/posts/2016-may-10th/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;!&lt;/p&gt;</description></item><item><title>2016 Feb&amp;Jan</title><link>/posts/2016-febjan/</link><pubDate>Thu, 31 Mar 2016 08:06:11 +0000</pubDate><guid>/posts/2016-febjan/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;!&lt;/p&gt;</description></item><item><title>2016 March Reading Ref</title><link>/posts/2016-march/</link><pubDate>Thu, 31 Mar 2016 08:06:11 +0000</pubDate><guid>/posts/2016-march/</guid><description>&lt;h3 id="esther"&gt;esther&lt;/h3&gt;
+&lt;p&gt;!&lt;/p&gt;</description></item><item><title>First challenge</title><link>/posts/first-challenge/</link><pubDate>Wed, 09 Mar 2016 21:49:35 +0000</pubDate><guid>/posts/first-challenge/</guid><description>&lt;h3 id="not-easy"&gt;Not easy!&lt;/h3&gt;
+&lt;p&gt;I love this theme.&lt;br&gt;
+It&amp;rsquo;s really simple and clean as I need.&lt;br&gt;
+However, I also want to use other &amp;ldquo;advanced&amp;rdquo; function, like tags and categories&amp;hellip;&lt;/p&gt;
+&lt;p&gt;So, here&amp;rsquo;s what I&amp;rsquo;m going to do this:&lt;/p&gt;</description></item><item><title>2016 Arpil</title><link>/posts/2016-april/</link><pubDate>Sat, 20 Feb 2016 11:38:15 +0000</pubDate><guid>/posts/2016-april/</guid><description>&lt;h3 id="esther"&gt;Esther&lt;/h3&gt;
+&lt;p&gt;!&lt;/p&gt;</description></item><item><title>First Post - Hello World!</title><link>/posts/first-post/</link><pubDate>Sat, 20 Feb 2016 11:38:15 +0000</pubDate><guid>/posts/first-post/</guid><description/></item></channel></rss>

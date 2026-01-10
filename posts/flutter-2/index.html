@@ -1,66 +1,75 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=preconnect href=https://fonts.gstatic.com><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css integrity=sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l crossorigin=anonymous><link rel=stylesheet type=text/css href=/css/style.css><link rel=stylesheet type=text/css href=/css/syntax.css><title>Flutter Part 2: with Dart ｜ Esther's Life</title><meta name=description content="Instructon of Dart Get basic idea of both flutter and dart: - Flutter with Dart - Flutter for web developers"><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','G-ZS1GBZ1JP6','auto');ga('send','pageview');}</script><link rel="shortcut icon" href=/images/favicon.ico></head><body><header><div><a href=/ class=logo><img width=160px src=/img/esther.png></a></div><div><nav id=nav class="nav justify-content-end"><a class=nav-link title=Esther href=/esther/ target=_self><i data-feather=message-circle></i></a><a class=nav-link title=Blog href=/posts/ target=_self><i data-feather=book-open></i></a><a class=nav-link title=Portfolio href=/portfolio/ target=_self><i data-feather=briefcase></i></a><a class=nav-link title=Playground href=/playground/ target=_self><i data-feather=box></i></a><a class=nav-link title=Github href=https://github.com/estherj-hsu target=_blank><i data-feather=github></i></a><a class=nav-link title=LinkedIn href=https://www.linkedin.com/in/estherjhsu/ target=_blank><i data-feather=linkedin></i></a></nav></div></header><main><h1 class=text-center>Flutter Part 2: with Dart</h1><div class="text-center mt-4 mb-5"><div class=meta><i width=14px height=14px data-feather=calendar></i><time datetime=2019-11-22>Nov 22, 2019</time>
-<span class=mx-3></span><i width=14px height=14px data-feather=tag></i><a class=tag href=/tags/flutter>flutter</a>
-<a class=tag href=/tags/app>App</a></div></div><h3 id=instructon-of-dart>Instructon of Dart</h3><p>Get basic idea of both flutter and dart:
-- <a href=https://medium.com/swlh/flutter-with-dart-is-it-worth-it-3f60ed5df9da target=_blank>Flutter with Dart</a>
-- <a href=https://flutter.dev/docs/get-started/flutter-for/web-devs target=_blank>Flutter for web developers</a></p><hr><h3 id=var-by-type>var by <code>Type</code></h3><p>Dart build-in types:</p><ul><li><em>String</em> variableSting</li><li><em>int</em> variableNumber</li><li><em>double</em> variableNumberWithFloat</li><li><em>bool</em> booleanType</li><li><em>List<class></em> listVariableFromClass</li><li><p>etc&mldr;</p><div class=highlight><pre class=chroma><code class=language-fallback data-lang=fallback>String myName;              // myName = &#39;Esther&#39;
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=preconnect href=https://fonts.gstatic.com><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css integrity=sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l crossorigin=anonymous><link rel=stylesheet type=text/css href=/css/style.css><link rel=stylesheet type=text/css href=/css/syntax.css><title>Flutter Part 2: with Dart ｜ Esther's Life</title><meta name=description content="Instructon of Dart Get basic idea of both flutter and dart:
+Flutter with Dart Flutter for web developers "><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS1GBZ1JP6"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZS1GBZ1JP6")}</script><link rel="shortcut icon" href=/images/favicon.ico></head><body><header><div><a href=/ class=logo><img width=160px src=/img/esther.png></a></div><div><nav id=nav class="nav justify-content-end"><a class=nav-link title=Esther href=/esther/ target=_self><i data-feather=message-circle></i>
+</a><a class=nav-link title=Blog href=/posts/ target=_self><i data-feather=book-open></i>
+</a><a class=nav-link title=Portfolio href=/portfolio/ target=_self><i data-feather=briefcase></i>
+</a><a class=nav-link title=Playground href=/playground/ target=_self><i data-feather=box></i>
+</a><a class=nav-link title=Github href=https://github.com/estherj-hsu target=_blank><i data-feather=github></i>
+</a><a class=nav-link title=LinkedIn href=https://www.linkedin.com/in/estherjhsu/ target=_blank><i data-feather=linkedin></i></a></nav></div></header><main><h1 class=text-center>Flutter Part 2: with Dart</h1><div class="text-center mt-4 mb-5"><div class=meta><i width=14px height=14px data-feather=calendar></i>
+<time datetime=2019-11-22>Nov 22, 2019</time>
+<span class=mx-3></span>
+<i width=14px height=14px data-feather=tag></i>
+<a class=tag href=/tags/flutter>flutter</a>
+<a class=tag href=/tags/app>App</a></div></div><h3 id=instructon-of-dart>Instructon of Dart</h3><p>Get basic idea of both flutter and dart:</p><ul><li><a href=https://medium.com/swlh/flutter-with-dart-is-it-worth-it-3f60ed5df9da>Flutter with Dart</a></li><li><a href=https://flutter.dev/docs/get-started/flutter-for/web-devs>Flutter for web developers</a></li></ul><hr><h3 id=var-by-type>var by <code>Type</code></h3><p>Dart build-in types:</p><ul><li><em>String</em> variableSting</li><li><em>int</em> variableNumber</li><li><em>double</em> variableNumberWithFloat</li><li><em>bool</em> booleanType</li><li><em>List<class></em> listVariableFromClass</li><li>etc&mldr;</li></ul><pre tabindex=0><code>String myName;              // myName = &#39;Esther&#39;
 int number;                 // number = 1
 double numberFloat;         // numberFloat = 4.12
 bool isHot;                 // isHot = true
 List&lt;int&gt; numberArray;      // numberArray = [1, 2, 3, ...]
-List&lt;String&gt; stringArray;   // stringArray = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, ...]</code></pre></div></li></ul><p>See all build-in types on <a href=https://dart.dev/guides/language/language-tour#built-in-types target=_blank>Dart doc</a>.</p><p>📌 Know more about <a href=https://dart.dev/guides/language/language-tour#generics target=_blank>Generics in Dart</a></p><h3 id=pokers-by-dart>Pokers by Dart</h3><ul><li>All dart need <code>main()</code></li><li><p>Object-oriented with <strong>Class</strong></p><div class=highlight><pre class=chroma><code class=language-fallback data-lang=fallback>void main() {
-var deck = new Deck();
-deck.shuffle();
-print(deck.deal(5));
+List&lt;String&gt; stringArray;   // stringArray = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, ...]
+</code></pre><p>See all build-in types on <a href=https://dart.dev/guides/language/language-tour#built-in-types>Dart doc</a>.</p><p>📌 Know more about <a href=https://dart.dev/guides/language/language-tour#generics>Generics in Dart</a></p><h3 id=pokers-by-dart>Pokers by Dart</h3><ul><li>All dart need <code>main()</code></li><li>Object-oriented with <strong>Class</strong></li></ul><pre tabindex=0><code>void main() {
+  var deck = new Deck();
+  deck.shuffle();
+  print(deck.deal(5));
 }
 
 class Deck {
-List&lt;Card&gt; cards = [];
+  List&lt;Card&gt; cards = [];
 
-Deck() {
-var suits = [&#39;Daimonds&#39;, &#39;Hearts&#39;, &#39;Clubs&#39;, &#39;Spades&#39;];
-var ranks = [&#39;Ace&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;, &#39;J&#39;, &#39;Q&#39;, &#39;K&#39;];
+  Deck() {
+    var suits = [&#39;Daimonds&#39;, &#39;Hearts&#39;, &#39;Clubs&#39;, &#39;Spades&#39;];
+    var ranks = [&#39;Ace&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;, &#39;J&#39;, &#39;Q&#39;, &#39;K&#39;];
 
-for (var s in suits) {
-  for (var r in ranks) {
-    var card = new Card(
-      rank: r,
-      suit: s,
-    );
-    cards.add(card);
+    for (var s in suits) {
+      for (var r in ranks) {
+        var card = new Card(
+          rank: r,
+          suit: s,
+        );
+        cards.add(card);
+      }
+    }
   }
-}
-}
 
-toString() {
-return cards.toString();
-}
+  toString() {
+    return cards.toString();
+  }
 
-shuffle() {
-cards.shuffle();
-}
+  shuffle() {
+    cards.shuffle();
+  }
 
-cardsWithSuit(String suit) {
-return cards.where((card) =&gt; card.suit == suit);
-}
+  cardsWithSuit(String suit) {
+    return cards.where((card) =&gt; card.suit == suit);
+  }
 
-deal(int handSize) {
-var hand = cards.sublist(0, handSize);
-cards = cards.sublist(handSize);
-return hand;
-}
+  deal(int handSize) {
+    var hand = cards.sublist(0, handSize);
+    cards = cards.sublist(handSize);
+    return hand;
+  }
 
-removeCard(String suit, String rank) {
-cards.removeWhere((card) =&gt; (card.suit == suit) &amp;&amp; (card.rank == rank));
-}
+  removeCard(String suit, String rank) {
+    cards.removeWhere((card) =&gt; (card.suit == suit) &amp;&amp; (card.rank == rank));
+  }
 }
 
 class Card {
-String suit;
-String rank;
+  String suit;
+  String rank;
 
-Card({this.rank, this.suit});
+  Card({this.rank, this.suit});
 
-toString() {
-return &#39;$rank of $suit&#39;;
+  toString() {
+    return &#39;$rank of $suit&#39;;
+  }
 }
-}</code></pre></div></li></ul></main><footer class="footer text-center"><p class=text-muted><small>Designed by EstherJ <span class=mx-2>|</span> Copyright © 2023</small></p></footer><script src=/js/feather.min.js></script><script>feather.replace()</script><script src=/js/jquery-3.5.1.min.js></script><script src=/js/jquery.fancybox.min.js></script></body></html>
+</code></pre></main><footer class="footer text-center"><p class=text-muted><small>Designed by EstherJ <span class=mx-2>|</span> Copyright © 2026</small></p></footer><script src=/js/feather.min.js></script><script>feather.replace()</script><script src=/js/jquery-3.5.1.min.js></script><script src=/js/jquery.fancybox.min.js></script></body></html>

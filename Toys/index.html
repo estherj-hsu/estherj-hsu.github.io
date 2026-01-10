@@ -3,9 +3,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/syntax.css">
 	
 	
 	
@@ -13,7 +14,21 @@
 	
 
   
-
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS1GBZ1JP6"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-ZS1GBZ1JP6');
+        }
+      </script>
   <link rel="shortcut icon" href="/images/favicon.ico" />
 </head><body>
         <header>
@@ -25,40 +40,48 @@
   <div>
     <nav id="nav" class="nav justify-content-end">
       
-      <a class="nav-link" alt="Esther" href="/esther/" target='_self'>
-        
-          
-          <i data-feather="message-circle"></i> 
-        
-      </a>
       
-      <a class="nav-link" alt="Blog" href="/posts/" target='_self'>
-        
+        <a class="nav-link" title="Esther" href="/esther/" target='_self'>
           
-          <i data-feather="book-open"></i> 
-        
-      </a>
+            
+            <i data-feather="message-circle"></i> 
+          
+        </a>
       
-      <a class="nav-link" alt="Portfolio" href="/portfolio/" target='_self'>
-        
+        <a class="nav-link" title="Blog" href="/posts/" target='_self'>
           
-          <i data-feather="briefcase"></i> 
-        
-      </a>
+            
+            <i data-feather="book-open"></i> 
+          
+        </a>
       
-      <a class="nav-link" alt="Playground" href="/playground/" target='_self'>
-        
+        <a class="nav-link" title="Portfolio" href="/portfolio/" target='_self'>
           
-          <i data-feather="box"></i> 
-        
-      </a>
+            
+            <i data-feather="briefcase"></i> 
+          
+        </a>
       
-      <a class="nav-link" alt="Github" href="https://github.com/estherj-hsu" target='_blank'>
-        
+        <a class="nav-link" title="Playground" href="/playground/" target='_self'>
           
-          <i data-feather="github"></i> 
-        
-      </a>
+            
+            <i data-feather="box"></i> 
+          
+        </a>
+      
+        <a class="nav-link" title="Github" href="https://github.com/estherj-hsu" target='_blank'>
+          
+            
+            <i data-feather="github"></i> 
+          
+        </a>
+      
+        <a class="nav-link" title="LinkedIn" href="https://www.linkedin.com/in/estherjhsu/" target='_blank'>
+          
+            
+            <i data-feather="linkedin"></i> 
+          
+        </a>
       
     </nav>
   </div>
@@ -66,8 +89,8 @@
 
     
     <div class="post">
-        <h3><a class="title" href="/toys/lottodraw/readme/"></a></h3>
-        <article class="my-4" href="/toys/lottodraw/readme/">
+        <h3><a class="title" href="/toys/lottodraw/"></a></h3>
+        <article class="my-4" href="/toys/lottodraw/">
             <p></p>
         </article>
         <div class="meta">
@@ -80,8 +103,8 @@
     </div>
     
     <div class="post">
-        <h3><a class="title" href="/toys/rocket/readme/"></a></h3>
-        <article class="my-4" href="/toys/rocket/readme/">
+        <h3><a class="title" href="/toys/rocket/"></a></h3>
+        <article class="my-4" href="/toys/rocket/">
             <p></p>
         </article>
         <div class="meta">
@@ -101,10 +124,12 @@
             </main>
         <footer class="footer text-center">
   <p class="text-muted">
-    <small>Designed by EstherJ <span class="mx-2">|</span> Copyright © 2022</small>
+    <small>Designed by EstherJ <span class="mx-2">|</span> Copyright © 2026</small>
   </p>
 </footer><script src="/js/feather.min.js"></script>
 <script>
   feather.replace()
-</script></body>
+</script>
+<script src="/js/jquery-3.5.1.min.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script></body>
 </html>
