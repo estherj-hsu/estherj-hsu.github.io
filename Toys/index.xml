@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Toys on Esther’s Work in Progress</title>
-    <link>/toys/</link>
+    <link>https://estherj-hsu.github.io/toys/</link>
     <description>Recent content in Toys on Esther’s Work in Progress</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="/toys/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://estherj-hsu.github.io/toys/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>/toys/lottodraw/</link>
+      <link>https://estherj-hsu.github.io/toys/lottodraw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/toys/lottodraw/</guid>
+      <guid>https://estherj-hsu.github.io/toys/lottodraw/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>/toys/rocket/</link>
+      <link>https://estherj-hsu.github.io/toys/rocket/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/toys/rocket/</guid>
+      <guid>https://estherj-hsu.github.io/toys/rocket/</guid>
       <description></description>
     </item>
   </channel>
