@@ -299,11 +299,41 @@ table
       background: #c8d6e5
       margin: 5rem auto 0
 .meta
+  display: flex
+  gap: 1.5rem
   font-size: .8rem
   color: $c-muted
-
-.meta-separator
-  margin: 0 0.75rem
+  .meta-date
+    display: flex
+    gap: 0.25em
+    align-items: center
+    &::before
+      content: ""
+      mask-image: url('/icons/icon-calendar.svg')
+      mask-size: cover
+      width: 1.25em
+      height: 1.25em
+      background-color: currentColor
+  .meta-tags
+    display: flex
+    gap: 0.5em
+    align-items: center
+    list-style: none
+    margin: 0
+    padding: 0
+    &::before
+      content: ""
+      mask-image: url('/icons/icon-tag.svg')
+      mask-size: cover
+      width: 1.25em
+      height: 1.25em
+      background-color: currentColor
+  .tag
+    color: inherit
+    margin-right: 0.5em
+    &:hover
+      color: $c-body
+      text-decoration: none
 
 .metadata-wrapper
   text-align: center
@@ -316,13 +346,6 @@ table
     display: inline-block
   .pagination-next
     margin-left: 0.75rem
-
-.tag
-  padding: 2px 6px
-  color: inherit
-  &:hover
-    color: $c-body
-    text-decoration: none
 
 h2[id^="esther"]
   display: none
@@ -346,19 +369,14 @@ h2[id^="esther"]
     &::before
       content: ''
       display: block
-      text-align: center
-      color: #fff
-      font-weight: bold
-      font-size: 1.3rem
-      line-height: 32px
-      left: -.9rem
+      left: -0.9rem
       top: 0
       background-color: $c-primary
-      background-image: url('/icons/icon-me.svg')
-      background-size: cover
+      background-image: url('/icons/icon-bubble.svg')
+      background-size: 80%
       background-position: center
       background-repeat: no-repeat
-      border-radius: 4px
+      border-radius: 2px
       position: absolute
       width: 32px
       height: 32px
