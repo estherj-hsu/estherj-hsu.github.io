@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><meta name="description" content="Accessible UI, interface craft, and ongoing experiments."><title>CSS優化項目之一：多語系選單 – Esther: Version History</title><meta property="og:type" content="website"><meta property="og:title" content="CSS優化項目之一：多語系選單"><meta property="og:description" content="Accessible UI, interface craft, and ongoing experiments."><meta property="og:image" content="/img/og.png"><meta property="og:url" content="https://estherj-hsu.github.io/blog/CSS-OPT-menuList/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CSS優化項目之一：多語系選單"><meta name="twitter:description" content="Accessible UI, interface craft, and ongoing experiments."><meta name="twitter:image" content="/img/og.png"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg"><link rel="icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.ico"><script type="module">document.addEventListener("astro:page-load",()=>{window.refreshFsLightbox&&window.refreshFsLightbox()});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_1_lang.B0Xlk8SJ.js"></script><link rel="stylesheet" href="/_astro/_slug_.B9ZDccv9.css"></head> <body> <header> <div> <a href="/" class="logo"> <img width="280" src="/img/logo.png" alt="Esther: Version History logo"> </a> </div> <div> <nav id="nav" class="nav"> <ul> <li class="nav-link"> <a aria-label="Esther" href="/esther/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-bubble.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Blog" href="/blog/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-book.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Portfolio" href="/portfolio/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-suitcase.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Playground" href="/playground/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-cube.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Github (Opens in new tab)" href="https://github.com/estherj-hsu" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-git.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="LinkedIn (Opens in new tab)" href="https://www.linkedin.com/in/estherjhsu/" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-linkedin.svg')" aria-hidden="true"></i> </a> </li> </ul> </nav> </div> </header> <main>  <article> <h1>CSS優化項目之一：多語系選單</h1> <div class="metadata-wrapper"> <div class="meta"> <div class="meta-date"> <time datetime="2017-09-18T14:11:21.000Z"> September 18, 2017 </time> </div> <ul class="meta-tags"> <li> <a href="/tags/css-sass/" class="tag">CSS/sass</a> </li> </ul> </div> </div> <section class="esther"> <h2 class="visually-hidden">Author note</h2> <p>想記錄一下自己去年優化的幾個部分，不堪回想的血淚… T^T<br/>
+剛接觸 sass 時，會被他很厲害的功能迷惑，<br/>
+曾經我也不自覺地濫用了很多的 <code>@extend</code>，<br/>
+但是如果弄清楚需求與效能後，<br/>
+會知道很多東西其實維持舊寫法才是比較適當的選擇。<br/>
+就讓我們繼續看下去吧…</p> </section>
+<hr/>
+<h2 id="needs">Needs?</h2>
+<p>選單的需求很單純：</p>
+<ol>
+<li>多階層選單</li>
+<li>大項目分類與旗下所有子項目清單</li>
+<li>不同語系會有不同寬度與欄數</li>
+<li>每一列下方會有分隔線</li>
+</ol>
+<p>原本（不是我的）做法是各別將語系的寬度與欄數做了兩個 map 以及一個 map-get 的 function，<br/>
+先以語系的寬度 map 跑 <code>@each</code> 後，再針對語系去 get 該語系欄數的 map，<br/>
+最後還針對分隔線多了無謂的計算。</p>
+<p>寫到這裡應該大概能理解為什麼要優化這塊的CSS了？</p>
+<hr/>
+<h3 id="after-optimization">After optimization?</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 懶人用專用 font &amp; position &amp; size mixin</span></span>
+<span class="line"><span style="color:#F97583">=</span><span style="color:#B392F0">fs(</span><span style="color:#E1E4E8">$fz: </span><span style="color:#79B8FF">null</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $c: </span><span style="color:#79B8FF">null</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $lh: </span><span style="color:#79B8FF">null</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $fw: </span><span style="color:#79B8FF">null</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $fm: </span><span style="color:#79B8FF">null</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: $fz</span></span>
+<span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: $c</span></span>
+<span class="line"><span style="color:#79B8FF">  line-height</span><span style="color:#E1E4E8">: $lh</span></span>
+<span class="line"><span style="color:#79B8FF">  font-weight</span><span style="color:#E1E4E8">: $fw</span></span>
+<span class="line"><span style="color:#79B8FF">  font-family</span><span style="color:#E1E4E8">: $fm</span></span>
+<span class="line"><span style="color:#F97583">=</span><span style="color:#B392F0">pos(</span><span style="color:#E1E4E8">$p: </span><span style="color:#79B8FF">null</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $t: </span><span style="color:#79B8FF">null</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $r: </span><span style="color:#79B8FF">null</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $b: </span><span style="color:#79B8FF">null</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $l: </span><span style="color:#79B8FF">null</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF">  position</span><span style="color:#E1E4E8">: $p</span></span>
+<span class="line"><span style="color:#79B8FF">  top</span><span style="color:#E1E4E8">: $t</span></span>
+<span class="line"><span style="color:#79B8FF">  right</span><span style="color:#E1E4E8">: $r</span></span>
+<span class="line"><span style="color:#79B8FF">  bottom</span><span style="color:#E1E4E8">: $b</span></span>
+<span class="line"><span style="color:#79B8FF">  left</span><span style="color:#E1E4E8">: $l</span></span>
+<span class="line"><span style="color:#F97583">=</span><span style="color:#B392F0">size(</span><span style="color:#E1E4E8">$w: </span><span style="color:#79B8FF">null</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $h: </span><span style="color:#79B8FF">null</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF">  width</span><span style="color:#E1E4E8">: $w</span></span>
+<span class="line"><span style="color:#79B8FF">  height</span><span style="color:#E1E4E8">: $h</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 需要的 map 與 變數</span></span>
+<span class="line"><span style="color:#6A737D">// 不同語系時清單的寬度與每列欄數</span></span>
+<span class="line"><span style="color:#E1E4E8">$menuListCol: (</span><span style="color:#79B8FF">en-us</span><span style="color:#E1E4E8">: (</span><span style="color:#79B8FF">164</span><span style="color:#F97583">px</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 4</span><span style="color:#E1E4E8">)</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> zh-tw</span><span style="color:#E1E4E8">: (</span><span style="color:#79B8FF">110</span><span style="color:#F97583">px</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 6</span><span style="color:#E1E4E8">)</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> ko-kr</span><span style="color:#E1E4E8">: (</span><span style="color:#79B8FF">142</span><span style="color:#F97583">px</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 5</span><span style="color:#E1E4E8">)</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#6A737D">// gutter or gap 看你喜歡怎樣叫</span></span>
+<span class="line"><span style="color:#E1E4E8">$menuListGap: </span><span style="color:#79B8FF">30</span><span style="color:#F97583">px</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 清單用 flex 唷</span></span>
+<span class="line"><span style="color:#B392F0">.menuList</span></span>
+<span class="line"><span style="color:#79B8FF">  align-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">stretch</span></span>
+<span class="line"><span style="color:#79B8FF">  box-sizing</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">content-box</span></span>
+<span class="line"><span style="color:#79B8FF">  display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex</span></span>
+<span class="line"><span style="color:#79B8FF">  flex-flow</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">row</span><span style="color:#79B8FF"> wrap</span></span>
+<span class="line"><span style="color:#79B8FF">  justify-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex-start</span></span>
+<span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#79B8FF"> 25</span><span style="color:#F97583">px</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 分類標題</span></span>
+<span class="line"><span style="color:#B392F0">.menuList-title</span></span>
+<span class="line"><span style="color:#F97583">  +</span><span style="color:#79B8FF">fs</span><span style="color:#B392F0">(</span><span style="color:#E1E4E8">$fz: </span><span style="color:#79B8FF">18</span><span style="color:#F97583">px</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $c: </span><span style="color:#79B8FF">#455A64</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $fw: </span><span style="color:#79B8FF">normal</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $lh: </span><span style="color:#79B8FF">18</span><span style="color:#F97583">px</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF">  padding-bottom</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#F97583">px</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 分類群組</span></span>
+<span class="line"><span style="color:#B392F0">.menuList-group</span></span>
+<span class="line"><span style="color:#79B8FF">  align-items</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">stretch</span></span>
+<span class="line"><span style="color:#79B8FF">  margin-right</span><span style="color:#E1E4E8">: $menuListGap</span></span>
+<span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">38</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> 0</span><span style="color:#79B8FF"> 30</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> 0</span></span>
+<span class="line"><span style="color:#79B8FF">  position</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">relative</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 分類子項</span></span>
+<span class="line"><span style="color:#B392F0">.menuList-item</span></span>
+<span class="line"><span style="color:#F97583">  +</span><span style="color:#79B8FF">fs</span><span style="color:#B392F0">(</span><span style="color:#E1E4E8">$fz: </span><span style="color:#79B8FF">14</span><span style="color:#F97583">px</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $c: </span><span style="color:#79B8FF">#999</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $lh: </span><span style="color:#79B8FF">1.4</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF">  margin</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> 0</span><span style="color:#79B8FF"> 0</span><span style="color:#79B8FF"> 0</span></span>
+<span class="line"><span style="color:#85E89D">  &amp;</span><span style="color:#B392F0">:first-of-type</span></span>
+<span class="line"><span style="color:#79B8FF">    margin-top</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span></span>
+<span class="line"><span style="color:#85E89D">  &amp;</span><span style="color:#B392F0">:hover</span></span>
+<span class="line"><span style="color:#79B8FF">    color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#455A64</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 重點在這裡，套入 map 內的資料與 gap，針對不同語系時給予不同的寬度</span></span>
+<span class="line"><span style="color:#F97583">@each </span><span style="color:#E1E4E8">$lang</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $cols </span><span style="color:#79B8FF">in</span><span style="color:#E1E4E8"> $menuListCol</span></span>
+<span class="line"><span style="color:#E1E4E8">  $colW: </span><span style="color:#79B8FF">nth</span><span style="color:#E1E4E8">($cols</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 1</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#E1E4E8">  $colN: </span><span style="color:#79B8FF">nth</span><span style="color:#E1E4E8">($cols</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 2</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#E1E4E8">  $allW: $colW </span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> $colN </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> $menuListGap </span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> ($colN</span><span style="color:#F97583"> - </span><span style="color:#79B8FF">1</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#85E89D">  html</span><span style="color:#B392F0">:lang(</span><span style="color:#79B8FF">#{</span><span style="color:#E1E4E8">$lang</span><span style="color:#79B8FF">}</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#B392F0">    .menuList</span></span>
+<span class="line"><span style="color:#79B8FF">      width</span><span style="color:#E1E4E8">: $allW</span></span>
+<span class="line"><span style="color:#B392F0">    .menuList-group</span></span>
+<span class="line"><span style="color:#79B8FF">      width</span><span style="color:#E1E4E8">: $colW</span></span>
+<span class="line"><span style="color:#85E89D">      &amp;</span><span style="color:#B392F0">:nth-of-type(</span><span style="color:#79B8FF">#{</span><span style="color:#E1E4E8">$colN</span><span style="color:#79B8FF">}</span><span style="color:#85E89D">n</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF">        margin-right</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span></span>
+<span class="line"><span style="color:#85E89D">      &amp;</span><span style="color:#B392F0">:nth-of-type(</span><span style="color:#79B8FF">#{</span><span style="color:#E1E4E8">$colN</span><span style="color:#79B8FF">}</span><span style="color:#85E89D">n-0</span><span style="color:#B392F0">)::after</span></span>
+<span class="line"><span style="color:#F97583">        +</span><span style="color:#79B8FF">pos</span><span style="color:#B392F0">(</span><span style="color:#E1E4E8">$p: </span><span style="color:#79B8FF">absolute</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $r: </span><span style="color:#79B8FF">0</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $b: </span><span style="color:#79B8FF">0</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#F97583">        +</span><span style="color:#79B8FF">size</span><span style="color:#B392F0">(</span><span style="color:#E1E4E8">$w: $allW</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $h: </span><span style="color:#79B8FF">1</span><span style="color:#F97583">px</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF">        background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#e5e5e5</span></span>
+<span class="line"><span style="color:#79B8FF">        content</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&#39;&#39;</span></span>
+<span class="line"><span style="color:#79B8FF">        display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">inline-block</span></span></code></pre>
+<blockquote>
+<p>懶人專用那部分其實就是活用 sass 的 mixin 節省寫 code 時間的好例子，
+比起 editor 本身的 autocomplete 或是 emmet 的 abbreviations，
+我反而比較習慣這種用法？（單純討厭背東西）</p>
+</blockquote>
+<h3 id="result">Result</h3>
+<p data-height="400" data-theme-id="dark" data-slug-hash="wrKOKa" data-default-tab="result" data-user="estherj-hsu" data-embed-version="2" data-pen-title="wrKOKa" class="codepen">See the Pen <a href="https://codepen.io/estherj-hsu/pen/wrKOKa/">wrKOKa</a> by Esther (<a href="https://codepen.io/estherj-hsu">@estherj-hsu</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> </article>  </main> <footer class="footer"> <p> <small>
+Designed by EstherJ <span class="footer-separator">|</span> Copyright © 2026 </small> </p> </footer> </body></html>

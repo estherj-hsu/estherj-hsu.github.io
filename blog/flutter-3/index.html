@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><meta name="description" content="Accessible UI, interface craft, and ongoing experiments."><title>Flutter Part 3: State – Esther: Version History</title><meta property="og:type" content="website"><meta property="og:title" content="Flutter Part 3: State"><meta property="og:description" content="Accessible UI, interface craft, and ongoing experiments."><meta property="og:image" content="/img/og.png"><meta property="og:url" content="https://estherj-hsu.github.io/blog/flutter-3/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Flutter Part 3: State"><meta name="twitter:description" content="Accessible UI, interface craft, and ongoing experiments."><meta name="twitter:image" content="/img/og.png"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg"><link rel="icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.ico"><script type="module">document.addEventListener("astro:page-load",()=>{window.refreshFsLightbox&&window.refreshFsLightbox()});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_1_lang.B0Xlk8SJ.js"></script><link rel="stylesheet" href="/_astro/_slug_.B9ZDccv9.css"></head> <body> <header> <div> <a href="/" class="logo"> <img width="280" src="/img/logo.png" alt="Esther: Version History logo"> </a> </div> <div> <nav id="nav" class="nav"> <ul> <li class="nav-link"> <a aria-label="Esther" href="/esther/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-bubble.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Blog" href="/blog/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-book.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Portfolio" href="/portfolio/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-suitcase.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Playground" href="/playground/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-cube.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Github (Opens in new tab)" href="https://github.com/estherj-hsu" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-git.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="LinkedIn (Opens in new tab)" href="https://www.linkedin.com/in/estherjhsu/" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-linkedin.svg')" aria-hidden="true"></i> </a> </li> </ul> </nav> </div> </header> <main>  <article> <h1>Flutter Part 3: State</h1> <div class="metadata-wrapper"> <div class="meta"> <div class="meta-date"> <time datetime="2019-12-11T15:22:41.000Z"> December 11, 2019 </time> </div> <ul class="meta-tags"> <li> <a href="/tags/flutter/" class="tag">flutter</a> </li><li> <a href="/tags/app/" class="tag">App</a> </li> </ul> </div> </div> <h3 id="state--http-request">State &amp; HTTP request</h3>
+<p><strong>Dart and Flutter: The Complete Developer’s Guide</strong>: Chapter 9~11<br/>
+Let’s learn more about flutter widget.<br/>
+Main Goal: Click the action button to request one more image<br/>
+Also, play with material wedgets. 🌟</p>
+<hr/>
+<h3 id="stateless--stateful-widget">Stateless / Stateful Widget</h3>
+<p><strong>Stateless</strong>: no interaction , eg. Icon, Text…</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dart"><code><span class="line"><span style="color:#F97583">class</span><span style="color:#79B8FF"> MyApp</span><span style="color:#F97583"> extends</span><span style="color:#79B8FF"> StatelessWidget</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  Widget</span><span style="color:#B392F0"> build</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">BuildContext</span><span style="color:#E1E4E8"> context) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> MaterialApp</span><span style="color:#E1E4E8">(...);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr/>
+<p><strong>Stateful</strong>: interaciton with user, eg. Form, Checkbox, Slider…</p>
+<p>State could be update by user and saved.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dart"><code><span class="line"><span style="color:#F97583">class</span><span style="color:#79B8FF"> App</span><span style="color:#F97583"> extends</span><span style="color:#79B8FF"> StatefulWidget</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">  createState</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> AppState</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#79B8FF"> AppState</span><span style="color:#F97583"> extends</span><span style="color:#79B8FF"> State</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">App</span><span style="color:#E1E4E8">&gt; {</span></span>
+<span class="line"><span style="color:#79B8FF">  Widget</span><span style="color:#B392F0"> build</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">BuildContext</span><span style="color:#E1E4E8"> context) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> (...)</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="http-request-get">HTTP request: GET</h3>
+<ol>
+<li>Import package</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dart"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> &#39;package:http/http.dart&#39;</span><span style="color:#F97583"> show</span><span style="color:#E1E4E8"> get;</span></span></code></pre>
+<ol start="2">
+<li>Get response</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dart"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> response </span><span style="color:#F97583">=</span><span style="color:#B392F0"> get</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;https://jsonplaceholder.typicode.com/posts/1&#39;</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<ol start="3">
+<li><code>async</code> or not
+if request as <strong>await</strong>, need to be marked as <strong>async</strong></li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dart"><code><span class="line"><span style="color:#B392F0">fetchImage</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">async</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583"> var</span><span style="color:#E1E4E8"> response </span><span style="color:#F97583">=</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> get</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;https://jsonplaceholder.typicode.com/post/1&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>💡<a href="https://dart.dev/codelabs/async-await">Dart: futures, <code>async</code>, <code>await</code></a></p>
+<h3 id="photo-request-example">Photo Request Example</h3>
+<h4 id="model">Model</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dart"><code><span class="line"><span style="color:#F97583">class</span><span style="color:#79B8FF"> ImageModel</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  int</span><span style="color:#E1E4E8"> id;</span></span>
+<span class="line"><span style="color:#79B8FF">  String</span><span style="color:#E1E4E8"> url;</span></span>
+<span class="line"><span style="color:#79B8FF">  String</span><span style="color:#E1E4E8"> title;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  ImageModel</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.id, </span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.url, </span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.title);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  ImageModel</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">fromJson</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">Map</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">String</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">dynamic</span><span style="color:#E1E4E8">&gt; parsedJson) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    id </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> parsedJson[</span><span style="color:#9ECBFF">&#39;id&#39;</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#E1E4E8">    url </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> parsedJson[</span><span style="color:#9ECBFF">&#39;url&#39;</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#E1E4E8">    title </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> parsedJson[</span><span style="color:#9ECBFF">&#39;title&#39;</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h5 id="shorthand">shorthand</h5>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dart"><code><span class="line"><span style="color:#79B8FF">ImageModel</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">fromJson</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">Map</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">String</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">dynamic</span><span style="color:#E1E4E8">&gt; parsedJson)</span></span>
+<span class="line"><span style="color:#F97583">  :</span><span style="color:#E1E4E8"> id </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> parsedJson[</span><span style="color:#9ECBFF">&#39;id&#39;</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#E1E4E8">    url </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> parsedJson[</span><span style="color:#9ECBFF">&#39;url&#39;</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#E1E4E8">    title </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> parsedJson[</span><span style="color:#9ECBFF">&#39;title&#39;</span><span style="color:#E1E4E8">];</span></span></code></pre>
+<h4 id="widget">Widget</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dart"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> &#39;package:flutter/material.dart&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> &#39;../models/image_model.dart&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#79B8FF"> ImageList</span><span style="color:#F97583"> extends</span><span style="color:#79B8FF"> StatelessWidget</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  final</span><span style="color:#79B8FF"> List</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">ImageModel</span><span style="color:#E1E4E8">&gt; images;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  ImageList</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.images);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  Widget</span><span style="color:#B392F0"> build</span><span style="color:#E1E4E8">(context) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> ListView</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">builder</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      itemCount</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> images.length,</span></span>
+<span class="line"><span style="color:#E1E4E8">      itemBuilder</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> (context, </span><span style="color:#79B8FF">int</span><span style="color:#E1E4E8"> index) {</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#B392F0"> buildImage</span><span style="color:#E1E4E8">(images[index]);</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    );</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  Widget</span><span style="color:#B392F0"> buildImage</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">ImageModel</span><span style="color:#E1E4E8"> image) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> Container</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      margin</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> EdgeInsets</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">fromLTRB</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">16.0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">8.0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">16.0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">8.0</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">      padding</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> EdgeInsets</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">all</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">6.0</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">      decoration</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> BoxDecoration</span><span style="color:#E1E4E8">(border</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> Border</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">all</span><span style="color:#E1E4E8">(width</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> 3</span><span style="color:#E1E4E8">, color</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> Colors</span><span style="color:#E1E4E8">.blueGrey)),</span></span>
+<span class="line"><span style="color:#E1E4E8">      child</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> Column</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">        children</span><span style="color:#F97583">:</span><span style="color:#F97583"> &lt;</span><span style="color:#79B8FF">Widget</span><span style="color:#F97583">&gt;</span><span style="color:#E1E4E8">[</span></span>
+<span class="line"><span style="color:#79B8FF">          Image</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">network</span><span style="color:#E1E4E8">(image.url),</span></span>
+<span class="line"><span style="color:#79B8FF">          Padding</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">            child</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> Text</span><span style="color:#E1E4E8">(image.title),</span></span>
+<span class="line"><span style="color:#E1E4E8">            padding</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> EdgeInsets</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">all</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">10.0</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">          )</span></span>
+<span class="line"><span style="color:#E1E4E8">        ],</span></span>
+<span class="line"><span style="color:#E1E4E8">      ),</span></span>
+<span class="line"><span style="color:#E1E4E8">    );</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h4 id="app">App</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dart"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> &#39;package:flutter/material.dart&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> &#39;dart:convert&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> &#39;package:http/http.dart&#39;</span><span style="color:#F97583"> show</span><span style="color:#E1E4E8"> get;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> &#39;models/image_model.dart&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> &#39;widgets/image_list.dart&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#79B8FF"> App</span><span style="color:#F97583"> extends</span><span style="color:#79B8FF"> StatefulWidget</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">  createState</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> AppState</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#79B8FF"> AppState</span><span style="color:#F97583"> extends</span><span style="color:#79B8FF"> State</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">App</span><span style="color:#E1E4E8">&gt; {</span></span>
+<span class="line"><span style="color:#79B8FF">  int</span><span style="color:#E1E4E8"> counter </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  List</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">ImageModel</span><span style="color:#E1E4E8">&gt; images </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  void</span><span style="color:#B392F0"> fetchImage</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">async</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">    counter</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    var</span><span style="color:#E1E4E8"> res </span><span style="color:#F97583">=</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> get</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;https://jsonplaceholder.typicode.com/photos/</span><span style="color:#9ECBFF">$</span><span style="color:#79B8FF">counter</span><span style="color:#9ECBFF">&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">    var</span><span style="color:#E1E4E8"> imageModel </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> ImageModel</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">fromJson</span><span style="color:#E1E4E8">(json.</span><span style="color:#B392F0">decode</span><span style="color:#E1E4E8">(res.body));</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">    setState</span><span style="color:#E1E4E8">(() {</span></span>
+<span class="line"><span style="color:#E1E4E8">      images.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(imageModel);</span></span>
+<span class="line"><span style="color:#E1E4E8">    });</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  Widget</span><span style="color:#B392F0"> build</span><span style="color:#E1E4E8">(context) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> MaterialApp</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      home</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> Scaffold</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">        appBar</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> AppBar</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">          title</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> Text</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Hello&#39;</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">        ),</span></span>
+<span class="line"><span style="color:#E1E4E8">        body</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> ImageList</span><span style="color:#E1E4E8">(images),</span></span>
+<span class="line"><span style="color:#E1E4E8">        floatingActionButton</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> FloatingActionButton</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">          child</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> Icon</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">Icons</span><span style="color:#E1E4E8">.add),</span></span>
+<span class="line"><span style="color:#E1E4E8">          onPressed</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> fetchImage,</span></span>
+<span class="line"><span style="color:#E1E4E8">        ),</span></span>
+<span class="line"><span style="color:#E1E4E8">      ),</span></span>
+<span class="line"><span style="color:#E1E4E8">    );</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h4 id="main">main</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="dart"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> &#39;package:flutter/material.dart&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> &#39;src/app.dart&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">void</span><span style="color:#B392F0"> main</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#B392F0">  runApp</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">App</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre> </article>  </main> <footer class="footer"> <p> <small>
+Designed by EstherJ <span class="footer-separator">|</span> Copyright © 2026 </small> </p> </footer> </body></html>

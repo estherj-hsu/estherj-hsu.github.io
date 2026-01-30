@@ -1,0 +1,646 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><meta name="description" content="Accessible UI, interface craft, and ongoing experiments."><title>Data Structures – Esther: Version History</title><meta property="og:type" content="website"><meta property="og:title" content="Data Structures"><meta property="og:description" content="Accessible UI, interface craft, and ongoing experiments."><meta property="og:image" content="/img/og.png"><meta property="og:url" content="https://estherj-hsu.github.io/blog/DataStructure/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Data Structures"><meta name="twitter:description" content="Accessible UI, interface craft, and ongoing experiments."><meta name="twitter:image" content="/img/og.png"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg"><link rel="icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.ico"><script type="module">document.addEventListener("astro:page-load",()=>{window.refreshFsLightbox&&window.refreshFsLightbox()});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_1_lang.B0Xlk8SJ.js"></script><link rel="stylesheet" href="/_astro/_slug_.B9ZDccv9.css"></head> <body> <header> <div> <a href="/" class="logo"> <img width="280" src="/img/logo.png" alt="Esther: Version History logo"> </a> </div> <div> <nav id="nav" class="nav"> <ul> <li class="nav-link"> <a aria-label="Esther" href="/esther/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-bubble.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Blog" href="/blog/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-book.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Portfolio" href="/portfolio/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-suitcase.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Playground" href="/playground/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-cube.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Github (Opens in new tab)" href="https://github.com/estherj-hsu" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-git.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="LinkedIn (Opens in new tab)" href="https://www.linkedin.com/in/estherjhsu/" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-linkedin.svg')" aria-hidden="true"></i> </a> </li> </ul> </nav> </div> </header> <main>  <article> <h1>Data Structures</h1> <div class="metadata-wrapper"> <div class="meta"> <div class="meta-date"> <time datetime="2018-01-29T17:53:32.000Z"> January 29, 2018 </time> </div> <ul class="meta-tags"> <li> <a href="/tags/js/" class="tag">JS</a> </li><li> <a href="/tags/front-end/" class="tag">Front-End</a> </li> </ul> </div> </div> <section class="esther"> <h2 class="visually-hidden">Author note</h2> <p>From data structure to algorithm…?<br/>
+Still working on the tree removing part T^T</p> </section>
+<hr/>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://medium.com/@limichelle21/5-data-structures-in-5-minutes-7f4b34d00b8e">6 Data Structures in 6 Minutes</a></li>
+<li><a href="https://www.quora.com/How-do-you-use-Queue-Stack-List-Map-and-Set-in-Java">How do you use Queue, Stack, List, Map, and Set in Java?</a></li>
+<li>用 JavaScript 學習資料結構和演算法 系列
+<ul>
+<li><a href="https://blog.kdchang.cc/2016/06/23/javascript-data-structure-algorithm-array/">陣列（Array）篇</a></li>
+<li><a href="https://blog.kdchang.cc/2016/06/24/javascript-data-structure-algorithm-stack/">堆疊（Stack）篇</a> *</li>
+<li><a href="https://blog.kdchang.cc/2016/09/11/javascript-data-structure-algorithm-queue/">佇列（Queue）篇</a> *</li>
+<li><a href="https://blog.kdchang.cc/2016/09/21/javascript-data-structure-algorithm-linked-list/">鏈結串列（Linked List）篇</a> *</li>
+<li><a href="https://blog.kdchang.cc/2016/09/23/javascript-data-structure-algorithm-set/">集合（Set）篇</a> *</li>
+<li><a href="https://blog.kdchang.cc/2016/09/23/javascript-data-structure-algorithm-dictionary-hash-table/">字典（Dictionary）和雜湊表（Hash Table）篇</a></li>
+<li><a href="https://blog.kdchang.cc/2016/09/25/javascript-data-structure-algorithm-tree/">樹（Tree）篇</a> *</li>
+<li><a href="https://blog.kdchang.cc/2016/09/26/javascript-data-structure-algorithm-graph/">圖形（Graph）篇</a></li>
+<li><a href="https://blog.kdchang.cc/2016/09/27/javascript-data-structure-algorithm-sort-and-search/">排序（Sort）與搜尋（Search）篇</a></li>
+<li><a href="https://blog.kdchang.cc/2016/09/27/javascript-data-structure-algorithm-advance/">演算法進階補充篇</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="array">Array</h2>
+<p><img src="https://blog.kdchang.cc/2016/06/23/javascript-data-structure-algorithm-array/ja-array-operation.jpg" alt="@tooto1985"/></p>
+<h2 id="stack">Stack</h2>
+<p>Last In First Out (LIFO)</p>
+<p><img src="https://www.tutorialspoint.com/data_structures_algorithms/images/stack_representation.jpg" alt="tutorialspoint"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> Stack</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> items </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">push</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">element</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    items.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(element);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">pop</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items.</span><span style="color:#B392F0">pop</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">peek</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items[items.</span><span style="color:#79B8FF">length</span><span style="color:#F97583"> -</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">isEmpty</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items.</span><span style="color:#79B8FF">length</span><span style="color:#F97583"> ===</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">clear</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">    items </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">size</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">print</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(items.</span><span style="color:#B392F0">toString</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> stack </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Stack</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">stack.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Book I&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">stack.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Book II&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">stack.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Book III&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">stack.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Book IV&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">stack.</span><span style="color:#B392F0">pop</span><span style="color:#E1E4E8">();                   </span><span style="color:#6A737D">// remove BookIV</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(stack.</span><span style="color:#B392F0">size</span><span style="color:#E1E4E8">());     </span><span style="color:#6A737D">// 3</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(stack.</span><span style="color:#B392F0">peek</span><span style="color:#E1E4E8">());     </span><span style="color:#6A737D">// Book III</span></span>
+<span class="line"><span style="color:#E1E4E8">stack.</span><span style="color:#B392F0">clear</span><span style="color:#E1E4E8">();                 </span><span style="color:#6A737D">// Clear stack</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(stack.</span><span style="color:#B392F0">isEmpty</span><span style="color:#E1E4E8">());  </span><span style="color:#6A737D">// true</span></span>
+<span class="line"></span></code></pre>
+<h2 id="queue">Queue</h2>
+<p>First In First Out (FIFO): In <strong>Rear</strong>, Out <strong>Front</strong></p>
+<p><img src="https://www.tutorialspoint.com/data_structures_algorithms/images/queue_diagram.jpg" alt="tutorialspoint"/></p>
+<p><img src="https://www.tutorialspoint.com/data_structures_algorithms/images/queue_enqueue_diagram.jpg" alt="tutorialspoint"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> Queue</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> items </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">enqueue</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">element</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    items.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(element);</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">dequeue</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items.</span><span style="color:#B392F0">shift</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">front</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">isEmpty</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items.</span><span style="color:#79B8FF">length</span><span style="color:#F97583"> ===</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">clear</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">    items </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">size</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">print</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(items.</span><span style="color:#B392F0">toString</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> queue</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Queue</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(queue.</span><span style="color:#B392F0">isEmpty</span><span style="color:#E1E4E8">());     </span><span style="color:#6A737D">// true</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">queue.</span><span style="color:#B392F0">enqueue</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Car 1&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">queue.</span><span style="color:#B392F0">enqueue</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Car 2&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">queue.</span><span style="color:#B392F0">enqueue</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Car 3&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">queue.</span><span style="color:#B392F0">enqueue</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Car 4&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(queue.</span><span style="color:#B392F0">front</span><span style="color:#E1E4E8">());       </span><span style="color:#6A737D">// Car 1</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(queue.</span><span style="color:#B392F0">size</span><span style="color:#E1E4E8">());        </span><span style="color:#6A737D">// 4</span></span>
+<span class="line"><span style="color:#E1E4E8">queue.</span><span style="color:#B392F0">print</span><span style="color:#E1E4E8">();                    </span><span style="color:#6A737D">// Car 1,Car 2,Car 3,Car 4</span></span>
+<span class="line"><span style="color:#E1E4E8">queue.</span><span style="color:#B392F0">dequeue</span><span style="color:#E1E4E8">();                  </span><span style="color:#6A737D">// remove Car 1</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(queue.</span><span style="color:#B392F0">front</span><span style="color:#E1E4E8">());       </span><span style="color:#6A737D">// Car 2</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(queue.</span><span style="color:#B392F0">size</span><span style="color:#E1E4E8">());        </span><span style="color:#6A737D">// 3</span></span>
+<span class="line"><span style="color:#E1E4E8">queue.</span><span style="color:#B392F0">print</span><span style="color:#E1E4E8">();                    </span><span style="color:#6A737D">// Car 2,Car 3,Car 4</span></span>
+<span class="line"></span></code></pre>
+<h3 id="priority-queue">Priority Queue</h3>
+<p>Set priority to each item in array.</p>
+<p><img src="https://netmatze.files.wordpress.com/2014/08/priorityqueue.png" alt="netmatze"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> PriorityQueue</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> items </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"><span style="color:#F97583">  function</span><span style="color:#B392F0"> QueueElement</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">element</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">priority</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">    this</span><span style="color:#E1E4E8">.element </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> element;</span></span>
+<span class="line"><span style="color:#79B8FF">    this</span><span style="color:#E1E4E8">.priority </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> priority;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">enqueue</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">element</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">priority</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> queueElement</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> QueueElement</span><span style="color:#E1E4E8">(element, priority);</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">isEmpty</span><span style="color:#E1E4E8">()) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      items.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(queueElement);</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">      let</span><span style="color:#E1E4E8"> added </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">      for</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">let</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> items.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8">(queueElement.priority </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> items[i].priority) {</span></span>
+<span class="line"><span style="color:#E1E4E8">          items.</span><span style="color:#B392F0">splice</span><span style="color:#E1E4E8">(i, </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, queueElement);</span></span>
+<span class="line"><span style="color:#E1E4E8">                    added </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">                    break</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">!</span><span style="color:#E1E4E8">added) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        items.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(queueElement);</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">dequeue</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items.</span><span style="color:#B392F0">shift</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">front</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">isEmpty</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items.</span><span style="color:#79B8FF">length</span><span style="color:#F97583"> ===</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">clear</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">    items </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">size</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">print</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">JSON</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">stringify</span><span style="color:#E1E4E8">(items));</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> priorityQueue</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> PriorityQueue</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(priorityQueue.</span><span style="color:#B392F0">isEmpty</span><span style="color:#E1E4E8">());      </span><span style="color:#6A737D">// true</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">priorityQueue.</span><span style="color:#B392F0">enqueue</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Tom&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">priorityQueue.</span><span style="color:#B392F0">enqueue</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Jane&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">priorityQueue.</span><span style="color:#B392F0">enqueue</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Ann&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">priorityQueue.</span><span style="color:#B392F0">enqueue</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Tina&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(priorityQueue.</span><span style="color:#B392F0">front</span><span style="color:#E1E4E8">());        </span><span style="color:#6A737D">// {element: &quot;Jane&quot;, priority: 1}</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(priorityQueue.</span><span style="color:#B392F0">size</span><span style="color:#E1E4E8">());         </span><span style="color:#6A737D">// 4</span></span>
+<span class="line"><span style="color:#E1E4E8">priorityQueue.</span><span style="color:#B392F0">print</span><span style="color:#E1E4E8">();                     </span><span style="color:#6A737D">// [{element: &quot;Jane&quot;, priority: 1}, {element: &quot;Tom&quot;, priority: 2}, ...]</span></span>
+<span class="line"><span style="color:#E1E4E8">priorityQueue.</span><span style="color:#B392F0">dequeue</span><span style="color:#E1E4E8">();                   </span><span style="color:#6A737D">// remove Jane</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(priorityQueue.</span><span style="color:#B392F0">front</span><span style="color:#E1E4E8">());        </span><span style="color:#6A737D">// {element: &quot;Tom&quot;, priority: 2}</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(priorityQueue.</span><span style="color:#B392F0">size</span><span style="color:#E1E4E8">());         </span><span style="color:#6A737D">// 3</span></span>
+<span class="line"><span style="color:#E1E4E8">priorityQueue.</span><span style="color:#B392F0">print</span><span style="color:#E1E4E8">();                     </span><span style="color:#6A737D">// [{element: &quot;Tom&quot;, priority: 2}, {element: &quot;Tina&quot;, priority: 3}, ...]</span></span>
+<span class="line"></span></code></pre>
+<h2 id="linked-list">Linked List</h2>
+<p>A sequence of data structures which are connected together via links.</p>
+<ul>
+<li><strong>Link</strong> − Each Link of a linked list can store a data called an element.</li>
+<li><strong>Next</strong> − Each Link of a linked list contain a link to next link called Next.</li>
+<li><strong>LinkedList</strong> − A LinkedList contains the connection link to the first Link called First.</li>
+</ul>
+<p><img src="https://www.tutorialspoint.com/data_structures_algorithms/images/dsa_linkedlist.jpg" alt="tutorialspoint"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> LinkedList</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> Node</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">element</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">    this</span><span style="color:#E1E4E8">.element </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> element;</span></span>
+<span class="line"><span style="color:#79B8FF">    this</span><span style="color:#E1E4E8">.next </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> length </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;            </span><span style="color:#6A737D">// 存放 LinkedList 長度</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> head </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">;           </span><span style="color:#6A737D">// 第一個節點的指標</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">getHead</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> head;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">append</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">element</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> node</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Node</span><span style="color:#E1E4E8">(element)</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> current;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(head </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      head </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> node;</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">      current </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> head;</span></span>
+<span class="line"><span style="color:#F97583">      while</span><span style="color:#E1E4E8">(current.next) {</span></span>
+<span class="line"><span style="color:#E1E4E8">          current </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> current.next;</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">      current.next </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> node;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">    length</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">insert</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">position</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">element</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(position </span><span style="color:#F97583">&gt;=</span><span style="color:#79B8FF"> 0</span><span style="color:#F97583"> &amp;&amp;</span><span style="color:#E1E4E8"> position </span><span style="color:#F97583">&lt;=</span><span style="color:#E1E4E8"> length) {</span></span>
+<span class="line"><span style="color:#F97583">      let</span><span style="color:#E1E4E8"> node </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Node</span><span style="color:#E1E4E8">(element);</span></span>
+<span class="line"><span style="color:#F97583">      let</span><span style="color:#E1E4E8"> current </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> head;</span></span>
+<span class="line"><span style="color:#F97583">      let</span><span style="color:#E1E4E8"> previous;</span></span>
+<span class="line"><span style="color:#F97583">      let</span><span style="color:#E1E4E8"> index </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8">(position </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        node.next </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> current;</span></span>
+<span class="line"><span style="color:#E1E4E8">        head </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> node;</span></span>
+<span class="line"><span style="color:#E1E4E8">      } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">        while</span><span style="color:#E1E4E8">(index</span><span style="color:#F97583">++</span><span style="color:#F97583"> &lt;</span><span style="color:#E1E4E8"> position) {</span></span>
+<span class="line"><span style="color:#E1E4E8">            previous </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> current;</span></span>
+<span class="line"><span style="color:#E1E4E8">            current </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> current.next;</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">        node.next </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> current;</span></span>
+<span class="line"><span style="color:#E1E4E8">        previous.next </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> node;</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">      length</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">remove</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">element</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> index </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">indexOf</span><span style="color:#E1E4E8">(element);</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">removeAt</span><span style="color:#E1E4E8">(index);</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">removeAt</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">position</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(position </span><span style="color:#F97583">&gt;</span><span style="color:#F97583"> -</span><span style="color:#79B8FF">1</span><span style="color:#F97583"> &amp;&amp;</span><span style="color:#E1E4E8"> position </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> length) {</span></span>
+<span class="line"><span style="color:#F97583">      let</span><span style="color:#E1E4E8"> current </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> head;</span></span>
+<span class="line"><span style="color:#F97583">      let</span><span style="color:#E1E4E8"> previous;</span></span>
+<span class="line"><span style="color:#F97583">      let</span><span style="color:#E1E4E8"> index </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8">(position </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        head </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> current.next;</span></span>
+<span class="line"><span style="color:#E1E4E8">      } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">        while</span><span style="color:#E1E4E8">(index</span><span style="color:#F97583">++</span><span style="color:#F97583"> &lt;</span><span style="color:#E1E4E8"> position) {</span></span>
+<span class="line"><span style="color:#E1E4E8">          previous </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> current;</span></span>
+<span class="line"><span style="color:#E1E4E8">          current </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> current.next;</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">        previous.next </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> current.next;</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">      length</span><span style="color:#F97583">--</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#E1E4E8"> current.element;</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">indexOf</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">element</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    var</span><span style="color:#E1E4E8"> current </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> head;</span></span>
+<span class="line"><span style="color:#F97583">    var</span><span style="color:#E1E4E8"> index </span><span style="color:#F97583">=</span><span style="color:#F97583"> -</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    while</span><span style="color:#E1E4E8">(current) {</span></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8">(element </span><span style="color:#F97583">===</span><span style="color:#E1E4E8"> current.element) {</span></span>
+<span class="line"><span style="color:#F97583">          return</span><span style="color:#E1E4E8"> index;</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">      index</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">      current </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> current.next;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#F97583"> -</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">isEmpty</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> length </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">size</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#E1E4E8"> length;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">toString</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> current </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> head;</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> string </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &#39;&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    while</span><span style="color:#E1E4E8">(current) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      string </span><span style="color:#F97583">+=</span><span style="color:#E1E4E8"> current.element;</span></span>
+<span class="line"><span style="color:#E1E4E8">      current </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> current.next;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> string;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">print</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">toString</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> linkdeList</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> LinkedList</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(linkdeList.</span><span style="color:#B392F0">isEmpty</span><span style="color:#E1E4E8">());     </span><span style="color:#6A737D">// true</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">linkedList.</span><span style="color:#B392F0">append</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;A&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">linkedList.</span><span style="color:#B392F0">append</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;B&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">linkedList.</span><span style="color:#B392F0">append</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;C&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">linkedList.</span><span style="color:#B392F0">append</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;D&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">linkedList.</span><span style="color:#B392F0">print</span><span style="color:#E1E4E8">();                    </span><span style="color:#6A737D">// ABCD</span></span>
+<span class="line"><span style="color:#E1E4E8">linkedList.</span><span style="color:#B392F0">insert</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;X&#39;</span><span style="color:#E1E4E8">);             </span><span style="color:#6A737D">// add X after node2(B)</span></span>
+<span class="line"><span style="color:#E1E4E8">linkedList.</span><span style="color:#B392F0">print</span><span style="color:#E1E4E8">();                    </span><span style="color:#6A737D">// ABbCD</span></span>
+<span class="line"><span style="color:#E1E4E8">linkedList.</span><span style="color:#B392F0">remove</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;B&#39;</span><span style="color:#E1E4E8">);                </span><span style="color:#6A737D">// remove B</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(linkedList.</span><span style="color:#B392F0">size</span><span style="color:#E1E4E8">());        </span><span style="color:#6A737D">// 4</span></span>
+<span class="line"><span style="color:#E1E4E8">linkedList.</span><span style="color:#B392F0">removeAt</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">);                </span><span style="color:#6A737D">// remove node0 (A)</span></span>
+<span class="line"><span style="color:#E1E4E8">linkedList.</span><span style="color:#B392F0">print</span><span style="color:#E1E4E8">();                    </span><span style="color:#6A737D">// XCD</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(linkedList.</span><span style="color:#B392F0">indexOf</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;X&#39;</span><span style="color:#E1E4E8">));  </span><span style="color:#6A737D">// -1</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(linkedList.</span><span style="color:#B392F0">indexOf</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;D&#39;</span><span style="color:#E1E4E8">));  </span><span style="color:#6A737D">// 1</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(linkedList.</span><span style="color:#B392F0">getHead</span><span style="color:#E1E4E8">());     </span><span style="color:#6A737D">// { element: &quot;X&quot;, next: { element: &quot;C&quot;, next: { ... } } }</span></span>
+<span class="line"></span></code></pre>
+<h3 id="types">Types</h3>
+<ul>
+<li>Singly Linked List<br/>
+<img src="https://www.studytonight.com/data-structures/images/linked-list-linear.png" alt="studytonight"/></li>
+<li>Doubly Linked List<br/>
+<img src="https://www.studytonight.com/data-structures/images/linked-list-double.png" alt="studytonight"/></li>
+<li>Circular Linked List<br/>
+<img src="https://www.studytonight.com/data-structures/images/linked-list-circular.png" alt="studytonight"/></li>
+</ul>
+<h2 id="set">Set</h2>
+<p><img src="http://wikistack.com/wp-content/uploads/2015/04/disjsds.jpeg" alt="wikistack"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> Set</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> items </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">add</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">value</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">!</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">has</span><span style="color:#E1E4E8">(value)) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      items[value] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> value;</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">remove</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">value</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">has</span><span style="color:#E1E4E8">(value)) {</span></span>
+<span class="line"><span style="color:#F97583">      delete</span><span style="color:#E1E4E8"> items[value];</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">has</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">value</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> items.</span><span style="color:#B392F0">hasOwnProperty</span><span style="color:#E1E4E8">(value);</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">clear</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">    items </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {};</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">size</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> count </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">let</span><span style="color:#E1E4E8"> key </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> items) {</span></span>
+<span class="line"><span style="color:#F97583">      ++</span><span style="color:#E1E4E8">count;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> count;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">value</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> keys </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">let</span><span style="color:#E1E4E8"> key </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> items) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      keys.</span><span style="color:#B392F0">push</span><span style="color:#E1E4E8">(key);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> keys;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">union</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">otherSet</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> unionSet </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Set</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> value </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">var</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> value.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      unionSet.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(value[i]);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">    value </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> otherSet.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">var</span><span style="color:#E1E4E8"> j </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; j </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> value.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">; j</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      unionSet.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(value[j]);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> unionSet;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">intersection</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">otherSet</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> intersectionSet </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Set</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> value </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">  for</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">var</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> value.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(otherSet.</span><span style="color:#B392F0">has</span><span style="color:#E1E4E8">(value[i])) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      intersectionSet.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(value[i]);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> intersectionSet;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">difference</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">otherSet</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> differenceSet </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Set</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> value </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">var</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> value.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">!</span><span style="color:#E1E4E8">otherSet.</span><span style="color:#B392F0">has</span><span style="color:#E1E4E8">(value[i])) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        differenceSet.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(value[i]);</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> differenceSet;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">isSub</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">otherSet</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">size</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">&gt;</span><span style="color:#E1E4E8"> otherSet.</span><span style="color:#B392F0">size</span><span style="color:#E1E4E8">()) {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">      let</span><span style="color:#E1E4E8"> value </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">      for</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">var</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> value.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">!</span><span style="color:#E1E4E8">otherSet.</span><span style="color:#B392F0">has</span><span style="color:#E1E4E8">(value[i])) {</span></span>
+<span class="line"><span style="color:#F97583">          return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> set</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Set</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">set.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">12</span><span style="color:#E1E4E8">);                                         </span><span style="color:#6A737D">// add 12</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(set.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">());                            </span><span style="color:#6A737D">// [&#39;12&#39;]</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(set.</span><span style="color:#B392F0">has</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">12</span><span style="color:#E1E4E8">));                            </span><span style="color:#6A737D">// true</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(set.</span><span style="color:#B392F0">size</span><span style="color:#E1E4E8">());                             </span><span style="color:#6A737D">// 1</span></span>
+<span class="line"><span style="color:#E1E4E8">set.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">15</span><span style="color:#E1E4E8">);                                         </span><span style="color:#6A737D">// add 15</span></span>
+<span class="line"><span style="color:#E1E4E8">set.</span><span style="color:#B392F0">remove</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">12</span><span style="color:#E1E4E8">);                                      </span><span style="color:#6A737D">// remove 12</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(set.</span><span style="color:#B392F0">has</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">12</span><span style="color:#E1E4E8">));                            </span><span style="color:#6A737D">// false</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(set.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">());                            </span><span style="color:#6A737D">// [&#39;15&#39;]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> setA </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Set</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">setA.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;A&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">setA.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;B&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">setA.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;C&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">setA.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;D&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(setA.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">());                           </span><span style="color:#6A737D">// [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> setB </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Set</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">setB.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;A&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">setB.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;C&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">setB.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;E&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">setB.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;F&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(setB.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">());                           </span><span style="color:#6A737D">// [&quot;A&quot;, &quot;C&quot;, &quot;E&quot;, &quot;F&quot;]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> setC </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Set</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">setC.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;A&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">setC.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;B&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> unionSet</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> setA.</span><span style="color:#B392F0">union</span><span style="color:#E1E4E8">(setB);</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(unionSet.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">());                       </span><span style="color:#6A737D">// [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> intersectionSet</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> setA.</span><span style="color:#B392F0">intersection</span><span style="color:#E1E4E8">(setB);</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(intersectionSet.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">());                </span><span style="color:#6A737D">// [&quot;A&quot;, &quot;C&quot;]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> differenceSet</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> setA.</span><span style="color:#B392F0">difference</span><span style="color:#E1E4E8">(setB);</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(differenceSet.</span><span style="color:#B392F0">value</span><span style="color:#E1E4E8">());                  </span><span style="color:#6A737D">// [&quot;A&quot;, &quot;C&quot;]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(setB.</span><span style="color:#B392F0">isSub</span><span style="color:#E1E4E8">(setA));                       </span><span style="color:#6A737D">// false</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(setC.</span><span style="color:#B392F0">isSub</span><span style="color:#E1E4E8">(setA));                       </span><span style="color:#6A737D">// true</span></span>
+<span class="line"></span></code></pre>
+<h2 id="tree">Tree</h2>
+<ul>
+<li><strong>inorder</strong>: left -&gt; root -&gt; right (A -&gt; B -&gt; C)</li>
+<li><strong>preorder</strong>: root -&gt; left -&gt; right (B -&gt; A -&gt; C)</li>
+<li><strong>postorder</strong>: left -&gt; right -&gt; root (A -&gt; C -&gt; B)</li>
+</ul>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*87h2uhCJ5qztBNwfck2b6g.jpeg" alt="medium"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> BinarySearchTree</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> Node</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">key</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">    this</span><span style="color:#E1E4E8">.key </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> key;</span></span>
+<span class="line"><span style="color:#79B8FF">    this</span><span style="color:#E1E4E8">.left </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">    this</span><span style="color:#E1E4E8">.right </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> root </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">insert</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">key</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> newNode </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Node</span><span style="color:#E1E4E8">(key);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(root </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      root </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> newNode;</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">      insertNode</span><span style="color:#E1E4E8">(root, newNode);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> insertNode</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">node</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">newNode</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(newNode.key </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> node.key) {</span></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8">(node.left </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        node.left </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> newNode;</span></span>
+<span class="line"><span style="color:#E1E4E8">      } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">        insertNode</span><span style="color:#E1E4E8">(node.left, newNode);</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8">(node.right </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        node.right </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> newNode;</span></span>
+<span class="line"><span style="color:#E1E4E8">      } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">        insertNode</span><span style="color:#E1E4E8">(node.right, newNode);</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">inOrderTraverse</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">callback</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#B392F0">    inOrderTraverseNode</span><span style="color:#E1E4E8">(root, callback);</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> inOrderTraverseNode</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">node</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">callback</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(node </span><span style="color:#F97583">!==</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#B392F0">      inOrderTraverseNode</span><span style="color:#E1E4E8">(node.left, callback);</span></span>
+<span class="line"><span style="color:#B392F0">      callback</span><span style="color:#E1E4E8">(node.key);</span></span>
+<span class="line"><span style="color:#B392F0">      inOrderTraverseNode</span><span style="color:#E1E4E8">(node.right, callback);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">preOrderTraverse</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">callback</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#B392F0">    preOrderTraverseNode</span><span style="color:#E1E4E8">(root, callback);</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> preOrderTraverseNode</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">node</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">callback</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(node </span><span style="color:#F97583">!==</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#B392F0">      callback</span><span style="color:#E1E4E8">(node.key);</span></span>
+<span class="line"><span style="color:#B392F0">      preOrderTraverseNode</span><span style="color:#E1E4E8">(node.left, callback);</span></span>
+<span class="line"><span style="color:#B392F0">      preOrderTraverseNode</span><span style="color:#E1E4E8">(node.right, callback);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">postOrderTraverse</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">callback</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#B392F0">    postOrderTraverseNode</span><span style="color:#E1E4E8">(root, callback);</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> postOrderTraverseNode</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">node</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">callback</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(node </span><span style="color:#F97583">!==</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#B392F0">      postOrderTraverseNode</span><span style="color:#E1E4E8">(node.left, callback);</span></span>
+<span class="line"><span style="color:#B392F0">      postOrderTraverseNode</span><span style="color:#E1E4E8">(node.right, callback);</span></span>
+<span class="line"><span style="color:#B392F0">      callback</span><span style="color:#E1E4E8">(node.key);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">search</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">key</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#B392F0"> searchNode</span><span style="color:#E1E4E8">(root, key);</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> searchNode</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">node</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">key</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(node </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (key </span><span style="color:#F97583">===</span><span style="color:#E1E4E8"> node.key) {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (key </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> node.key) {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#B392F0"> searchNode</span><span style="color:#E1E4E8">(node.left, key);</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (key </span><span style="color:#F97583">&gt;</span><span style="color:#E1E4E8"> node.key) {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#B392F0"> searchNode</span><span style="color:#E1E4E8">(node.right, key);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">min</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#B392F0"> minNode</span><span style="color:#E1E4E8">(root);</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> minNode</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">node</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(node) {</span></span>
+<span class="line"><span style="color:#F97583">      while</span><span style="color:#E1E4E8">(node </span><span style="color:#F97583">&amp;&amp;</span><span style="color:#E1E4E8"> node.left </span><span style="color:#F97583">!==</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        node </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> node.left;</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#E1E4E8"> node.key;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">max</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#B392F0"> maxNode</span><span style="color:#E1E4E8">(root);</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> maxNode</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">node</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(node) {</span></span>
+<span class="line"><span style="color:#F97583">      while</span><span style="color:#E1E4E8">(node </span><span style="color:#F97583">&amp;&amp;</span><span style="color:#E1E4E8"> node.right </span><span style="color:#F97583">!==</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        node </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> node.right;</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#E1E4E8"> node.key;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">remove</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">key</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">search</span><span style="color:#E1E4E8">(key)) {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#B392F0"> removeAt</span><span style="color:#E1E4E8">(root, key);</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">      console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;No such node.&#39;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> removeAt</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">node</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">key</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8">(node </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      node.left </span><span style="color:#F97583">=</span><span style="color:#B392F0"> removeAt</span><span style="color:#E1E4E8">(node.left, key);</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#E1E4E8"> node;</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8">(key </span><span style="color:#F97583">&gt;</span><span style="color:#E1E4E8"> node.key) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      node.right </span><span style="color:#F97583">=</span><span style="color:#B392F0"> removeAt</span><span style="color:#E1E4E8">(node.right, key);</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8">(node.left </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        node </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> node.right;</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> node;</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8">(node.left </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        node </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> node.right;</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> node;</span></span>
+<span class="line"><span style="color:#E1E4E8">      } </span><span style="color:#F97583">else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8">(node.right </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        node </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> node.left;</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> node;</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#F97583">      const</span><span style="color:#79B8FF"> aux</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">search</span><span style="color:#E1E4E8">(node.right);</span></span>
+<span class="line"><span style="color:#E1E4E8">      node.key </span><span style="color:#F97583">=</span><span style="color:#B392F0"> removeAt</span><span style="color:#E1E4E8">(node.right, aux.key);</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#E1E4E8"> node;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> printNode</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">value</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">  console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(value);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> tree </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> BinarySearchTree</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">insert</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">35</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">insert</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">22</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">insert</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">7</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">insert</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">insert</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">insert</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">insert</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">32</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">insert</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">40</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">inOrderTraverse</span><span style="color:#E1E4E8">(printNode);            </span><span style="color:#6A737D">// 2 4 5 7 22 32 35 40</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">preOrderTraverse</span><span style="color:#E1E4E8">(printNode);           </span><span style="color:#6A737D">// 35 22 7 2 4 5 32 40</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">postOrderTraverse</span><span style="color:#E1E4E8">(printNode);          </span><span style="color:#6A737D">// 5 4 2 7 32 22 40 35</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// tree.remove(5);</span></span>
+<span class="line"><span style="color:#6A737D">// tree.inOrderTraverse(printNode);            // 2 4 5 7 22 32 35 40</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">remove</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">tree.</span><span style="color:#B392F0">inOrderTraverse</span><span style="color:#E1E4E8">(printNode);            </span><span style="color:#6A737D">// 2 4 5 7 22 32 35 40</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(tree.</span><span style="color:#B392F0">min</span><span style="color:#E1E4E8">());                    </span><span style="color:#6A737D">// 2</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(tree.</span><span style="color:#B392F0">max</span><span style="color:#E1E4E8">());                    </span><span style="color:#6A737D">// 40</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(tree.</span><span style="color:#B392F0">search</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">));                </span><span style="color:#6A737D">// false</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(tree.</span><span style="color:#B392F0">search</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">22</span><span style="color:#E1E4E8">));               </span><span style="color:#6A737D">// true</span></span>
+<span class="line"></span></code></pre> </article>  </main> <footer class="footer"> <p> <small>
+Designed by EstherJ <span class="footer-separator">|</span> Copyright © 2026 </small> </p> </footer> </body></html>

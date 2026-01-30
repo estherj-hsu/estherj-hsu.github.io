@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><meta name="description" content="Accessible UI, interface craft, and ongoing experiments."><title>Flutter Part 1: Install – Esther: Version History</title><meta property="og:type" content="website"><meta property="og:title" content="Flutter Part 1: Install"><meta property="og:description" content="Accessible UI, interface craft, and ongoing experiments."><meta property="og:image" content="/img/og.png"><meta property="og:url" content="https://estherj-hsu.github.io/blog/flutter-1/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Flutter Part 1: Install"><meta name="twitter:description" content="Accessible UI, interface craft, and ongoing experiments."><meta name="twitter:image" content="/img/og.png"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg"><link rel="icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.ico"><script type="module">document.addEventListener("astro:page-load",()=>{window.refreshFsLightbox&&window.refreshFsLightbox()});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_1_lang.B0Xlk8SJ.js"></script><link rel="stylesheet" href="/_astro/_slug_.B9ZDccv9.css"></head> <body> <header> <div> <a href="/" class="logo"> <img width="280" src="/img/logo.png" alt="Esther: Version History logo"> </a> </div> <div> <nav id="nav" class="nav"> <ul> <li class="nav-link"> <a aria-label="Esther" href="/esther/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-bubble.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Blog" href="/blog/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-book.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Portfolio" href="/portfolio/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-suitcase.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Playground" href="/playground/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-cube.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Github (Opens in new tab)" href="https://github.com/estherj-hsu" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-git.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="LinkedIn (Opens in new tab)" href="https://www.linkedin.com/in/estherjhsu/" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-linkedin.svg')" aria-hidden="true"></i> </a> </li> </ul> </nav> </div> </header> <main>  <article> <h1>Flutter Part 1: Install</h1> <div class="metadata-wrapper"> <div class="meta"> <div class="meta-date"> <time datetime="2019-11-19T17:03:38.000Z"> November 19, 2019 </time> </div> <ul class="meta-tags"> <li> <a href="/tags/flutter/" class="tag">flutter</a> </li><li> <a href="/tags/app/" class="tag">App</a> </li> </ul> </div> </div> <section class="esther"> <h2 class="visually-hidden">Author note</h2> <p>Make sure that you unzip the flutter folder into the right directory.<br/>
+If you’d like to move the flutter folder after ran flutter, you might see the same error as mine. 🙈</p> </section>
+<hr/>
+<h3 id="install-macos">Install (macOS)</h3>
+<ol>
+<li>Download Flutter SDK and unzip</li>
+<li>Add path to <code>.zshrc</code></li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="zsh"><code><span class="line"><span style="color:#F97583">export</span><span style="color:#E1E4E8"> PATH</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;</span><span style="color:#E1E4E8">$PATH</span><span style="color:#9ECBFF">:[PATH_OF_DIRECTORY]/flutter/bin&quot;</span></span></code></pre>
+<ol start="3">
+<li>Pre-download tools</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">flutter</span><span style="color:#9ECBFF"> precache</span></span></code></pre>
+<h3 id="ios">iOS</h3>
+<ol>
+<li>Install <strong>xcode</strong></li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> xcode-select</span><span style="color:#79B8FF"> --switch</span><span style="color:#9ECBFF"> /Applications/Xcode.app/Contents/Developer</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> xcodebuild</span><span style="color:#79B8FF"> -runFirstLaunch</span></span></code></pre>
+<ol start="2">
+<li>Set up <strong>Simulator</strong></li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">open</span><span style="color:#79B8FF"> -a</span><span style="color:#9ECBFF"> Simulator</span></span></code></pre>
+<ol start="3">
+<li>Create a flutter project and test with the device</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">flutter</span><span style="color:#9ECBFF"> run</span></span></code></pre>
+<h3 id="android">android</h3>
+<ol>
+<li>Download and install <a href="https://developer.android.com/studio">Android Studio</a></li>
+<li>Create a Virtual Device (Android Studio &gt; Tools &gt; AVD Manager)</li>
+<li>Run with the device</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">flutter</span><span style="color:#9ECBFF"> run</span></span></code></pre>
+<h3 id="errors">Errors</h3>
+<p>After moved flutter folder, you might see the error below:</p>
+<blockquote>
+<p>Warning! This package referenced a Flutter repository via the .packages file that is no longer available. The repository from which the ‘flutter’ tool is currently executing will be used instead.</p>
+</blockquote>
+<ol>
+<li>Update path in <code>.zshrc</code></li>
+<li>Add <code>.packages</code> into <code>.gitignore</code></li>
+<li>Recreate <code>.packages</code></li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">flutter</span><span style="color:#9ECBFF"> packages</span><span style="color:#9ECBFF"> get</span></span></code></pre> </article>  </main> <footer class="footer"> <p> <small>
+Designed by EstherJ <span class="footer-separator">|</span> Copyright © 2026 </small> </p> </footer> </body></html>

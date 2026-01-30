@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><meta name="description" content="Accessible UI, interface craft, and ongoing experiments."><title>TypeScript I: Types, Functions &amp; Gernerics – Esther: Version History</title><meta property="og:type" content="website"><meta property="og:title" content="TypeScript I: Types, Functions &#38; Gernerics"><meta property="og:description" content="Accessible UI, interface craft, and ongoing experiments."><meta property="og:image" content="/img/og.png"><meta property="og:url" content="https://estherj-hsu.github.io/blog/TypeScript-1/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="TypeScript I: Types, Functions &#38; Gernerics"><meta name="twitter:description" content="Accessible UI, interface craft, and ongoing experiments."><meta name="twitter:image" content="/img/og.png"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg"><link rel="icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.ico"><script type="module">document.addEventListener("astro:page-load",()=>{window.refreshFsLightbox&&window.refreshFsLightbox()});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_1_lang.B0Xlk8SJ.js"></script><link rel="stylesheet" href="/_astro/_slug_.B9ZDccv9.css"></head> <body> <header> <div> <a href="/" class="logo"> <img width="280" src="/img/logo.png" alt="Esther: Version History logo"> </a> </div> <div> <nav id="nav" class="nav"> <ul> <li class="nav-link"> <a aria-label="Esther" href="/esther/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-bubble.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Blog" href="/blog/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-book.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Portfolio" href="/portfolio/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-suitcase.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Playground" href="/playground/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-cube.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Github (Opens in new tab)" href="https://github.com/estherj-hsu" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-git.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="LinkedIn (Opens in new tab)" href="https://www.linkedin.com/in/estherjhsu/" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-linkedin.svg')" aria-hidden="true"></i> </a> </li> </ul> </nav> </div> </header> <main>  <article> <h1>TypeScript I: Types, Functions &amp; Gernerics</h1> <div class="metadata-wrapper"> <div class="meta"> <div class="meta-date"> <time datetime="2023-03-22T18:26:14.000Z"> March 22, 2023 </time> </div> <ul class="meta-tags"> <li> <a href="/tags/esther/" class="tag">Esther</a> </li><li> <a href="/tags/front-end/" class="tag">Front-End</a> </li> </ul> </div> </div> <section class="esther"> <h2 class="visually-hidden">Author note</h2> <p>Dive into Typescript! 🧐<br/>
+Took a free course on <a href="https://www.codecademy.com/learn/learn-typescript">codecademy</a> 🙇🏻‍♀️</p> </section>
+<hr/>
+<h2 id="types">Types</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#9ECBFF">  &quot;Hello, world!&quot;</span><span style="color:#6A737D">  // string</span></span>
+<span class="line"><span style="color:#79B8FF">  42</span><span style="color:#6A737D">               // number</span></span>
+<span class="line"><span style="color:#79B8FF">  true</span><span style="color:#6A737D">             // boolean</span></span>
+<span class="line"><span style="color:#79B8FF">  null</span></span>
+<span class="line"><span style="color:#79B8FF">  undefined</span></span></code></pre>
+<h3 id="annotations">Annotations</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> typeString</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> typeNumber</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> typeBoolean</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> boolean</span><span style="color:#E1E4E8">;</span></span></code></pre>
+<h2 id="functions">Functions</h2>
+<h3 id="parameter-type-annotations">Parameter Type Annotations</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  function</span><span style="color:#B392F0"> greet</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">noun</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">`Hello, ${</span><span style="color:#E1E4E8">noun</span><span style="color:#9ECBFF">}!`</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span></code></pre>
+<p>Make it optional:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  function</span><span style="color:#B392F0"> greet</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">name</span><span style="color:#F97583">?:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">`Hello, ${</span><span style="color:#E1E4E8"> name</span><span style="color:#F97583"> ||</span><span style="color:#9ECBFF"> &#39;stranger&#39;</span><span style="color:#9ECBFF"> }!`</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span></code></pre>
+<p>Make it default:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  function</span><span style="color:#B392F0"> exponentiation</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">power</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">4</span><span style="color:#F97583"> **</span><span style="color:#E1E4E8"> power);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span></code></pre>
+<h3 id="return-types">Return Types</h3>
+<p>Inferring Return Type:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  function</span><span style="color:#B392F0"> factOrFiction</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> Math.</span><span style="color:#B392F0">random</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">&gt;=</span><span style="color:#79B8FF"> .5</span><span style="color:#F97583"> ?</span><span style="color:#9ECBFF"> &#39;true&#39;</span><span style="color:#F97583"> :</span><span style="color:#9ECBFF"> &#39;false&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> myAnswer</span><span style="color:#F97583"> :</span><span style="color:#79B8FF"> boolean</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> factOrFiction</span><span style="color:#E1E4E8">();</span></span></code></pre>
+<p>Explicit Return Type:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  function</span><span style="color:#B392F0"> trueOrFalse</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">value</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> boolean</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> boolean</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (value) {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#9ECBFF"> &#39;false&#39;</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// Typescript Error: Type &#39;string&#39; is not assignable to type &#39;boolean&#39;.</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span></code></pre>
+<p>Void Return Type:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  function</span><span style="color:#B392F0"> sayHello</span><span style="color:#E1E4E8">()</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> void</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">      console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;Hello!&#39;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span></code></pre>
+<h2 id="complex-types">Complex Types</h2>
+<h3 id="arrays">Arrays</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#6A737D">  // One-Dimensional Array</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> zipcodesNH</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">[] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">&#39;03255&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;02134&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;08002&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;03063&#39;</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#6A737D">  // Generic Types</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> zipcodesNH</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Array</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">string</span><span style="color:#E1E4E8">&gt; </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">&#39;03255&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;02134&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;08002&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;03063&#39;</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">  // Multi-dimensional Array</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> zipcodes</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">[][] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [zipcodesNH]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">  // Empty Array</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> axis</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">[] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> coordinates</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">[][] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [];</span></span></code></pre>
+<h3 id="tuple-type">Tuple Type</h3>
+<p>What’s a <code>Tuple</code>?<br/>
+An array that has a <em>fixed size</em> of similar or different element types <em>arranged in a particular sequence</em>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> profile</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">string</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">boolean</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">&#39;Kobe&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">39</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">150000</span><span style="color:#E1E4E8">];</span></span></code></pre>
+<ul>
+<li>A tuple cannot expand (assigning an array to a tuple that matches the same type and length will generate an error)</li>
+<li><code>.concat()</code> can be called on a TypeScript tuple, and will return a new array</li>
+</ul>
+<h3 id="function-rest-parameter-explicit-type">Function Rest Parameter Explicit Type</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> sumAllNumbers</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">...</span><span style="color:#FFAB70">numberList</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">[])</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#F97583"> =&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> sum </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">let</span><span style="color:#E1E4E8"> i</span><span style="color:#F97583">=</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> numberList.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      sum </span><span style="color:#F97583">+=</span><span style="color:#E1E4E8"> numberList[i];</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> sum;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">sumAllNumbers</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">70</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">30</span><span style="color:#E1E4E8">));</span></span></code></pre>
+<h4 id="spread-syntax">Spread Syntax</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  function</span><span style="color:#B392F0"> modulo</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">dividend</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">divisor</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> dividend </span><span style="color:#F97583">%</span><span style="color:#E1E4E8"> divisor;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> numbers</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">6</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">  // Call modulo() with spread syntax</span></span>
+<span class="line"><span style="color:#E1E4E8">  console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">modulo</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">...</span><span style="color:#E1E4E8">numbers));</span></span>
+<span class="line"><span style="color:#6A737D">  // No error, prints 2</span></span></code></pre>
+<h3 id="enum-type">Enum Type</h3>
+<p>What’s <code>enum</code>?<br/>
+A <em>set of possible values</em> for a variable using TypeScript’s complex type. There’re only two tpyes of enum: <em>numeric enum</em> and <em>string enum</em>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#6A737D">  // Numeric enum</span></span>
+<span class="line"><span style="color:#F97583">  enum</span><span style="color:#B392F0"> ClassGrade</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    Freshman</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 9</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    Sophomore</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    Junior</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    Senior</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">  // String enum</span></span>
+<span class="line"><span style="color:#F97583">  enum</span><span style="color:#B392F0"> ClassName</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    Freshman</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> &#39;FRESHMAN&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    Sophomore</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> &#39;SOPHOMORE&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    Junior</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> &#39;JUNIOR&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    Senior</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> &#39;SENIOR&#39;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> studentClass</span><span style="color:#F97583">:</span><span style="color:#B392F0"> ClassName</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> ClassName.Junior;</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> studentGrade</span><span style="color:#F97583">:</span><span style="color:#B392F0"> ClassGrade</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> ClassGrade.Junior;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">`I am a ${</span><span style="color:#E1E4E8">studentClass</span><span style="color:#9ECBFF">} in ${</span><span style="color:#E1E4E8">studentGrade</span><span style="color:#9ECBFF">}th grade.`</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#6A737D">  // Prints &quot;I am a JUNIOR in 11th grade.&quot;</span></span></code></pre>
+<h4 id="numeric-enum-type-initializers">Numeric Enum Type Initializers</h4>
+<p>A numeric enum type starts counting from 0, and the following options are automatically assigned an increasing number when you create it. But you can choose to give specific numbers to each option if you want.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#6A737D">// This numeric enum type begins with a 1, instead of the default 0</span></span>
+<span class="line"><span style="color:#F97583">enum</span><span style="color:#B392F0"> Weekdays</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  Monday</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  Tuesday</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  Wednesday</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  Thursday</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  Friday</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// This numeric enum type has only some explicit values</span></span>
+<span class="line"><span style="color:#F97583">enum</span><span style="color:#B392F0"> Prizes</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  Pencil</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 5</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  Ruler</span><span style="color:#E1E4E8">,     </span><span style="color:#6A737D">// No error: value is 6</span></span>
+<span class="line"><span style="color:#79B8FF">  Eraser</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 10</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  Pen</span><span style="color:#6A737D">        // No error: value is 11</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<h3 id="object">Object</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> car</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> {</span><span style="color:#FFAB70">make</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">model</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">year</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  car </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {make: </span><span style="color:#9ECBFF">&#39;Toyota&#39;</span><span style="color:#E1E4E8">, model: </span><span style="color:#9ECBFF">&#39;Camry&#39;</span><span style="color:#E1E4E8">, year: </span><span style="color:#79B8FF">2020</span><span style="color:#E1E4E8">};</span></span></code></pre>
+<h3 id="type-alias">Type Alias</h3>
+<p>Tpye alias can be defined any types in TypeScript, such as:</p>
+<ul>
+<li>Primitive types (such as string, number, boolean, null, and undefined)</li>
+<li>Object types (including interfaces and classes)</li>
+<li>Union types</li>
+<li>Function types</li>
+<li>Array types (including tuple types)</li>
+<li>…</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  type</span><span style="color:#B392F0"> Name</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">;   </span><span style="color:#6A737D">// Primitive</span></span>
+<span class="line"><span style="color:#F97583">  type</span><span style="color:#B392F0"> Names</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">[];   </span><span style="color:#6A737D">// Array</span></span>
+<span class="line"><span style="color:#F97583">  type</span><span style="color:#B392F0"> ID</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> string</span><span style="color:#F97583"> |</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">;   </span><span style="color:#6A737D">// Union</span></span>
+<span class="line"><span style="color:#F97583">  type</span><span style="color:#B392F0"> RGBColor</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">];   </span><span style="color:#6A737D">// Tuple</span></span>
+<span class="line"><span style="color:#F97583">  type</span><span style="color:#B392F0"> Add</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">x</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">y</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">;   </span><span style="color:#6A737D">// Function</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">  // Object Type Alia</span></span>
+<span class="line"><span style="color:#F97583">  type</span><span style="color:#B392F0"> Student</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#FFAB70">    name</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    age</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    courses</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">[]</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> boris</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Student</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {name: </span><span style="color:#9ECBFF">&#39;Boris&#39;</span><span style="color:#E1E4E8">, age: </span><span style="color:#79B8FF">35</span><span style="color:#E1E4E8">, courses: [</span><span style="color:#9ECBFF">&#39;JavaScript&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;TypeScript&#39;</span><span style="color:#E1E4E8">]};</span></span></code></pre>
+<h4 id="function-type-alias">Function Type Alias</h4>
+<p>A function type alias can be used to annotate a variable.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  type</span><span style="color:#B392F0"> NumberArrayToNumber</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">numberArray</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">[]) </span><span style="color:#F97583">=&gt;</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#B392F0"> sumAll</span><span style="color:#F97583">:</span><span style="color:#B392F0"> NumberArrayToNumber</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">numbers</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">[]) {</span></span>
+<span class="line"><span style="color:#F97583">    let</span><span style="color:#E1E4E8"> sum </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">let</span><span style="color:#E1E4E8"> i</span><span style="color:#F97583">=</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> numbers.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      sum </span><span style="color:#F97583">+=</span><span style="color:#E1E4E8"> numbers[i];</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> sum;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#B392F0"> computeAverage</span><span style="color:#F97583">:</span><span style="color:#B392F0"> NumberArrayToNumber</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">numbers</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">[]) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#B392F0"> sumAll</span><span style="color:#E1E4E8">(numbers)</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">numbers.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">computeAverage</span><span style="color:#E1E4E8">([</span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">15</span><span style="color:#E1E4E8">]));   </span><span style="color:#6A737D">// Prints 10</span></span></code></pre>
+<h2 id="generic">Generic</h2>
+<ul>
+<li>What <em>generic</em> means in TypeScript?<br/>
+Generics allow you to create functions, classes, or interfaces that can work with different types of data, without specifying the type up front.</li>
+<li>Does it have to be <code>T</code>?<br/>
+No. <code>T</code> is just a convention that is commonly used to represent a generic type parameter.</li>
+</ul>
+<h4 id="generic-type-alias">Generic Type Alias</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  type</span><span style="color:#B392F0"> Collection</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">G</span><span style="color:#E1E4E8">&gt; </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#FFAB70">    name</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    quantity</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    content</span><span style="color:#F97583">:</span><span style="color:#B392F0"> G</span><span style="color:#E1E4E8">[]</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> bookCollection</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Collection</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">string</span><span style="color:#E1E4E8">&gt; </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">    name: </span><span style="color:#9ECBFF">&#39;Nursery Books&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    quantity: </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    content: [</span><span style="color:#9ECBFF">&#39;Goodnight Moon&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;Humpty Dumpty&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;Green Eggs &amp; Ham&#39;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  let</span><span style="color:#E1E4E8"> primeNumberCollection</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Collection</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">number</span><span style="color:#E1E4E8">&gt; </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">    name: </span><span style="color:#9ECBFF">&#39;First 5 Prime Numbers&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    quantity: </span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    content: [</span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">7</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">11</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span></code></pre>
+<h4 id="generic-function-type-alias">Generic Function Type Alias</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">  function</span><span style="color:#B392F0"> sortArray</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">T</span><span style="color:#E1E4E8">&gt;(</span><span style="color:#FFAB70">array</span><span style="color:#F97583">:</span><span style="color:#B392F0"> T</span><span style="color:#E1E4E8">[])</span><span style="color:#F97583">:</span><span style="color:#B392F0"> T</span><span style="color:#E1E4E8">[] {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> array.</span><span style="color:#B392F0">sort</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> stringArray</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">&#39;apple&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;banana&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;cherry&#39;</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> sortedStringArray</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> sortArray</span><span style="color:#E1E4E8">(stringArray);</span></span>
+<span class="line"><span style="color:#6A737D">  // returns [&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> numberArray</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> sortedNumberArray</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> sortArray</span><span style="color:#E1E4E8">(numberArray);</span></span>
+<span class="line"><span style="color:#6A737D">  // returns [1, 2, 3]</span></span>
+<span class="line"></span></code></pre> </article>  </main> <footer class="footer"> <p> <small>
+Designed by EstherJ <span class="footer-separator">|</span> Copyright © 2026 </small> </p> </footer> </body></html>

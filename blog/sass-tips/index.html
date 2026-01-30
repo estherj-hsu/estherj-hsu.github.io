@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><meta name="description" content="Accessible UI, interface craft, and ongoing experiments."><title>sass快速入門 – Esther: Version History</title><meta property="og:type" content="website"><meta property="og:title" content="sass快速入門"><meta property="og:description" content="Accessible UI, interface craft, and ongoing experiments."><meta property="og:image" content="/img/og.png"><meta property="og:url" content="https://estherj-hsu.github.io/blog/sass-tips/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="sass快速入門"><meta name="twitter:description" content="Accessible UI, interface craft, and ongoing experiments."><meta name="twitter:image" content="/img/og.png"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg"><link rel="icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.ico"><script type="module">document.addEventListener("astro:page-load",()=>{window.refreshFsLightbox&&window.refreshFsLightbox()});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_1_lang.B0Xlk8SJ.js"></script><link rel="stylesheet" href="/_astro/_slug_.B9ZDccv9.css"></head> <body> <header> <div> <a href="/" class="logo"> <img width="280" src="/img/logo.png" alt="Esther: Version History logo"> </a> </div> <div> <nav id="nav" class="nav"> <ul> <li class="nav-link"> <a aria-label="Esther" href="/esther/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-bubble.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Blog" href="/blog/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-book.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Portfolio" href="/portfolio/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-suitcase.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Playground" href="/playground/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-cube.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Github (Opens in new tab)" href="https://github.com/estherj-hsu" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-git.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="LinkedIn (Opens in new tab)" href="https://www.linkedin.com/in/estherjhsu/" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-linkedin.svg')" aria-hidden="true"></i> </a> </li> </ul> </nav> </div> </header> <main>  <article> <h1>sass快速入門</h1> <div class="metadata-wrapper"> <div class="meta"> <div class="meta-date"> <time datetime="2016-12-05T17:11:02.000Z"> December 5, 2016 </time> </div> <ul class="meta-tags"> <li> <a href="/tags/css-sass/" class="tag">CSS/sass</a> </li> </ul> </div> </div> <section class="esther"> <h2 class="visually-hidden">Author note</h2> <p>自己整理的sass快速入門重點，對於已有CSS經驗、不想花時間研讀sass手冊的懶人們應該會節省不少時間。</p> </section>
+<hr/>
+<h2 id="重點">重點</h2>
+<ul>
+<li>以雙空格取代 tab</li>
+<li>理想情況下每行的寬度在 80 字元內</li>
+<li>以多行方式呈現（善用 nesting）</li>
+<li>統一空格使用方式（冒號/分號後統一空格）</li>
+<li>以  <code>&#39;單引號&#39;</code>  呈現字串&amp;路徑，若字串內包含單引號則使用雙引號 <code>&quot;字串&#39;引用&#39;&quot;</code></li>
+</ul>
+<p>架構部分可以參考 sass 的 <a href="https://sass-guidelin.es/#architecture">The 7-1 Patterns</a> 或之前整理的 <a href="../css-methodologies/">CSS方法論們</a></p>
+<blockquote>
+<p>Reference
+<a href="http://sass-lang.com/guide">http://sass-lang.com/guide</a>
+<a href="https://sass-guidelin.es/">Sass Guidelines</a></p>
+</blockquote>
+<h2 id>&amp;</h2>
+<h3 id>&amp; —</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#85E89D">h3</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span></span>
+<span class="line"><span style="color:#79B8FF">  margin-bottom</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#F97583">px</span></span>
+<span class="line"><span style="color:#85E89D">&amp;</span><span style="color:#B392F0">.some-selector</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">24</span><span style="color:#F97583">px</span></span>
+<span class="line"><span style="color:#79B8FF">  margin-bottom</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">h3</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  margin-bottom</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#85E89D">h3</span><span style="color:#B392F0">.some-selector</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">24</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  margin-bottom</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="--1">— &amp;</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#85E89D">h3</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span></span>
+<span class="line"><span style="color:#79B8FF">  margin-bottom</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#F97583">px</span></span>
+<span class="line"><span style="color:#B392F0">.some-parent-selector</span><span style="color:#85E89D"> &amp;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">24</span><span style="color:#F97583">px</span></span>
+<span class="line"><span style="color:#79B8FF">  margin-bottom</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">h3</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  margin-bottom</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.some-parent-selector</span><span style="color:#85E89D"> h3</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">24</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  margin-bottom</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="variables">Variables</h2>
+<p>基本的變數</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#E1E4E8">$c-warningRed: </span><span style="color:#79B8FF">#d50000</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.btn-warning</span></span>
+<span class="line"><span style="color:#79B8FF">  background-color</span><span style="color:#E1E4E8">: $c-warningRed</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.btn-warning</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#d50000</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="list">List</h2>
+<p>變數的進階版，需注意清單與map不同，簡單來說清單為列的話map為表格，儲存資料方式不同，取出方式當然也有差異</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#E1E4E8">$pages: (</span><span style="color:#9ECBFF">&#39;home&#39;</span><span style="color:#6A737D">,</span><span style="color:#9ECBFF"> &#39;about&#39;</span><span style="color:#6A737D">,</span><span style="color:#9ECBFF"> &#39;products&#39;</span><span style="color:#6A737D">,</span><span style="color:#9ECBFF"> &#39;contact&#39;</span><span style="color:#B392F0">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">$selector: (</span><span style="color:#B392F0">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">@each </span><span style="color:#E1E4E8">$item </span><span style="color:#79B8FF">in</span><span style="color:#E1E4E8"> $pages</span></span>
+<span class="line"><span style="color:#E1E4E8">  $selector: </span><span style="color:#79B8FF">append</span><span style="color:#E1E4E8">($selector</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> unquote</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&#39;.</span><span style="color:#79B8FF">#{</span><span style="color:#E1E4E8">$item</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF"> .nav-</span><span style="color:#79B8FF">#{</span><span style="color:#E1E4E8">$item</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">&#39;</span><span style="color:#E1E4E8">)</span><span style="color:#6A737D">,</span><span style="color:#9ECBFF"> &#39;comma&#39;</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF">  #{</span><span style="color:#E1E4E8">$selector</span><span style="color:#79B8FF">}</span></span>
+<span class="line"><span style="color:#79B8FF">    style</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">awsome</span><span style="color:#E1E4E8">;</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.home</span><span style="color:#B392F0"> .nav-home</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#B392F0">.about</span><span style="color:#B392F0"> .nav-about</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#B392F0">.products</span><span style="color:#B392F0"> .nav-products</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#B392F0">.contact</span><span style="color:#B392F0"> .nav-contact</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  style</span><span style="color:#E1E4E8">: awsome;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="mixin">@mixin</h2>
+<p>=mixinName (v1: default, v2: default, …)</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#F97583">=</span><span style="color:#B392F0">stf</span><span style="color:#B392F0"> (</span><span style="color:#E1E4E8">$font:</span><span style="color:#79B8FF">Arial</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $color:</span><span style="color:#79B8FF">#000000</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $size:</span><span style="color:#79B8FF">0.8</span><span style="color:#F97583">em</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $fwt:</span><span style="color:#79B8FF">normal</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $lh:</span><span style="color:#79B8FF">100</span><span style="color:#F97583">%</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF">  font-family</span><span style="color:#E1E4E8">: $font</span></span>
+<span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: $color</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: $size</span></span>
+<span class="line"><span style="color:#79B8FF">  font-weight</span><span style="color:#E1E4E8">: $fwt</span></span>
+<span class="line"><span style="color:#79B8FF">  line-height</span><span style="color:#E1E4E8">: $lh</span></span>
+<span class="line"><span style="color:#B392F0">.p1</span></span>
+<span class="line"><span style="color:#F97583">  +</span><span style="color:#79B8FF">stf</span><span style="color:#B392F0">(</span><span style="color:#79B8FF">Arial</span><span style="color:#6A737D">,</span><span style="color:#B392F0"> #555555</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 1.0</span><span style="color:#F97583">em</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> bold</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 200</span><span style="color:#F97583">%</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#B392F0">.p2</span></span>
+<span class="line"><span style="color:#F97583">  +</span><span style="color:#79B8FF">stf</span><span style="color:#B392F0">(</span><span style="color:#79B8FF">Times</span><span style="color:#79B8FF"> New</span><span style="color:#79B8FF"> Roman</span><span style="color:#6A737D">,</span><span style="color:#B392F0"> #888888</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 1.5</span><span style="color:#F97583">em</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 700</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#B392F0">.p3</span></span>
+<span class="line"><span style="color:#F97583">  +</span><span style="color:#79B8FF">stf</span><span style="color:#B392F0">(</span><span style="color:#79B8FF">Arial</span><span style="color:#6A737D">,</span><span style="color:#B392F0"> #888888</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 2.5</span><span style="color:#F97583">em</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#B392F0">.p4</span></span>
+<span class="line"><span style="color:#F97583">  +</span><span style="color:#79B8FF">stf</span></span>
+<span class="line"><span style="color:#B392F0">.p5</span></span>
+<span class="line"><span style="color:#F97583">  +</span><span style="color:#79B8FF">stf</span><span style="color:#B392F0">(</span><span style="color:#79B8FF">Verdana</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">15</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> 5</span><span style="color:#F97583">px</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.p1</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-family</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">Arial</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#555555</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#F97583">em</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-weight</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">bold</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  line-height</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">200</span><span style="color:#F97583">%</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.p2</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-family</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">Times</span><span style="color:#E1E4E8"> New Roman;</span></span>
+<span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#888888</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1.5</span><span style="color:#F97583">em</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-weight</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">700</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  line-height</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#F97583">%</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.p3</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-family</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">Arial</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#888888</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2.5</span><span style="color:#F97583">em</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-weight</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">normal</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  line-height</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#F97583">%</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.p4</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-family</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">Arial</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#000000</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.8</span><span style="color:#F97583">em</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-weight</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">normal</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  line-height</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#F97583">%</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.p5</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-family</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">Verdana</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#000000</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.8</span><span style="color:#F97583">em</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-weight</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">normal</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  line-height</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#F97583">%</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">15</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> 5</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>簡單用：用於常成組出現的屬性可節省時間，如width/height、font-size/font-weight/font-family/color/line-height/text-align…</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#F97583">    =</span><span style="color:#B392F0">size(</span><span style="color:#E1E4E8">$w</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $h</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF">      width</span><span style="color:#E1E4E8">: $w</span></span>
+<span class="line"><span style="color:#79B8FF">      height</span><span style="color:#E1E4E8">: $h</span></span></code></pre>
+<h2 id="eachmap">@each+map</h2>
+<p>通常需要一組map/list去做特定的each迴圈</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#E1E4E8">$btns: (</span><span style="color:#79B8FF">normal</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#94a437</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> warning</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#cb0a3a</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> closed</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#5d5d5d</span><span style="color:#B392F0">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.btn</span><span style="color:#85E89D"> a</span></span>
+<span class="line"><span style="color:#79B8FF">  font-family</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">Arial</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">12</span><span style="color:#F97583">px</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">@each </span><span style="color:#E1E4E8">$btn-item</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $btn-color </span><span style="color:#79B8FF">in</span><span style="color:#E1E4E8"> $btns</span></span>
+<span class="line"><span style="color:#B392F0">  .btn-</span><span style="color:#79B8FF">#{</span><span style="color:#E1E4E8">$btn-item</span><span style="color:#79B8FF">}</span></span>
+<span class="line"><span style="color:#79B8FF">    background</span><span style="color:#E1E4E8">: $btn-color</span></span>
+<span class="line"><span style="color:#85E89D">    &amp;</span><span style="color:#B392F0">:hover</span></span>
+<span class="line"><span style="color:#79B8FF">      background</span><span style="color:#E1E4E8">: </span><span style="color:#B392F0">lighten(</span><span style="color:#E1E4E8">$btn-color</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 5</span><span style="color:#F97583">%</span><span style="color:#B392F0">)</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.btn</span><span style="color:#85E89D"> a</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-family</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">Arial</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">12</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.btn-normal</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  background</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#94a437</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.btn-normal:hover</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  background</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#a5b73d</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.btn-warning</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  background</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#cb0a3a</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.btn-warning:hover</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  background</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#e30b41</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.btn-closed</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  background</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#5d5d5d</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.btn-closed:hover</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  background</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#6a6a6a</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="for">@for</h2>
+<p>基本數字迴圈</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#F97583">@for </span><span style="color:#E1E4E8">$i </span><span style="color:#79B8FF">from</span><span style="color:#79B8FF"> 1</span><span style="color:#79B8FF"> through</span><span style="color:#79B8FF"> 3</span></span>
+<span class="line"><span style="color:#B392F0">  .heading</span><span style="color:#79B8FF">#{</span><span style="color:#E1E4E8">$i</span><span style="color:#79B8FF">}</span></span>
+<span class="line"><span style="color:#79B8FF">    font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#F97583">em</span><span style="color:#F97583"> +</span><span style="color:#E1E4E8"> $i</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.heading1</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span><span style="color:#F97583">em</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.heading2</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">3</span><span style="color:#F97583">em</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">.heading3</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">4</span><span style="color:#F97583">em</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="function">@function</h2>
+<p>Output = single value (different form mixin)</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#F97583">@function</span><span style="color:#B392F0"> calc-em(</span><span style="color:#E1E4E8">$target-px</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> $context</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#F97583">@return </span><span style="color:#B392F0">(</span><span style="color:#E1E4E8">$target-px </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> $context</span><span style="color:#B392F0">)</span><span style="color:#F97583"> *</span><span style="color:#79B8FF"> 1</span><span style="color:#F97583">em</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">h2</span></span>
+<span class="line"><span style="color:#79B8FF">  padding-left</span><span style="color:#E1E4E8">: </span><span style="color:#B392F0">calc-em(</span><span style="color:#79B8FF">12</span><span style="color:#F97583">px</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 32</span><span style="color:#F97583">px</span><span style="color:#B392F0">)</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">h2</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  padding-left</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.375</span><span style="color:#F97583">em</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="extend---佔位符">@extend + % 佔位符</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#B392F0">%txt</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.8</span><span style="color:#F97583">em</span></span>
+<span class="line"><span style="color:#79B8FF">  font-weight</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">300</span></span>
+<span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">steelblue</span></span>
+<span class="line"><span style="color:#B392F0">.highlight</span></span>
+<span class="line"><span style="color:#F97583">  @extend </span><span style="color:#B392F0">%txt</span></span>
+<span class="line"><span style="color:#79B8FF">  line-height</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">200</span><span style="color:#F97583">%</span></span>
+<span class="line"><span style="color:#B392F0">.bold</span></span>
+<span class="line"><span style="color:#F97583">  @extend </span><span style="color:#B392F0">%txt</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.highlight</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">.bold</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.8</span><span style="color:#F97583">em</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  font-weight</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">300</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">steelblue</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.highlight</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  line-height</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">200</span><span style="color:#F97583">%</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.bold</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  font-weight</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">bold</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre> </article>  </main> <footer class="footer"> <p> <small>
+Designed by EstherJ <span class="footer-separator">|</span> Copyright © 2026 </small> </p> </footer> </body></html>

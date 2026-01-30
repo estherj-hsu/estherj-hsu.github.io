@@ -1,0 +1,561 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><meta name="description" content="Accessible UI, interface craft, and ongoing experiments."><title>CSS Methodologies – Esther: Version History</title><meta property="og:type" content="website"><meta property="og:title" content="CSS Methodologies"><meta property="og:description" content="Accessible UI, interface craft, and ongoing experiments."><meta property="og:image" content="/img/og.png"><meta property="og:url" content="https://estherj-hsu.github.io/blog/CSS-Methodologies/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CSS Methodologies"><meta name="twitter:description" content="Accessible UI, interface craft, and ongoing experiments."><meta name="twitter:image" content="/img/og.png"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg"><link rel="icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.ico"><script type="module">document.addEventListener("astro:page-load",()=>{window.refreshFsLightbox&&window.refreshFsLightbox()});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_1_lang.B0Xlk8SJ.js"></script><link rel="stylesheet" href="/_astro/_slug_.B9ZDccv9.css"></head> <body> <header> <div> <a href="/" class="logo"> <img width="280" src="/img/logo.png" alt="Esther: Version History logo"> </a> </div> <div> <nav id="nav" class="nav"> <ul> <li class="nav-link"> <a aria-label="Esther" href="/esther/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-bubble.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Blog" href="/blog/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-book.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Portfolio" href="/portfolio/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-suitcase.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Playground" href="/playground/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-cube.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Github (Opens in new tab)" href="https://github.com/estherj-hsu" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-git.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="LinkedIn (Opens in new tab)" href="https://www.linkedin.com/in/estherjhsu/" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-linkedin.svg')" aria-hidden="true"></i> </a> </li> </ul> </nav> </div> </header> <main>  <article> <h1>CSS Methodologies</h1> <div class="metadata-wrapper"> <div class="meta"> <div class="meta-date"> <time datetime="2016-11-02T11:14:32.000Z"> November 2, 2016 </time> </div> <ul class="meta-tags"> <li> <a href="/tags/css-sass/" class="tag">CSS/sass</a> </li> </ul> </div> </div> <h3 id="css-方法論們">CSS 方法論們</h3>
+<p>因應公司目前專案需求簡單整理了目前線上的 CSS 方法論們 (OOCSS、SMACSS、BEM、SUIT CSS、ITCSS、The 7-1 Pattern、MVCSS)，包含架構、命名等相關規範，除 Atomic 外，Atomic 簡單來說就是原子概念，將 CSS 拆分成許多不同的小部件，如 <code>.border-bottom</code> <code>.border-1px</code> <code>.border-solid</code> …等，在實際頁面中做組裝動作，嚴格來說不是很符合一般專案的情境。</p>
+<p>雖然整理完所有方法論，以目前專案而言，沒有實際適合的命名規則可以使用，現階段應該會以 The 7-1 Pattern 作為主要架構基底搭配 SUIT CSS 的命名概念，再去做一套專屬的命名規範。</p>
+<p>維持基本的 CSS 要求：</p>
+<ul>
+<li>不針對 html tag 做樣式</li>
+<li>低耦合</li>
+<li>提升樣式名稱語意</li>
+</ul>
+<p>規範百百種，不要通通都覺得可以用，混到最後沒有一個規則，就是四不像呀！現在開始要還債惹！T^T</p>
+<hr/>
+<h2 id="oocss">OOCSS</h2>
+<p>Object Oriented CSS (OOCSS) 的核心概念：</p>
+<ul>
+<li>Seperate <em>structure</em>（結構） and <em>skin</em>（樣式）</li>
+<li>Seperate <em>container</em>（容器） and <em>content</em>（內容）</li>
+</ul>
+<p>在遵循上述兩點情況下，達到重複使用樣式的最高原則。</p>
+<blockquote>
+<p>Reference
+<a href="http://andyyou.logdown.com/posts/290513-understanding-oocss">http://andyyou.logdown.com/posts/290513-understanding-oocss</a>
+<a href="http://oocss.org/">http://oocss.org/</a>
+<a href="https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/">https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/</a></p>
+</blockquote>
+<h3 id="rules">Rules</h3>
+<ul>
+<li>避免以 html tag 作為選擇器</li>
+<li>以<em>邏輯與語意</em>命名元素，非外觀語意</li>
+<li>避免樣式相依於結構（低耦合概念）</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;page&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;head&quot;</span><span style="color:#E1E4E8">&gt;&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;body&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;leftCol&quot;</span><span style="color:#E1E4E8">&gt;&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;rightCol&quot;</span><span style="color:#E1E4E8">&gt;&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;main&quot;</span><span style="color:#E1E4E8">&gt;&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;foot&quot;</span><span style="color:#E1E4E8">&gt;&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<h2 id="smacss">SMACSS</h2>
+<p>Scalable and Modular Architecture for CSS (SMACSS) 的主要概念：</p>
+<ul>
+<li>提升網頁語意</li>
+<li>減少對 html tag 的依賴</li>
+</ul>
+<blockquote>
+<p>Reference
+<a href="http://ithelp.ithome.com.tw/articles/10161555">http://ithelp.ithome.com.tw/articles/10161555</a>
+<a href="http://www.w3cplus.com/blog/tags/383.html">http://www.w3cplus.com/blog/tags/383.html</a>
+<a href="https://smacss.com/">https://smacss.com/</a>
+<a href="https://www.sitepoint.com/bem-smacss-advice-from-developers/">https://www.sitepoint.com/bem-smacss-advice-from-developers/</a></p>
+</blockquote>
+<h3 id="manifest">Manifest</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F97583">@import</span></span>
+<span class="line"><span style="color:#E1E4E8">  &quot;site-settings&quot;,</span></span>
+<span class="line"><span style="color:#E1E4E8">  &quot;mixins&quot;,</span></span>
+<span class="line"><span style="color:#E1E4E8">  &quot;base&quot;,</span></span>
+<span class="line"><span style="color:#E1E4E8">  &quot;states&quot;,</span></span>
+<span class="line"><span style="color:#E1E4E8">  &quot;layout/grid&quot;,</span></span>
+<span class="line"><span style="color:#E1E4E8">  &quot;module/btn&quot;,</span></span>
+<span class="line"><span style="color:#E1E4E8">  &quot;module/bookmarks&quot;,</span></span>
+<span class="line"><span style="color:#E1E4E8">  &quot;module/callout&quot;;</span></span></code></pre>
+<h3 id="categories">Categories</h3>
+<ul>
+<li>Base 基本設定：reset, normalize, etc… 初始設定</li>
+<li>Layout 框架/容器：以 <code>.l-</code> 作為前綴，如 <code>.l-header</code></li>
+<li>Module 元件：可單獨存在且重複使用，如 <code>.pullquote</code></li>
+<li>State 狀態：和 layout/module搭配，以 <code>.is-</code> 為前綴，如 <code>.is-active</code></li>
+<li>Theme 視覺：網站整體樣式、佈景，以 <code>.theme-</code> / <code>.t-</code> 為前綴，如 <code>.t-light</code></li>
+</ul>
+<p>較特別的是，SMACSS 建議在 state 中使用 <code>!important</code>，且 module 下可細拆 sub module</p>
+<h3 id="sample">Sample</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;media</span><span style="color:#B392F0"> is-box-shadow</span><span style="color:#FDAEB7;font-style:italic">&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;media-img</span><span style="color:#E1E4E8">&gt;&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;media-body&quot;</span><span style="color:#E1E4E8">&gt;&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<h2 id="bem">BEM</h2>
+<p>Block Element Modifier (BEM) 是目前最常被使用的 CSS 設計模式，由區塊（Block）、元素（Element）、修飾符（Modifier）構成，可輕鬆地藉由樣式名稱了解元素間彼此關係，也廣泛被其他的 CSS 方法論（OOCSS, SMACSS, SUITCSS, Atomic, etc…）作為命名依據。</p>
+<blockquote>
+<p>Reference
+<a href="https://en.bem.info/">https://en.bem.info/</a>
+<a href="http://getbem.com/">http://getbem.com/</a></p>
+</blockquote>
+<h3 id="blocks-elements-and-modifiers">Blocks, Elements and Modifiers</h3>
+<ul>
+<li>Blocks 區塊：獨立且可以單獨存在於頁面中的區塊，如 <code>.menu</code> <code>.header</code></li>
+<li>Elements 元素：可重複使用，需被包含於 block 內，命名方式會以 <code>block__</code> 名稱作為前綴，如<code>.menu__item</code></li>
+<li>Modifiers 修飾符：定義 blocks 和 elements 的狀態或屬性，命名以 <code>block--</code> 或 <code>block__element--</code> 為前綴，如 <code>.menu__item--active</code> <code>.menu--hidden</code></li>
+</ul>
+<h3 id="sample-1">Sample</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">form</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;form</span><span style="color:#B392F0"> form--theme-xmas</span><span style="color:#B392F0"> form--simple</span><span style="color:#FDAEB7;font-style:italic">&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">input</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;form__input&quot;</span><span style="color:#B392F0"> type</span><span style="color:#FDAEB7;font-style:italic">&quot;text&quot;</span><span style="color:#E1E4E8"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">input</span></span>
+<span class="line"><span style="color:#B392F0">    class</span><span style="color:#FDAEB7;font-style:italic">&quot;form__submit</span><span style="color:#B392F0"> form__submit--disabled</span><span style="color:#FDAEB7;font-style:italic">&quot;</span></span>
+<span class="line"><span style="color:#B392F0">    type</span><span style="color:#FDAEB7;font-style:italic">&quot;submit&quot;</span><span style="color:#E1E4E8"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">form</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.form</span><span style="color:#E1E4E8"> { }</span></span>
+<span class="line"><span style="color:#B392F0">.form--theme-xmas</span><span style="color:#E1E4E8"> { }</span></span>
+<span class="line"><span style="color:#B392F0">.form--simple</span><span style="color:#E1E4E8"> { }</span></span>
+<span class="line"><span style="color:#B392F0">.form__input</span><span style="color:#E1E4E8"> { }</span></span>
+<span class="line"><span style="color:#B392F0">.form__submit</span><span style="color:#E1E4E8"> { }</span></span>
+<span class="line"><span style="color:#B392F0">.form__submit--disabled</span><span style="color:#E1E4E8"> { }</span></span></code></pre>
+<h2 id="suit-css">SUIT CSS</h2>
+<p>Style UI Tool for CSS (SUIT CSS) 類似 BEM 的 CSS 命名規範，此命名規範區分出了頁面中的幾個主要元素：</p>
+<ul>
+<li>通用樣式</li>
+<li>獨立/模組化 UI 元件</li>
+<li>單獨元素</li>
+<li>修飾符</li>
+</ul>
+<p>SUIT CSS 以帕斯卡命名（PascalCase）為主，搭配駝峰命名（camelCase），減少 BEM 中的 <code>--</code> / <code>__</code> 使用量，並增加樣式名稱識別度。</p>
+<blockquote>
+<p>Reference
+<a href="https://github.com/estherj-hsu/suit/blob/master/doc/naming-conventions.md">https://github.com/estherj-hsu/suit/blob/master/doc/naming-conventions.md</a>
+<a href="http://www.w3cplus.com/PostCSS/using-postcss-with-bem-and-suit-methodologies.html">http://www.w3cplus.com/PostCSS/using-postcss-with-bem-and-suit-methodologies.html</a></p>
+</blockquote>
+<h3 id="architectural-division">Architectural Division</h3>
+<ul>
+<li>Utilities 結構：控制位置、頁面結構</li>
+<li>Components 組建：類似 BEM 中的 blocks
+<ul>
+<li>Descents 後代：子元素，類似 BEM 中的 elements</li>
+<li>Modifiers 修飾符：限用於 components</li>
+<li>States 狀態：可用於 components 與 descents，用於改變狀態</li>
+</ul>
+</li>
+</ul>
+<h3 id="naming">Naming</h3>
+<h4 id="utilities">Utilities</h4>
+<p>以 <code>.u-</code> 為前綴，RWD 時可加上尺寸修飾，如 <code>u-[sm-|md-|lg-]&lt;utilityName&gt;</code></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;u-cf&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">a</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;u-floatLeft&quot;</span><span style="color:#B392F0"> href</span><span style="color:#FDAEB7;font-style:italic">&quot;{{url}}&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;</span><span style="color:#85E89D">img</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;u-block&quot;</span><span style="color:#B392F0"> src</span><span style="color:#FDAEB7;font-style:italic">&quot;{{src}}&quot;</span><span style="color:#B392F0"> alt</span><span style="color:#FDAEB7;font-style:italic">&quot;&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;/</span><span style="color:#85E89D">a</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">p</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;u-sizeFill</span><span style="color:#B392F0"> u-textBreak</span><span style="color:#FDAEB7;font-style:italic">&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    …</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<h4 id="components">Components</h4>
+<p>通常為元件名稱，並延伸後代、修飾符與狀態，如 <code>[&lt;namespace&gt;-]&lt;ComponentName&gt;[-descendentName][--modifierName]</code></p>
+<h5 id="componentname">ComponentName</h5>
+<p>一般為防止命名衝突，建議在 CompnentName 前加上前綴，如 <code>.sp-MyComponent</code>，增加命名空間。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">article</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;MyComponent&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  …</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">article</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<h5 id="componentnamemodifiername">ComponentName—modifierName</h5>
+<p>限用於 components，不能用於狀態表示，以雙破折號 <code>--</code> 和 ComponentName 連接。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">button</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;Button</span><span style="color:#B392F0"> Button--default</span><span style="color:#FDAEB7;font-style:italic">&quot;</span><span style="color:#B392F0"> type</span><span style="color:#FDAEB7;font-style:italic">&quot;button&quot;</span><span style="color:#E1E4E8">&gt;…&lt;/</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<h5 id="componentname-descendentname">ComponentName-descendentName</h5>
+<p>以破折號 <code>-</code> 和 ComponentName 連接，類似子元素概念。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">article</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;Tweet&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">header</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;Tweet-header&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;</span><span style="color:#85E89D">img</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;Tweet-avatar&quot;</span><span style="color:#B392F0"> src</span><span style="color:#FDAEB7;font-style:italic">&quot;{{src}}&quot;</span><span style="color:#B392F0"> alt</span><span style="color:#FDAEB7;font-style:italic">&quot;{{alt}}&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    …</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;/</span><span style="color:#85E89D">header</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;Tweet-bodyText&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    …</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">article</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<h5 id="componentnameis-stateofcomponent">ComponentName.is-stateOfComponent</h5>
+<p>可用於 components 和 ComponentName-descendentName，通常用於反應狀態改變，多以 <code>.is-</code> 作為前綴。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">article</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;Tweet</span><span style="color:#B392F0"> is-expanded</span><span style="color:#FDAEB7;font-style:italic">&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  …</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">article</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<h2 id="itcss">ITCSS</h2>
+<p>Inverted Triangle CSS (ITCSS) 以倒三角的形狀為主要概念，由上到下特異性逐增，ITCSS是一種CSS的概念，可以與其他方法論（OOCSS, SMACSS）共用，主要特性為：</p>
+<ul>
+<li>頁面內的元素被拆分後可以提高重複使用性</li>
+<li>可與其他方法論融合使用</li>
+<li>無特定的資料夾結構，活用度高</li>
+</ul>
+<blockquote>
+<p>Reference
+<a href="https://read01.com/ndExyQ.html">https://read01.com/ndExyQ.html</a>
+<a href="https://medium.okgrow.com/building-a-maintainable-and-scalable-css-codebase-with-itcss-ceda5b2f495b#.pf75off6e">https://medium.okgrow.com/building-a-maintainable-and-scalable-css-codebase-with-itcss-ceda5b2f495b#.pf75off6e</a>
+<a href="https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/">https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/</a>
+<a href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/</a></p>
+</blockquote>
+<h3 id="layers">Layers</h3>
+<ul>
+<li>Settings 設置：變數、基本設定，無實際樣式</li>
+<li>Tools 工具：mixins、函數，無實際樣式</li>
+<li>Generic 通用：reset/normalize、通用樣式</li>
+<li>Elements 元素：基本 html tag 定義</li>
+<li>Objects 物件：非裝飾性質的元素，如 layout</li>
+<li>Components 特定的 UI 元件，通常由 objects 和 elements 構成</li>
+<li>Trumps 王牌：utilities/helpers，用於覆蓋上述所有樣式</li>
+</ul>
+<h3 id="bemit">BEMIT</h3>
+<p>ITCSS 設計者將 ITCSS 與 BEM 做完美融合為 BEMIT，是設計者本身推薦的融合方法論</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;o-media</span><span style="color:#B392F0">  c-user</span><span style="color:#B392F0">  c-user--premium</span><span style="color:#FDAEB7;font-style:italic">&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">img</span><span style="color:#B392F0"> src</span><span style="color:#FDAEB7;font-style:italic">&quot;&quot;</span><span style="color:#B392F0"> alt</span><span style="color:#FDAEB7;font-style:italic">&quot;&quot;</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;o-media__img</span><span style="color:#B392F0">  c-user__photo</span><span style="color:#B392F0">  c-avatar</span><span style="color:#FDAEB7;font-style:italic">&quot;</span><span style="color:#E1E4E8"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">p</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;o-media__body</span><span style="color:#B392F0">  c-user__bio</span><span style="color:#FDAEB7;font-style:italic">&quot;</span><span style="color:#E1E4E8">&gt;...&lt;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<h3 id="structure">Structure</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>main.scss</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>settings</span></span>
+<span class="line"><span>-- _typography.scss</span></span>
+<span class="line"><span>-- _palette.scss</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>tools</span></span>
+<span class="line"><span>-- _box-model.scss</span></span>
+<span class="line"><span>-- _position.scss</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>generic</span></span>
+<span class="line"><span>-- _normalize.scss</span></span>
+<span class="line"><span>-- _box-sizing.scss</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>elements</span></span>
+<span class="line"><span>-- _body.scss</span></span>
+<span class="line"><span>-- _a.scss</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>objects</span></span>
+<span class="line"><span>-- _media.scss</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>components</span></span>
+<span class="line"><span>-- _button.scss</span></span>
+<span class="line"><span>-- _loading.scss</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>trumps</span></span>
+<span class="line"><span>-- _clear-fix.scss</span></span></code></pre>
+<h2 id="the-7-1-pattern">The 7-1 Pattern</h2>
+<p>sass-guideline 中建議的 sass 架構，7-1 代表 7 folders 1 file，主要是針對 sass 設計。</p>
+<blockquote>
+<p>Reference
+<a href="https://sass-guidelin.es/#architecture">https://sass-guidelin.es/#architecture</a></p>
+</blockquote>
+<h3 id="architecture">Architecture</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>sass/</span></span>
+<span class="line"><span>|</span></span>
+<span class="line"><span>|– abstracts/             sass 應用相關變數、函式、mixins...等，亦可稱為 utilities 或 helpers</span></span>
+<span class="line"><span>|   |– _variables.scss    # Sass Variables</span></span>
+<span class="line"><span>|   |– _functions.scss    # Sass Functions</span></span>
+<span class="line"><span>|   |– _mixins.scss       # Sass Mixins</span></span>
+<span class="line"><span>|   |– _placeholders.scss # Sass Placeholders</span></span>
+<span class="line"><span>|</span></span>
+<span class="line"><span>|– base/                  基本設定，若專案有大量動畫需求，建議在此增加 _animations.scss</span></span>
+<span class="line"><span>|   |– _reset.scss        # Reset/normalize</span></span>
+<span class="line"><span>|   |– _typography.scss   # Typography rules</span></span>
+<span class="line"><span>|   …                     # Etc.</span></span>
+<span class="line"><span>|</span></span>
+<span class="line"><span>|– components/            元件，亦可稱為 modules</span></span>
+<span class="line"><span>|   |– _buttons.scss      # Buttons</span></span>
+<span class="line"><span>|   |– _carousel.scss     # Carousel</span></span>
+<span class="line"><span>|   |– _cover.scss        # Cover</span></span>
+<span class="line"><span>|   |– _dropdown.scss     # Dropdown</span></span>
+<span class="line"><span>|   …                     # Etc.</span></span>
+<span class="line"><span>|</span></span>
+<span class="line"><span>|– layout/                架構，框架，亦可稱為 partials</span></span>
+<span class="line"><span>|   |– _navigation.scss   # Navigation</span></span>
+<span class="line"><span>|   |– _grid.scss         # Grid system</span></span>
+<span class="line"><span>|   |– _header.scss       # Header</span></span>
+<span class="line"><span>|   |– _footer.scss       # Footer</span></span>
+<span class="line"><span>|   |– _sidebar.scss      # Sidebar</span></span>
+<span class="line"><span>|   |– _forms.scss        # Forms</span></span>
+<span class="line"><span>|   …                     # Etc.</span></span>
+<span class="line"><span>|</span></span>
+<span class="line"><span>|– pages/                 頁面特定樣式</span></span>
+<span class="line"><span>|   |– _home.scss         # Home specific styles</span></span>
+<span class="line"><span>|   |– _contact.scss      # Contact specific styles</span></span>
+<span class="line"><span>|   …                     # Etc.</span></span>
+<span class="line"><span>|</span></span>
+<span class="line"><span>|– themes/                通用頁面樣式</span></span>
+<span class="line"><span>|   |– _theme.scss        # Default theme</span></span>
+<span class="line"><span>|   |– _admin.scss        # Admin theme</span></span>
+<span class="line"><span>|   …                     # Etc.</span></span>
+<span class="line"><span>|</span></span>
+<span class="line"><span>|– vendors/               第三方工具樣式</span></span>
+<span class="line"><span>|   |– _bootstrap.scss    # Bootstrap</span></span>
+<span class="line"><span>|   |– _jquery-ui.scss    # jQuery UI</span></span>
+<span class="line"><span>|   …                     # Etc.</span></span>
+<span class="line"><span>|</span></span>
+<span class="line"><span>`– main.scss              # Main Sass file</span></span></code></pre>
+<h3 id="folders-order">Folders Order</h3>
+<p>須於 main.scss 依照下方順序匯入</p>
+<ol>
+<li>abstracts/</li>
+<li>vendors/</li>
+<li>base/</li>
+<li>layout/</li>
+<li>components/</li>
+<li>pages/</li>
+<li>themes/</li>
+</ol>
+<h3 id="mainscss">main.scss</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;abstracts/variables&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;abstracts/functions&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;abstracts/mixins&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;abstracts/placeholders&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;vendors/bootstrap&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;vendors/jquery-ui&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;base/reset&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;base/typography&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;layout/navigation&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;layout/grid&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;layout/header&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;layout/footer&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;layout/sidebar&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;layout/forms&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;components/buttons&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;components/carousel&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;components/cover&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;components/dropdown&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;pages/home&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;pages/contact&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;themes/theme&#39;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">@import</span><span style="color:#9ECBFF"> &#39;themes/admin&#39;</span><span style="color:#E1E4E8">;</span></span></code></pre>
+<h2 id="mvcss">MVCSS</h2>
+<p>MVCSS 是針對 sass 延伸出的 CSS 方法論，融合了SMACSS、OOCSS、BEM的設計模式，是少數<strong>規範完整</strong>的方法論。</p>
+<blockquote>
+<p>Reference
+<a href="https://mvcss.ycnets.com/">https://mvcss.ycnets.com/</a>
+<a href="http://mvcss.io/">http://mvcss.io/</a>
+<a href="https://github.com/mvcss/mvcss">https://github.com/mvcss/mvcss</a></p>
+</blockquote>
+<h3 id="manifest-1">Manifest</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>application.sass 資源配置&amp;收件匣(inbox)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>foundation/</span></span>
+<span class="line"><span>  _reset.sass</span></span>
+<span class="line"><span>  _helpers.sass  function, mixin, extend, ...</span></span>
+<span class="line"><span>  _config.sass   font-face, colors, ...</span></span>
+<span class="line"><span>  _base.sass     HTML tag level, html, ...</span></span>
+<span class="line"><span>  _tools.sass    Specific style</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>components/      可用於不同專案，EX. card, box, ...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>structures/      加強components，大範圍用，EX. RWD</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>vendor/          3rd party css</span></span></code></pre>
+<h3 id="style-sheets">Style Sheets</h3>
+<ul>
+<li>屬性按字母順序排列（有 vendor 前綴的屬性按無前綴來排序）</li>
+<li>Extends 和 Mixins 應該被放在標準屬性之前</li>
+<li>使用兩個空格縮排</li>
+<li>在 : 之後添加一個空格</li>
+<li>在註解 // 之後添加一個空格</li>
+<li>在值中的逗號之後添加一個空格（如 rgba(#000, 0.5)）</li>
+<li>在數學運算符的結尾寫數字（如 $b-space * 0.5）</li>
+<li>堅持為類別而非 ID 上樣式 盡可能限制巢狀結構</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#B392F0">.component</span></span>
+<span class="line"><span style="color:#F97583"> @extend </span><span style="color:#B392F0">.group</span></span>
+<span class="line"><span style="color:#F97583"> +</span><span style="color:#79B8FF">transition</span><span style="color:#B392F0">(</span><span style="color:#79B8FF">opacity</span><span style="color:#79B8FF"> 0.2</span><span style="color:#F97583">s</span><span style="color:#79B8FF"> ease-in-out</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF"> border-radius</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5</span><span style="color:#F97583">px</span></span>
+<span class="line"><span style="color:#79B8FF"> box-shadow</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#79B8FF"> 2</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> 5</span><span style="color:#F97583">px</span><span style="color:#B392F0"> rgba(</span><span style="color:#79B8FF">#000</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 0.5</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#79B8FF"> -webkit-flex</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#79B8FF"> 1</span><span style="color:#79B8FF"> 50</span><span style="color:#F97583">%</span></span>
+<span class="line"><span style="color:#79B8FF"> -ms-flex</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#79B8FF"> 1</span><span style="color:#79B8FF"> 50</span><span style="color:#F97583">%</span></span>
+<span class="line"><span style="color:#79B8FF"> flex</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#79B8FF"> 1</span><span style="color:#79B8FF"> 50</span><span style="color:#F97583">%</span></span>
+<span class="line"><span style="color:#79B8FF"> font-style</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">italic</span></span>
+<span class="line"><span style="color:#79B8FF"> padding-bottom</span><span style="color:#E1E4E8">: $b-space </span><span style="color:#F97583">*</span><span style="color:#79B8FF"> 3</span></span></code></pre>
+<h3 id="markup">Markup</h3>
+<ul>
+<li>按字母順序排列類別，依序是 Component、Structure、Tool、狀態和情境</li>
+<li>在每個獨立模組之後應用修飾符類別（modifier classes）</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#FDAEB7;font-style:italic">&quot;g</span><span style="color:#B392F0"> collection</span><span style="color:#B392F0"> collection--1of3</span><span style="color:#B392F0"> bch</span><span style="color:#B392F0"> mtl</span><span style="color:#B392F0"> tci</span><span style="color:#B392F0"> is-active</span><span style="color:#B392F0"> has-dropdown</span><span style="color:#FDAEB7;font-style:italic">&quot;</span><span style="color:#E1E4E8">&gt;&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<h3 id="comments">Comments</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#E1E4E8">// </span><span style="color:#85E89D">*************************************</span></span>
+<span class="line"><span style="color:#E1E4E8">//</span></span>
+<span class="line"><span style="color:#E1E4E8">//   First Level</span></span>
+<span class="line"><span style="color:#E1E4E8">//   -</span><span style="color:#F97583">&gt;</span><span style="color:#E1E4E8"> Description</span></span>
+<span class="line"><span style="color:#E1E4E8">//</span></span>
+<span class="line"><span style="color:#E1E4E8">// </span><span style="color:#85E89D">*************************************</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">// -------------------------------------</span></span>
+<span class="line"><span style="color:#E1E4E8">//   Second Level</span></span>
+<span class="line"><span style="color:#E1E4E8">// -------------------------------------</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">// ----- Third Level ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">// Fourth Level</span></span></code></pre>
+<h3 id="naming-1">Naming</h3>
+<h4 id="tools">Tools</h4>
+<p>大部分的 Tool 類別看起來是首字母略縮詞。在這個概念下，採用兩個或三個字母的類別。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#B392F0">.mbm</span><span style="color:#79B8FF">  margin</span><span style="color:#79B8FF"> bottom</span><span style="color:#79B8FF"> medium</span></span>
+<span class="line"><span style="color:#B392F0">.mbl</span><span style="color:#79B8FF">  bottom</span><span style="color:#79B8FF"> margin</span><span style="color:#79B8FF"> large</span></span></code></pre>
+<h4 id="componentsstructures">Components/Structures</h4>
+<ul>
+<li>單數命名 Ex. icon, button, g (grid), form, modal</li>
+<li>如果名稱包含兩個單詞，利用 駝峰式命名（camelCase）Ex. taskList</li>
+</ul>
+<h4 id="modifiers">Modifiers</h4>
+<p>修飾符的存在允許建立在初始定義上的風格調整。這些調整以兩個連字符 <code>--</code> 表示。例如，一個按鈕可能有一些不同的顏色和大小。</p>
+<blockquote>
+<p>註： 修飾符通常在分層序列（a、b）定義或透過功能（cancel、submit）時發揮最好，而不是使用外觀（red、blue）。</p>
+</blockquote>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#6A737D">// *************************************</span></span>
+<span class="line"><span style="color:#6A737D">//</span></span>
+<span class="line"><span style="color:#6A737D">//   Button</span></span>
+<span class="line"><span style="color:#6A737D">//   -&gt; Action points</span></span>
+<span class="line"><span style="color:#6A737D">//</span></span>
+<span class="line"><span style="color:#6A737D">// *************************************</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.btn</span></span>
+<span class="line"><span style="color:#79B8FF">  border</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span></span>
+<span class="line"><span style="color:#79B8FF">  display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">inline-block</span></span>
+<span class="line"><span style="color:#79B8FF">  line-height</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2.5</span></span>
+<span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8"> $b-space</span></span>
+<span class="line"><span style="color:#79B8FF">  font-weight</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">bold</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"><span style="color:#6A737D">//   Modifiers</span></span>
+<span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ----- Sizes ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.btn--s</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">75</span><span style="color:#F97583">%</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.btn--l</span></span>
+<span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">150</span><span style="color:#F97583">%</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ----- Theme ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// Hierarchy</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.btn--a</span></span>
+<span class="line"><span style="color:#79B8FF">  background</span><span style="color:#E1E4E8">: $c-base</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.btn--b</span></span>
+<span class="line"><span style="color:#79B8FF">  background</span><span style="color:#E1E4E8">: $c-highlight</span></span></code></pre>
+<h4 id="states">States</h4>
+<p>通常是透過 JavaScript 添加，狀態類似於修飾符但具有條件的情境。<code>.is-</code> 表示是一個狀態，例如 <code>.is-active</code></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#6A737D">// *************************************</span></span>
+<span class="line"><span style="color:#6A737D">//</span></span>
+<span class="line"><span style="color:#6A737D">//   Button</span></span>
+<span class="line"><span style="color:#6A737D">//   -&gt; Action points</span></span>
+<span class="line"><span style="color:#6A737D">//</span></span>
+<span class="line"><span style="color:#6A737D">// *************************************</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.btn</span></span>
+<span class="line"><span style="color:#6A737D">  // Styles</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// Modifiers</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"><span style="color:#6A737D">//   States</span></span>
+<span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.btn.is-active</span></span>
+<span class="line"><span style="color:#79B8FF">  background</span><span style="color:#E1E4E8">: $c-highlight</span></span></code></pre>
+<h4 id="context">Context</h4>
+<p>情境選擇器以 has- 開頭表示。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#E1E4E8">// </span><span style="color:#85E89D">*************************************</span></span>
+<span class="line"><span style="color:#E1E4E8">//</span></span>
+<span class="line"><span style="color:#E1E4E8">//   Dropdown</span></span>
+<span class="line"><span style="color:#E1E4E8">//   -</span><span style="color:#F97583">&gt;</span><span style="color:#E1E4E8"> Revealed information</span></span>
+<span class="line"><span style="color:#E1E4E8">//</span></span>
+<span class="line"><span style="color:#E1E4E8">// </span><span style="color:#85E89D">*************************************</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.dropdown</span></span>
+<span class="line"><span style="color:#E1E4E8">  // Styles</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">// Modifiers, States</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">// -------------------------------------</span></span>
+<span class="line"><span style="color:#E1E4E8">//   Context</span></span>
+<span class="line"><span style="color:#E1E4E8">// -------------------------------------</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.has-dropdown</span></span>
+<span class="line"><span style="color:#E1E4E8">  position: relative</span></span></code></pre>
+<h4 id="variables">Variables</h4>
+<p>定義在 Config 裡，並且帶有他們的角色或相應 Component/Structure 的前綴。</p>
+<ul>
+<li>$b-* 用於基礎變數</li>
+<li>$c-* 用於顏色</li>
+<li>$g-* 用於斷點（breakpoints）</li>
+<li>$componentName-* 用於Components</li>
+<li>$structureName-* 用於 Structures</li>
+</ul>
+<h3 id="foundation---configsass-sample">Foundation - config.sass sample</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"><span style="color:#6A737D">//   Colors</span></span>
+<span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ----- Palette ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">$cerulean: </span><span style="color:#79B8FF">#017ba7</span></span>
+<span class="line"><span style="color:#E1E4E8">$forest: </span><span style="color:#79B8FF">#7ba05b</span></span>
+<span class="line"><span style="color:#E1E4E8">$gainsboro: </span><span style="color:#79B8FF">#ecf0f1</span></span>
+<span class="line"><span style="color:#E1E4E8">$gold: </span><span style="color:#79B8FF">#ffd700</span></span>
+<span class="line"><span style="color:#E1E4E8">$jet: </span><span style="color:#79B8FF">#343434</span></span>
+<span class="line"><span style="color:#E1E4E8">$scarlet: </span><span style="color:#79B8FF">#ff3f00</span></span>
+<span class="line"><span style="color:#E1E4E8">$white: </span><span style="color:#79B8FF">#fff</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ----- Base ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">$c-background-invert: $white</span></span>
+<span class="line"><span style="color:#E1E4E8">$c-background: $gainsboro</span></span>
+<span class="line"><span style="color:#E1E4E8">$c-border: </span><span style="color:#79B8FF">lighten</span><span style="color:#E1E4E8">($jet</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 30</span><span style="color:#F97583">%</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#E1E4E8">$c-error: $scarlet</span></span>
+<span class="line"><span style="color:#E1E4E8">$c-highlight: $cerulean</span></span>
+<span class="line"><span style="color:#E1E4E8">$c-text-invert: $white</span></span>
+<span class="line"><span style="color:#E1E4E8">$c-text: $jet</span></span>
+<span class="line"><span style="color:#E1E4E8">$c-subdue: </span><span style="color:#79B8FF">lighten</span><span style="color:#E1E4E8">($cerulean</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 40</span><span style="color:#F97583">%</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#E1E4E8">$c-success: $forest</span></span>
+<span class="line"><span style="color:#E1E4E8">$c-warning: $gold</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ----- Components ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 範例：$row--a-background: $c-highlight</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ----- Structures ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 範例：$dropdown-link-color: $c-subdue</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"><span style="color:#6A737D">//   Base</span></span>
+<span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ----- Borders &amp; Box Shadow ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">$b-borderRadius: </span><span style="color:#79B8FF">3</span><span style="color:#F97583">px</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-borderStyle: </span><span style="color:#79B8FF">solid</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-borderWidth: </span><span style="color:#79B8FF">2</span><span style="color:#F97583">px</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-border: $b-borderWidth $b-borderStyle $c-border</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-boxShadow: </span><span style="color:#79B8FF">0</span><span style="color:#79B8FF"> 2</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> 0</span><span style="color:#79B8FF"> rgba</span><span style="color:#E1E4E8">($jet</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 0.25</span><span style="color:#B392F0">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ----- Typography ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">$b-fontFamily-heading: </span><span style="color:#9ECBFF">&#39;OpenSans&#39;</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> sans-serif</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-fontFamily: </span><span style="color:#9ECBFF">&#39;OpenSans&#39;</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> sans-serif</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-fontSize: </span><span style="color:#79B8FF">16</span><span style="color:#F97583">px</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-fontSize-s: </span><span style="color:#79B8FF">75</span><span style="color:#F97583">%</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-fontSize-m: </span><span style="color:#79B8FF">90</span><span style="color:#F97583">%</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-fontSize-l: </span><span style="color:#79B8FF">115</span><span style="color:#F97583">%</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-lineHeight: </span><span style="color:#79B8FF">1.5</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ----- Sizing ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">$b-space: </span><span style="color:#79B8FF">em</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-space-s: </span><span style="color:#79B8FF">0.5</span><span style="color:#F97583"> *</span><span style="color:#E1E4E8"> $b-space</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-space-l: </span><span style="color:#79B8FF">2</span><span style="color:#F97583"> *</span><span style="color:#E1E4E8"> $b-space</span></span>
+<span class="line"><span style="color:#E1E4E8">$b-space-xl: </span><span style="color:#79B8FF">4</span><span style="color:#F97583"> *</span><span style="color:#E1E4E8"> $b-space</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"><span style="color:#6A737D">//   Components</span></span>
+<span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ----- Grid ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">$g-s: </span><span style="color:#79B8FF">em</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">480</span><span style="color:#F97583">px</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#E1E4E8">$g-m: </span><span style="color:#79B8FF">em</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">800</span><span style="color:#F97583">px</span><span style="color:#B392F0">)</span></span>
+<span class="line"><span style="color:#E1E4E8">$g-l: </span><span style="color:#79B8FF">em</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1024</span><span style="color:#F97583">px</span><span style="color:#B392F0">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"><span style="color:#6A737D">//   Structures</span></span>
+<span class="line"><span style="color:#6A737D">// -------------------------------------</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ----- Dropdown ----- //</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 範例：$dropdown-width: em(200px)</span></span></code></pre> </article>  </main> <footer class="footer"> <p> <small>
+Designed by EstherJ <span class="footer-separator">|</span> Copyright © 2026 </small> </p> </footer> </body></html>

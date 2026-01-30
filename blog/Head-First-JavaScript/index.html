@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><meta name="description" content="Accessible UI, interface craft, and ongoing experiments."><title>Head First JavaScript – Esther: Version History</title><meta property="og:type" content="website"><meta property="og:title" content="Head First JavaScript"><meta property="og:description" content="Accessible UI, interface craft, and ongoing experiments."><meta property="og:image" content="/img/og.png"><meta property="og:url" content="https://estherj-hsu.github.io/blog/Head-First-JavaScript/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Head First JavaScript"><meta name="twitter:description" content="Accessible UI, interface craft, and ongoing experiments."><meta name="twitter:image" content="/img/og.png"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg"><link rel="icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.ico"><script type="module">document.addEventListener("astro:page-load",()=>{window.refreshFsLightbox&&window.refreshFsLightbox()});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_1_lang.B0Xlk8SJ.js"></script><link rel="stylesheet" href="/_astro/_slug_.B9ZDccv9.css"></head> <body> <header> <div> <a href="/" class="logo"> <img width="280" src="/img/logo.png" alt="Esther: Version History logo"> </a> </div> <div> <nav id="nav" class="nav"> <ul> <li class="nav-link"> <a aria-label="Esther" href="/esther/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-bubble.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Blog" href="/blog/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-book.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Portfolio" href="/portfolio/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-suitcase.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Playground" href="/playground/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-cube.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Github (Opens in new tab)" href="https://github.com/estherj-hsu" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-git.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="LinkedIn (Opens in new tab)" href="https://www.linkedin.com/in/estherjhsu/" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-linkedin.svg')" aria-hidden="true"></i> </a> </li> </ul> </nav> </div> </header> <main>  <article> <h1>Head First JavaScript</h1> <div class="metadata-wrapper"> <div class="meta"> <div class="meta-date"> <time datetime="2016-06-17T14:26:29.000Z"> June 17, 2016 </time> </div> <ul class="meta-tags"> <li> <a href="/tags/js/" class="tag">JS</a> </li> </ul> </div> </div> <h2 id="read-note">Read note</h2>
+<p>From “Head First JavaScript Programming”</p>
+<section class="esther"> <h2 class="visually-hidden">Author note</h2> <p><a href="https://github.com/estherj-hsu/js-sandbox/blob/master/HeadFirstJS/">練習code Github</a>
+需補強：控制DOM、實際應用<br/>
+閱讀中，You don’t know JS系列：</p><ol>
+<li>You don’t know JS: UP &amp; GOING (done)</li>
+<li>You don’t know JS: SCOPE &amp; CLOSURE</li>
+</ol> </section>
+<hr/>
+<h2 id="ch6-dom">Ch6. DOM</h2>
+<h3 id="html">HTML</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">// set the element as var</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> planet </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;greenplanet&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// change HTML content</span></span>
+<span class="line"><span style="color:#E1E4E8">planet.innerHTML </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;Red Alert: hit by phaser fire!&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// set html attribute</span></span>
+<span class="line"><span style="color:#E1E4E8">planet.</span><span style="color:#B392F0">setAttribute</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;style&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;font-size: 13px&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// get html attribute by ID first, then get attribute value</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> getBlue </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;blueplanet&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> blueTitle </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> getBlue.</span><span style="color:#B392F0">getAttribute</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;title&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(blueTitle);</span></span></code></pre>
+<h3 id="windowonload">window.onload</h3>
+<p>頁面完全載入後才執行JS</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">  function</span><span style="color:#B392F0"> init</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    var</span><span style="color:#E1E4E8"> planet </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;greenplanet&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    planet.innerHTML </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;Red Alert: hit by phaser fire!&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    planet.</span><span style="color:#B392F0">setAttribute</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;class&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;redtext&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">window.onload </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> init;</span></span></code></pre>
+<h2 id="ch7-data-type">Ch7. Data Type</h2>
+<h3 id="字串方法屬性">字串方法&amp;屬性</h3>
+<h4 id="tolowercase-字串小寫--touppercase-字串大寫"><strong>toLowerCase</strong> (字串小寫) &amp; <strong>toUpperCase</strong> (字串大寫)</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> uptxt </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;UPPER CASE&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> lowtxt </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;lower case&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 字串小寫</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> val </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> uptxt.</span><span style="color:#B392F0">toLowerCase</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 字串大寫</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> val </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> lowtxt.</span><span style="color:#B392F0">toUpperCase</span><span style="color:#E1E4E8">();</span></span></code></pre>
+<h4 id="substring子字串--split-字串分割"><strong>substring</strong>(子字串) &amp; <strong>split</strong> (字串分割)</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> data </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;name|phone|address&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 取得位於5-10字元中的子字串</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> val </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> data.</span><span style="color:#B392F0">substring</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 取得第五字元後子字串</span></span>
+<span class="line"><span style="color:#E1E4E8">val </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> data.</span><span style="color:#B392F0">substring</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 以|作為分隔符，分割字串內容</span></span>
+<span class="line"><span style="color:#E1E4E8">val </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> data.</span><span style="color:#B392F0">split</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;|&quot;</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<h4 id="length-取得長度--charat-取得特定字符"><strong>length</strong> (取得長度) &amp; <strong>charAt</strong> (取得特定字符)</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> input </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;jenny@wickedlysmart.com&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">//取得字串長度</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">var</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> input.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#6A737D">  // 取得特定字符 @</span></span>
+<span class="line"><span style="color:#F97583">  if</span><span style="color:#E1E4E8"> (input.</span><span style="color:#B392F0">charAt</span><span style="color:#E1E4E8">(i) </span><span style="color:#F97583">===</span><span style="color:#9ECBFF"> &quot;@&quot;</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;There&#39;s an @ sign at index &quot;</span><span style="color:#F97583"> +</span><span style="color:#E1E4E8"> i);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h4 id="indexof--lastindexof-取得字串初次最後出現位置引數"><strong>indexOf</strong> / <strong>lastIndexOf</strong> (取得字串初次/最後出現位置引數)</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> phrase </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;the cat in the hat&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 取得字串中cat初次出現位置</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> index </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> phrase.</span><span style="color:#B392F0">indexOf</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;cat&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 由字串第五字元後開始，取得the位置</span></span>
+<span class="line"><span style="color:#E1E4E8">index </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> phrase.</span><span style="color:#B392F0">indexOf</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;the&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 若無法取得引數則顯示-1</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> index </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> phrase.</span><span style="color:#B392F0">indexOf</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;dog&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 取得字串中the最後出現位置</span></span>
+<span class="line"><span style="color:#E1E4E8">index </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> phrase.</span><span style="color:#B392F0">indexOf</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;the&quot;</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<h2 id="ch8-building-an-app">Ch8. Building an app</h2>
+<p><a href="https://github.com/estherj-hsu/js-sandbox/blob/master/HeadFirstJS/src/js/battleShipApp.js">Battleship實作</a></p>
+<h2 id="ch9-handling-events">Ch9. Handling events</h2>
+<h3 id="events">Events</h3>
+<ul>
+<li>load / unload</li>
+<li>click</li>
+<li>resize</li>
+<li>play / pause</li>
+<li>dragstart / drop</li>
+<li>touchstart / touchend</li>
+<li>mouseover / mouseout / mousemove</li>
+<li>keypress</li>
+</ul>
+<h4 id="load-瀏覽器載入">load 瀏覽器載入</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">window.onload </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> init;</span></span></code></pre>
+<h4 id="click-滑鼠點擊">click 滑鼠點擊</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> init</span><span style="color:#E1E4E8"> () {</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> images </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementsByTagName</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;img&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">  for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">var</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> images.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    images[i].onclick </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> showAnswer;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> showAnswer</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">eventObj</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> image </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> eventObj.target;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> name </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> image.id;</span></span>
+<span class="line"><span style="color:#E1E4E8">  name </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;src/img/&quot;</span><span style="color:#F97583"> +</span><span style="color:#E1E4E8"> name </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> &quot;.jpg&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  image.src </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> name;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h4 id="mousemove-滑鼠移動">mousemove 滑鼠移動</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> init</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> map </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;map&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  map.onmousemove </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> showCoords;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> showCoords</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">eventObj</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> map </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;coords&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> x </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> eventObj.pageX;</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> y </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> eventObj.pageY;</span></span>
+<span class="line"><span style="color:#E1E4E8">  map.innerHTML </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;Map coordinates: &quot;</span><span style="color:#F97583"> +</span><span style="color:#E1E4E8"> x </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> &quot;, &quot;</span><span style="color:#F97583"> +</span><span style="color:#E1E4E8"> y;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="random-numbers">Random numbers</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">// 0 -&gt; 10</span></span>
+<span class="line"><span style="color:#E1E4E8">Math.</span><span style="color:#B392F0">floor</span><span style="color:#E1E4E8">(Math.</span><span style="color:#B392F0">random</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">*</span><span style="color:#79B8FF"> 11</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 1 -&gt; 10</span></span>
+<span class="line"><span style="color:#E1E4E8">Math.</span><span style="color:#B392F0">floor</span><span style="color:#E1E4E8">(Math.</span><span style="color:#B392F0">random</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">*</span><span style="color:#79B8FF"> 10</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 5 -&gt; 20</span></span>
+<span class="line"><span style="color:#E1E4E8">Math.</span><span style="color:#B392F0">floor</span><span style="color:#E1E4E8">(Math.</span><span style="color:#B392F0">random</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">*</span><span style="color:#79B8FF"> 16</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 5</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// -10 -&gt; (-2)</span></span>
+<span class="line"><span style="color:#E1E4E8">Math.</span><span style="color:#B392F0">floor</span><span style="color:#E1E4E8">(Math.</span><span style="color:#B392F0">random</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">*</span><span style="color:#79B8FF"> 9</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 10</span><span style="color:#E1E4E8">;</span></span></code></pre>
+<h2 id="ch10-liberated-functions">Ch10. Liberated functions</h2>
+<ul>
+<li>函式可賦予變數值</li>
+<li>函式可傳遞給其他函式</li>
+<li>函式可回傳其他函式</li>
+</ul>
+<h3 id="函式宣告">函式宣告</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> quack</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">num</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">  for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">var</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;=</span><span style="color:#E1E4E8"> num; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;quack!&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<h3 id="函式運算式">函式運算式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#B392F0"> fly</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">num</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">  for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">var</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;=</span><span style="color:#E1E4E8"> num; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Flying!&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<h3 id="陣列sort">陣列sort</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> numberArray </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">60</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">62</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">58</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">54</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">54</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">53</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> compareNumbers</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">num1</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">num2</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">  if</span><span style="color:#E1E4E8"> (num1 </span><span style="color:#F97583">&gt;</span><span style="color:#E1E4E8"> num2) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  } </span><span style="color:#F97583">else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (num1 </span><span style="color:#F97583">==</span><span style="color:#E1E4E8"> num2) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#F97583"> -</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">numberArray.</span><span style="color:#B392F0">sort</span><span style="color:#E1E4E8">(compareNumbers);</span></span></code></pre>
+<h2 id="ch11-serious-functions">Ch11. Serious Functions</h2>
+<h3 id="匿名函式">匿名函式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> alarm</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#B392F0">  alert</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Time is done!&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">setTimeout</span><span style="color:#E1E4E8">(alarm, </span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#B392F0">setTimeout</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">function</span><span style="color:#E1E4E8">() { </span><span style="color:#B392F0">alert</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Time is done!&quot;</span><span style="color:#E1E4E8">);}, </span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<p>函式宣告建立的函式會較函式運算式<strong>優先定義</strong></p>
+<h3 id="嵌套函式">嵌套函式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> setTimer</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">doneMessage</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">n</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#B392F0">  setTimeout</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#B392F0">    alert</span><span style="color:#E1E4E8">(doneMessage);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }, n);</span></span>
+<span class="line"><span style="color:#E1E4E8">  doneMessage</span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;OUCH!&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">setTimer</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Cookies are done!&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h3 id="閉包">閉包</h3>
+<p><strong>包含操作環境的函式</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> setTimer</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">doneMessage</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">n</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#B392F0">  setTimeout</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#B392F0">    alert</span><span style="color:#E1E4E8">(doneMessage);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }, n);</span></span>
+<span class="line"><span style="color:#E1E4E8">  doneMessage</span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;OUCH!&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">setTimer</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Cookies are done!&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h4 id="範例">範例</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> count </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">window.</span><span style="color:#B392F0">onload</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> button </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;clickme&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  button.onclick </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> handleClick;</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> handleClick</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> message </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;You clicked me! &quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> div </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;message&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  count</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  div.innerHTML </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> message </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> count </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> &quot; times!&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">window.</span><span style="color:#B392F0">onload</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> count </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> message </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;You clicked me! &quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> div </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;message&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> button </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;clickme&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  button.</span><span style="color:#B392F0">onclick</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">    count</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    div.innerHTML </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> message </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> count </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> &quot; times!&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<h2 id="ch12-creating-objects">Ch12. Creating objects</h2>
+<h3 id="物件建構程序">物件建構程序</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> Car</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">make</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">model</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">year</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">color</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">passengers</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">converitble</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">mileage</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.make </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> make;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.model </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> model;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.year </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> year;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.color </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> color;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.passengers </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> passengers;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.convertible </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> convertible;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.mileage </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> mileage;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.started </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">start</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#79B8FF">    this</span><span style="color:#E1E4E8">.started </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">stop</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#79B8FF">    this</span><span style="color:#E1E4E8">.started </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">drive</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.started) {</span></span>
+<span class="line"><span style="color:#B392F0">      alert</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Zoom zoom!&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">      alert</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Start the engine first!&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 新增物件</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> chevy </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Car</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Chevy&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Bel Air&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1957</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;red&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1021</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<h3 id="改寫為物件字面">改寫為物件字面</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> chevyParams </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {make:</span><span style="color:#9ECBFF">&quot;Chevy&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">                   model: </span><span style="color:#9ECBFF">&quot;Bel Air&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">                   year: </span><span style="color:#79B8FF">1957</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">                   color: </span><span style="color:#9ECBFF">&quot;red&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">                   passengers: </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">                   convertible: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">                   mileage: </span><span style="color:#79B8FF">1021</span><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> chevy </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Car</span><span style="color:#E1E4E8">(chevyParams)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> Car</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">params</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.make </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> params.make;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.model </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> params.model;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.year </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> params.year;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.color </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> params.color;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.passengers </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> params.passengers;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.convertible </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> params.convertible;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.mileage </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> params.mileage;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.started </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">start</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#79B8FF">    this</span><span style="color:#E1E4E8">.started </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">stop</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#79B8FF">    this</span><span style="color:#E1E4E8">.started </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">drive</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.started) {</span></span>
+<span class="line"><span style="color:#B392F0">      alert</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Zoom zoom!&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">      alert</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Start the engine first!&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="ch13-extra-strength-objects">Ch13. Extra strength objects</h2>
+<p>新增prototype Dog</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> Dog</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">name</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">breed</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">weight</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.name </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> name;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.breed </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> breed;</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.weight </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> weight;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>新增屬性給Dog，預設值為Canine</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#79B8FF">Dog</span><span style="color:#E1E4E8">.</span><span style="color:#79B8FF">prototype</span><span style="color:#E1E4E8">.species </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;Canine&quot;</span><span style="color:#E1E4E8">;</span></span></code></pre>
+<p>新增function屬性</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#79B8FF">Dog</span><span style="color:#E1E4E8">.</span><span style="color:#79B8FF">prototype</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">bark</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8"> () {</span></span>
+<span class="line"><span style="color:#F97583">  if</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.weight </span><span style="color:#F97583">&gt;</span><span style="color:#79B8FF"> 25</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.name </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> &quot; says WOOF!&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.name </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> &quot; says YIP!&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<p>以prototype建立新物件</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> fido </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Dog</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Fido&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Mixed&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;38&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> spot </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Dog</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Spot&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Poodle&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;10&quot;</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<p>自訂屬性</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">spot.</span><span style="color:#B392F0">bark</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8"> (){</span></span>
+<span class="line"><span style="color:#E1E4E8">  console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.name </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> &quot; says WOOF!&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<h3 id="繼承">繼承</h3>
+<p>新增prototype(ShowDog)並繼承原有prototype(Dog)</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> ShowDog</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">name</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">breed</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">weight</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">handler</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">  Dog.</span><span style="color:#B392F0">call</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">, name, breed, weight);</span></span>
+<span class="line"><span style="color:#79B8FF">  this</span><span style="color:#E1E4E8">.handler </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> handler;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#79B8FF">ShowDog</span><span style="color:#E1E4E8">.</span><span style="color:#79B8FF">prototype</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Dog</span><span style="color:#E1E4E8">();</span></span></code></pre> </article>  </main> <footer class="footer"> <p> <small>
+Designed by EstherJ <span class="footer-separator">|</span> Copyright © 2026 </small> </p> </footer> </body></html>

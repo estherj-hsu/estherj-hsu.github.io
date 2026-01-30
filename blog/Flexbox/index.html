@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><meta name="description" content="Accessible UI, interface craft, and ongoing experiments."><title>Flexbox – Esther: Version History</title><meta property="og:type" content="website"><meta property="og:title" content="Flexbox"><meta property="og:description" content="Accessible UI, interface craft, and ongoing experiments."><meta property="og:image" content="/img/og.png"><meta property="og:url" content="https://estherj-hsu.github.io/blog/Flexbox/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Flexbox"><meta name="twitter:description" content="Accessible UI, interface craft, and ongoing experiments."><meta name="twitter:image" content="/img/og.png"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg"><link rel="icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.ico"><script type="module">document.addEventListener("astro:page-load",()=>{window.refreshFsLightbox&&window.refreshFsLightbox()});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_1_lang.B0Xlk8SJ.js"></script><link rel="stylesheet" href="/_astro/_slug_.B9ZDccv9.css"></head> <body> <header> <div> <a href="/" class="logo"> <img width="280" src="/img/logo.png" alt="Esther: Version History logo"> </a> </div> <div> <nav id="nav" class="nav"> <ul> <li class="nav-link"> <a aria-label="Esther" href="/esther/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-bubble.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Blog" href="/blog/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-book.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Portfolio" href="/portfolio/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-suitcase.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Playground" href="/playground/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-cube.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Github (Opens in new tab)" href="https://github.com/estherj-hsu" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-git.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="LinkedIn (Opens in new tab)" href="https://www.linkedin.com/in/estherjhsu/" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-linkedin.svg')" aria-hidden="true"></i> </a> </li> </ul> </nav> </div> </header> <main>  <article> <h1>Flexbox</h1> <div class="metadata-wrapper"> <div class="meta"> <div class="meta-date"> <time datetime="2016-06-08T15:32:52.000Z"> June 8, 2016 </time> </div> <ul class="meta-tags"> <li> <a href="/tags/css-sass/" class="tag">CSS/sass</a> </li> </ul> </div> </div> <section class="esther"> <h2 class="visually-hidden">Author note</h2> <p>A Brief Note of CSS Selector<br/>
+Noted by myself in the end of 2015.<br/>
+P.S. <strong>NEW</strong> <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Grid Layout</a> is coming soon!<br/>
+2017/02/15 updated!</p><p><em>實作/範例</em></p><ul>
+<li><a href="http://codepen.io/estherj-hsu/pen/bVXOMY">Pinterest Grid with Flexbox</a></li>
+<li><a href="http://progressivered.com/fla/">Flex Layout Attribute</a></li>
+</ul> </section>
+<hr/>
+<h2 id="fully-flexbox-properties-introduction">Fully(?) Flexbox Properties Introduction</h2>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://css-tricks.com/using-flexbox/">CSS-Tricks: Flexbox</a></li>
+<li><a href="http://www.w3.org/html/ig/zh/wiki/Css3-flexbox">W3 - Flexbox</a></li>
+<li><a href="http://css.doyoe.com/properties/flex/index.htm">CSS參考手冊 - Flexbox</a></li>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks: A Complete Guide to Flexbox</a></li>
+<li><a href="https://egghead.io/lessons/misc-flexbox-fundamentals">Flexbox Fundamentals (video)</a></li>
+<li><a href="http://zh-tw.learnlayout.com/flexbox.html">Flexbox版面配置</a></li>
+<li><a href="http://flexboxfroggy.com/">Flexbox Froggy (learning tool)</a></li>
+<li><a href="http://tympanus.net/codrops/css_reference/flexbox">CSS Reference - Flexbox</a></li>
+<li><a href="https://medium.com/@Heydon/flexbox-grid-finesse-4d22b80bfee1#.txc4ylkrf">Flexbox Grid Finesse</a></li>
+<li><a href="https://medium.com/@samserif/flexbox-s-best-kept-secret-bd3d892826b6#.3bd4xfkt8">Flexbox’s Best-Kept Secret</a></li>
+<li><a href="https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/">Vertical Centering (flexbox)</a></li>
+<li><a href="https://medium.com/@spaceninja/what-is-flexbox-6aed968555ef#.4wvachxkk">What is Flexbox</a></li>
+<li><a href="http://blog.karenmenezes.com/2014/apr/13/floats-inline-block-or-display-table-or-flexbox/">Floats, Inline Block or Display Table? Or Flexbox?</a></li>
+<li><a href="http://fourword.fourkitchens.com/article/responsive-multi-column-lists-flexbox">Responsive Multi-Column Lists with Flexbox</a></li>
+<li><a href="http://callmenick.com/post/flexbox-examples">Flexbox Grid</a></li>
+<li><a href="http://flexbox.help/">Flexbox.help</a></li>
+</ul>
+<h2 id="parent-wrapcontainer">Parent (wrap/container)</h2>
+<p><img src="https://cdn.css-tricks.com/wp-content/uploads/2014/05/flex-container.svg" alt="enter image description here"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex</span></span></code></pre>
+<h3 id="flex-direction">flex-direction</h3>
+<p>容器內部child排列方向</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">flex-direction</span><span style="color:#E1E4E8">: </span><span style="color:#B392F0">row(</span><span style="color:#79B8FF">default</span><span style="color:#B392F0">)</span><span style="color:#E1E4E8"> 橫向 | </span><span style="color:#79B8FF">ltr</span><span style="color:#E1E4E8"> 左到右 | </span><span style="color:#79B8FF">rtl</span><span style="color:#E1E4E8"> 右到左</span></span>
+<span class="line"><span style="color:#79B8FF">flex-direction</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">row-reverse</span><span style="color:#E1E4E8"> 逆橫向</span></span>
+<span class="line"><span style="color:#79B8FF">flex-direction</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">column</span><span style="color:#E1E4E8"> 縱向</span></span>
+<span class="line"><span style="color:#79B8FF">flex-direction</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">column-reverse</span><span style="color:#E1E4E8"> 逆縱向</span></span></code></pre>
+<h3 id="flex-wrap">flex-wrap</h3>
+<p>容器內部child換行</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">flex-wrap</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">nowrap</span><span style="color:#E1E4E8"> 單行</span></span>
+<span class="line"><span style="color:#79B8FF">flex-wrap</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">wrap</span><span style="color:#E1E4E8"> 多行</span></span>
+<span class="line"><span style="color:#79B8FF">flex-wrap</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">wrap-reverse</span><span style="color:#E1E4E8"> 逆向多行</span></span></code></pre>
+<blockquote>
+<p>當採 <strong>橫向</strong> (row/row-reverse)排列時，需藉由控制容器 <strong>寬度</strong> 來呈現多行排列模式
+當採 <strong>縱向</strong> (column/column-reverse)排列時，需藉由控制容器 <strong>高度</strong> 來呈現多行排列模式</p>
+</blockquote>
+<h3 id="flex-flow">flex-flow</h3>
+<p>合併flex-direction與flex-wrap，共有4(方向)x3(換行)總組合方式</p>
+<p>flex-flow: row wrap
+flex-flow: column wrap</p>
+<h3 id="justify-content">justify-content</h3>
+<p>容器內部 <strong>單行</strong> 主軸(X軸)對齊</p>
+<p><img src="https://cdn.css-tricks.com/wp-content/uploads/2013/04/justify-content.svg" alt="enter image description here"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">justify-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex-start</span><span style="color:#E1E4E8"> 對齊主軸起始點</span></span>
+<span class="line"><span style="color:#79B8FF">justify-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex-end</span><span style="color:#E1E4E8"> 對齊主軸終點</span></span>
+<span class="line"><span style="color:#79B8FF">justify-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">center</span><span style="color:#E1E4E8"> 對齊主軸中間點</span></span>
+<span class="line"><span style="color:#79B8FF">justify-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">space-between</span><span style="color:#E1E4E8"> 對齊主軸左右</span></span>
+<span class="line"><span style="color:#79B8FF">justify-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">space-around</span><span style="color:#E1E4E8"> 對齊主軸左右且每個 </span><span style="color:#79B8FF">item</span><span style="color:#E1E4E8"> 左右保有相同空間</span></span></code></pre>
+<h3 id="align-items">align-items</h3>
+<p>容器內部<strong>單行</strong>側軸(Y軸)對齊</p>
+<p><img src="https://cdn.css-tricks.com/wp-content/uploads/2014/05/align-items.svg" alt="enter image description here"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">align-items</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex-start</span><span style="color:#E1E4E8"> 對齊側軸起始點</span></span>
+<span class="line"><span style="color:#79B8FF">align-items</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex-end</span><span style="color:#E1E4E8"> 對齊側軸終點</span></span>
+<span class="line"><span style="color:#79B8FF">align-items</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">center</span><span style="color:#E1E4E8"> 對齊側軸中間點</span></span>
+<span class="line"><span style="color:#79B8FF">align-items</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">stretch</span><span style="color:#E1E4E8"> 延展至側軸雙邊、對齊側軸雙邊</span></span>
+<span class="line"><span style="color:#79B8FF">align-items</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">baseline</span><span style="color:#E1E4E8"> 對齊文字基準線</span></span></code></pre>
+<h3 id="align-content">align-content</h3>
+<p>容器內部<strong>多行</strong>對齊</p>
+<p><img src="https://cdn.css-tricks.com/wp-content/uploads/2013/04/align-content.svg" alt="enter image description here"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">align-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex-start</span><span style="color:#E1E4E8"> 對齊主軸起始點</span></span>
+<span class="line"><span style="color:#79B8FF">align-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex-end</span><span style="color:#E1E4E8"> 對齊主軸終點</span></span>
+<span class="line"><span style="color:#79B8FF">align-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">center</span><span style="color:#E1E4E8"> 對齊主軸中間點</span></span>
+<span class="line"><span style="color:#79B8FF">align-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">stretch</span><span style="color:#E1E4E8"> 延展至側軸雙邊、對齊側軸雙邊</span></span>
+<span class="line"><span style="color:#79B8FF">align-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">space-between</span><span style="color:#E1E4E8"> 對齊主軸左右</span></span>
+<span class="line"><span style="color:#79B8FF">align-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">space-around</span><span style="color:#E1E4E8"> 對齊主軸左右且每個 </span><span style="color:#79B8FF">item</span><span style="color:#E1E4E8"> 左右保有相同空間</span></span></code></pre>
+<h2 id="child-item">Child (item)</h2>
+<p><img src="https://cdn.css-tricks.com/wp-content/uploads/2014/05/flex-items.svg" alt="enter image description here"/></p>
+<h3 id="order">order</h3>
+<p>控制子項目順序，數字越小越接近起始點</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">order</span><span style="color:#E1E4E8">: # </span><span style="color:#B392F0">(</span><span style="color:#79B8FF">1</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 2</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 3</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> ...</span><span style="color:#B392F0">)</span></span></code></pre>
+<h3 id="flex-basis">flex-basis</h3>
+<p>取代 item 之 width，預約空間</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">flex-basis</span><span style="color:#E1E4E8">: </span><span style="color:#B392F0">auto(</span><span style="color:#79B8FF">default</span><span style="color:#B392F0">)</span><span style="color:#E1E4E8"> 不指定 | </span><span style="color:#F97583">&lt;</span><span style="color:#79B8FF">width</span><span style="color:#F97583">&gt;</span><span style="color:#B392F0"> (</span><span style="color:#79B8FF">100</span><span style="color:#F97583">px</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 50</span><span style="color:#F97583">%</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> ...</span><span style="color:#B392F0">)</span><span style="color:#E1E4E8"> 指定 | </span><span style="color:#79B8FF">content</span><span style="color:#E1E4E8"> 以內容計算</span></span></code></pre>
+<blockquote>
+<p>[注意] flex-shrink屬性 <strong>優先</strong> 於 width，但若兩者之一值為 auto，則非 auto 之屬性優先
+容器若為 nowrap 情況下，子項目建議以 flex-basis 取代 width，若為 wrap 情況，則建議子項目使用 width 即可</p>
+</blockquote>
+<h3 id="flex-grow">flex-grow</h3>
+<p><img src="https://cdn.css-tricks.com/wp-content/uploads/2014/05/flex-grow.svg" alt="enter image description here"/></p>
+<p>主容器剩餘空間索取之擴大比例，default 為 0(代表皆不索取)，代表若主容器寬/高度大於各 item 寬/高度總和時，如何分配於各 item，數字代表索取之份量。</p>
+<p>假設容器寬度為500px，且 flex-grow 為預設值 0 時，每個 item 寬度為500/3px；
+但若設定三個 item 寬度為100px，再針對其中一個 itemA 設定 flex-grow為1，
+則 itemA 之寬度為100px(預設寬度) <em>+200px</em> (總剩餘寬度)。</p>
+<p>承上，若再設定 itemB 之 flex-grow 為3，
+則 itemB 寬度為100px <em>+ 150px</em>(總剩餘寬度200px中的3/4)，
+而A之寬度為100px <em>+ 50px</em>(總剩餘寬度200px中的1/4)。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">flex-grow</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#B392F0">(</span><span style="color:#79B8FF">default</span><span style="color:#B392F0">)</span><span style="color:#E1E4E8"> | #</span><span style="color:#B392F0">(</span><span style="color:#79B8FF">1</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 2</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 3</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> ...</span><span style="color:#B392F0">)</span></span></code></pre>
+<h3 id="flex-shrink">flex-shrink</h3>
+<p>主容器剩餘空間吸收之縮小比例，default 為1，代表若主容器寬/高度 <strong>不足時</strong>，各item吸收比例皆相同，數字代表吸收之份量。</p>
+<p>假設容器寬度為700px，預設4個item的寬度皆為200px，
+此時主容器寬度不足100px(200px × 4 = 800px)，
+預設情況(flex-shrink: 1)下，不足的100px平均由4個item吸收，
+因此每個item的寬度為200px <em>- 25px</em>(不足寬度100px的1/4)。</p>
+<p>承上，若再指定itemA之flex-shrink為2，則itemA之寬度為200px(預設寬度) <em>- 40px</em>(不足寬度100px的2/5)。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">flex-shrink</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#B392F0">(</span><span style="color:#79B8FF">default</span><span style="color:#B392F0">)</span><span style="color:#E1E4E8"> | #</span><span style="color:#B392F0">(</span><span style="color:#79B8FF">1</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 2</span><span style="color:#6A737D">,</span><span style="color:#79B8FF"> 3</span><span style="color:#6A737D">,</span><span style="color:#E1E4E8"> ...</span><span style="color:#B392F0">)</span></span></code></pre>
+<blockquote>
+<p>善用 flex-shrink 與 flex-grow 處理跨瀏覽器的寬度計算問題，指定最後一項子項目吸收多餘/不足空間</p>
+</blockquote>
+<h3 id="flex">flex</h3>
+<p>整合 <em>flex-grow</em>、<em>flex-shrink</em>、<em>flex-basis</em> 之屬性，依序以空格區隔</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">flex</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#79B8FF"> 1</span><span style="color:#B392F0"> auto(</span><span style="color:#79B8FF">default</span><span style="color:#B392F0">)</span><span style="color:#E1E4E8"> | </span><span style="color:#79B8FF">none</span><span style="color:#E1E4E8"> 不指定</span></span></code></pre>
+<h3 id="align-self">align-self</h3>
+<p>針對item之側軸對齊設定，<em>可取代主容器之align-item屬性</em></p>
+<p><img src="https://cdn.css-tricks.com/wp-content/uploads/2014/05/align-items.svg" alt="enter image description here"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">align-self</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">auto</span><span style="color:#E1E4E8"> 跟從</span><span style="color:#79B8FF">align-item</span><span style="color:#E1E4E8">設定</span></span>
+<span class="line"><span style="color:#79B8FF">align-self</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex-start</span><span style="color:#E1E4E8"> 對齊側軸起始邊</span></span>
+<span class="line"><span style="color:#79B8FF">align-self</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex-end</span><span style="color:#E1E4E8"> 對齊側軸終邊</span></span>
+<span class="line"><span style="color:#79B8FF">align-self</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">center</span><span style="color:#E1E4E8"> 對齊側軸中間</span></span>
+<span class="line"><span style="color:#79B8FF">align-self</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">baseline</span><span style="color:#E1E4E8"> 以文字為基準</span></span>
+<span class="line"><span style="color:#79B8FF">align-self</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">stretch</span><span style="color:#E1E4E8"> 延展至側軸雙邊、對齊側軸雙邊</span></span></code></pre>
+<hr/>
+<h2 id="compatibility">Compatibility</h2>
+<h3 id="parant">Parant</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">-webkit-box</span></span>
+<span class="line"><span style="color:#79B8FF">display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">-moz-box</span></span>
+<span class="line"><span style="color:#79B8FF">display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">-ms-flexbox</span></span>
+<span class="line"><span style="color:#79B8FF">display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">-webkit-flex</span></span>
+<span class="line"><span style="color:#79B8FF">display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex</span></span></code></pre>
+<h3 id="child">Child</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">-webkit-box-flex</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#79B8FF"> 1</span><span style="color:#79B8FF"> auto</span></span>
+<span class="line"><span style="color:#79B8FF">-moz-box-flex</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#79B8FF"> 1</span><span style="color:#79B8FF"> auto</span></span>
+<span class="line"><span style="color:#79B8FF">flex</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#79B8FF"> 1</span><span style="color:#79B8FF"> auto</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">-webkit-box-ordinal-group</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#79B8FF">-moz-box-ordinal-group</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#79B8FF">-ms-flex-order</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#79B8FF">order</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span></span></code></pre>
+<h3 id="bugs-in-ie10-ie11">Bugs in IE10, IE11</h3>
+<h4 id="reference-1">Reference</h4>
+<ul>
+<li><a href="https://github.com/philipwalton/flexbugs">Flexbugs</a></li>
+<li><a href="http://philipwalton.com/articles/normalizing-cross-browser-flexbox-bugs/">Normalizing Cross-browser Flexbox Bugs</a></li>
+</ul>
+<h4 id="bugs">Bugs</h4>
+<ul>
+<li>子項目設定min-height情況下，容器的高度設定將會被忽略 [<a href="https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items">solution</a>](fixed in Edge)</li>
+<li>子項目不允許無單位的flex-basis [<a href="https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored">solution</a>](fixed in Edge)</li>
+<li>子項目圖片自動調整比例問題[<a href="https://github.com/philipwalton/flexbugs#5-column-flex-items-dont-always-preserve-intrinsic-aspect-ratios">solution</a>](fixed in Edge)</li>
+<li>flex-basis: auto超出容器大小（包含::before/after）[<a href="https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box">solution</a>](fixed in Edge)</li>
+<li>inline元件無法成為子項目[<a href="https://github.com/philipwalton/flexbugs#12-inline-elements-are-not-treated-as-flex-items">solution</a>](fixed in Edge)</li>
+</ul>
+<h4 id="extra">Extra</h4>
+<p><img src="https://cdn.css-tricks.com/wp-content/uploads/2010/09/widthbox.png" alt="enter image description here"/></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#79B8FF">box-sizing</span><span style="color:#E1E4E8">: </span><span style="color:#B392F0">content-box(</span><span style="color:#79B8FF">default</span><span style="color:#B392F0">)</span><span style="color:#E1E4E8"> | </span><span style="color:#79B8FF">border-box</span><span style="color:#E1E4E8"> | </span><span style="color:#79B8FF">initial</span><span style="color:#E1E4E8"> | </span><span style="color:#79B8FF">inherit</span></span></code></pre>
+<blockquote>
+<p><em>content-box:</em> element size =  width/height + padding + border</p>
+<p><em>border-box:</em> element size =  width/height</p>
+</blockquote> </article>  </main> <footer class="footer"> <p> <small>
+Designed by EstherJ <span class="footer-separator">|</span> Copyright © 2026 </small> </p> </footer> </body></html>

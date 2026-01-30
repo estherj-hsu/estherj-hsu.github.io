@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><meta name="description" content="Accessible UI, interface craft, and ongoing experiments."><title>Notes from Interviews – Esther: Version History</title><meta property="og:type" content="website"><meta property="og:title" content="Notes from Interviews"><meta property="og:description" content="Accessible UI, interface craft, and ongoing experiments."><meta property="og:image" content="/img/og.png"><meta property="og:url" content="https://estherj-hsu.github.io/blog/notes-from-interviews/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Notes from Interviews"><meta name="twitter:description" content="Accessible UI, interface craft, and ongoing experiments."><meta name="twitter:image" content="/img/og.png"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg"><link rel="icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.ico"><script type="module">document.addEventListener("astro:page-load",()=>{window.refreshFsLightbox&&window.refreshFsLightbox()});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_1_lang.B0Xlk8SJ.js"></script><link rel="stylesheet" href="/_astro/_slug_.B9ZDccv9.css"></head> <body> <header> <div> <a href="/" class="logo"> <img width="280" src="/img/logo.png" alt="Esther: Version History logo"> </a> </div> <div> <nav id="nav" class="nav"> <ul> <li class="nav-link"> <a aria-label="Esther" href="/esther/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-bubble.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Blog" href="/blog/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-book.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Portfolio" href="/portfolio/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-suitcase.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Playground" href="/playground/" target="_self"> <i class="icon" style="--icon-url: url('/icons/icon-cube.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="Github (Opens in new tab)" href="https://github.com/estherj-hsu" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-git.svg')" aria-hidden="true"></i> </a> </li><li class="nav-link"> <a aria-label="LinkedIn (Opens in new tab)" href="https://www.linkedin.com/in/estherjhsu/" target="_blank"> <i class="icon" style="--icon-url: url('/icons/icon-linkedin.svg')" aria-hidden="true"></i> </a> </li> </ul> </nav> </div> </header> <main>  <article> <h1>Notes from Interviews</h1> <div class="metadata-wrapper"> <div class="meta"> <div class="meta-date"> <time datetime="2022-07-18T19:02:07.000Z"> July 18, 2022 </time> </div> <ul class="meta-tags"> <li> <a href="/tags/front-end/" class="tag">Front-End</a> </li><li> <a href="/tags/esther/" class="tag">Esther</a> </li> </ul> </div> </div> <section class="esther"> <h2 class="visually-hidden">Author note</h2> <p>Some notes from those technical interviews I had so far<br/>
+Talked with some mentors on <a href="https://app.adplist.org/signup?referral_id=99993&src=user">ADPList</a> 🥰</p> </section>
+<hr/>
+<h3 id="pure-function">Pure function</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> pure</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">num</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> num </span><span style="color:#F97583">*</span><span style="color:#79B8FF"> 5</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<ul>
+<li>Always returns same result</li>
+<li>Never depends on any state/data/change</li>
+<li>Always return something</li>
+<li>Test cases will be straighforward</li>
+</ul>
+<h3 id="high-order-function">High Order Function</h3>
+<ul>
+<li>Takes another function as an argument</li>
+<li>Returns function</li>
+</ul>
+<h3 id="high-order-component">High Order Component</h3>
+<ul>
+<li>Takes a component as an input and returns a new compnent</li>
+<li>Idealy enhance the component</li>
+<li>Usually a pure function and returns a new component</li>
+<li>Use cases: loader while fetching data</li>
+</ul>
+<h3 id="undefined-vs-null">Undefined VS null</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><code>Undefined</code></th><th><code>Null</code></th></tr></thead><tbody><tr><td>Declared, but not yet defined</td><td>No value, on purpose</td></tr><tr><td>The type is <code>undefined</code></td><td>The type is <code>object</code></td></tr><tr><td>Equal to <code>NaN</code></td><td>Equal to 0</td></tr></tbody></table>
+<h3 id="this">THIS</h3>
+<h4 id="in-a-method">In a method</h4>
+<p>refer to <strong>the owner object</strong> (me)</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> me </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  firstName: </span><span style="color:#9ECBFF">&#39;John&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  lastName: </span><span style="color:#9ECBFF">&#39;Doe&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#B392F0">  fullName</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">function</span><span style="color:#E1E4E8"> () {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.firstName </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> &#39; &#39;</span><span style="color:#F97583"> +</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.lastName;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h4 id="alone--independent">Alone &amp; Independent</h4>
+<p>refer to <strong>the global object (window)</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> x </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.name;</span></span></code></pre>
+<h4 id="in-a-function">In a function</h4>
+<p>refer to <strong>the global object</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> myFunction</span><span style="color:#E1E4E8"> () {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.name;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h4 id="in-a-function-strict-mode">In a function “strict mode”</h4>
+<p><code>undefined</code></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#9ECBFF">&quot;use strict&quot;</span></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> myFunction</span><span style="color:#E1E4E8"> () {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.name;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h4 id="in-event-handlers">In Event Handlers</h4>
+<p>refer to <strong>the HTML Element</strong> that received the event (button)</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">button</span><span style="color:#B392F0"> onclick</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">&quot;</span><span style="color:#79B8FF">this</span><span style="color:#9ECBFF">.</span><span style="color:#E1E4E8">style</span><span style="color:#9ECBFF">.</span><span style="color:#E1E4E8">display</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&#39;none&#39;&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  Button</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<h4 id="call--apply---explict-binding"><code>call()</code> &amp; <code>apply()</code> - Explict binding</h4>
+<p>force the function(a) to refer to <strong>the object</strong>(b)</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> a </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">  fullName</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">function</span><span style="color:#E1E4E8"> () {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.firstName </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> &#39; &#39;</span><span style="color:#F97583"> +</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.lastName;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#E1E4E8"> b </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  firstName: </span><span style="color:#9ECBFF">&#39;John&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  lastName: </span><span style="color:#9ECBFF">&#39;Doe&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">a.fullName.</span><span style="color:#B392F0">call</span><span style="color:#E1E4E8">(b);</span></span></code></pre> </article>  </main> <footer class="footer"> <p> <small>
+Designed by EstherJ <span class="footer-separator">|</span> Copyright © 2026 </small> </p> </footer> </body></html>
