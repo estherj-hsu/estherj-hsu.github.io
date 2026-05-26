@@ -1,0 +1,16 @@
+/* TEAM */
+Developer & Designer: Esther H.
+Site: https://estherh.dev
+Location: Vancouver, BC, Canada
+From: Taiwan 🇹🇼
+
+/* SITE */
+Built with: Astro, SCSS, Markdown
+Fonts: Rubik, Inter, JetBrains Mono
+Icons: Lucide
+Est: 2002
+Last updated: 2026
+
+/* THANKS */
+Everyone who writes about CSS on the internet.
+The a11y community, for making the web better for everyone.
